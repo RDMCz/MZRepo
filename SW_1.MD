@@ -40,22 +40,22 @@ __Podprogram:__ (subroutine) Část programu
 ## operátory + priorita operátorů
 
 kategorie | operátor
-- | -
+--- | ---
 __primární__ | závorky `(x)`, přístup ke členu `x.y`, invokace `f(x)`, indexer `a[x]`, `x++`, `x--`, `new`
- __unární__| `+x`, `-x`, `!`, bitová negace `~`, `++x`, `--x`, přetypování `(T)x`, `true`, `false`
- __rozsah__| `x..y`
- __multiplikativní__| `*`, `/`, modulo `%`
- __aditivní__| součet `+`, rozdíl `-`
- __bitové posuny__| `<<`, `>>`
- __relační__| `<`, `>`, `<=`, `>=`, `is`, `as`
- __rovnost__| `==`, `!=`
- __bit AND__| `&`
- __bit XOR__| `^`
- __bit OR__| `\|`
- __AND__| `&&`
- __OR__| `\|\|`
- __ternární__| `? :`
- __přiřazení a lambda__| `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `<<=`, `>>=`, `&=`, `^=`, `\|=`, `=>`
+__unární__| `+x`, `-x`, `!`, bitová negace `~`, `++x`, `--x`, přetypování `(T)x`, `true`, `false`
+__rozsah__| `x..y`
+__multiplikativní__| `*`, `/`, modulo `%`
+__aditivní__| součet `+`, rozdíl `-`
+__bitové posuny__| `<<`, `>>`
+__relační__| `<`, `>`, `<=`, `>=`, `is`, `as`
+__rovnost__| `==`, `!=`
+__bit AND__| `&`
+__bit XOR__| `^`
+__bit OR__| `\|`
+__AND__| `&&`
+__OR__| `\|\|`
+__ternární__| `? :`
+__přiřazení a lambda__| `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `<<=`, `>>=`, `&=`, `^=`, `\|=`, `=>`
 
 ## podmíněné příkazy
 
