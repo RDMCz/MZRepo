@@ -4,6 +4,8 @@
 
 `sw [........................#]`
 
+[mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
+
 ## hw
 
 1. Vrstva síťového přístupu, Ethernet
@@ -104,20 +106,49 @@
     * TLD, SLD, přiřazení DN, překlad, autoritativní odpověď
 
 16. Mikrokontroléry (mcu) – základní pojmy
+    * Vysvětlení pojmu mikrokontrolér, harvardská a von Neumannova architektura, hlavní vlastnosti mikrokontrolérů Atmel AVR, popis blokového schématu.
+
 17. Instrukční soubor mcu
+    * Druhy instrukcí, popis. Struktura instrukce v paměti, CISC, RISC, architektura load-store, doba provádění instrukce. Popis příkladu zdrojového kódu programu v asm.
+
 18. Paralelní porty mcu
+    * Popis paralelních portů mikrokontrolérů řady Atmel AVR. Obvodový popis portu, elektrické vlastnosti. Příklady instrukcí pro práci s porty.
+
 19. Připojování externích periferií k mcu
+    * Tlačítka, klávesnice, LED, segmentové a inteligentní displeje.
+
 20. Čítačové podsystémy mcu
+    * Režim čítače/časovače, podrobný popis pro Atmel AVR. Režimy CAPTURE, COMPARE, PWM. Dohlížecí časovač WDT.
+
 21. Internet věcí
+    * Vysvětlení pojmu, architektura, sítě typu LPWAN, komunikační protokoly.
+
 22. Přerušovací podsystém mcu
+    * Přerušení, obsluha, vektor, povolení, příznak, priorita, kontext, zpracování, přerušovací systém Atmel AVR.
+
 23. Vyšší programovací jazyky pro mcu
+    * Požadavky vpj na architekturu mcu, omezení a rozdíly vůči programování pro osobní počítače, optimalizace kompilátoru.
+
 24. Sériová rozhraní mcu
+    * Popis sériových sběrnic USART, RS422/485, SPI/Microwire, I2C, 1Wire, CAN. Popis sériového portu Atmel AVR.
+
 25. Procesory
+    * Struktura současných procesorů (x86/64). Techniky optimalizace provádění instrukcí, snižování spotřeby. Rozšířené instrukční sady.
+
 26. Základní desky
+    * Základní deska (čipová sada, bios), interní sběrnice (PCI, PCIe), externí sběrnice (usb, firewire).
+
 27. Paměti
+    * Typy pamětí, struktura, základní parametry, optimalizace přístupu do paměti (cache).
+
 28. Zařízení pro ukládání dat
+    * Pevné disky (HDD/SSD), optická média (CD, DVD, BlueRay), rozhraní PATA, SATA, SCSI, SAS, M.2.
+
 29. Grafické karty
+    * Struktura, základní parametry, akcelerace, vytváření 3D scény, použití pro negrafické výpočty.
+
 30. Výstupní zařízení PC
+    * Displeje - LCD, LED, OLED, technologie zobrazení, základní parametry. Tiskárny – technologie tisku, základní parametry.
 
 ## sw
 
