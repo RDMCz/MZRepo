@@ -1,13 +1,13 @@
-# sw 1 – Základní programové konstrukce
+# SW 01 – Základní programové konstrukce
 
 * proměnné, datové typy, reference a hodnota, programy a podprogramy, operátory, priorita operátorů
 * if, switch, cyklus
 
-## proměnné
+## Proměnné
 
 Proměnná je místo v paměti, kam se ukládají data. Je to označení pro identifikátor, který uchovává určitou hodnotu při běhu programu.
 
-## datové typy + reference a hodnota
+## Datové typy + reference a hodnota
 
 __Hodnotové:__ Hodnota je v paměti uložena přímo a přímo se k ní přistupuje. Mají pevnou velikost.
 
@@ -27,17 +27,18 @@ __Referenční:__ Neuchovává přímo hodnotu samotnou, ale odkaz na místo v p
 * `array`
 * `delegate`
 
-## programy a podprogramy
+## Programy a podprogramy
 
 __Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem.
 
 __Podprogram:__ (subroutine) Část programu
 
-* lze opakovaně použít kdekoliv v programu (i v podprogramu)
-* může mít vstupní parametry
-* může mít návratovou hodnotu
+* Lze opakovaně použít kdekoliv v programu (i v podprogramu)
+* Může mít vstupní parametry
+* Může mít návratovou hodnotu
+* V C# metoda
 
-## operátory + priorita operátorů
+## Operátory + priorita operátorů
 
 kategorie | operátor
 --- | ---
@@ -57,7 +58,7 @@ __OR__| `\|\|`
 __ternární__| `? :`
 __přiřazení a lambda__| `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `<<=`, `>>=`, `&=`, `^=`, `\|=`, `=>`
 
-## podmíněné příkazy
+## Podmíněné příkazy
 
 __úplný if__:
 
@@ -91,7 +92,7 @@ switch (výraz) {
 }
 ```
 
-## cykly
+## Cykly
 
 __while__:
 
