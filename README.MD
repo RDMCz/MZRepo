@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [######...................]`
+`sw [#######..................]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 

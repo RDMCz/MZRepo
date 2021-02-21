@@ -138,3 +138,11 @@ static void Main(string[] args)
 ```
 
 ![Přetížitelné operátory](img/SW_06_01.PNG)
+
+## Metoda s proměnným počtem parametrů
+
+* Klíčové slovo `params` před posledním z parametrů. Typ tohoto parametru musí být pole.
+
+``` csharp
+public void SomeMethod(params object[] p) { } // Proměnný počet parametrů
+```

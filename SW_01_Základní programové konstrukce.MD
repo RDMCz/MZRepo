@@ -37,6 +37,7 @@ __Podprogram:__ (subroutine) Část programu
 * Může mít vstupní parametry
 * Může mít návratovou hodnotu
 * V C# metoda
+* Obecně funkce vrací hodnotu, procedura ne
 
 ## Operátory + priorita operátorů
 
