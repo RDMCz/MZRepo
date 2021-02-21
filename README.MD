@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [#####....................]`
+`sw [######...................]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -192,7 +192,7 @@
     * Entita, relace, entitní typ, klíč, kandidátní klíč, primární klíč, silná a slabá entity, kardinalita a parcialita, agregace, kompozice
 
 14. Normalizace databáze
-    * OLAP, OLTP, Normální formy, normalizace, optimalizace, 0. NF, 1. NF, 2. NF, 3.NF
+    * OLAP, OLTP, Normální formy, normalizace, optimalizace, 0. NF, 1. NF, 2. NF, 3. NF
 
 15. Jazyk SQL
     * Dialekt, standard, DML, DDL, DCL, TCL, INSERT, UPDATE, INSERT
