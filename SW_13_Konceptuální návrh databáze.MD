@@ -32,6 +32,8 @@
 * Superklíč není vhodný pro jednoznačné adresování (uživatelem nebo navázanou tabulkou). Proto je potřeba vybrat jeden atribut, který jednoznačně identifikuje celý záznam (řádek) = __Primární klíč__
 * Všechny atributy, které mohou být použity jako PK = __Kandidátní klíče__
 * K propojení tabulek se používá __Cizí klíč__ – Sloupec, který se shoduje (váže) na PK v jiné tabulce, musí obsahovat hodnotu PK druhé tabulky nebo null.
+* Složený primární klíč – Více atributů
+* PFK – Primární cizí klíč – Součást složeného PK "převzatá" z jiné tabulky
 
 ## Silná a slabá entita
 
