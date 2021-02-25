@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [#######.....##...........]`
+`sw [#######.....###..........]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -195,7 +195,7 @@
     * OLAP, OLTP, Normální formy, normalizace, optimalizace, 0. NF, 1. NF, 2. NF, 3. NF
 
 15. Jazyk SQL
-    * Dialekt, standard, DML, DDL, DCL, TCL, INSERT, UPDATE, INSERT
+    * Dialekt, standard, DML, DDL, DCL, TCL, INSERT, UPDATE
 
 16. Výběr dat v SQL
     * SELECT, projekce, restrikce, podmínky, seskupování, agregace, spojování tabulek
