@@ -167,7 +167,7 @@ Italy | 2
 * `FULL (OUTER) JOIN` – vrací řádky z obou tabulek, doplňuje NULL při neexistující vazbě.
 
 ``` sql
-SELECT * From Orders;
+SELECT * FROM Orders;
 ```
 
 OrderID (PK) | CustomerID (FK)
@@ -178,7 +178,7 @@ OrderID (PK) | CustomerID (FK)
 104 | 4
 
 ``` sql
-SELECT * From Customers INNER/LEFT/RIGHT/OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+SELECT * FROM Customers INNER/LEFT/RIGHT/OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 ```
 
 ### INNER JOIN
