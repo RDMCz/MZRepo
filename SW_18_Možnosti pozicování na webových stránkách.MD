@@ -16,7 +16,7 @@ __Blokový prvek:__
 
 __Inline prvek:__
 
-* Nezčíná na novém řádku, může jich být víc vedle sebe
+* Nezačíná na novém řádku, může jich být víc vedle sebe
 * Zabírá jen tolik šířky, kolik potřebuje
 * `<span>`, `<a>`, ...
 

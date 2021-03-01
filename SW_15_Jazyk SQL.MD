@@ -61,7 +61,7 @@ TRUNCATE TABLE employees;
 ## DCL (Data Control Language)
 
 * Podjazyk SQL k nastavování přístupových práv (Autorizace)
-* `GRANT` – Dát uživateli práva na určité operace sa tabulkou
+* `GRANT` – Dát uživateli práva na určité operace s tabulkou
 * `REVOKE` – Odebrat tato práva
 
 ``` sql

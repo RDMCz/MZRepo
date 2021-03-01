@@ -8,7 +8,7 @@
 * Vrací množinu záznamů z jedné nebo více tabulek
 
 ``` sql
-SELECT seznam sloupců (* = všechny)
+SELECT seznam sloupců -- * = všechny, jinak odděleno čárkami
 FROM seznam tabulek 
 WHERE restrikce
 GROUP BY seskupit dle
@@ -131,7 +131,7 @@ SELECT AVG(BirthYear) FROM Customers; -- 1838
 SELECT Country, COUNT(CustomerID) -- Běžně vybíráme to, podle čeho se bude seskupovat + agregační fce
 FROM Customers
 GROUP BY Country
-ORDER BY COUNT(CustomerID) DESC;
+ORDER BY COUNT(CustomerID) DESC; -- Seřadit dle ..., DESC = sestupně
 ```
 
 Country | COUNT(CustomerID)
@@ -159,7 +159,7 @@ Italy | 2
 
 ## Spojování tabulek
 
-* Podstat relačních databází spočívá v rozdělení informací do několika navzájem propojených tabulek (přes klíče PK–FK)
+* Podstata relačních databází spočívá v rozdělení informací do několika navzájem propojených tabulek (přes klíče PK–FK)
 * Pomocí příkazu `JOIN` lze spojit dvě tabulky do jedné
 * `INNER JOIN` – vrací řádky, kde se klíče shodují v obou tabulkách
 * `LEFT (OUTER JOIN)` – vrací všechny řádky z levé tabulky, ke každému z nich přiřadí shodující se řádek z pravé tabulky nebo NULL (pokud neexistuje pravá vazba)

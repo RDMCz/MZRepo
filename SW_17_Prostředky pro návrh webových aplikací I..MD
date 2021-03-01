@@ -51,15 +51,15 @@
   * Frontend: React, Angular, Vue
   * Backend: Express, Next, Meteor
 
-``` javascript
-<script>
-    function changeText() {
-        document.getElementById("demo").innerHTML = "Změněný text";
-    }
-</script>
-// ...
+``` html
 <p id="demo">Text</p>
 <button type="button" onclick="changeText()">Změnit</button>
+```
+
+``` javascript
+function changeText() {
+    document.getElementById("demo").innerHTML = "Změněný text";
+}
 ```
 
 ## Značka (Tag)
@@ -71,7 +71,7 @@
 
 ## Atribut
 
-* Dodávají elementům dodatečé informace.
+* Dodávají elementům dodatečné informace.
 * Všechny html elementy mohou mít atributy.
 * Umožňují nastavit `id`, `class`, `style`
 
