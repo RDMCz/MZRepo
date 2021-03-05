@@ -1,8 +1,8 @@
-# svět se posral
+# no mně je zle
 
 `hw [..............................]`
 
-`sw [#######.....######.......]`
+`sw [########....######.......]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -28,7 +28,7 @@
     * Instalace operačního systému, připojení uživatelů
     * Druhy souborových systémů používaných v současných verzích OS
     * Koncepce souborového systému, stromová struktura, druhy souborů
-    * Práva a oprávnění, nastavení oprávnění pro soubory (rwx), databáze uživatelů a hesel,
+    * Práva a oprávnění, nastavení oprávnění pro soubory (rwx), databáze uživatelů a hesel
     * Změna vlastníka a oprávnění
 
 4. Referenční model OSI/ISO
