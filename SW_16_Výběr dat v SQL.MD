@@ -235,4 +235,4 @@ SELECT sloupce FROM tabulka2;
 
 ## ---
 
-![Joins](https://miro.medium.com/max/2400/1*4lPn1y63GGLKsEEpLxS8BQ.png)
+![Joins](img/SW_16_01.png)

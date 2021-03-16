@@ -98,13 +98,13 @@ openWith.Add("txt", "winword.exe"); // Nelze, klíč musí být unikátní
 
 * Fronta, FIFO – First In First Out (Kdo přijde jako první je vyřešen jako první)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg" width="500">
+<img src="img/SW_03_01.svg" width="500">
 
 ### __Stack__
 
 * Zásobník, LIFO – Last In First Out (kdo přijde jako poslední je vyřešen jako první)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png" width="500">
+<img src="img/SW_03_02.png" width="500">
 
 __System.Collections.Generic__:
 

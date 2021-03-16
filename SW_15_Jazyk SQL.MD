@@ -128,4 +128,4 @@ Hektor | 37000
 
 ## ---
 
-![SQL Commands](https://media.geeksforgeeks.org/wp-content/uploads/sql-commands.jpg)
+![SQL Commands](img/SW_15_01.jpg)
