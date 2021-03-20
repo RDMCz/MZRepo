@@ -1,4 +1,4 @@
-# Návrhové vzory II
+# SW 9 – Návrhové vzory II
 
 * Návrhové vzory pro skrývání implementace, optimalizaci rozhraní.
 
