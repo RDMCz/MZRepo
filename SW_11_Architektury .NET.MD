@@ -53,7 +53,7 @@
 * Organizovaná hierarchie jmenných prostorů
 * Poskytuje kolekci tříd, rozhraní a typů (většinou `System.*` nebo `Microsoft.*`)
 * Ty poskytují operace jako čtení/zápis souborů, lokalizace, komunikace po síti, využití více vláken, reflexe (zjištění informací o objektech za běhu)
-* Dále zahrnuje např. knihovny pro ASP .NET, WPF, LINQ, ...
+* Dále zahrnuje např. knihovny pro <span>ASP.NET</span>, WPF, LINQ, ...
 
 #### LINQ (Language Integrated Query)
 
