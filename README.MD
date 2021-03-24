@@ -8,6 +8,11 @@
 
 [pepino](https://github.com/Soukupis/FinalExamQuestions)
 
+[0](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html)
+[1](http://mis.e-mis.cz/index.php/Informatika#S.C3.ADt.C4.9B_a_p.C5.99enos_dat)
+[2](http://samuraj-cz.com)
+[3](https://ct.upce.cz/machalik/puitk-stare/text.htm)
+
 ## hw
 
 1. Vrstva síťového přístupu, Ethernet
