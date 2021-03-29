@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [#########.########.......]`
+`sw [#########.#########......]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -219,7 +219,7 @@
 20. Ověřování identity v prostředí internetu
     * Jméno, heslo, dvoufázové ověřování, biometrické ověřování, OAuth2, resource, owner, authorization server, OpenID, poskytovatelé ověření, access_token
 
-21. Návrh webové aplikace ASP .NET
+21. Návrh webové aplikace <span>ASP.NET</span>
     * Razor Pages, MVC, Page, PageModel, Razor syntaxe, Setup.cs, služba, databáze, Entity Framework, Identity
 
 22. AJAX, REST
