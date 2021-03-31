@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [#########.#########......]`
+`sw [#########.##########.....]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -56,9 +56,9 @@
 
 7. Sítě standardu IEEE 802.11
     * Přenosová trasa, přístup k médiu, 802.11a/b/g/n/ac/ax WiFi, AP,
-    * fyzická vrstva – SS – AFH, DS, OFDM, QAM, MIMO,
+    * fyzická vrstva – SS (rozprostřeno?) – AFH, DS, OFDM, QAM, MIMO (multiple input, multiple output),
     * Ad-hoc, Wi-Fi Direct, infrastrukturní sítě,
-    * BSS, ESD, ESSID, MAC control, WEP, WPA, WPA2, WPA3, EAP, 802.1X, Radius, AAA.
+    * BSS, ESS, ESSID, MAC control, WEP, WPA, WPA2, WPA3, EAP, 802.1X, Radius, AAA.
 
 8. Protokol TCP, UDP
     * Přepínání datagramů vs. přepínání obvodů, TCP komunikace, segmentace, multiplexování segmentů, formát datagramu, řízení toku, omezení režie, navázání a ukončení spojení (tří a čtyřcestný handshake), plovoucí okno.

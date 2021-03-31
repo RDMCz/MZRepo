@@ -79,9 +79,9 @@ desítková soustava | šestnáctková soustava
 ## Druhy vysílání a adres
 
 <table><tbody>
-<tr><td><strong>Unicast</strong><td><td>Individuální</td><td>Identifikuje právě jedno zařízení.</td></tr>
-<tr><td><strong>Multicast</strong><td><td>Skupinové</td><td>Adresování skupin zařízení, data přijdou všem členům skupiny.</td></tr>
-<tr><td><strong>Anycast</strong><td><td>Výběrové</td><td>Adresování skupiny, data přijdou jen nejbližšímu členovi skupiny.</td></tr>
+<tr><td><strong>Unicast</strong></td><td>Individuální</td><td>Identifikuje právě jedno zařízení.</td></tr>
+<tr><td><strong>Multicast</strong></td><td>Skupinové</td><td>Adresování skupin zařízení, data přijdou všem členům skupiny.</td></tr>
+<tr><td><strong>Anycast</strong></td><td>Výběrové</td><td>Adresování skupiny, data přijdou jen nejbližšímu členovi skupiny.</td></tr>
 </tbody></table>
 
 * Oproti IPv4 broadcast (všesměrové vysílání) není potřeba, používají se obecnější typy multicast adres
@@ -145,10 +145,6 @@ prefix | význam
   * Spojení prefixu `ff02::1:ff00:0/104` s posledními 24 bity testované uni/anycast adresy
   * Např. `ff02::1:ff00:0/104` + `fe80::2aa:ff:fe`__`28:9c5a`__ = `ff02::1:ff28:9c5a`
 
-## Mrdka stanovení InterfaceID, ZoneID, použití adresy pro ping a web stránky
-
-## mrdka 🤐 ND (NDP) – RS, RA, NS, NA, DAD, ICMPv6 – náhrada ARP
-
 ## Dynamické adresování
 
 * Dynamicky se adresuje GUA a ULA (LLA generuje OS)
@@ -181,3 +177,60 @@ prefix | význam
 
 * DHCPv6 server přiděluje i adresu
 * SLAAC ale nelze úplně vypnout, přiděluje totiž výchozí bránu
+
+## Zóna
+
+* Adresy v zóně musí být unikátní
+* Různé dosahy zóny, např.:
+  * 2 – linka – fyzická síť (Ethernet)
+  * 4 – správa – obvykle podsíť
+  * 5 – místo – koncová zákaznická síť – jedna organizace, jedna lokalita
+  * E – globální – celosvětový dosah
+  * aj.
+* Celá zóna je vždy zahrnuta do nadřízené zóny většího dosahu
+* Zóny stejného dosahu se nesmí překrývat
+* Jelikož adresa je unikátní jen v rámci zóny a zařízení může být ve více zónách stejného dosahu, může se stejná adresa objevit v několika zónách
+* -> Pro jejich odlišení zavedeny identifikátory zón (Zone ID)
+* Zápis _`<address>`_`%`_`<Zone ID>`_ např.: `fe80::714b:9770:43d4:f8b2`__`%18`__
+
+## Použití adresy
+
+``` txt
+ping -6 ipv6.google.com
+ping -6 fe80::260:97ff:fe02:6ea5%4
+```
+
+* V prohlížeči se adresa zapisuje do hranatých závorek: `http://[fe80::714b:9770:43d4:f8b2%18]/`
+
+## NDP – Neighbor Discovery Protocol
+
+* Náhrada za ARP (Address Resolution Protocol) v IPv4, kde zařízení odešle na všechny stroje v lokální síti ARP dotaz tázající se, jaké zařízení má určitou adresu
+* Funkce NDP:
+  * Hledání směrovačů a zjištění informací pro automatickou konfiguraci adresy
+  * Zjišťování linkových adres uzlů ve stejné lokální síti
+  * Detekce duplicitních adres
+  * aj.
+* Zjištění linkových adres probíhá pomocí Solicited-Node Multicast Address
+
+### RS – Router solicitation – Výzva směrovači
+
+* Zařízení zprávou RS hledají směrovače a žádají o informace
+
+### RA – Router advertisement – Ohlášení směrovače
+
+* Odeslání informací; v časových intervalech nebo jako odpověď na RS
+
+### NS – Neighbor solicitation – Výzva sousedovi
+
+* Určení linkové adresy souseda nebo potvrzení dosažitelnosti souseda
+* Používáno DAD
+
+### NA – Neighbor advertisement – Ohlášení souseda
+
+* Reakce na NS
+
+### DAD – Duplicate Address Detection – Detekce duplicitních adres
+
+### ICMPv6 – Internet Control Message Protocol Version 6
+
+//TODO
