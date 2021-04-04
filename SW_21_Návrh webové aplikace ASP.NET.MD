@@ -65,6 +65,9 @@ public class IndexModel : PageModel
     {
         // Použito např. při odeslání formuláře
     }
+
+    [BindProperty] // Daná vlastnost se vloží jako parametr do všech akcí stránky
+    public string UserName { get; set; } // Používá se např. při zpracování dat z formulářů
 }
 
 // Startup.cs:
@@ -96,8 +99,7 @@ public class Startup
         services.AddScoped<IModel, Model>(); // Při požádání o IModel poskytne Model
         // -- AddSingleton – platný pro celé spuštění aplikace
         // -- AddScoped – platný pro celý request
-        // -- AddTransient – při každém requeste poskytne novou instanci
-
+        // -- AddTransient – při každém requestu poskytne novou instanci
     }
     
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -65,7 +65,7 @@ desítková soustava | šestnáctková soustava
 * Velikost části, která vyjadřuje číslo sítě je definována pomocí CIDR notace počtem bitů zleva = __prefix__
 * V IPv4 lze zapsat jako délu prefixu `192.168.1.1/24` nebo pomocí masky `255.255.255.0`
 * V IPv6 se zapisuje pouze délka prefixu
-  * Doporučená velikost pro podsítě je `/64`, aby fungoval Neighbor Discovery Protocol (?)
+  * Doporučená velikost pro podsítě je `/64`, ~aby fungoval Neighbor Discovery Protocol
 * S délkou prefixu `/64` je tedy 64 bitů z leva __Prefix__ (adresa podsítě) a zbylých 64 bitů (128-64) je __Interface ID__ (adresa konkrétního zařízení v podsíti)
 
 ## Komprimace nul
@@ -138,7 +138,7 @@ prefix | význam
   * 112 bitů – identifikátor skupiny
 * Well-known:
   * `FF02::1` – všichni hosté na lince ~"broadcast"
-  * `FF02::2` – všechny routery na lince (musí mít zapnuté `ipv6 unicast-routing`)
+  * `FF02::2` – všechny routery na lince
   * aj.
 * Solicited-Node Multicast Address:
   * Používá ji Neighbor Discovery Protocol, aby zjistil, zdali je určitá adresa unikátní na lince
@@ -231,6 +231,31 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 
 ### DAD – Duplicate Address Detection – Detekce duplicitních adres
 
+* Kontrola, zdali je IPv6 adresa na lince unikátní, před tím, než je přiřazena na fyzické rozhraní
+* Využívá NS
+
 ### ICMPv6 – Internet Control Message Protocol Version 6
 
-//TODO
+* ICMP je protokol k ohlašování chybových stavů, testování dosažitelnosti a výměně provozních informací
+* Jeden z nejdůležitějších protokolů, zajišťuje funkčnost programů ping a traceroute
+* Chybové zprávy oznamují např.
+  * Chyba v hlavičce datagramu
+  * Nedosažitelná adresa/port, neznámá cesta k cíli
+  * Správce zakázal komunikaci
+* Mezi informační zprávy patří např. výzva a odpověď na echo, ty využívá program `ping -6`
+* V ICMPv4 šlo útočit na síť zahlcením cílového stroje ICMP zprávami, ICMPv6 proti tomuto implemetuje bezpečnostní opatření
+
+## Cisco a IPv6
+
+``` txt
+ipv6 unicast-routing
+```
+
+* Zapne IPv6 směrování, které je defaultně vypnuto
+
+``` txt
+ipv6 address 2001:db8:1:1::baba/64
+ipv6 address fe80::baba/64 link-local
+```
+
+* Nastavení IPv6 adres na interfacu
