@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [#########.###########....]`
+`sw [#########.############...]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -226,7 +226,7 @@
     * Klasická a asynchronní komunikace, AJAX, promise, fetch API, API, metody http, GET, POST, DELETE, PUT, PATCH, OPTION, REST
 
 23. React
-    * Component, DOM, Virtual DOM, událost, props, state, hoko, propagace stavu
+    * Component, DOM, Virtual DOM, událost, props, state, hook, propagace stavu
 
 24. Prostředky pro návrh webových aplikací II.
     * Písmo v WWW, CSS, selektor, příklady selektorů, vlastnosti CSS, media query, CSS Frameworky, komponenty v CSS, možnosti pozicování prvků v Bootstrap
