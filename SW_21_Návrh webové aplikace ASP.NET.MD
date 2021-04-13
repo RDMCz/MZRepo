@@ -60,19 +60,52 @@ public class IndexModel : PageModel
     {
         // Zde lze předat parametry přes adresu – https://localhost:44363/?a=3&text=Hello
     }
-
-    public IActionResult OnPost()
-    {
-        // Použito např. při odeslání formuláře
-    }
-
-    [BindProperty] // Daná vlastnost se vloží jako parametr do všech akcí stránky
-    public string UserName { get; set; } // Používá se např. při zpracování dat z formulářů
 }
 
 // Startup.cs:
 services.AddScoped<IModel, Model>();
 ```
+
+### RazorPages Formulář
+
+``` razor
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Input.UserName">UserName:</label>
+        <input asp-for="Input.UserName" />
+    </div>
+    <button type="submit">Search</button>
+</form>
+```
+
+``` csharp
+public class UserSearchModel : PageModel
+{
+    public class InputModel
+    {
+        [Required] public string UserName { get; set; }
+    }
+
+    [BindProperty] public InputModel Input { get; set; }
+
+    public UserSearchModel()
+    {
+        Input = new InputModel();
+    }
+
+    public IActionResult OnPost()
+    {
+        if (ModelState.IsValid)
+        {
+            // search(Input.UserName);
+            // ...
+        }
+    }
+}
+```
+
+* Díky anotaci `[BindProperty]` lze vlastnost Input použít přímo ve View, po odeslání formuláře se hodnoty do této vlastnosti zapíší
 
 ## Startup.cs
 
@@ -93,9 +126,9 @@ public class Startup
         // * Kontrolérů
         // * Autorizace, Autentizace, Identity
         // * Cors – seznam aplikací, které můžou přistoupit k našemu API
-        // * Razor Pages
+        // * Razor Pages:
         services.AddRazorPages();
-        // * Dependency Injection
+        // * Dependency Injection:
         services.AddScoped<IModel, Model>(); // Při požádání o IModel poskytne Model
         // -- AddSingleton – platný pro celé spuštění aplikace
         // -- AddScoped – platný pro celý request
@@ -104,7 +137,7 @@ public class Startup
     
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        // Konfigurace aplikace
+        // Konfigurace aplikace:
         app.UseHttpsRedirection();
         app.UseStaticFiles();
         app.UseRouting();

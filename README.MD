@@ -2,7 +2,7 @@
 
 `hw [..............................]`
 
-`sw [#########.############...]`
+`sw [######################...]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
 
@@ -39,7 +39,7 @@
     * Změna vlastníka a oprávnění
 
 4. Referenční model OSI/ISO
-    * Protokol, rozhraní, popis a funkce jednotlivých vrstev, PDU, zapouzdřování, porovnání s * modelem TCP/IP, průchod dat přes síťové prvky, kategorie přepínačů pro jednotlivé vrstvy,
+    * Protokol, rozhraní, popis a funkce jednotlivých vrstev, PDU, zapouzdřování, porovnání s modelem TCP/IP, průchod dat přes síťové prvky, kategorie přepínačů pro jednotlivé vrstvy,
     * nástroje pro zachycování dat v síti, testování a oprava problémů v síti
 
 5. VLAN, návrh podnikové sítě
