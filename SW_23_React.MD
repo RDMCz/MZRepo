@@ -131,7 +131,7 @@ import { ListContext } from "./Providers/ListContext";
 
 const App = () => {
 
-    const [context, setContext] = useState([])
+    const [context, setContext] = useState([]);
 
     return (
         <>
