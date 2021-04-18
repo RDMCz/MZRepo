@@ -152,20 +152,26 @@ prefix | význam
 * Interface ID přiděluje OS:
   * Podle MAC adresy pomocí algoritmu EUI-64
     * Doporostřed MAC adresy vloží `FFFE` a sedmý bit zleva nastaví na jedničku (pokud není)
-  * Nebo generováno OS, tzv. Privacy Extensions
+    * Méně bezpečné, Windows XP
+  * Nebo náhodně generováno OS, tzv. Privacy Extensions (Windows 7 a výš)
 * Zbývá vyřešit přidělení prefixu:
   * Stavové – DHCPv6 – zařízení odešle na obecnou adresu dotaz ohledně svých parametrů a server mu odpoví
-  * Bezstavové – SLAAC – směrovače vedí vše potřebné a občas tyto informace rozešlou všem, nebo si o ně zařízení zažádá (RS – Router solicitation – Výzva směrovači)
+  * Bezstavové – SLAAC – směrovače vedí vše potřebné a občas tyto informace rozešlou všem (Router advertisement), nebo si o ně zařízení zažádá (Router solicitation)
+
+### __RS__ – Router solicitation – Výzva směrovači
+
+* Zařízení zprávou RS hledají směrovače a žádají o informace
 
 ### __RA__ – Router advertisement – Ohlášení směrovače
 
-* Směrovače v náhodných intervalech zasílají do všech připojených sítí informace
+* Směrovače v náhodných intervalech (podle Prokeše každých 200 sekund) zasílají do všech připojených sítí informace
 * Odesláno pomocí ICMPv6
 
 ### __SLAAC__ – StateLess Address AutoConfiguration – Bezstavová konfigurace
 
 * Přidělování adres, použití RA a RS
 * Není potřeba DHCPv6 server
+* Odešle prefix a délku prefixu; bránu nemusí – je to jeho zdrojová adresa
 * Dříve RA zprávy neobsahovaly IPv6 adresy rekurzivních DNS serverů
 
 ### __Stateless DHCPv6__

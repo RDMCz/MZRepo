@@ -1,19 +1,16 @@
-# no mně je zle
+# No mně je zle
 
-`hw [..#...........................]`
+`hw [..#......#....#...............]`
 
 `sw [########################.]`
 
-[mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing)
-
+[mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing),
 [pepino](https://github.com/Soukupis/FinalExamQuestions)
 
-[0](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html)
-[1](http://mis.e-mis.cz/index.php/Informatika#S.C3.ADt.C4.9B_a_p.C5.99enos_dat)
-[2](http://samuraj-cz.com)
-[3](https://ct.upce.cz/machalik/puitk-stare/text.htm)
+[c#](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html),
+[netw](http://samuraj-cz.com)
 
-## hw
+## HW
 
 1. Vrstva síťového přístupu, Ethernet
     * Protokol IEEE 802.3, MAC vrstva, IEEE 802.2, LLC vrstva, unicast, broadcast, multicast, anycast
@@ -102,14 +99,14 @@
     * Zabezpečení bezdrátových sítí (kontrola přístupu, šifrování)  
 
 15. DHCP, NAT, DNS
-    * DHCPv4 komunikace s DHCP serverem, obsah zprávy DHCP serveru,
+    * DHCPv4 komunikace s DHCP serverem, obsah zprávy DHCP serveru
     * Nastavení rozsahu přidělovaných adres, DHCP Relay (DHCP server za standardní bránou)
     * SLAAC, DHCPv6, nastavení serveru a klienta, ověření nastavení.
     * Koncepce NAT, důvody a výhody použití NAT, port forwarding, NAT v IPv6 (NAT64)
     * Inside, outside, local a global adresy,
     * statická NAT, dynamická NAT, portovaná NAT (PAT) - overloading
     * Konfigurace statické i dynamické NAT, PAT (NAT overload), ověření nastavení
-    * Doménové jméno, FQDN, systém DNS – kořenové servery,
+    * Doménové jméno, FQDN, systém DNS – kořenové servery
     * TLD, SLD, přiřazení DN, překlad, autoritativní odpověď
 
 16. Mikrokontroléry (mcu) – základní pojmy
@@ -157,7 +154,7 @@
 30. Výstupní zařízení PC
     * Displeje - LCD, LED, OLED, technologie zobrazení, základní parametry. Tiskárny – technologie tisku, základní parametry.
 
-## sw
+## SW
 
 1. Základní programové konstrukce
     * Základní programové konstrukce, proměnné, datové typy, reference a hodnota, programy a podprogramy, operátory, priorita operátorů.
