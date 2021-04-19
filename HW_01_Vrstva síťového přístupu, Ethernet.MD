@@ -63,4 +63,128 @@
 
 ## Ethernet
 
-//TODO
+* Protokol definující přenos dat na lokální síti
+* Nejdůlěžitější obsah rámce: Zdrojová a cílová adresa
+
+### Lokální síť
+
+* Dříve definováno vzdáleností mezi stroji, resp. časem přenosu mezi nimi
+* Možné definice:
+  * Síť pod jednou administrativní správou
+  * Síť, která končí bránou
+
+### IEEE 802.3
+
+* Standard společnosti Institute of Electrical and Electronics Engineers
+* Určuje specifikace fyzické (HW) a linkové (MAC) vrstvy
+
+<table>
+    <tr><td>802.3i</td><td>Ethernet</td><td align="right">10 Mbit/s</td><td>10BASE-T</td></tr>
+    <tr><td>802.3u</td><td>Fast Ethernet</td><td align="right">100 Mbit/s</td><td>100BASE-TX</td></tr>
+    <tr><td>802.3ab</td><td>Gigabit Ethernet</td><td align="right">1000 Mbit/s</td><td>1000BASE-T</td></tr>
+    <tr><td><td>10 Gigabit Ethernet</td><td align="right">10 000 Mbit/s</td><td></td></tr>
+    <tr><td></td><td>100 Gigabit Ethernet</td><td align="right">100 000 Mbit/s</td><td></td></tr>
+    <tr><td></td><td>Terabit Ethernet (200GbE a 400GbE)</td><td align="right">> 100 000 Mbit/s</td><td></td></tr>
+</table>
+
+* Baseband – Přenáší pouze jeden signál, data jdou v základním pásmu (v Ethernetu je vše baseband)
+* Broadband – Přenáší několik signálů najednou (DSL modemy)
+* 1000BASE-__T__ – Twisted – Kroucená dvojlinka
+* 1000BASE-__LX__ – Long – Single-mode fiber – Menší průměr vlákna, jeden paprsek, delší vzdálenost, dražší
+* 1000BASE-__SX__ – Short – Multi-mode fiber – Větší průměr vlákna, více paprsků, kratší vzdálenost, levnější
+
+### MAC vrstva – Media Access Control
+
+* Řízení přístupu k médiu
+* Kontrola správnosti přenášených rámců
+* Adresace – MAC adresy vázané na síťovou kartu (vrstva je hardwarově závislá)
+* MAC adresa:
+  * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
+  * 48 bitů, kontrola pomocí komparátoru
+
+### IEEE 802.2 – LLC vrstva – Logical Link Control
+
+* LLC není obsahem standardu IEEE 802.3
+* IEEE 802.2 definuje LLC jakožto horní podvrstvu linkové vrstvy, propojení mezi Ethernetem a síťovou vrstvou
+* Zakrývá rozdíly mezi sítěmi 802, poskytuje společný formát a rozhraní pro síťovou vrstvu
+* Error-control, flow-control (aby rychlý odesílatel nezahltil pomalého adresáta)
+
+### Unicast
+
+* Přímá komunikace mezi dvěma uzly v síti
+* Cílová adresa – MAC adresa cílové síťové karty
+
+### Broadcast
+
+* Pro všechna zařízení v síti
+* Cílová adresa – samé jedničky (FF-FF-FF-FF-FF-FF)
+
+### Multicast
+
+* Pro vybranou skupinu, musí být předem definována
+* Výhoda – Zmenšení provozu na síti a hlavně na serveru
+* Nevýhoda – Definovat skupinu může být problém
+
+### Anycast
+
+* Data přijdou nejbližšímu členovi skupiny (resp. nejvýhodnějšímu – počet skoků a latence)
+
+## ARP – Address Resolution Protocol
+
+* Objevování MAC adres na základě IP adres
+* Situace, kdy je třeba odeslat IP datagram na adresu ležící ve stejné podsíti a odesílatel zná pouze IP adresu cíle
+* Průběh:
+  * ARP request – broadcast – obsahuje tázanou IP adresu + IP a MAC adresu zdroje
+    * Všichni příjemci si tato data zapíší do ARP cache
+  * ARP reply – tázané zařízení odesílá zpět svou IP a MAC adresu
+
+## PPP – Point-to-Point Protocol
+
+* Komunikační protokol linkové vrstvy – přímá komunikace mezi dvěma uzly
+* Např. sériová linka RS-232
+
+## Média
+
+1. Měď
+2. Optika
+3. Bezdrát
+
+* __Modulace__ – nosný signál měněn modulujícím signálem:
+  * Kódování Manchester – Data XOR Hodiny
+  * QAM – Kvadraturní amplitudová modulace
+  * QPSK
+* __Šířka pásma__: Frekvenční rozsah (rozdíl mezi nejvyšší a nejnižší frekvencí přenášeného signálu)
+* __Propustnost__: Množství dat za jendotku času, závislé na šířce pásma
+* __Přenosová rychlost__: Závislá na propustnosti, ovlivněna vnějšími jevy
+
+### Koaxiál
+
+* Měděný vnitřní vodič pro přenos
+* Vnější vodič – stínění před elmg polem, oddělen od vnitřního nevodivou vrstvou
+* Užití v počátcích Ethernetu, dnes se moc nepoužívá, existuje však rodina technologií Ethernet over Coax
+
+### Kroucená dvojlinka
+
+* Čtyři páry vodičů, které jsou v páru pravidelně zakroucené
+* Kroucení má vliv na šířku pásma a na odolnost proti rušení
+  * Magnetická pole kroucených vodičů jsou opačná a vyrušují se; vyrušují i vnější pole
+* U/UTP – Unshielded Twisted Pair
+  * Značení `<stínění kabelu>/<stínění páru>TP`, U – nestíněno, F – Fólie, S – Opletení (pouze kabel)
+  * Např.: SF/FTP – Kabel stíněn fólií a opletením + páry stíněny fólií
+* Různé kategorie Cat1 - Cat8, nejběžnější Cat6
+* Koncovka RJ-45 (8P8C)
+
+### Optika
+
+* Skleněné nebo plastové vlákno přenašející signál pomocí světla
+* Princip totálního odrazu
+* Menší ztráty, větší vzdálenosti, imunní vůči elmg rušení
+* SMF – Single-mode fiber – Menší průměr vlákna, jeden paprsek, delší vzdálenost, dražší
+* MMF – Multi-mode fiber – Větší průměr vlákna, více paprsků, kratší vzdálenost, levnější
+* Vlnová délka cca 1 mikrometr, infračervený paprsek
+* Konektory LC, SC, ST
+
+### Bezdrát
+
+* Signály na frekvencích 2,4 a 5 GHz – bezlicenční pásma
+* Antény
