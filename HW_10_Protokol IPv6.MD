@@ -79,7 +79,7 @@ desítková soustava | šestnáctková soustava
 ## Druhy vysílání a adres
 
 <table><tbody>
-<tr><td><strong>Unicast</strong></td><td>Individuální</td><td>Identifikuje právě jedno zařízení.</td></tr>
+<tr><td><strong>Unicast</strong></td><td>Individuální</td><td>Identifikuje právě jeden interface (jedno zařízení).</td></tr>
 <tr><td><strong>Multicast</strong></td><td>Skupinové</td><td>Adresování skupin zařízení, data přijdou všem členům skupiny.</td></tr>
 <tr><td><strong>Anycast</strong></td><td>Výběrové</td><td>Adresování skupiny, data přijdou jen nejbližšímu členovi skupiny.</td></tr>
 </tbody></table>
@@ -90,6 +90,7 @@ desítková soustava | šestnáctková soustava
 
 prefix | význam
 --: | :--
+`::/0` | žolík – default route
 `::/128` | nedefinovaná adresa
 `::1/128` | loopback (pingem lze zjistit funkčnost IP služeb)
 `64:FF9B::/96` | IPv4-embedded adress – adresy s vloženým IPv4
@@ -114,6 +115,7 @@ prefix | význam
 
 * Nástupce _site local_ adres
 * Adresy směrovatelné v množině spolupracujících sítí, např. společnost s více pobočkami
+* Podobné jako IPv4 privátní adresy, nelze je ale použít ve veřejné síti (IPv6 nemá NAT)
 
 ![ULA](./img/HW_10_03.PNG)
 
@@ -123,7 +125,7 @@ prefix | význam
 
 ### __LLA__ – link-local address
 
-* Komunikace na lince (v podsíti)
+* Komunikace na lince (v podsíti), linka končí routerem
 * Povinná pro každé IPv6 zařízení, nesměrovatelná, nastavuje ji OS
 * prefix `FE80::/10` __+__ 54 nulových bitů __+__ 64bitový identifikátor rozhraní
 * např.: `fe80::714b:9770:43d4:f8b2`
@@ -144,6 +146,31 @@ prefix | význam
   * Používá ji Neighbor Discovery Protocol, aby zjistil, zdali je určitá adresa unikátní na lince
   * Spojení prefixu `ff02::1:ff00:0/104` s posledními 24 bity testované uni/anycast adresy
   * Např. `ff02::1:ff00:0/104` + `fe80::2aa:ff:fe`__`28:9c5a`__ = `ff02::1:ff28:9c5a`
+
+## Zóna
+
+* Adresy v zóně musí být unikátní
+* Různé dosahy zóny, např.:
+  * 2 – linka – fyzická síť (Ethernet)
+  * 4 – správa – obvykle podsíť
+  * 5 – místo – koncová zákaznická síť – jedna organizace, jedna lokalita
+  * E – globální – celosvětový dosah
+  * aj.
+* Celá zóna je vždy zahrnuta do nadřízené zóny většího dosahu
+* Zóny stejného dosahu se nesmí překrývat
+* Jelikož adresa je unikátní jen v rámci zóny a zařízení může být ve více zónách stejného dosahu, může se stejná adresa objevit v několika zónách
+* -> Pro jejich odlišení zavedeny identifikátory zón (Zone ID)
+* Zápis _`<address>`_`%`_`<Zone ID>`_ např.: `fe80::714b:9770:43d4:f8b2`__`%18`__
+* Příkaz ve Windows `netsh interface ipv6 show interfaces`
+
+## Použití adresy
+
+``` txt
+ping -6 ipv6.google.com
+ping -6 fe80::260:97ff:fe02:6ea5%4
+```
+
+* V prohlížeči se adresa zapisuje do hranatých závorek: `http://[fe80::714b:9770:43d4:f8b2%18]/`
 
 ## Dynamické adresování
 
@@ -183,30 +210,6 @@ prefix | význam
 
 * DHCPv6 server přiděluje i adresu
 * SLAAC ale nelze úplně vypnout, přiděluje totiž výchozí bránu
-
-## Zóna
-
-* Adresy v zóně musí být unikátní
-* Různé dosahy zóny, např.:
-  * 2 – linka – fyzická síť (Ethernet)
-  * 4 – správa – obvykle podsíť
-  * 5 – místo – koncová zákaznická síť – jedna organizace, jedna lokalita
-  * E – globální – celosvětový dosah
-  * aj.
-* Celá zóna je vždy zahrnuta do nadřízené zóny většího dosahu
-* Zóny stejného dosahu se nesmí překrývat
-* Jelikož adresa je unikátní jen v rámci zóny a zařízení může být ve více zónách stejného dosahu, může se stejná adresa objevit v několika zónách
-* -> Pro jejich odlišení zavedeny identifikátory zón (Zone ID)
-* Zápis _`<address>`_`%`_`<Zone ID>`_ např.: `fe80::714b:9770:43d4:f8b2`__`%18`__
-
-## Použití adresy
-
-``` txt
-ping -6 ipv6.google.com
-ping -6 fe80::260:97ff:fe02:6ea5%4
-```
-
-* V prohlížeči se adresa zapisuje do hranatých závorek: `http://[fe80::714b:9770:43d4:f8b2%18]/`
 
 ## NDP – Neighbor Discovery Protocol
 

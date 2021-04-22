@@ -109,8 +109,8 @@
 * Přeposílá pakety směrem k jejich cíly – Cílem je cizí síť
 * Směrovací tabulka (routing table) obsahuje adresu sítě, masku a port (interface), na kterém se nachází
 * Routování:
-  * Statické –
-  * Dynamické –
+  * Statické – routy nastavuje správce
+  * Dynamické – routy nastavuje směrovač pomocí protokolů
 * Pakety mají omezenou životnost TTL (time to live)
 
 ## Firewall

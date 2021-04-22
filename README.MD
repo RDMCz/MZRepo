@@ -1,6 +1,6 @@
 # No mně je zle
 
-`hw [#.#......##...#...............]`
+`hw [#.#......##.#.#...............]`
 
 `sw [########################.]`
 
@@ -94,7 +94,7 @@
     * Příklad vytvoření směrovacích tabulek staticky a pomocí směrovacího protokolu (např. RIP)
 
 14. Problematika bezpečnosti počítačových sítí
-    * Fyzická bezpečnost, sociální inženýrství, adware, spyware, malware, exploit, virus, červ, DoS, DDoS, Botnet (zombie), Man in the Middle (MITM), ransomeware
+    * Fyzická bezpečnost, sociální inženýrství, adware, spyware, malware, exploit, virus, červ, DoS, DDoS, Botnet (zombie), Man in the Middle (MITM), ransomware
     * Zabezpečení přepínače (flooding, snooping, starvation, port security)
     * Zabezpečení bezdrátových sítí (kontrola přístupu, šifrování)  
 
