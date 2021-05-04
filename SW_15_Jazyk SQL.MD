@@ -126,6 +126,6 @@ name | salary
 Rudolf | 15000
 Hektor | 37000
 
-## ---
+---
 
 ![SQL Commands](img/SW_15_01.jpg)

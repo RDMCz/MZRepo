@@ -233,6 +233,6 @@ UNION (ALL)
 SELECT sloupce FROM tabulka2;
 ```
 
-## ---
+---
 
 ![Joins](img/SW_16_01.png)
