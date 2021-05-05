@@ -98,7 +98,7 @@
 ### PCIe – PCI Express
 
 * Serial Full-duplex
-* Velikosti 1x, 4x, 8x, 16x, do větších lze zapojit menší
+* Velikosti x1, (x2), x4, x8, x16, do větších lze zapojit menší
   * U open ended konektorů lze do menších zapojit větší
 * Verze 1.0-5.0, zpětná kompatibilita
 

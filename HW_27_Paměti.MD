@@ -70,9 +70,19 @@
 ### Základní parametry
 
 * Kapacita [GB]
-* Fromát – DIMM, SO-DIMM (, SIMM, SIPP)
+* Formát – DIMM, SO-DIMM, (SIMM, SIPP)
 * Typ – SDRAM DDR2/3/4/5
 * Pracovní frekvence [MHz] – Počet instrukcí za vteřinu, také může být uvedeno v MT/s (Mega Transfers per second)
+
+### GDDR – Graphics DDR
+
+* DDR SDRAM přizpůsobená pro práci s GPU
+
+### HBM – High Bandwidth Memory
+
+* 3D paměť – DRAM čipy se skládají na sebe
+* Díky tomu data putují kratší vzdálenost a je umožněna větší hustota, nižší spotřeba a širší sběrnice
+* Drahé na výrobu, využito v některých kartách od AMD
 
 ## Cache
 
