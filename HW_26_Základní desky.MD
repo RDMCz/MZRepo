@@ -105,7 +105,7 @@
 PCIe | x1 | x16
 --- | --: | --:
 1.0 | 250 MB/s | 4 GB/s
-5.0 | 2 GB/s | 64 GB/s
+5.0 | 4 GB/s | 64 GB/s
 
 * Základní rychlost je 250 MB/s, zdvojnásobuje se s každou novou verzí nebo větší velikostí
 * Síťové, zvukové, střihové, televizní, USB, AIC SSD, ... karty
