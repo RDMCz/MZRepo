@@ -14,6 +14,7 @@
             <th colspan=2>Vrstva</th>
             <th>Protokolová datová jednotka</th>
             <th>Funkce</th>
+            <th>TCP/IP</th>
         </tr>
     </thead>
     <tbody>
@@ -21,12 +22,13 @@
             <td><strong>7</strong></td>
             <td><strong>Aplikační</strong></td>
             <td rowspan=3>Zpráva</td>
-            <td>Vrstva nejblíže k uživateli. Obsahuje jádro aplikací, které ma smysl standardizovat (např. přenosové mechanismy elektronické pošty), zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu. Poskytuje uživatelským programům ucelené služby.</td>
+            <td>Vrstva nejblíže k uživateli. Obsahuje jádro aplikací, které má smysl standardizovat (např. přenosové mechanismy elektronické pošty), zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu. Poskytuje uživatelským programům ucelené služby.</td>
+            <td rowspan=3><strong>Aplikační</strong></td>
         </tr>
         <tr>
             <td><strong>6</strong></td>
             <td><strong>Prezentační</strong></td>
-            <td>Transformuje data do tvaru, který používají aplikace (šifrování, konvertování, komprimace). Zabývá se strukturou dat, nikoliv jejich významem. Úkolem je, aby odeslaná data dorazila ve stejné podobě.</td>
+            <td>Transformuje data do tvaru, který používají aplikace (šifrování, konvertování, komprimace). Zabývá se strukturou dat, nikoliv jejich významem.</td>
         </tr>
         <tr>
             <td><strong>5</strong></td>
@@ -38,18 +40,21 @@
             <td><strong>Transportní</strong></td>
             <td>TCP segment / UDP datagram</td>
             <td>Přenos dat mezi koncovými uzly (end-to-end). Účelem je poskytnout takový přenos, který si vyžadují vyšší vrstvy. Řeší odeslání dat ze zdroje do cíle. (TCP/UDP)</td>
+            <td><strong>Transportní</strong></td>
         </tr>
         <tr>
             <td><strong>3</strong></td>
             <td><strong>Síťová</strong></td>
             <td>Paket</td>
             <td>Propojuje nesousední systémy – komunikace dvou uzlů, které nejsou přímo spojeny (prostřednictvím jiných uzlů). Logická adresace – IP protokol – IP adresa. Směrování – určení cesty paketu; všechny směrovače pracují na této vrstvě.</td>
+            <td><strong>Síťová</strong></td>
         </tr>
         <tr>
             <td><strong>2</strong></td>
             <td><strong>Linková</strong></td>
             <td>Rámec</td>
             <td>Přenáší data mezi dvěma přímo spojenými uzly. Uspořádání dat z fyzické vrstvy do rámců. Pracuje s rámci, hlásí chyby. Adresace MAC a LLC. Na této vrstvě fungují přepínače; propojení pouze místních zařízení. Ethernet, Wi-Fi, ZigBee.</td>
+            <td rowspan=2><strong>Vrstva síťového rozhraní</strong></td>
         </tr>
         <tr>
             <td><strong>1</strong></td>

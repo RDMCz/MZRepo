@@ -1,6 +1,6 @@
-# No mně je zle
+# Už nikdy více 😫
 
-`[ HW ] [###......####.#.........######]`
+`[ HW ] [####.....####.#.........######]`
 
 `[ SW ] [########################.]`
 
@@ -36,8 +36,7 @@
     * Změna vlastníka a oprávnění
 
 4. Referenční model OSI/ISO
-    * Protokol, rozhraní, popis a funkce jednotlivých vrstev, PDU, zapouzdřování, porovnání s modelem TCP/IP, průchod dat přes síťové prvky, kategorie přepínačů pro jednotlivé vrstvy,
-    * nástroje pro zachycování dat v síti, testování a oprava problémů v síti
+    * Protokol, rozhraní, popis a funkce jednotlivých vrstev, PDU, zapouzdřování, porovnání s modelem TCP/IP, průchod dat přes síťové prvky, kategorie přepínačů pro jednotlivé vrstvy, nástroje pro zachycování dat v síti, testování a oprava problémů v síti
 
 5. VLAN, návrh podnikové sítě
     * Koncepce VLAN, výhody nasazení VLAN, access VLAN, trunk VLAN, IEEE802.1Q, native VLAN, management VLAN, voice VLAN.

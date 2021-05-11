@@ -22,12 +22,12 @@
             <td><strong>7</strong></td>
             <td><strong>Aplikační</strong></td>
             <td rowspan=3>Zpráva</td>
-            <td>Vrstva nejblíže k uživateli. Obsahuje jádro aplikací, které ma smysl standardizovat (např. přenosové mechanismy elektronické pošty), zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu. Poskytuje uživatelským programům ucelené služby.</td>
+            <td>Vrstva nejblíže k uživateli. Obsahuje jádro aplikací, které má smysl standardizovat (např. přenosové mechanismy elektronické pošty), zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu. Poskytuje uživatelským programům ucelené služby.</td>
         </tr>
         <tr>
             <td><strong>6</strong></td>
             <td><strong>Prezentační</strong></td>
-            <td>Transformuje data do tvaru, který používají aplikace (šifrování, konvertování, komprimace). Zabývá se strukturou dat, nikoliv jejich významem. Úkolem je, aby odeslaná data dorazila ve stejné podobě.</td>
+            <td>Transformuje data do tvaru, který používají aplikace (šifrování, konvertování, komprimace). Zabývá se strukturou dat, nikoliv jejich významem.</td>
         </tr>
         <tr>
             <td><strong>5</strong></td>
