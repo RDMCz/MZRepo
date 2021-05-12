@@ -38,7 +38,7 @@
 ``` txt
 Router> en
 Router# conf t
-Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.2 ——((buď rozsah nebo lze napsat jen jednu))
+Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.2    // buď rozsah nebo lze napsat jen jednu
 Router(config)# ip dhcp pool bazen
 Router(dhcp-config)# network 192.168.1.0 255.255.255.0
 Router(dhcp-config)# default-router 192.168.1.1
@@ -149,17 +149,17 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 == Statická NAT =================================================================
 Router(config)# ip nat inside source static 192.168.1.3 89.24.220.3
 
-Router(config)# interface fastethernet 0/0
+Router(config)# interface fastEthernet 0/0
 Router(config-if)# ip nat inside
 
-Router(config)# interface fastethernet 0/1
+Router(config)# interface fastEthernet 0/1
 Router(config-if)# ip nat outside
 
 == Dynamická NAT ================================================================
-Router(config)# interface fastethernet 0/0
+Router(config)# interface fastEthernet 0/0
 Router(config-if)# ip nat inside
 
-Router(config)# interface fastethernet 0/1
+Router(config)# interface fastEthernet 0/1
 Router(config-if)# ip nat outside
 
 Router(config)# access-list 1 permit 192.168.1.0 0.0.0.255
@@ -167,14 +167,14 @@ Router(config)# ip nat pool bazen 89.24.220.3 89.24.220.6 netmask 255.255.255.0
 Router(config)# ip nat inside source list 1 pool bazen
 
 == PAT ==========================================================================
-Router(config)# interface fastethernet 0/0
+Router(config)# interface fastEthernet 0/0
 Router(config-if)# ip nat inside
 
-Router(config)# interface fastethernet 0/1
+Router(config)# interface fastEthernet 0/1
 Router(config-if)# ip nat outside
 
 Router(config)# access-list 1 permit 192.168.1.0 0.0.0.255
-Router(config)# ip nat pool bazen 89.24.220.3 89.24.220.3 netmask 255.255.255.0 ——((rozsah, jedna adresa))
+Router(config)# ip nat pool bazen 89.24.220.3 89.24.220.3 netmask 255.255.255.0     // Jedna adresa zapsaná pomocí rozsahu
 Router(config)# ip nat inside source list 1 pool bazen overload
 ```
 
