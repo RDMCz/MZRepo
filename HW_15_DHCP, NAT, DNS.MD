@@ -38,7 +38,7 @@
 ``` txt
 Router> en
 Router# conf t
-Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.2    // buď rozsah nebo lze napsat jen jednu
+Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.2    // Buď rozsah nebo lze napsat jen jednu
 Router(config)# ip dhcp pool bazen
 Router(dhcp-config)# network 192.168.1.0 255.255.255.0
 Router(dhcp-config)# default-router 192.168.1.1

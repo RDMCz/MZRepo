@@ -102,7 +102,7 @@
 * Propojuje nesousední systémy – komunikace dvou uzlů, které nejsou přímo spojeny, prostřednictvím jiných uzlů
 * Logická adresace – IP protokol – IP adresa
 * Směrování – určení cesty paketu
-* Na této vrstvě pracuje směrovač a L3 Switch
+* Na této vrstvě pracuje směrovač a L3 switch
 
 ## 4. Transportní vrstva
 
