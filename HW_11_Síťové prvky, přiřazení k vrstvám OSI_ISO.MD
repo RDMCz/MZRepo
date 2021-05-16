@@ -2,7 +2,7 @@
 
 * Popis standardního chování opakovače, mostu, přepínače, směrovače, firewallu …
 * Možnosti nastavení přepínače a směrovače pomocí managementu – další funkce směrovače,
-* Domácí router a WiFi router – možnosti nastavení, porovnání s podnikovým routerem
+* Domácí router a Wi-Fi router – možnosti nastavení, porovnání s podnikovým routerem
 * Možnosti škálování sítí (drátové i bezdrátové) – rozšíření množství portů
 
 ## Referenční model ISO/OSI
@@ -122,7 +122,7 @@
   * Senzor obsahující mechanismy pro detekci nebezpečných kódů
 * IPS – Intrusion Prevention System
 
-## WiFi Router
+## Wi-Fi Router
 
 * Router + switch + access point
 * Zapnutá NAT (občas i natvrdo)
@@ -131,4 +131,4 @@
   * Obvykle 4 žluté – slouží jako switch
 * Nastavení routeru přes prohlížeč, user friendly UI
 * Lze si nastavit DHCP, QoS, VPN, ...
-* Existují také WiFi DSL Modem Routery (do WAN je připojen přes RJ-11 namísto RJ-45)
+* Existují také Wi-Fi DSL Modem Routery (do WAN je připojen přes RJ-11 namísto RJ-45)

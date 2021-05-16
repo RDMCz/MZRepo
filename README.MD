@@ -1,6 +1,6 @@
 # Už nikdy více 😫
 
-`[ HW ] [######...####.#.........######]`
+`[ HW ] [########.######.........######]`
 
 `[ SW ] [########################.]`
 
@@ -51,10 +51,10 @@
     * Připojení VLAN do internetu
 
 7. Sítě standardu IEEE 802.11
-    * Přenosová trasa, přístup k médiu, 802.11a/b/g/n/ac/ax WiFi, AP,
-    * fyzická vrstva – SS (rozprostřeno?) – AFH, DS, OFDM, QAM, MIMO (multiple input, multiple output),
+    * Přenosová trasa, přístup k médiu, 802.11a/b/g/n/ac/ax Wi-Fi, AP,
+    * fyzická vrstva – SS – AFH, DS, OFDM, QAM, MIMO (multiple input, multiple output),
     * Ad-hoc, Wi-Fi Direct, infrastrukturní sítě,
-    * BSS, ESS, ESSID, MAC control, WEP, WPA, WPA2, WPA3, EAP, 802.1X, Radius, AAA.
+    * BSS, ESS, ESSID, MAC control, WEP, WPA, WPA2, WPA3, EAP, 802.1X, Radius, AAA
 
 8. Protokol TCP, UDP
     * Přepínání datagramů vs. přepínání obvodů, TCP komunikace, segmentace, multiplexování segmentů, formát datagramu, řízení toku, omezení režie, navázání a ukončení spojení (tří a čtyřcestný handshake), plovoucí okno.
@@ -78,7 +78,7 @@
 11. Síťové prvky, přiřazení k vrstvám OSI/ISO
     * Popis standardního chování opakovače, mostu, přepínače, směrovače, firewallu …
     * Možnosti nastavení přepínače a směrovače pomocí managementu – další funkce směrovače,
-    * Domácí router a WiFi router – možnosti nastavení, porovnání s podnikovým routerem
+    * Domácí router a Wi-Fi router – možnosti nastavení, porovnání s podnikovým routerem
     * Možnosti škálování sítí (drátové i bezdrátové) – rozšíření množství portů
 
 12. Zabezpečení komunikace, ACL
@@ -95,7 +95,7 @@
 14. Problematika bezpečnosti počítačových sítí
     * Fyzická bezpečnost, sociální inženýrství, adware, spyware, malware, exploit, virus, červ, DoS, DDoS, Botnet (zombie), Man in the Middle (MITM), ransomware
     * Zabezpečení přepínače (flooding, snooping, starvation, port security)
-    * Zabezpečení bezdrátových sítí (kontrola přístupu, šifrování)  
+    * Zabezpečení bezdrátových sítí (kontrola přístupu, šifrování)
 
 15. DHCP, NAT, DNS
     * DHCPv4 komunikace s DHCP serverem, obsah zprávy DHCP serveru

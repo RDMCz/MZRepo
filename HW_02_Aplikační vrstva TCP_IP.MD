@@ -92,6 +92,7 @@
 69 | TFTP | Trivial File Transfer Protocol
 80 | HTTP | Hypertext Transfer Protocol
 110 | POP3 | Post Office Protocol
+161 | SNMP | Simple Network Management Protocol
 143 | IMAP | Internet Message Access Protocol
 443 | HTTPS | HTTP Secure
 445 | SMB | Server Message Block

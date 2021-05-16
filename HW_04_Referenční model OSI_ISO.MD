@@ -107,18 +107,18 @@
 ## 4. Transportní vrstva
 
 * Řeší odeslání dat ze zdroje do cíle takovým způsobem, jaký si vyžadují vyšší vrstvy
-* Nejnižší vrstva, kterou se nazbývají síťové prvky, ale pouze koncová zařízení
+* Nejnižší vrstva, kterou se nezabývají síťové prvky, ale pouze koncová zařízení
 * Přijímá data z relační vrstvy a rozkládá je na pakety pro síťovou vrstvu
-* Stará se o bezchybný přenos zprávy (kontrola chyb, sestavení zprávy po přenosu)
+* Stará se o (bezchybný) přenos zprávy (kontrola chyb, sestavení zprávy po přenosu)
 * TCP – Transmission Control Protocol
   * Three-way handshake
   * Spolehlivost – zaručuje úplné správné odeslání
   * Potvrzuje přijatá data, znovu odesílá ztracená data
   * Pomalejší
-  * WWW, e-mail, SSH
+  * WWW, e-mail, FTP, SSH
 * UDP – User Datagram Protocol
   * Rychlejší, menší hlavička
-  * Nezaručuje se úplné správné odeslání
+  * Nezaručuje se úplné správné odeslání – ztráta, poškození, duplikace, špatné pořadí
   * VoIP, video stream, online hry
 
 ## 5. Relační vrstva

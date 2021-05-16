@@ -47,7 +47,7 @@
 ### VLAN mezi více přepínači
 
 1. Cisco ISL – Inter-Switch Link – funguje pouze na Cisco zařízeních
-2. Propojení access portů na obou přepínačích a přiřazení do stejné VLAN – nepraktické
+2. Propojení access portů na obou přepínačích pro každou VLAN – nepraktické
 3. IEEE 802.1Q
 
 ### IEEE 802.1Q – "Dot1q"
