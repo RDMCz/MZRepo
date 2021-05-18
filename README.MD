@@ -1,11 +1,11 @@
 # Už nikdy více 😫
 
-`[ HW ] [########.######.........######]`
+`[ HW ] [########.########.......######]`
 
 `[ SW ] [#########################]`
 
 [mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing),
-[pepino](https://github.com/Soukupis/FinalExamQuestions)
+[pepin](https://github.com/Soukupis/FinalExamQuestions)[o](https://github.com/RDMCz/Ondra-MIT)
 
 [c#](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html),
 [netw](http://samuraj-cz.com)

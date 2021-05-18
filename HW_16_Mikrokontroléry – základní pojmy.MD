@@ -14,6 +14,7 @@
   * A/D převodník
   * Komunikační periferie
 * Použití – Elektronická zařízení s digitálním řízením
+* Od PC se liší architekturou, fyzickou velikostí, energetickou náročností a výpočetním výkonem
 
 ## Von Neumannova architektura
 
@@ -44,12 +45,15 @@
 * Dokumentace strana 1
 * Harvardská RISC architektura
   * Reduced Instruction Set Computer – jednoduchá a vysoce optimalizovaná sada instrukcí
-* Většina instrukcí zabírá jeden hodinový cyklus
+  * _130 Powerful Instructions_ – Pro RISC relativně hodně (existují RISC procesory s pár desítkami instrukcí), u CISC je ale 130 instrukcí málo
+  * _Most Single Clock Cycle Execution_ – Instrukce trvají stejnou dobu
+  * Většina instrukcí má stejnou délku (v binárním zápisu) – V paměti zabírají stejně místa
+  * _32 x 8 General Purpose Working Registers_ – 32 osmibitových registrů
+  * Load/Store architektura – S operační pamětí pracují pouze instrukce pro čtení a zápis do paměti; Všechny aritmeticko-logické operace pracují pouze s registry (žádná ALU operace nemůže sahat přímo do paměti, nejdříve se pomocí operací přesunu musí hodnota nahrát do registru)
 * 8bit
   * Osmibitová datová sběrnice
   * Osmibitová šířka registrů
   * Osmibitový implicitní datový typ pro ALU
-* 32 osmibitových registrů
 * Hardwarová násobička
 * 64 KB Flash – velikost paměti programu
 * 4 KB SRAM – velikost datové paměti (cache)
@@ -60,4 +64,17 @@
 * SPI
 * 53 vstupně-výstupních pinů
 
-// TODO (?)
+![bože](./img/HW_16_03.png)
+
+![božínku](./img/HW_16_04.png)
+
+## Příznaky Status
+
+* __`I`__ – Globální povolení přerušení
+* __`T`__ – Jednobitová "proměnná", BST a BLD
+* __`H`__ – Half carry – přechod do vyššího řádu mezi nibbly
+* __`S`__ – N ⊕ V
+* __`V`__ – oVerflow – aritmetické přetečení nebo přetečení znaménka
+* __`N`__ – Negative – záporný výsledek
+* __`Z`__ – Zero – nulový výsledek
+* __`C`__ – Carry – přenos do vyššího řádu
