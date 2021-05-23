@@ -27,13 +27,16 @@
 ### Elektrické vlastnosti
 
 <table><tbody>
-    <tr><td>DC Current per I/O Pin</td><td>40 mA</td><td>pin by měl krátkodobě vydržet proud 40 mA (maximální)</td></tr>
-    <tr><td>Output Low/High Voltage</td><td>20 mA při 5V a 10 mA při 3V napájecím napětí</td><td>hodnota pro dlouhodobé zatížení na pin, směr proudu (znaménko) se mění podle logické nuly/jedničky (pracovní)</td></tr>
-    <tr><td>Input Low Voltage except XTAL1 and RESET pins</td><td>< 0,2 Vcc</td><td>do 20 % Vcc se interpretuje jako logická nula</td></tr>
-    <tr><td>Input High Voltage except XTAL1 and RESET pins</td><td>> 0,6 Vcc</td><td>nad 60 % Vcc se interpretuje jako logická jednička (0,2–0,6 je zakázané pásmo)</td></tr>
+    <tr><td>DC Current per I/O Pin</td><td colspan=2>40 mA</td><td>pin by měl krátkodobě vydržet proud 40 mA (maximální)</td></tr>
+    <tr><td>Output Low Voltage</td><td>20 mA (5V) / 10 mA (3V)</td><td>MAX 0,7 / 0,5 V *</td><td rowspan=2>hodnota pro dlouhodobé zatížení na pin, směr proudu (znaménko) se mění podle logické nuly/jedničky (pracovní)</td></tr>
+    <tr><td>Output High Voltage</td><td>-20 mA (5V) / -10 mA (3V)</td><td>MIN 4,2 / 2,2 V **</td></tr>
+    <tr><td>Input Low Voltage except XTAL1 and RESET pins</td><td colspan=2>< 0,2 Vcc</td><td>do 20 % Vcc se interpretuje jako logická nula</td></tr>
+    <tr><td>Input High Voltage except XTAL1 and RESET pins</td><td colspan=2>> 0,6 Vcc</td><td>nad 60 % Vcc se interpretuje jako logická jednička (0,2–0,6 je zakázané pásmo)</td></tr>
 </tbody></table>
 
-* Pro některé porty nebo piny je ještě definovaný součtový limit dlouhodobé velikosti proudu (uvedeno pod tabulkou strana 326)
+* \* Pokud je pin v logické nule, napětí nepřekročí tuto hodnotu
+* \*\* Pokud máme napájecí napětí 5V (3V) a pin není zatížen více jak 20 mA (10 mA), tak se zaručuje,  že výstupní napětí na pinu nepoklesne pod tuto hodnotu
+* Pro některé porty nebo piny je ještě definovaný součtový limit dlouhodobé velikosti proudu (uvedeno pod tabulkou strana 326) (celkový limit na všechny piny 400 mA + limity pro konkrétní porty/piny dohromady)
 
 ## Příklady instrukcí pro práci s porty
 
