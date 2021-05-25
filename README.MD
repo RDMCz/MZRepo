@@ -109,39 +109,30 @@
     * TLD, SLD, přiřazení DN, překlad, autoritativní odpověď
 
 16. Mikrokontroléry (mcu) – základní pojmy
-    * (01)
     * Vysvětlení pojmu mikrokontrolér, harvardská a von Neumannova architektura, hlavní vlastnosti mikrokontrolérů Atmel AVR, popis blokového schématu.
 
 17. Instrukční soubor mcu
-    * (02)
     * Druhy instrukcí, popis. Struktura instrukce v paměti, CISC, RISC, architektura load-store, doba provádění instrukce. Popis příkladu zdrojového kódu programu v asm.
 
 18. Paralelní porty mcu
-    * (03)
     * Popis paralelních portů mikrokontrolérů řady Atmel AVR. Obvodový popis portu, elektrické vlastnosti. Příklady instrukcí pro práci s porty.
 
 19. Připojování externích periferií k mcu
-    * (04)
     * Tlačítka, klávesnice, LED, segmentové a inteligentní displeje.
 
 20. Čítačové podsystémy mcu
-    * (05)
     * Režim čítače/časovače, podrobný popis pro Atmel AVR. Režimy CAPTURE, COMPARE, PWM. Dohlížecí časovač WDT.
 
 21. Internet věcí
-    * (09)
     * Vysvětlení pojmu, architektura, sítě typu LPWAN, komunikační protokoly.
 
 22. Přerušovací podsystém mcu
-    * (06)
     * Přerušení, obsluha, vektor, povolení, příznak, priorita, kontext, zpracování, přerušovací systém Atmel AVR.
 
 23. Vyšší programovací jazyky pro mcu
-    * (07)
     * Požadavky vpj na architekturu mcu, omezení a rozdíly vůči programování pro osobní počítače, optimalizace kompilátoru.
 
 24. Sériová rozhraní mcu
-    * (08)
     * Popis sériových sběrnic USART, RS422/485, SPI/Microwire, I2C, 1Wire, CAN. Popis sériového portu Atmel AVR.
 
 25. Procesory
