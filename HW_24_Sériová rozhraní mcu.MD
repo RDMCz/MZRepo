@@ -60,9 +60,9 @@
 
 SPI | Serial Peripheral Interface
 --: | :-:
-Vzdálenost | ?
-Rychlost | x Mbit/s
-Počet zařízení | ?
+Vzdálenost | 3 m
+Frekvence | CK/2 (ATmega64)
+Počet zařízení | Podle počtu vývodů na masteru
 Řízení | Singlemaster
 Adresace | HW
 Zabezpečení | —
@@ -77,7 +77,7 @@ Duplexita | Full duplex
   * V klidovém stavu jsou vodiče v úrovni H
   * Při přenosu jsou na SDA vysílány jednotlivé bity s tím, že logická hodnota SDA se může změnit, pouze pokud je SCL v úrovni L
   * Toto pravidlo je porušeno ve dvou případech: vysílání podmínek START a STOP – zahájení arbitrace a ukončení přenosu
-* Každá stanice si synchronizuje GHS měřením trvání úrovně H na CSL vnitřním časovačem
+* Každá stanice si vnitřním časovačem synchronizuje GHS měřením trvání úrovně H na CSL
   * To umožňuje některé ze stanic zpomalit přenos
 
 ![TWI0](./img/HW_24_02.png)
@@ -86,7 +86,7 @@ Duplexita | Full duplex
 * Poté jsou přenášena data, každý byte je následován jedním bitem ACK
   * Pokud vysílající stanice nedostane potvrzení příjmu, ukončí vysílání podmínkou STOP
 * Po ukončení přenosu je vyslána podmínka STOP
-* Vysilající stanice porovnává vysílané bity se skutečnou hodnotou SDA
+* Vysílající stanice porovnává vysílané bity se skutečnou hodnotou SDA
   * Pokud se liší, musí vysílání okamžitě ukončit
   * => Řešení arbitrace pomocí detekce kolize
 
@@ -105,16 +105,43 @@ Duplexita | Half duplex
 
 ## USART – Universal Synchronous and Asynchronous Receiver and Transmitter
 
-* Pomocí jednotky USART lze komunikovat protokoly RS-232, RS-422 a RS-485
 * ATmega64 má USART0 (PORTE) a USART1
 * Podporuje synchronní a asynchronní ("UART") režim
-* Převážně point-to-point mezi dvěma MCU
+* Point-to-point; převážně mezi dvěma MCU
 * Full-duplex
-* // TODO (?)
 
 ### USART na ATmega64
 
 ![USART](./img/HW_24_01.png)
+
+* Horní část _Clock Generator_ obsahuje synchronizační logiku pro externí vstupní pulz (clock slave) a _Baud Rate Generator_ dělící frekvenci mikrokontroléru na frekvenci vhodnou pro USART
+* Čtyři režimy, nastavení v konfiguračních registrech
+  1. Normální asynchronní
+  2. Asynchronní s dvojnásobnou rychlostí
+  3. Synchronní – master
+  4. Synchronní – slave
+* Asynchronní režim s dvojnásobnou rychlostí:
+  * Frekvence asynchronní komunikace je 2x rychlejší (_Baud Rate Generator_ dělen 8 místo 16)
+  * V _Receiveru_ stihnou _Clock Recovery_ a _Data Recovery_ přečíst hodnotu 2x méně (8x místo 16x)
+* Synchronní režim:
+  * Pin _XCK_ slouží jako clock master nebo clock slave, v asynchronním režimu se nepoužívá
+  * U zařízení bez speciálního pinu pro hodiny se pro synchronní USART komunikaci musí obětovat jeden z pinů transmitter/receiver, tím se zhorší duplexita
+* USART podporuje všech třicet kombinací formátu rámce:
+  * 1 startovní bit
+  * 5/6/7/8/9 datových bitů – začíná se od nejméně významného bitu
+  * Žádný/lichý/sudý paritní bit
+  * 1/2 stop bity
+* Formát rámce také nastaven v konfiguračních registrech (nepřenastavovat během komunikace)
+
+USART | Universal Synchronous and Asynchronous Receiver and Transmitter
+--: | :-:
+Vzdálenost | Klidně i stovky metrů (převod na RSxxx, kvalita kabelu, počet baudů)
+Frekvence | Uvedena v baudech (až megabaudech; bit/s), ostatní rychlosti odvozeny dělením; v praxi desítky/stovky kbit/s
+Počet zařízení | 2
+Řízení | Point-to-Point
+Adresace | —
+Zabezpečení | —
+Duplexita | Full duplex
 
 ---
 ---

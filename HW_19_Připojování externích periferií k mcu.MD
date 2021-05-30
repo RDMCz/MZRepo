@@ -121,4 +121,11 @@
 
 ## Zákmity a jejich odstranění
 
-// TODO nepovinné
+* Způsobeny mechanickými nedokonalostmi tlačítek
+* Změna stavu na opačnou hodnotu je doprovázena vícenásobnými přechody
+
+1. Schmittův klopný obvod + kapacitor
+2. RS klopný obvod
+3. Monostabilní klopný obvod (NE555)
+4. Softwarové řešení
+5. ...
