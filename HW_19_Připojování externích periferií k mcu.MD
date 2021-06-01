@@ -48,10 +48,13 @@
 
 ![1903](./img/HW_19_03.PNG)
 
-* Na paralelní vstup se připojí tlačítka, jedním pulzem se dostane stav všech tlačítek do stavového registru
-* Počtem pulzů odpovídajícím počtu tlačítek, se hodnoty vytáhnou do MCU
+* Na paralelní vstup jsou připojena tlačítka
+
+1. Na pinu _sp_ se nastaví parallel a pošle se jeden pulz na _clk_, tím se stav všech tlačítek zapíše do posuvného registru
+2. Na pinu _sp_ se nastaví serial a na _clk_ se pošle tolik pulzů, kolik je tlačítek; po každém pulzu se čte datový vstup (hodnoty se "vytáhnou" z PISO do MCU)
+
 * Výhody:
-  * Konstatní počet pinů // TODO
+  * Konstatní počet pinů (3)
   * Detekce více stisknutých tlačítek současně
 * Nevýhody:
   * Sériové čtení – pomalejší, rychlý stisk nemusí být zachycen

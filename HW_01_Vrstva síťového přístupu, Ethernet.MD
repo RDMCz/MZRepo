@@ -101,6 +101,10 @@
 * MAC adresa:
   * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
   * 48 bitů, kontrola pomocí komparátoru
+    * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
+    * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
+    * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
+    * Druhá polovina – Přiděluje výrobce (náhodně)
 
 ### IEEE 802.2 – LLC vrstva – Logical Link Control
 

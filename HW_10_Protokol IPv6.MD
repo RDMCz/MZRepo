@@ -10,7 +10,7 @@
 ## IPv6 – Internet Protocol Version 6
 
 * Internet Protocol je zodpovědný za směrování (routování) paketů ze zdroje do cíle
-* IP adresa jednoznačně identifikuje síťové rozhraní na třetí vrstvě OSI/ISO
+* IP adresa jednoznačně identifikuje síťové rozhraní na třetí vrstvě ISO/OSI
 * IPv6 adresy se skládají z osmi skupin po čtyřech hexa číslech (0-F) oddělených dvojtečkou = __osm hextetů__
 * `0123:BB99:3210:FE00:58A0:4565:98AE:1245`
 * Vznikla kvůli nedostatku IPv4 adres

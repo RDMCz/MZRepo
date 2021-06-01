@@ -116,6 +116,12 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 * "Díra do NAT"
 * Umožňuje aby se přes určitý port dalo dostat z internetu do privátní sítě
 
+<table>
+    <tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr>
+    <td>Registered</td><td>1024 ÷ 49151</td><td>Určitý protokol či aplikace, IANA</td></tr>
+    <td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr>
+</table>
+
 Číslo portu | Aplikace | ...
 :-: | :-: | :--
 20, 21 | FTP | File Transfer Protocol

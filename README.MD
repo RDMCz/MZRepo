@@ -1,14 +1,12 @@
-# Už nikdy více 😫
+# 🥺👉👈
 
-`[ HW ] [########.#####################]`
+`[ HW ] [##############################]`
 
 `[ SW ] [#########################]`
 
-[mišmaus](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing),
-[pepin](https://github.com/Soukupis/FinalExamQuestions)[o](https://github.com/RDMCz/Ondra-MIT)
-
-[c#](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html),
-[netw](http://samuraj-cz.com)
+[Barth](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing),
+[Běhálek](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html),
+[Bouška](http://samuraj-cz.com)
 
 ## HW
 
@@ -64,7 +62,7 @@
     * Značení portů na aktivních propojovacích prvcích (př. CISCO), fyzické adresy (MAC)
     * třídy adres IPv4, rezervované (speciální adresy), veřejné a privátní adresy,
     * získání adresy, protokol ARP, vytváření podsítí (podsítě konstantní velikosti, VLSM)
-    * porty (dobře známé, registrované, volné), popis přenosu dat od odesilatele (klient) k adresátovi (server), přechod paketu přes standardní bránu, ARP - získání MAC,
+    * porty (dobře známé, registrované, volné), popis přenosu dat od odesílatele (klient) k adresátovi (server), přechod paketu přes standardní bránu, ARP - získání MAC,
     * rozložení cesty z pohledu modelu TCP/IP – zapouzdření dat
 
 10. Protokol IPv6
