@@ -62,7 +62,7 @@ for (int i = 0; i < pole.Length; i++) {
 }
 ```
 
-Selection sort najde v poli minimum (projede všech n prvků, to trvá n), dá ho na začátek a hledá nové minimum (takhle nkrát). Náročnost je tedy `O(n**2)`.
+Selection sort najde v poli minimum (projede všech n prvků, to trvá n), dá ho na začátek a hledá nové minimum (takhle nkrát). Náročnost je tedy `O(n**2)`, stejně jako u bubble sortu.
 
 Algoritmus, který by zkoušel všechny možnosti, dokud nenajde tu seřazenou (permutace), by měl náročnost `O(n!)`.
 
@@ -73,13 +73,13 @@ Algoritmus, který by zkoušel všechny možnosti, dokud nenajde tu seřazenou (
 * Výhodou je usnadnění zápisu, čitelnost
 * Nevýhodou je náročnost na paměť a procesor
 
-__Přímá__: Podprogram volá přímo sám sebe.
+__Přímá__: Podprogram volá přímo sám sebe
 
-__Nepřímá__: Více podprogramů se volá navzájem a tvoří "kruh".
+__Nepřímá__: Více podprogramů se volá navzájem a tvoří "kruh"
 
-__Lineární__: Podprogram volá sám sebe vždy jednou.
+__Lineární__: Podprogram volá sám sebe vždy jednou
 
-__Stromová__: Podprogram se volá více jak jednou v rámci jednoho svého úkolu (nemusí být konstantní počet volání).
+__Stromová__: Podprogram se volá více jak jednou v rámci jednoho svého úkolu (nemusí být konstantní počet volání)
 
 ``` csharp
 uint Factorial(uint N) => (N == 0) ? 1 : Factorial(N - 1) * N;

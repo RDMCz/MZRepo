@@ -5,21 +5,36 @@
 
 ## Proměnné
 
-Proměnná je místo v paměti, kam se ukládají data. Je to označení pro identifikátor, který uchovává určitou hodnotu při běhu programu.
+* Proměnná je místo v paměti, kam se ukládají data
+* Je to označení pro identifikátor, který uchovává určitou hodnotu při běhu programu
+* Proměnnou deklarujeme specifikováním datového typu, názvu a popř. hodnoty
 
-## Datové typy + reference a hodnota
+## Datové typy, reference a hodnota
 
-__Hodnotové:__ Hodnota je v paměti uložena přímo a přímo se k ní přistupuje. Mají pevnou velikost.
+* Zásobník a hromada (halda) se nacházejí v paměti RAM
+* Tuto paměť přiděluje programu (vláknu) OS
+* Zásobník je rychlý ale má omezenou velikost
+* Hromada je ~neomezená paměť se složitějším (pomalejším) přístupem
 
-* `int` a jiné celočíselné
-* `float` a jiné desetinné
+### Hodnotové datové typy
+
+* Hodnota je uložena v zásobníku a program s ní pracuje přímo
+* Mají pevnou velikost
+* Lze dělit na základní typy, struktury a výčtové typy
+* V programu se jich vyskytuje mnoho a zabírají málo místa, chceme s nimi pracovat co nejrychleji
+* `int` a jiné celočíselné (`byte`, `short`, `long`)
+* `float` a jiné s plovoucí řádovou čárkou (`double`)
 * `char`
 * `bool`
-* `enum`
 * `struct`
+* `enum`
 
-__Referenční:__ Neuchovává přímo hodnotu samotnou, ale odkaz na místo v paměti (konkrétně na hromadu, kde je skutečný objekt uložen)
+### Referenční datové typy
 
+* V zásobníku neuchovává přímo hodnotu samotnou, ale pouze odkaz (referenci) na místo v paměti
+  * Konkrétně na hromadu, kde je skutečný objekt uložen
+* Na jeden objekt může být více referencí a můžeme vytvářet objekty s dynamickou velikostí
+* O to, aby na hromadě nebyla data s žádnou referencí, se stará garbage collector
 * `object` – alias třídy _`System.Object`_, všechny ostatní třídy z ní dědí
 * `string`
 * `class`
@@ -29,7 +44,7 @@ __Referenční:__ Neuchovává přímo hodnotu samotnou, ale odkaz na místo v p
 
 ## Programy a podprogramy
 
-__Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem.
+__Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem
 
 __Podprogram:__ (subroutine) Část programu
 
@@ -44,20 +59,20 @@ __Podprogram:__ (subroutine) Část programu
 kategorie | operátor
 --- | ---
 __primární__ | závorky `(x)`, přístup ke členu `x.y`, invokace `f(x)`, indexer `a[x]`, `x++`, `x--`, `new`
-__unární__| `+x`, `-x`, `!`, bitová negace `~`, `++x`, `--x`, přetypování `(T)x`, `true`, `false`
-__rozsah__| `x..y`
-__multiplikativní__| `*`, `/`, modulo `%`
-__aditivní__| součet `+`, rozdíl `-`
-__bitové posuny__| `<<`, `>>`
-__relační__| `<`, `>`, `<=`, `>=`, `is`, `as`
-__rovnost__| `==`, `!=`
-__bit AND__| `&`
-__bit XOR__| `^`
-__bit OR__| `\|`
-__AND__| `&&`
-__OR__| `\|\|`
-__ternární__| `? :`
-__přiřazení a lambda__| `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `<<=`, `>>=`, `&=`, `^=`, `\|=`, `=>`
+__unární__ | `+x`, `-x`, `!`, bitová negace `~`, `++x`, `--x`, přetypování `(T)x`, `true`, `false`
+rozsah | `x..y`
+__multiplikativní__ | `*`, `/`, modulo `%`
+__aditivní__ | součet `+`, rozdíl `-`
+bitové posuny | `<<`, `>>`
+__relační__ | `<`, `>`, `<=`, `>=`, `is`, `as`
+__rovnost__ | `==`, `!=`
+bit AND | `&`
+bit XOR | `^`
+bit OR | `\|`
+__AND__ | `&&`
+__OR__ | `\|\|`
+__ternární__ | `? :`
+__přiřazení a lambda__ | `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `<<=`, `>>=`, `&=`, `^=`, `\|=`, `=>`
 
 ## Podmíněné příkazy
 
@@ -126,3 +141,10 @@ foreach (object obj in pole) {
     // pro každý prvek datového typu implementujícího IEnumerable
 }
 ```
+
+---
+---
+
+![typy](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/resources/3.jpg)
+
+![memory](https://www.itnetwork.cz/images/5/csp/pamet_zasobnik_halda.png)
