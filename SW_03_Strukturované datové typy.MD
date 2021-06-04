@@ -80,11 +80,11 @@ Předdefinované třídy kolekcí:
 __System.Collections__:
 
 * Nespecifikovaný datový typ, kolekce mohou obsahovat různé datové typy
+* Prvky získané z kolekce jsou typu object, pro uložení do proměnné jiného typu je potřeba přetypovat
 
 ### __ArrayList__
 
 * Pole implementující rozhraní _IList_, jehož velikost se dynamicky zvětšuje dle potřeby
-* Prvky získané z kolekce jsou typu object, pro uložení do proměnné jiného typu je potřeba přetypovat
 
 ### __Hashtable__
 
@@ -112,6 +112,9 @@ openWith.Add("txt", "winword.exe"); // Nelze, klíč musí být unikátní
 <img src="img/SW_03_02.png" width="500">
 
 __System.Collections.Generic__:
+
+* Datový typ se specifikuje ve chvíli vytvoření instance
+* Generický typ slouží jako zástupce pro budoucí datový typ
 
 ### __Dictionary<TKey,TValue>__
 

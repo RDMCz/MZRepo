@@ -7,9 +7,11 @@
 
 * = Zabalení dat a metod a restrikce přístupu k nim. Používá se pro skrytí dat ve třídě.
 * `private` – Ke členům třídy mají přístup třídy, které z ní dědí a jsou v ní "nested" (`public class A { public class B : A { } }`)
+* `private protected` – Ke členům třídy mají přístup třídy, které z ní dědí a nachází se ve stejném [sestavení](https://docs.microsoft.com/cs-cz/dotnet/standard/assembly/)
 * `protected` – Ke členům třídy mají přístup třídy, které z ní dědí
-* `internal` – Ke členům třídy mají přístup třídy, které z ní dědí a nachází se ve stejném "[sestavení](https://docs.microsoft.com/cs-cz/dotnet/standard/assembly/)"
-* `public` – Ke členům třídy mají přístup ~všichni
+* `internal` – Ke členům třídy mají přístup všechny třídy ve stejném sestavení
+* `protected internal` – Ke členům třídy mají přístup všechny třídy ve stejném sestavení nebo třídy, které z ní dědí
+* `public` – Ke členům třídy mají přístup všechny třídy
 
 ## Dědičnost (Inheritance)
 

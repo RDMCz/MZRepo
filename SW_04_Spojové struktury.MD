@@ -156,7 +156,7 @@ private void Insert(Node iroot, Node node)
 
 ### Odstraňování prvků ze stromu
 
-* Pokud se maže list, stači na něj smazat odkaz
+* Pokud se maže list (prvek bez potomků), stačí na něj smazat odkaz
 * Pokud má jednu větev, je vynechán (podobně jako spojový seznam)
 * Pokud má oba následníky:
   * Je vynechán: jeho předchůdce, který na něj odkazoval, nyní odkazuje na jeho levého potomka

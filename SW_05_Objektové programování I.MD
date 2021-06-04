@@ -29,18 +29,22 @@ __Objektové__:
 * V C# lze mít pouze jednoho rodiče (single inheritance only)
 * Konstruktory a destruktory se nedědí, každá třída si musí definovat svůj vlastní
 
-#### Zapouzdření (Encapsulation)
+### Zapouzdření (Encapsulation)
 
 * = Zabalení dat a metod a restrikce přístupu k nim. Používá se pro skrytí dat ve třídě.
 * `private` – Ke členům třídy mají přístup třídy, které z ní dědí a jsou v ní "nested" (`public class A { public class B : A { } }`)
+* `private protected` – Ke členům třídy mají přístup třídy, které z ní dědí a nachází se ve stejném [sestavení](https://docs.microsoft.com/cs-cz/dotnet/standard/assembly/)
 * `protected` – Ke členům třídy mají přístup třídy, které z ní dědí
-* `internal` – Ke členům třídy mají přístup třídy, které z ní dědí a nachází se ve stejném "[sestavení](https://docs.microsoft.com/cs-cz/dotnet/standard/assembly/)"
-* `public` – Ke členům třídy mají přístup ~všichni
+* `internal` – Ke členům třídy mají přístup všechny třídy ve stejném sestavení
+* `protected internal` – Ke členům třídy mají přístup všechny třídy ve stejném sestavení nebo třídy, které z ní dědí
+* `public` – Ke členům třídy mají přístup všechny třídy
 
 ### Polymorfismus (Polymorphism)
 
 * Podstatou jsou metody, které mají všichni potomci definované se stejnou hlavičkou, ale jiným tělem
 * V C# `virtual` + `override`
+
+### Abstrakce (Abstraction)
 
 ## Třída
 
@@ -53,6 +57,37 @@ __Objektové__:
 * Modifikátor `abstract` může používat třída, metoda, vlastnost, indexer, událost
 * Abstraktní třída je myšlena pouze jako základ pro ostatní třídy, nelze z ní vytvořit instanci
 * Abstraktní členy lze použít pouze v abstraktní třídě, mají pouze hlavičku, tělo je definováno v dědících třídách (pomocí `override` protože Abstraktní člen je automaticky virtuální)
+
+### Statická třída
+
+* Nemohou z ní být tvořeny instance
+* Modifikátor `static` u třídy nastaví všechny její členy na statické
+* U této třídy nelze tedy použít klíčové slovo `new`, ke členům třídy se přistupuje přes jméno třídy samotné
+
+### Statický konstruktor
+
+* Jakákoliv třída může mít statický konstruktor (i vedle "normálního" konstruktoru)
+* Nemůže mít vstupní parametry
+* Volá se automaticky (před vytvořením první instance nebo použitím statického členu), aby inicializoval statické atributy (nebo vlastnosti) dané třídy; k nestatickým atributům přístup nemá
+
+### Zapečetěná třída
+
+* Modifikátor `sealed`
+* Z třídy nelze dědit
+* Modifikátor také lze použít na přepsané (override) metody, aby již nešly přepisovat v dalších potomcích
+
+### Částečná třída
+
+* Modifikátor `partial`
+* Definice tříd, struktur a rozhraní lze rozdělit do více zdrojových souborů
+* Všechny části se zkombinují při kompilaci
+
+### Privátní konstruktor
+
+* Pokud má třída privátní konstruktor, nemohou z ní ostatní třídy (kromě nested potomků) vytvářet instance
+* Použití, pokud má třída metodu, která vrací její instanci
+* Nebo pokud třída nemá žádné _instance methods_ (metody vyžadující vytvoření instance pro své volání), příkladem je knihovna Math
+* (Pokud má třída všechny členy statické, doporučuje se i třídu samotnou udělat statickou)
 
 ## Rozhraní
 
