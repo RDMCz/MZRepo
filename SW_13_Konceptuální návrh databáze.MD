@@ -51,7 +51,7 @@ __Slabá entita:__
 
 __Kardinalita:__
 
-* Vyjadřuje, kolik entitních typů se na relaci (vztahu) podílí nebo může podílet
+* Vyjadřuje, kolik entit se na relaci (vztahu) podílí nebo může podílet
 * __1:1__ – Řádku v jedné tabulce odpovídá právě jeden řádek v druhé tabulce a naopak. Moc se nepoužívá, protože lze zapsat jako jedna tabulka. Využitím je zpřehlednění rozsáhlých tabulek.
   * Např. řidič a automobil – v jednu chvíli řidič řídí právě jeden automobil a ten je zároveň řízen právě tím jedním řidičem.
 * __1:N__ – K jednomu řádku z jedné tabulky patří více řádků z druhé tabulky. Nejpoužívanější typ relace.
@@ -72,9 +72,12 @@ __Parcialita:__
 * Vztah celek-část
 * Část může existovat bez celku
 * Tiskárna může existovat bez počítače
+* Volná vazba se graficky značí prázdným kosočtvercem na straně celku
 
 ## Kompozice
 
 * Vztah celek-část, jen mezi silnou a slabou entitou
 * Část nemůže existovat bez celku
 * Kniha a její výpujčky – při odstranění knihy zaniknou výpůjčky
+* Součást patří minimálně i maximálně jednomu celku
+* Značení plným kosočtvercem na straně celku

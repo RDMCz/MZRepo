@@ -12,9 +12,9 @@
 ### Druhy NV
 
 * Rozděleny podle toho, jaké problémy řeší
-* __Vytvářející vzory (Creational patterns)__ řeší mechanismy pro tvorbu objektů, snaží se objekt vytvořit nejvhodněji vzhledem k aktuální situaci.
-* __Strukturální vzory (Structural patterns)__ řeší strukturu vztahů mezi entitami.
-* __Vzory chování (Behavioral patterns)__ řeší společnou komunikaci mezi objekty.
+* __Vytvářející vzory (Creational patterns)__ řeší mechanismy pro tvorbu objektů, snaží se objekt vytvořit nejvhodněji vzhledem k aktuální situaci
+* __Strukturální vzory (Structural patterns)__ řeší strukturu vztahů mezi entitami
+* __Vzory chování (Behavioral patterns)__ řeší společnou komunikaci mezi objekty
 
 ## Vytvářející vzory (Creational patterns)
 
@@ -25,7 +25,7 @@
 * Nahrazuje konsktruktor, když potřebujeme např.:
   * Rozhodnout, zda se má instance opravdu vytvořit
   * Vracet instance různých typů
-  * Provést nějakou akci před zavoláním konstruktoru
+  * Provést nějakou akci před zavoláním konstrukce
   * Více implementací se stejnými parametry (tovární metody se mohou jmenovat různě)
 * Metoda se používá ve třídě, ze které dědí objekty, které metoda vytváří
 
@@ -80,7 +80,7 @@ public static Module[] Modules = new Module[ModulesCount]
 public Module TakeModule(Actions a)
 {
     if (Modules.Where(x => !x.InUse && x.Action == a).Count() > 0)
-        return Modules.Where(x => !x.InUse && x.Action == a).ToArray()[0];
+        return Modules.SingleOrDefault(x => !x.InUse && x.Action == a);
     else
         throw new Exception("Žádné dostupné moduly");
 }
@@ -95,7 +95,7 @@ public Module TakeModule(Actions a)
 ### Originál
 
 * Třída, jejíž instance jsou svými parametry unikátní
-* Lze identifikovat přes klíč / seed
+* Lze identifikovat přes klíč/seed generovaný pomocí parametrů
 
 ## Strukturální vzory (Structural patterns)
 

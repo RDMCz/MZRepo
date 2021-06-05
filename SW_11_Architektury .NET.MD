@@ -5,7 +5,7 @@
 ## .NET
 
 * `.NET Framework` je framework od společnosti Microsoft
-* Framework = Softwarová struktura, která slouží jako podpora při vývoji sw produktů.
+* Framework = Softwarová struktura, která slouží jako podpora při vývoji sw produktů
   * první: `.NET Framework 1.0` (2002)
   * poslední: `.NET Framework 4.8` (2019)
 
@@ -170,8 +170,8 @@ class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto r
 * Návrhový vzor, závislost _1 : 0..N_ mezi poskytovatelem a konzumenty
 * Při změně poskytovatele jsou upozorněni všichni konzumenti a mohou na změnu reagovat
 * Příkladem tohoto NV je právě binding
-  * žádný nebo několik prvků ve View jsou pozorovatelé jedné vlastnosti ve ViewModel
-  * změna této vlastnosti upozorní pozorovatele, ti zavolají její getter a podle něj se aktualizují
+  * Žádný nebo několik prvků ve View jsou pozorovatelé jedné vlastnosti ve ViewModel
+  * Změna této vlastnosti upozorní pozorovatele, ti zavolají její getter a podle něj se aktualizují
 
 ## Událostmi řízené programování (event-driven)
 
@@ -187,5 +187,5 @@ private void ButtonClick(object sender, EventArgs e)
 ```
 
 * `sender` – komponenta, od které přišla událost
-  * typ je `object`, je tedy potřeba přetypovat nebo dotázat se na konkrétnější typ operátorem `is`
+  * Typ je `object`, je tedy potřeba přetypovat nebo dotázat se na konkrétnější typ operátorem `is`
 * `e` – obsahuje data o události

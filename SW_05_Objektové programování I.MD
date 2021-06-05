@@ -25,15 +25,18 @@ __Objektové__:
 ### Dědičnost (Inheritance)
 
 * Tvoření nových datových struktur na základě starých
-* Dědící třída používá (dědí), rozšiřuje nebo modifikuje chování rodičovské třídy.
+* Dědící třída používá (dědí), rozšiřuje nebo modifikuje chování rodičovské třídy
 * V C# lze mít pouze jednoho rodiče (single inheritance only)
 * Konstruktory a destruktory se nedědí, každá třída si musí definovat svůj vlastní
+* Podporuje koncept znovupoužitelnosti, méně redundantního kódu
+* Rodič = super/base/parent class; Potomek = sub/derived/extended/child class
+* Ze `sealed` třídy nelze dědit
 
 ### Zapouzdření (Encapsulation)
 
 * = Zabalení dat a metod a restrikce přístupu k nim. Používá se pro skrytí dat ve třídě.
 * `private` – Ke členům třídy mají přístup třídy, které z ní dědí a jsou v ní "nested" (`public class A { public class B : A { } }`)
-* `private protected` – Ke členům třídy mají přístup třídy, které z ní dědí a nachází se ve stejném [sestavení](https://docs.microsoft.com/cs-cz/dotnet/standard/assembly/)
+* `private protected` – Ke členům třídy mají přístup třídy, které z ní dědí a nachází se ve stejném sestavení (stejné dll/exe)
 * `protected` – Ke členům třídy mají přístup třídy, které z ní dědí
 * `internal` – Ke členům třídy mají přístup všechny třídy ve stejném sestavení
 * `protected internal` – Ke členům třídy mají přístup všechny třídy ve stejném sestavení nebo třídy, které z ní dědí

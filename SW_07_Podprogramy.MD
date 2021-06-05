@@ -18,13 +18,14 @@ __Podprogram:__ (subroutine) Část programu
 
 * ~Obecně __funkce__ = podprogram; __metoda__ = funkce (podprogram) uvnitř objektu. Metoda je OOP ekvivalent pro funkci.
 * V C# funkce nejsou, pouze metody
-* Parametry metodě jsou předávány hodnotou. Metoda získá kopii parametrů a jakékoliv modifikace uvnitř metody se nepromítnou zpět. (Toto platí pro hodnotové datové typy, ne pro referenční)
-  * Lze předat parametr odkazem pomocí klíčového slova `ref`, použité proměnné musí být předem inicializovány
-  * Parametry lze definovat jako výstupní (klíčové slovo `out`)
+* Parametry metodě jsou předávány hodnotou. Metoda získá kopii parametrů a jakékoliv modifikace uvnitř metody se nepromítnou zpět. (Toto platí pro hodnotové datové typy, nikoliv pro referenční)
+  * Lze předat parametr odkazem pomocí klíčového slova `ref`, použité proměnné musí být předem inicializovány (v metodě se pracuje s existujícími hodnotami; vhodné, pokud má metoda kromě hlavního výstupu editovat nějaké dodatečné hodnoty)
+  * Parametry lze definovat jako výstupní (klíčové slovo `out`), k proměnným musí být uvnitř metody něco přiřazeno (hodnota je vytvořena až uvnitř proměnné, na starou se nebere ohled; vhodné, pokud chceme metodu s více návratovými hodnotami)
 
     ``` csharp
-    static void LowerUpperText(string input, out string low, out string up)
+    static void LowerUpperText(ref string input, out string low, out string up)
     {
+        input += "!";
         low = input.ToLower();
         up = input.ToUpper();
     }
@@ -32,24 +33,24 @@ __Podprogram:__ (subroutine) Část programu
     // Main:
     string s = "aHoJ";
     string sUp = "blabla";
-    LowerUpperText(s, out string sLow, out sUp);    // Proměnnou lze deklarovat až při volání (sLow) nebo už před tím (sUp)
+    LowerUpperText(ref s, out string sLow, out sUp);    // Proměnnou lze deklarovat až při volání (sLow) nebo už před tím (sUp)
     
-    WriteLine(s);       // aHoJ
-    WriteLine(sLow);    // ahoj
-    WriteLine(sUp);     // AHOJ
+    WriteLine(s);       // aHoJ!
+    WriteLine(sLow);    // ahoj!
+    WriteLine(sUp);     // AHOJ!
     ```
 
-  * Metoda s proměnným počtem parametrů:
-    * Klíčové slovo `params` před posledním z parametrů. Typ tohoto parametru musí být pole.
+* Metoda s proměnným počtem parametrů:
+  * Klíčové slovo `params` před posledním z parametrů. Typ tohoto parametru musí být pole.
 
-        ``` csharp
-        public void SomeMethod(params object[] p) { } // Proměnný počet parametrů
-        ```
+    ``` csharp
+    public void SomeMethod(params object[] p) { } // Proměnný počet parametrů
+    ```
 
 ## Delegáty
 
 * "Typově bezpečný ukazatel na metodu"
-* Nemusí být interně spojen s jednou metodou, podporuje množinou metod (lze přidat pomocí `+=` nebo `+`)
+* Nemusí být interně spojen s jednou metodou, podporuje množinu metod (lze přidat pomocí `+=` nebo `+`)
 * Odděluje specifikaci od implementace
 
 ``` csharp
@@ -78,14 +79,14 @@ static void Main(string[] args)
 ## Lambda operátory
 
 * Vycházejí z anonymních delegátů – jakýkoliv lambda výraz lze přepsat na delegáta
-  * výraz bez návratové hodnoty `Action`
+  * Výraz bez návratové hodnoty `Action`
 
     ``` csharp
     Action<string> greet = name => WriteLine($"Hello {name}!");
     greet("World"); // "Hello World!"
     ```
 
-  * výraz s návratovou hodnotou `Func`
+  * Výraz s návratovou hodnotou `Func`
 
     ``` csharp
     Func<int, int> square = x => x * x; // Func<T,TResult>
@@ -127,8 +128,7 @@ __nebo:__
 __nebo:__
 
 ``` csharp
-    DoNumberAction(5, (int x) => WriteLine(x * 2));
-    DoNumberAction(5, (int x) => WriteLine(x * 3)); // Tady asi nejdou spojit do jednoho (?)
+    DoNumberAction(5, (int x) => { WriteLine(x * 2); WriteLine(x * 3); });
 ```
 
 ``` csharp

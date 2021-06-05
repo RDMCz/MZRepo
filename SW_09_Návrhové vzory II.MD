@@ -2,26 +2,33 @@
 
 * Návrhové vzory pro skrývání implementace, optimalizaci rozhraní.
 
-## Zástupce (proxy)
+## Návrhový vzor
+
+* Popis / šablona pro řešení (častého) problému
+* Svou aplikací zjednodušují daný problém
+* Ověřená funkčnost = menší šance udělat chybu
+* Kód je zpřehledněn a svým způsobem i standardizován
+
+## Zástupce (Proxy)
 
 * Umožňuje řídit přístup k celému/částečnému rozhraní objektu přes jiný zastupující objekt
 
-### Vzdálený zástupce (remote proxy)
+### Vzdálený zástupce (Remote proxy)
 
 * Zastupuje objekt umístěný někde jinde
 * Zařizuje (serverovou) komunikaci se vzdáleným objektem
 * Měl by být připraven i na selhání spojení (vyhodit odpovídající výjimku)
 
-### Virtuální zástupce (virtual proxy)
+### Virtuální zástupce (Virtual proxy)
 
 * Také zastupuje jiný objekt
 * Vytvoření objektu se nechává na poslední chvíli (objekt ani být vytvořen nemusí) a chování objektu se předstírá
 * Použití: lazy loading obrázků / dat z databáze
 
-### Ochranný zástupce (protection proxy)
+### Ochranný zástupce (Protection proxy)
 
 * Zakrývá identitu zastupovaného objektu
-* nabízí jen podmnožinu metod zastupovaného objektu, lze implementovat kontrolu přístupových práv
+* Nabízí jen podmnožinu metod zastupovaného objektu, lze implementovat kontrolu přístupových práv
 * Implementace skrytím za rozhraní nebo za proxy třídu spravující instanci objektu
 
 ``` csharp
@@ -32,7 +39,7 @@ public class Zastupce
 }
 ```
 
-### Chytrý odkaz (smart reference)
+### Chytrý odkaz (Smart reference)
 
 * Návrhový vzor spadající pod zástupce
 * Doplnění komunikace s objektem o další akce, typicky kvůli zrychlení a zefektivnění aplikace
@@ -42,11 +49,11 @@ public class Zastupce
 
 * Objekt je použit k zapouzdření všech informací potřebných ke zpožděnému spuštění události
 * Zapouzdření příkazu do třídy a používání ho jako proměnné z důvodu
-  * přidání příkazu do fronty
-  * rekonstrukce historie příkazů – implementace undo/redo
+  * Přidání příkazu do fronty
+  * Rekonstrukce historie příkazů – implementace undo/redo
 * Použití ve WPF/UWP – `ICommand(Execute, CanExecute)`
 
-## Iterátor (iterator)
+## Iterátor (Iterator)
 
 * Také známý jako Enumerator
 * Samostatný objekt umožňující lineární procházení kolekcemi bez znalosti jejich vnitřní implementace
@@ -55,30 +62,30 @@ public class Zastupce
 * __Externí iterátor__: průchod kolekcí řídí klient s využitím iterátoru; složitější, ale mocnější řešení
 * __Interní iterátor__: průchod kolekcí řídí iterátor sám; klient specifikuje , co provádět s prvky kolekce (např pomocí LINQ + lambda)
 
-## Stav (state)
+## Stav (State)
 
-* Návrhový vzor Stav (state) se podobá návrhovému vzoru Konečný automat (finite-state machine)
-  * konečný automat se používá např. pro tvorbu AI u NPC
-  * objekt má konečný počet definovaných stavů a vždy se může nacházet pouze v jednom z nich
-  * zároveň má určeno, kdy a na základě jakých vstupů má přepínat mezi jednotlivými stavy
+* Návrhový vzor stav (state) se podobá návrhovému vzoru konečný automat (finite-state machine)
+  * Konečný automat se používá např. pro tvorbu AI u NPC
+  * Objekt má konečný počet definovaných stavů a vždy se může nacházet pouze v jednom z nich
+  * Zároveň má určeno, kdy a na základě jakých vstupů má přepínat mezi jednotlivými stavy
 * Na rozdíl od konečného automatu jsou stavy více decentralizované = znovupoužitelnost ale horší optimalizace
 
-## Šablonová metoda (template method)
+## Šablonová metoda (Template method)
 
 * Definuje kostru algoritmu, jeho jednotlivé kroky; potomci poté tyto kroky implementují a představují zaměnitelné algoritmy
 * Potomci mohou předefinovat určité kroky algoritmu bez zásahu do jeho kostry
 * Rodičovská třída deklaruje placeholdery algoritmu a potomci je implementují
 * Použití:
-  * když chceme, aby se naše aplikace dala rozšířit, ale ne modifikovat
-  * když se nám v kódu objevují podobné algoritmy (lišicí se jen v pár krocích, kostra je stejná)
+  * Když chceme, aby se naše aplikace dala rozšířit, ale ne modifikovat
+  * Když se nám v kódu objevují podobné algoritmy (lišicí se jen v pár krocích, kostra je stejná)
 
-## Fasáda (facade)
+## Fasáda (Facade)
 
 * Zjednodušuje komunikaci mezi uživatelem a systémem
 * Vytvoření jednotného rozhraní pro celou logickou skupinu tříd, které se tak sdruží do subsystému
 * Zabalí komplikovaný subsystém do jednoduššího uceleného rozhraní
 
-## Adaptér (adapter / wrapper)
+## Adaptér (Adapter / Wrapper)
 
 * Převede zastaralé / nehodící se / chybné rozhraní třídy na rozhraní, které klient očekává
 * Zabezpečuje spolupráci tříd a usnadňuje implementaci nových
@@ -88,5 +95,6 @@ public class Zastupce
 
 * Doporučené řešení situace, kdy se pracuje se stromovou strukturou např. rekurzivně zanořené navigační menu
 * Jednoduché a z nich složené (kompozitní) objekty – lze k nim přistupovat jednotným způsobem, implementují stejné rozhraní
+* (Funkce použitá na kontejner by se měla aplikovat na všechny prvky v něm)
 
 ![Composite](img/SW_09_01.png)
