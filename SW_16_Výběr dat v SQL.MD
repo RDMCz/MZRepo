@@ -60,7 +60,7 @@ CustomerID (PK) | Name | BirthYear | Country
 3 | Carlos | 1975 | Spain
 
 ``` sql
-SELECT * FROM Customers WHERE County = "Italy";
+SELECT * FROM Customers WHERE Country = "Italy";
 ```
 
 CustomerID (PK) | Name | BirthYear | Country
@@ -73,7 +73,7 @@ CustomerID (PK) | Name | BirthYear | Country
   * `_` – Libovolný znak
 
     ``` sql
-    SELECT * FROM Customers WHERE County LIKE "F%";
+    SELECT * FROM Customers WHERE Country LIKE "F%";
     ```
 
     CustomerID (PK) | Name | BirthYear | Country
@@ -82,7 +82,7 @@ CustomerID (PK) | Name | BirthYear | Country
     2 | Arno | 1768 | France
 
     ``` sql
-    SELECT * FROM Customers WHERE County LIKE "__a__";
+    SELECT * FROM Customers WHERE Country LIKE "__a__";
     ```
 
     CustomerID (PK) | Name | BirthYear | Country
@@ -94,7 +94,7 @@ CustomerID (PK) | Name | BirthYear | Country
 ## Agregace
 
 * Agregační funkce slouží k provádění matematických operací s vybranými daty a vrací výsledky daných operací
-* `MIN` – minmální hodnota
+* `MIN` – minimální hodnota
 * `MAX` – maximální hodnota
 * `AVG` – průměrná hodnota
 * `SUM` – suma
@@ -162,7 +162,7 @@ Italy | 2
 * Podstata relačních databází spočívá v rozdělení informací do několika navzájem propojených tabulek (přes klíče PK–FK)
 * Pomocí příkazu `JOIN` lze spojit dvě tabulky do jedné
 * `INNER JOIN` – vrací řádky, kde se klíče shodují v obou tabulkách
-* `LEFT (OUTER JOIN)` – vrací všechny řádky z levé tabulky, ke každému z nich přiřadí shodující se řádek z pravé tabulky nebo NULL (pokud neexistuje pravá vazba)
+* `LEFT (OUTER) JOIN` – vrací všechny řádky z levé tabulky, ke každému z nich přiřadí shodující se řádek z pravé tabulky nebo NULL (pokud neexistuje pravá vazba)
 * `RIGHT (OUTER) JOIN` – ~obrácený LEFT JOIN
 * `FULL (OUTER) JOIN` – vrací řádky z obou tabulek, doplňuje NULL při neexistující vazbě.
 

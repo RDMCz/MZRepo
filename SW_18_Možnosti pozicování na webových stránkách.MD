@@ -30,11 +30,11 @@ __Inline prvek:__
 ## Relativní pozicování
 
 * Posunutí prvku o určité souřadnice (pozice je relativní k výchozí pozici)
-* `position: relative` + `left:` / `right:` / `top:` / `bottom:` `30px;`
+* `position: relative;` + `left:` / `right:` / `top:` / `bottom:` `30px;`
 
 ## Absolutní pozicování
 
-* Prvek je relativně pozicován ke svému pozicovanému rodiči (pozicovaný prvek je jakýkoliv prvek co není statický)
+* Prvek je relativně pozicován ke svému pozicovanému rodiči (pozicovaný prvek je jakýkoliv prvek, co není statický)
 * Levý horní roh rodiče jsou souřadnice 0,0 – U umístění vnitřních prvků se nemusí dopočítávat souřadnice relativně k celé stránce
 
 ## Fixní pozicování
@@ -64,7 +64,7 @@ Flex a Grid fungují velmi dobře pro Media Queries (zobrazení na mobilu / tabl
 ## Tabulka (Table)
 
 * Nejstarší způsob pozicování, dnes se používá především na výpis tabulkových dat
-* Také se používá na pozicování v emailech – emailoví klienti můžou ignorovat moderní pozicovací techniky
+* Také se používá na pozicování v e-mailech – e-mailoví klienti mohou ignorovat moderní pozicovací techniky
 * `colspan`, `rowspan`
 * Jednoduché na použití, ale neresponzivní, nemá tolik možností, hlasové čtečky pak web čtou jako tabulku
 

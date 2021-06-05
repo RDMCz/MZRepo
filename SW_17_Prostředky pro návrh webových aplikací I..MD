@@ -64,15 +64,15 @@ function changeText() {
 
 ## Značka (Tag)
 
-* HTML element je zapsán počáteční (a koncovou) značkou, mezi nimiž může být text (obsah).
-* Počáteční značka může obsahovat atributy s hodnotami.
-* Párové `<p></p>` a nepárové `<br>`.
+* HTML element je zapsán počáteční (a koncovou) značkou, mezi nimiž může být text (obsah)
+* Počáteční značka může obsahovat atributy s hodnotami
+* Párové `<p></p>` a nepárové `<br>`
 * `<tag atribut="hodnota">obsah</tag>`
 
 ## Atribut
 
-* Dodávají elementům dodatečné informace.
-* Všechny html elementy mohou mít atributy.
+* Dodávají elementům dodatečné informace
+* Všechny html elementy mohou mít atributy
 * Umožňují nastavit `id`, `class`, `style`
 
 ``` html
@@ -84,8 +84,8 @@ function changeText() {
 
 ## Sémantický význam značek
 
-* Obsah dokumentu se značí podle toho, o jaký druh informace se jedná.
-* Značky implikují význam, nikoliv instrukce pro vzhled.
+* Obsah dokumentu se značí podle toho, o jaký druh informace se jedná
+* Značky implikují význam, nikoliv instrukce pro vzhled
 * `<!DOCTYPE>` – Definuje typ dokumentu
 * `<html>` – Definuje html dokument
 * `<head>` – Obsahuje metadata + informace pro dokument

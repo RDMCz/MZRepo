@@ -9,11 +9,11 @@
 * Základem jsou data, která čteme nebo upravujeme
 * K datům přistupuje webová služba (API, ...)
 * K API přistupuje více klientů, může se jednat o:
-  * webové aplikace – <span>ASP.NET</span>, PHP, ...
-  * browser aplikace – JavaScript, WebAssembly, ...
-  * mobilní aplikace – Xamarin, React Native, ...
-  * desktopová aplikace
-  * jiná serverová služba využívající naše data
+  * Webové aplikace – <span>ASP.NET</span>, PHP, ...
+  * Browser aplikace – JavaScript, WebAssembly, ...
+  * Mobilní aplikace – Xamarin, React Native, ...
+  * Desktopová aplikace
+  * Jiná serverová služba využívající naše data
 * Cílem je tyto všechny přístupy sjednotit, aby pro ně existoval společný způsob přihlášení
 * Nutnost zabezpečení
 
@@ -25,7 +25,7 @@
   * Pouze unikátní username/e-mail nestačí, snadno prozraditelné
   * Pouze heslo nestačí, muselo by být unikátní
   * Míra bezpečnosti závisí na síle hesla
-* Prolomení hesla: bruteforce (hrubou silou) nebo Social engineering (Sociální inženýrství)
+* Prolomení hesla: bruteforce (hrubou silou) nebo social engineering (sociální inženýrství)
 * Posledním trendem na poli hesel je passphrase
   * Místo složitých hesel s náhodnými speciálními znaky se doporučuje dlouhé zapamatovatelnejší heslo v podobě "fráze"
   * Proto není vhodné u hesla nastavovat maximální počet znaků
