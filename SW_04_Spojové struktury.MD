@@ -4,8 +4,8 @@
 
 ## Spojové struktury
 
-* Struktura obsahující soubor záznamů (uzlů) propojených pomocí referencí (odkaz / ukazatel)
-* Spoj vyjadřuje vztah předchůdce - následník
+* Struktura obsahující soubor záznamů (uzlů) propojených pomocí referencí (odkaz/ukazatel)
+* Spoj vyjadřuje vztah předchůdce–následník
 * Ve zřetězené struktuře musí mít každý prvek odkaz na další prvek (v nezřetězené struktuře probíhá přístup k dalšímu prvku pomocí dopočítávání adresy v paměti)
 
 ## Spojové seznamy
@@ -60,7 +60,7 @@ public void Add(T _value)
 }
 ```
 
-* Pro přidání jinam než na začátek se musí změnit .next předchozího na nově přidaný (.next nově přidaného odkazuje prvek, na který dříve odkazoval přechozí)
+* Pro přidání jinam než na začátek se musí změnit _.next_ předchozího na nově přidaný (_.next_ nově přidaného odkazuje prvek, na který dříve odkazoval přechozí)
 * Pro přidání na konec se musí celý seznam "projet"
 
 ### Odstraňování prvků ze seznamu
@@ -78,7 +78,7 @@ public void Clear()
 }
 ```
 
-* Pro odstranění libovolného prvku se .next prvku před ním nastaví na prvek za ním
+* Pro odstranění libovolného prvku se _.next_ prvku před ním nastaví na prvek za ním
 
 ## Spojové stromy
 

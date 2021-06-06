@@ -17,17 +17,17 @@ __Objektové__:
 ## Objekt
 
 * neboli instance
-* V podstatě místo v paměti alokované a nakonfigurované třídou / strukturou.
-* Program může vytvořit několik objektů stejné třídy / struktury.
-* Může být uložen v proměnné / kolekci.
-* V C# je třída _Object_ nejvyšší základní třída.
+* V podstatě místo v paměti alokované a nakonfigurované třídou/strukturou
+* Program může vytvořit několik objektů stejné třídy/struktury
+* Může být uložen v proměnné/kolekci
+* V C# je třída _Object_ nejvyšší základní třída
 
 ### Dědičnost (Inheritance)
 
 * Tvoření nových datových struktur na základě starých
 * Dědící třída používá (dědí), rozšiřuje nebo modifikuje chování rodičovské třídy
 * V C# lze mít pouze jednoho rodiče (single inheritance only)
-* Konstruktory a destruktory se nedědí, každá třída si musí definovat svůj vlastní
+* Konstruktory a destruktory se nedědí, každá třída si musí definovat svůj vlastní (spuštění původního pomocí `: base()`)
 * Podporuje koncept znovupoužitelnosti, méně redundantního kódu
 * Rodič = super/base/parent class; Potomek = sub/derived/extended/child class
 * Ze `sealed` třídy nelze dědit
@@ -44,10 +44,12 @@ __Objektové__:
 
 ### Polymorfismus (Polymorphism)
 
-* Podstatou jsou metody, které mají všichni potomci definované se stejnou hlavičkou, ale jiným tělem
+* Podstatou jsou metody, které mají všichni potomci definované se stejnou hlavičkou, ale jiným tělem (jiná implementace "stejných" metod)
 * V C# `virtual` + `override`
 
 ### Abstrakce (Abstraction)
+
+* Obecně skrytí určitých detailů a zobrazení jen nejdůležitějších informací
 
 ## Třída
 
@@ -56,15 +58,14 @@ __Objektové__:
 
 ### Abstraktní třída
 
-* Abstrakce = skrytí určitých detailů a zobrazení jen nejdůležitějších informací
 * Modifikátor `abstract` může používat třída, metoda, vlastnost, indexer, událost
 * Abstraktní třída je myšlena pouze jako základ pro ostatní třídy, nelze z ní vytvořit instanci
-* Abstraktní členy lze použít pouze v abstraktní třídě, mají pouze hlavičku, tělo je definováno v dědících třídách (pomocí `override` protože Abstraktní člen je automaticky virtuální)
+* Abstraktní členy lze použít pouze v abstraktní třídě, mají pouze hlavičku, tělo je definováno v dědících třídách (pomocí `override` protože abstraktní člen je automaticky virtuální)
 
 ### Statická třída
 
-* Nemohou z ní být tvořeny instance
-* Modifikátor `static` u třídy nastaví všechny její členy na statické
+* Nemohou z ní být tvořeny instance, nelze z ní dědit
+* Modifikátor `static` u třídy vyžaduje, aby měla všechny členy také statické
 * U této třídy nelze tedy použít klíčové slovo `new`, ke členům třídy se přistupuje přes jméno třídy samotné
 
 ### Statický konstruktor
@@ -89,7 +90,7 @@ __Objektové__:
 
 * Pokud má třída privátní konstruktor, nemohou z ní ostatní třídy (kromě nested potomků) vytvářet instance
 * Použití, pokud má třída metodu, která vrací její instanci
-* Nebo pokud třída nemá žádné _instance methods_ (metody vyžadující vytvoření instance pro své volání), příkladem je knihovna Math
+* Nebo pokud třída nemá žádné _instance methods_ (~metody vyžadující vytvoření instance pro své volání), příkladem je knihovna Math
 * (Pokud má třída všechny členy statické, doporučuje se i třídu samotnou udělat statickou)
 
 ## Rozhraní

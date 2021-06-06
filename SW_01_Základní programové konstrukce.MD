@@ -36,7 +36,7 @@
 * Na jeden objekt může být více referencí a můžeme vytvářet objekty s dynamickou velikostí
 * O to, aby na hromadě nebyla data s žádnou referencí, se stará garbage collector
 * `object` – alias třídy _`System.Object`_, všechny ostatní třídy z ní dědí
-* `string`
+* `string` – navenek se ale chová spíše jako hodnotový typ pro zpříjemnění práce programátora
 * `class`
 * `interface`
 * `array`
@@ -46,7 +46,7 @@
 
 __Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem
 
-__Podprogram:__ (subroutine) Část programu
+__Podprogram__ (subroutine): Část programu
 
 * Lze opakovaně použít kdekoliv v programu (i v podprogramu)
 * Může mít vstupní parametry

@@ -53,7 +53,7 @@ Beer plzen = new Beer("Pilsner Urquell", BeerType.Ležák);
 ## Pole
 
 * Množina proměnných stejného datového typu = homogenní strukturovaný datový typ
-* S polem se zachází jako s celkem, k jednotlivým proměným se přistupuje přes index. V C# se indexuje od nuly.
+* S polem se zachází jako s celkem, k jednotlivým proměnným se přistupuje přes index. V C# se indexuje od nuly.
 
 ``` csharp
 int[] pole = new int[početPrvků];
@@ -68,7 +68,7 @@ pole[1] = new int[2];   // [1][0] [1][1]
 ```
 
 * `pole.Length` – celkový počet prvků ve všech dimenzích
-* `pole.GetLength(x)` – celkový počet prvků v dimezi x
+* `pole.GetLength(int x)` – celkový počet prvků v dimezi _x_
 * `foreach`, `Array.Copy()`, `Array.Clear()`, `Array.Find()`, `Array.IndexOf()`, `Array.Sort()`, `Array.Reverse()`
 
 ## Kolekce + Generické kolekce

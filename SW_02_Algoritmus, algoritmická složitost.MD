@@ -109,4 +109,4 @@ __Pravá náhodná čísla__:
 __Pseudonáhodná čísla__:
 
 * Zdánlivě náhodná čísla, později se sekvence opakují
-* Jako základ použity např. hodiny v PC, které měří čas v ms
+* Jako základ (seed) použity např. hodiny v PC, které měří čas v ms

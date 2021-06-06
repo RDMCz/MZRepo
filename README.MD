@@ -7,9 +7,24 @@
 
 `[ SW ] [#########################]`
 
-[Barth](https://drive.google.com/drive/folders/1D_n9iXheGX6-S03_GvbHD6FxsxruTHXG?usp=sharing),
-[Běhálek](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/index.html),
-[Bouška](http://samuraj-cz.com)
+## Cheatsheet
+
+kategorie | operátor
+--- | ---
+__primární__ | `(x)`, `x.y`, `f(x)`, `a[x]`
+__unární__ | `+x`, `-x`, `!`, `(T)x`, `true`, `false`
+__multiplikativní__ | `*`, `/`, `%`
+__aditivní__ | `+`, `-`
+__relační__ | `<`, `>`, `<=`, `>=`
+__rovnost__ | `==`, `!=`
+__AND__ | `&&`
+__OR__ | `\|\|`
+__ternární__ | `? :`
+__přiřazení a lambda__ | `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `=>`
+
+* Algoritmus – __Elementárnost, Konečnost, Obecnost, Determinovanost, Výstup__
+
+* OOP – __Dědičnost, Zapouzdření, Polymorfismus__
 
 ## HW
 

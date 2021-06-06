@@ -18,7 +18,7 @@
 * Tvoření nových datových struktur na základě starých
 * Dědící třída používá (dědí), rozšiřuje nebo modifikuje chování rodičovské třídy
 * V C# lze mít pouze jednoho rodiče (single inheritance only)
-* Konstruktory a destruktory se nedědí, každá třída si musí definovat svůj vlastní
+* Konstruktory a destruktory se nedědí, každá třída si musí definovat svůj vlastní (spuštění původního pomocí `: base()`)
 * Podporuje koncept znovupoužitelnosti, méně redundantního kódu
 * Rodič = super/base/parent class; Potomek = sub/derived/extended/child class
 * Ze `sealed` třídy nelze dědit
@@ -26,7 +26,7 @@
 
 ## Polymorfismus (Polymorphism) + přepsání a překrytí
 
-* Podstatou jsou metody, které mají všichni potomci definované se stejnou hlavičkou, ale jiným tělem (jiná implementace stejných metod)
+* Podstatou jsou metody, které mají všichni potomci definované se stejnou hlavičkou, ale jiným tělem (jiná implementace "stejných" metod)
 
 ``` csharp
 class A
