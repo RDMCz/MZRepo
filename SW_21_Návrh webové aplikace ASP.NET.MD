@@ -130,9 +130,9 @@ public class Startup
         services.AddRazorPages();
         // * Dependency Injection:
         services.AddScoped<IModel, Model>(); // Při požádání o IModel poskytne Model
-        // -- AddSingleton – platný pro celé spuštění aplikace
-        // -- AddScoped – platný pro celý request
-        // -- AddTransient – při každém requestu poskytne novou instanci
+        // -- AddSingleton – platný po celé spuštění aplikace
+        // -- AddScoped – platný po celý request
+        // -- AddTransient – každý controller a služba dostanou novou instanci
     }
     
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -190,11 +190,11 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn
 
 * Běží na .NET
 * "Nadstavba" nad <span>ADO</span>.NET (ActiveX Data Objects) – množina tříd nabízející služby k práci s databází
-* Generace SQL dotazů pro konkrétní databázi (MySQL, Microsoft SQL Server, SQLite, PostgreSQL, ...)
+* Generuje SQL dotazy pro konkrétní databázi (MySQL, Microsoft SQL Server, SQLite, PostgreSQL, ...)
 * Příkazy v sytaxy LINQ překládá do konkrétního SQL, tento dotaz odešle a přijdou mu data, která přeloží zpět do C#
 * = ORM – Objektově relační mapování – Konverze dat mezi relační databází a OOP jazykem
 * Ne všechny SQL příkazy musí být podporovány (kvůli SQL dialektům)
-  * Umí obsluhovat nejmenší podmnožinu, kterou mají všechny databáze společné
+  * Umí obsluhovat podmnožinu, kterou mají všechny databáze společné
   * Nezná speciální funkce a složitější příkazy
 
 ## Identity
@@ -238,6 +238,21 @@ public class AccountController : ControllerBase
     public async Task<IActionResult> Login([FromBody] UserIM userData) { /* ... */ }
 }
 ```
+
+![MVC](./img/SW_19_01.png)
+
+### Výhody
+
+* Díky oddělení logiky od výstupu je aplikace jednoduše udržovatelná a rozšiřitelná
+* Menší tendence pro špagetový kód
+* Frontend vývojáři teoreticky nemusí vědět, jak funguje backend, a obráceně
+
+### Nevýhody
+
+* Přísné worflow
+  * Každý request je routován přes kontroler do modelu, který pak renderuje view
+  * Tento proces je vyžadován i při menších změnách ve vizuální části
+  * Při více těchto requestech může být pomalé a časově náročné
 
 ## Blazor
 

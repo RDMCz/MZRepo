@@ -62,7 +62,7 @@ p { font-size: 12px; }
 
 ### Jednotky
 
-* Abolutní
+* Absolutní
   * `cm`, `mm`, `in`
   * `px` – ~pixel – ve skutečnosti relativní k velikosti displeje, u vysokých rozlišení zabírá 1px více pixelů zařízení
   * `pt` – point

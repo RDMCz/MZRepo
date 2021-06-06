@@ -23,6 +23,7 @@
 
 * Propojuje Model a View
 * Přijímá vstup od uživatele a převádí ho na příkazy pro Model/View
+* Jeho metodám, které se dají volat (skrz REST nebo routování) se říká _akce_
 
 ``` csharp
 [Route("[controller]")]
