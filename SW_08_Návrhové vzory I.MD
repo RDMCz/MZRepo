@@ -1,6 +1,7 @@
 # SW 8 – Návrhové vzory I
 
-* Návrhové vzory pro vytváření instancí, rozšiřování funkcionality.
+* Návrhové vzory pro vytváření instancí, rozšiřování funkcionality
+* Vytvářející vzory a vzory chování
 
 ## Návrhový vzor
 
@@ -9,12 +10,11 @@
 * Ověřená funkčnost = menší šance udělat chybu
 * Kód je zpřehledněn a svým způsobem i standardizován
 
-### Druhy NV
-
-* Rozděleny podle toho, jaké problémy řeší
-* __Vytvářející vzory (Creational patterns)__ řeší mechanismy pro tvorbu objektů, snaží se objekt vytvořit nejvhodněji vzhledem k aktuální situaci
-* __Strukturální vzory (Structural patterns)__ řeší strukturu vztahů mezi entitami
-* __Vzory chování (Behavioral patterns)__ řeší společnou komunikaci mezi objekty
+NV | — | —
+:-: | :-: | :-:
+__Vytvářející__ vzory | Mechanismy pro tvorbu objektů | Tovární metoda, Singleton, Bazén
+__Strukturální__ vzory | Uspořádání objektů do efektivních struktur | Proxy, Adaptér, Fasáda, Muší váha, Composite
+Vzory __chování__ | Interakce a responzibilita objektů | Command, Iterátor, Null, Služebník, State, Šablonová metoda
 
 ## Vytvářející vzory (Creational patterns)
 
@@ -87,35 +87,24 @@ public Module TakeModule(Actions a)
 // InUse představuje dostupnost - jestli je modul používaný
 ```
 
-### Knihovna (Utility)
+## Vzory chování (Behavioral patterns)
 
-* Skupina metod, které spolu nějak souvisí a využívají se společně
-* Z knihovny by nemělo jít dědit a vytvářet instace, měla by být přístupná odkudkoliv – `public static`
+### Příkaz (Command)
 
-### Originál
+* Objekt je použit k zapouzdření všech informací potřebných ke zpožděnému spuštění události
+* Zapouzdření příkazu do třídy a používání ho jako proměnné z důvodu
+  * Přidání příkazu do fronty
+  * Rekonstrukce historie příkazů – implementace undo/redo
+* Použití ve WPF/UWP – `ICommand(Execute, CanExecute)`
 
-* Třída, jejíž instance jsou svými parametry unikátní
-* Lze identifikovat přes klíč/seed generovaný pomocí parametrů
+### Iterátor (Iterator)
 
-## Strukturální vzory (Structural patterns)
-
-### Muší váha (Flyweight)
-
-* Objekt rozdělen na vnitřní a vnější část
-* Spočívá ve sdílení prstředků, vnitřní část je pro všechny instance společná
-* Ušetření paměťové náročnosti
-* Např. jednotky v RTS hrách
-
-### Neměnné (Immutable) objekty
-
-* Používánní proměnných objektů snižuje bezpečnost programu
-* V C# `readonly`
-
-### Přepravka (Crate, Data Transfer Object)
-
-* Kontejner na předávání několika informací – např. podprogram může vracet více hodnot
-* Atributy mohou být konstantní – zajištená neměnnost
-* Např. souřadnice x y z
+* Také známý jako Enumerator
+* Samostatný objekt umožňující lineární procházení kolekcemi bez znalosti jejich vnitřní implementace
+* V C# na kolekce implementující `IEnemuretor` lze použít `foreach` = __Implicitní iterátor__
+* __Explicitní iterátor__ si musíme sami napsat, instance iterátoru na požádání vrací odkaz na další prvek v kolekci, dokud nedojede k prvku poslednímu
+* __Externí iterátor__: průchod kolekcí řídí klient s využitím iterátoru; složitější, ale mocnější řešení
+* __Interní iterátor__: průchod kolekcí řídí iterátor sám; klient specifikuje , co provádět s prvky kolekce (např pomocí LINQ + lambda)
 
 ### Prázdný (Null) objekt
 
@@ -148,10 +137,25 @@ IAnimal dog = new Dog();
 IAnimal fox = Animal.Null;
 ```
 
-## Vzory chování (Behavioral patterns)
-
 ### Služebník (Servant)
 
 * Řeší, když je potřeba definovat společnou funkcionalitu pro více tříd současně
 * Tyto třídy nemusí mít společného rodiče, kam bychom definici funkcionality umístili
 * Implementují ale stejné rozhraní, které je vstupním parametrem služebníka
+
+### Stav (State)
+
+* Návrhový vzor stav (state) se podobá návrhovému vzoru konečný automat (finite-state machine)
+  * Konečný automat se používá např. pro tvorbu AI u NPC
+  * Objekt má konečný počet definovaných stavů a vždy se může nacházet pouze v jednom z nich
+  * Zároveň má určeno, kdy a na základě jakých vstupů má přepínat mezi jednotlivými stavy
+* Na rozdíl od konečného automatu jsou stavy více decentralizované = znovupoužitelnost ale horší optimalizace
+
+### Šablonová metoda (Template method)
+
+* Definuje kostru algoritmu, jeho jednotlivé kroky; potomci poté tyto kroky implementují a představují zaměnitelné algoritmy
+* Potomci mohou předefinovat určité kroky algoritmu bez zásahu do jeho kostry
+* Rodičovská třída deklaruje placeholdery algoritmu a potomci je implementují
+* Použití:
+  * Když chceme, aby se naše aplikace dala rozšířit, ale ne modifikovat
+  * Když se nám v kódu objevují podobné algoritmy (lišicí se jen v pár krocích, kostra je stejná)

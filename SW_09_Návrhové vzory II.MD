@@ -1,6 +1,7 @@
 # SW 9 – Návrhové vzory II
 
-* Návrhové vzory pro skrývání implementace, optimalizaci rozhraní.
+* Návrhové vzory pro skrývání implementace, optimalizaci rozhraní
+* Strukturální vzory
 
 ## Návrhový vzor
 
@@ -8,6 +9,14 @@
 * Svou aplikací zjednodušují daný problém
 * Ověřená funkčnost = menší šance udělat chybu
 * Kód je zpřehledněn a svým způsobem i standardizován
+
+NV | — | —
+:-: | :-: | :-:
+__Vytvářející__ vzory | Mechanismy pro tvorbu objektů | Tovární metoda, Singleton, Bazén
+__Strukturální__ vzory | Uspořádání objektů do efektivních struktur | Proxy, Adaptér, Fasáda, Muší váha, Composite
+Vzory __chování__ | Interakce a responzibilita objektů | Command, Iterátor, Null, Služebník, State, Šablonová metoda
+
+__Strukturální vzory__ (Structural patterns):
 
 ## Zástupce (Proxy)
 
@@ -45,39 +54,11 @@ public class Zastupce
 * Doplnění komunikace s objektem o další akce, typicky kvůli zrychlení a zefektivnění aplikace
 * Virtuální zástupce je také chytrý odkaz – rozhoduje, kdy přistoupí k originálnímu objektu a kdy načte hodnoty z cache / metadata
 
-## Příkaz (Command)
+## Adaptér (Adapter / Wrapper)
 
-* Objekt je použit k zapouzdření všech informací potřebných ke zpožděnému spuštění události
-* Zapouzdření příkazu do třídy a používání ho jako proměnné z důvodu
-  * Přidání příkazu do fronty
-  * Rekonstrukce historie příkazů – implementace undo/redo
-* Použití ve WPF/UWP – `ICommand(Execute, CanExecute)`
-
-## Iterátor (Iterator)
-
-* Také známý jako Enumerator
-* Samostatný objekt umožňující lineární procházení kolekcemi bez znalosti jejich vnitřní implementace
-* V C# na kolekce implementující `IEnemuretor` lze použít `foreach` = __Implicitní iterátor__
-* __Explicitní iterátor__ si musíme sami napsat, instance iterátoru na požádání vrací odkaz na další prvek v kolekci, dokud nedojede k prvku poslednímu
-* __Externí iterátor__: průchod kolekcí řídí klient s využitím iterátoru; složitější, ale mocnější řešení
-* __Interní iterátor__: průchod kolekcí řídí iterátor sám; klient specifikuje , co provádět s prvky kolekce (např pomocí LINQ + lambda)
-
-## Stav (State)
-
-* Návrhový vzor stav (state) se podobá návrhovému vzoru konečný automat (finite-state machine)
-  * Konečný automat se používá např. pro tvorbu AI u NPC
-  * Objekt má konečný počet definovaných stavů a vždy se může nacházet pouze v jednom z nich
-  * Zároveň má určeno, kdy a na základě jakých vstupů má přepínat mezi jednotlivými stavy
-* Na rozdíl od konečného automatu jsou stavy více decentralizované = znovupoužitelnost ale horší optimalizace
-
-## Šablonová metoda (Template method)
-
-* Definuje kostru algoritmu, jeho jednotlivé kroky; potomci poté tyto kroky implementují a představují zaměnitelné algoritmy
-* Potomci mohou předefinovat určité kroky algoritmu bez zásahu do jeho kostry
-* Rodičovská třída deklaruje placeholdery algoritmu a potomci je implementují
-* Použití:
-  * Když chceme, aby se naše aplikace dala rozšířit, ale ne modifikovat
-  * Když se nám v kódu objevují podobné algoritmy (lišicí se jen v pár krocích, kostra je stejná)
+* Převede zastaralé / nehodící se / chybné rozhraní třídy na rozhraní, které klient očekává
+* Zabezpečuje spolupráci tříd a usnadňuje implementaci nových
+* Může celou třídu zabalit do nové (object adaper), nebo z ní dědit (class adapter)
 
 ## Fasáda (Facade)
 
@@ -85,11 +66,12 @@ public class Zastupce
 * Vytvoření jednotného rozhraní pro celou logickou skupinu tříd, které se tak sdruží do subsystému
 * Zabalí komplikovaný subsystém do jednoduššího uceleného rozhraní
 
-## Adaptér (Adapter / Wrapper)
+## Muší váha (Flyweight)
 
-* Převede zastaralé / nehodící se / chybné rozhraní třídy na rozhraní, které klient očekává
-* Zabezpečuje spolupráci tříd a usnadňuje implementaci nových
-* Může celou třídu zabalit do nové (object adaper), nebo z ní dědit (class adapter)
+* Objekt rozdělen na dvě části
+* Spočívá ve sdílení prstředků, jedna část je pro všechny instance společná
+* Ušetření paměťové náročnosti
+* Např. jednotky v RTS hrách
 
 ## Composite
 

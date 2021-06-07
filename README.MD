@@ -7,7 +7,7 @@
 
 `[ SW ] [#########################]`
 
-## Cheatsheet
+## 🥵🥶
 
 kategorie | operátor
 --- | ---
@@ -25,6 +25,12 @@ __přiřazení a lambda__ | `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `=>`
 * Algoritmus – __Elementárnost, Konečnost, Obecnost, Determinovanost, Výstup__
 
 * OOP – __Dědičnost, Zapouzdření, Polymorfismus__
+
+NV | — | —
+:-: | :-: | :-:
+__Vytvářející__ vzory | Mechanismy pro tvorbu objektů | Tovární metoda, Singleton, Bazén
+__Strukturální__ vzory | Uspořádání objektů do efektivních struktur | Proxy, Adaptér, Fasáda, Muší váha, Composite
+Vzory __chování__ | Interakce a responzibilita objektů | Command, Iterátor, Null, Služebník, State, Šablonová metoda
 
 ## HW
 

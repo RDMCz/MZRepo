@@ -4,9 +4,9 @@
 
 ## Podprogramy
 
-__Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem.
+__Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem
 
-__Podprogram:__ (subroutine) Část programu
+__Podprogram__ (subroutine): Část programu
 
 * Lze opakovaně použít kdekoliv v programu (i v podprogramu)
 * Může mít vstupní parametry
@@ -18,7 +18,7 @@ __Podprogram:__ (subroutine) Část programu
 
 * ~Obecně __funkce__ = podprogram; __metoda__ = funkce (podprogram) uvnitř objektu. Metoda je OOP ekvivalent pro funkci.
 * V C# funkce nejsou, pouze metody
-* Parametry metodě jsou předávány hodnotou. Metoda získá kopii parametrů a jakékoliv modifikace uvnitř metody se nepromítnou zpět. (Toto platí pro hodnotové datové typy, nikoliv pro referenční)
+* Parametry jsou metodě předávány hodnotou. Metoda získá kopii parametrů a jakékoliv modifikace uvnitř metody se nepromítnou zpět. (Toto platí pro hodnotové datové typy, nikoliv pro referenční)
   * Lze předat parametr odkazem pomocí klíčového slova `ref`, použité proměnné musí být předem inicializovány (v metodě se pracuje s existujícími hodnotami; vhodné, pokud má metoda kromě hlavního výstupu editovat nějaké dodatečné hodnoty)
   * Parametry lze definovat jako výstupní (klíčové slovo `out`), k proměnným musí být uvnitř metody něco přiřazeno (hodnota je vytvořena až uvnitř proměnné, na starou se nebere ohled; vhodné, pokud chceme metodu s více návratovými hodnotami)
 
@@ -116,25 +116,6 @@ static void Main(string[] args)
 
     DoNumberAction(5, del);
 }
-```
-
-__nebo:__
-
-``` csharp
-    NumberAction del = (int x) => { WriteLine(x * 2); WriteLine(x * 3); };
-    DoNumberAction(5, del);
-```
-
-__nebo:__
-
-``` csharp
-    DoNumberAction(5, (int x) => { WriteLine(x * 2); WriteLine(x * 3); });
-```
-
-``` csharp
-// Always the same output:
-// 10
-// 15
 ```
 
 ## Oblast platnosti proměnné
