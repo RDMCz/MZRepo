@@ -66,7 +66,7 @@ p { font-size: 12px; }
   * `cm`, `mm`, `in`
   * `px` – ~pixel – ve skutečnosti relativní k velikosti displeje, u vysokých rozlišení zabírá 1px více pixelů zařízení
   * `pt` – point
-  * Podle Stehlíka by se velikost písma měla nastavovat v pointech, nikoli v pixelech
+  * ~Velikost písma by se měla nastavovat v pointech, nikoli v pixelech
 * Relativní
   * `em` – relativní k velikosti písma elementu
   * `rem` – relativní k velikosti písma root elementu (prvek hmtl)
@@ -82,7 +82,7 @@ p { font-size: 12px; }
   * `orientation`
   * `resolution`
   * `prefers-color-scheme` – zdali uživatel preferuje light/dark theme
-  * Píše se do závorek a za dvojtečku se píší jednotky
+  * Píše se do závorek, za dvojtečku se píší hodnoty a popř. jednotky
 * __Media type__:
   * `all`
   * `print`
@@ -148,6 +148,6 @@ p { font-size: 12px; }
   * Do Containeru lze vkládat řádky a do nich sloupce
   * Systém dvanácti sloupců, různé velikosti – `sm`, `md`, `lg`, `xl` určené maximální šířkou Containeru
   * Řádky uvnitř sloupců:
-  ![grid](./img/SW_24_01.PNG)
+    ![grid](./img/SW_24_01.PNG)
   * Column offset:
-  ![grid2](./img/SW_24_02.PNG)
+    ![grid2](./img/SW_24_02.PNG)

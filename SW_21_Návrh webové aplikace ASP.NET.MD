@@ -216,7 +216,7 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn
 
 * Logika aplikace (výpočty, databázové dotazy, ...)
 * Přijímá a vydává data, neví odkud data přišla a jak bude jeho výstup formátován
-* V ORM (Objetově-Relační Mapování) modely korespondují přímo s databázovými tabulkami. Nebo lze použít např. principu manažerů (AccountManager, ItemManager, ...)
+* V ORM modely korespondují přímo s databázovými tabulkami. Nebo lze použít např. principu manažerů (AccountManager, ItemManager, ...)
 
 ### View
 

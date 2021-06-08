@@ -17,15 +17,15 @@
 
 ### Použité technologie
 
-* HTML a CSS – vzhled a struktura stránky
-* DOM a JavaScript – modifikování obsahu na straně klienta
-  * DOM – Document Object Model – jazykově nezávislé rohraní umožňující přístup a aktualizaci prvků v dokumentu
-* XMLHttpRequest (XHR) Object
-  * Zajišťuje komunikaci mezi serverem a klientem, (nejen) protokol HTTP
-  * Stěžejní prvek AJAXu
-  * Vytváření dotazů na dodatečná data
-* XML, JSON, HTML, prostý text – formát dat pro výměnu informací
-  * XML – "Abstraktní HTML", dnes nahrazeno JSONem (úspora místa)
+1. HTML a CSS – vzhled a struktura stránky
+2. DOM a JavaScript – modifikování obsahu na straně klienta
+    * DOM – Document Object Model – jazykově nezávislé rohraní umožňující přístup a aktualizaci prvků v dokumentu
+3. XMLHttpRequest (XHR) Object
+    * Zajišťuje komunikaci mezi serverem a klientem, (nejen) protokol HTTP
+    * Stěžejní prvek AJAXu
+    * Vytváření dotazů na dodatečná data
+4. XML, JSON, HTML, prostý text – formát dat pro výměnu informací
+    * XML – "Abstraktní HTML", dnes nahrazeno JSONem (úspora místa)
 
 ### Komunikace
 

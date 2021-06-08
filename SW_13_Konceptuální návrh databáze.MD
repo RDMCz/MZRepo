@@ -4,8 +4,8 @@
 
 ## Relace
 
-* V relační databázi se tabulkám říká "relace"
-* Vztahy mezi tabulkami se také nazývají "relace"
+* V relační databázi se tabulkám říká _relace_
+* Vztahy mezi tabulkami se také nazývají _relace_
 
 ## Entita
 

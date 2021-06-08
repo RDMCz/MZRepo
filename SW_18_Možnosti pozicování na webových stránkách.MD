@@ -30,7 +30,8 @@ __Inline prvek:__
 ## Relativní pozicování
 
 * Posunutí prvku o určité souřadnice (pozice je relativní k výchozí pozici)
-* `position: relative;` + `left:` / `right:` / `top:` / `bottom:` `30px;`
+* `position: relative;`
+* `left:` / `right:` / `top:` / `bottom:` `30px;`
 
 ## Absolutní pozicování
 
@@ -41,6 +42,8 @@ __Inline prvek:__
 
 * Prvek je pozicován relativně k viewportu
 * Vždy zůstane na tom stejném místě
+
+## Sticky
 
 __`position: sticky;`__ má relativní pozici, pokud se ale dostane mimo zobrazení (např. kvůli skrolování), přepne se na fixní pozici
 

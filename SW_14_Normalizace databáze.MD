@@ -7,7 +7,7 @@
 * Technologie uložení dat v databázi
 * Umožňuje uspořádat velké množství dat tak, aby byla srozumitelná uživatelům zabývajícím se analýzou obchodních trendů a výsledků
 * (business intelligence – souhrn prodejů, marketing, management, rozpočet, předpověď, účetní závěrka)
-* = analytické účely nad rozsáhlými databázemi
+* => Analytické účely nad rozsáhlými databázemi
 * Jednorázově nahraná data, nad kterými jsou prováděny složité dotazy
 * Na rozdíl od relačních databází (tabulka, sloupec, řádek) pracuje s [datovou kostkou](https://office.lasakovi.com/excel/kontingencni-tabulka/OLAP-kostka-Excel-teorie/) (může být vícerozměrná)
 * Jde především o flexibilní a rychlé získání souhrnných dat
@@ -36,7 +36,7 @@
 
 * Lze říci, že tabulka (relace) se nachází v nulté formě, pokud obsahuje alespoň jeden neatomický atribut
 * Tzn. Jeden sloupec v tabulce obsahuje více než jednu hodnotu (neatomický = lze rozdělit)
-* Odstraněním násobných hodnot se zabývá 1NF
+* Odstraněním neatomických hodnot se zabývá 1NF
 
 ID (PK) | Name | Phone
 --- | --- | ---
@@ -65,7 +65,7 @@ ID (PK) | PersonID (FK) | Phone
 * Všechny neklíčové atributy jsou funkčně závislé na celém PK
 * Může být (ne)splněna u tabulek se složeným PK
 * Klade důraz především na odstranění duplicit
-* Částečně závislé atributy se dají do nové tabulky a vytvoří se jim PK (např. umělý), který se v původní tabulce použije jako FK
+* Částečně závislé atributy se dají do nové tabulky a vytvoří se jim PK (může být umělý), který se v původní tabulce použije jako PFK
 
 StudentID (PK) | SubjectID (PK) | SubjectAcronym | FinalGrade
 :-: | :-: | :-: | :-:

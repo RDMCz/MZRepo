@@ -16,7 +16,7 @@
 
 ## DML (Data Manipulation Language)
 
-* Jazyk (podjazyk SQL) pro vkládání, mazání a upravování dat v databázi.
+* Jazyk (podjazyk SQL) pro vkládání, mazání a upravování dat v databázi
 
 ``` sql
 -- Vložení záznamu (jednoho či více)
@@ -31,7 +31,7 @@ DELETE FROM sousedstvo WHERE věk = 57 AND jméno = "Ludvík";
 
 ## DDL (Data Definition Language)
 
-* Syntax v SQL pro tvorbu a úpravu databázových objektů, hlavně tabulek.
+* Syntax v SQL pro tvorbu a úpravu databázových objektů, hlavně tabulek
 
 ``` sql
 -- Vytvoření nové databáze/tabulky
@@ -71,7 +71,7 @@ REVOKE ALL ON employees FROM username;
 
 ## TCL (Transaction Control Language)
 
-* Správa transakcí v databázi – správa změn způsobených DML (DDL) příkazy
+* Správa transakcí v databázi – správa změn způsobených DML/DDL příkazy
 
 ``` sql
 BEGIN TRANSACTION; 

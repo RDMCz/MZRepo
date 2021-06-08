@@ -9,6 +9,8 @@
 
 ## 🥵🥶
 
+* SW 01:
+
 kategorie | operátor
 --- | ---
 __primární__ | `(x)`, `x.y`, `f(x)`, `a[x]`
@@ -23,7 +25,10 @@ __ternární__ | `? :`
 __přiřazení a lambda__ | `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `=>`
 
 * SW 02 – Algoritmus – __Elementárnost, Konečnost, Obecnost, Determinovanost, Výstup__
+
 * SW 05/06 – OOP – __Dědičnost, Zapouzdření, Polymorfismus__
+
+* SW 08/09:
 
 NV | — | —
 :-: | :-: | :-:
@@ -32,12 +37,42 @@ __Strukturální__ vzory | Uspořádání objektů do efektivních struktur | Pr
 Vzory __chování__ | Interakce a responzibilita objektů | Command, Iterátor, Null, Služebník, State, Šablonová metoda
 
 * SW 08 – __Tovární mtd, Singleton, Bazén, Command, Iterator, Null, Servant, State, Template mtd__
+
 * SW 09 – __Proxy – Remote/Virtual/Protection, Adapter, Fasáda, MušíVáha, Composite__
+
 * SW 11
   * CLI – __Common Language Infrastrucure__ – specifikace, vyšší jazyky na různých platformách
   * CLR – __Common Language Runtime__ – Překlad CLI -> machine code, správa paměti, type/thread safety, garbage, výjimky
   * CIL – __Common Intermediate Language__
   * FCL – __Framework Class Library__ – hierarchie jmenných prostorů, práce se soubory/sítí/vlákny/..., ASP, LINQ
+
+* SW 15:
+
+``` sql
+-- DML --
+INSERT INTO animalsounds (animal, sound) VALUES ("Cat", "Meow"), ("Dog", "Woof"), ("Cow", "Moo");
+INSERT INTO table2 SELECT * FROM table1 (WHERE condition);
+UPDATE employees SET salary = 37000 WHERE name = "Hektor";
+
+-- DDL --
+CREATE TABLE employees (
+    id          INTEGER         PRIMARY KEY,
+    name        VARCHAR(50)     not null,    
+);
+ALTER TABLE employees ADD salary INTEGER;
+TRUNCATE TABLE employees;
+DROP TABLE employees;
+
+-- DCL --
+GRANT SELECT, INSERT, UPDATE, DELETE ON employees TO PUBLIC;
+REVOKE ALL ON employees FROM username;
+
+-- TCL --
+BEGIN TRANSACTION; 
+COMMIT; 
+SAVEPOINT savename;
+ROLLBACK TO savename;
+```
 
 ## HW
 

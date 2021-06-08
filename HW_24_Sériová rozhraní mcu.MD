@@ -77,7 +77,7 @@ Duplexita | Full duplex
   * V klidovém stavu jsou vodiče v úrovni H
   * Při přenosu jsou na SDA vysílány jednotlivé bity s tím, že logická hodnota SDA se může změnit, pouze pokud je SCL v úrovni L
   * Toto pravidlo je porušeno ve dvou případech: vysílání podmínek START a STOP – zahájení arbitrace a ukončení přenosu
-* Každá stanice si vnitřním časovačem synchronizuje GHS měřením trvání úrovně H na CSL
+* Každá stanice si vnitřním časovačem synchronizuje GHS měřením trvání úrovně H na SCL
   * To umožňuje některé ze stanic zpomalit přenos
 
 ![TWI0](./img/HW_24_02.png)
