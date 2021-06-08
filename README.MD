@@ -22,15 +22,22 @@ __OR__ | `\|\|`
 __ternární__ | `? :`
 __přiřazení a lambda__ | `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `=>`
 
-* Algoritmus – __Elementárnost, Konečnost, Obecnost, Determinovanost, Výstup__
-
-* OOP – __Dědičnost, Zapouzdření, Polymorfismus__
+* SW 02 – Algoritmus – __Elementárnost, Konečnost, Obecnost, Determinovanost, Výstup__
+* SW 05/06 – OOP – __Dědičnost, Zapouzdření, Polymorfismus__
 
 NV | — | —
 :-: | :-: | :-:
 __Vytvářející__ vzory | Mechanismy pro tvorbu objektů | Tovární metoda, Singleton, Bazén
 __Strukturální__ vzory | Uspořádání objektů do efektivních struktur | Proxy, Adaptér, Fasáda, Muší váha, Composite
 Vzory __chování__ | Interakce a responzibilita objektů | Command, Iterátor, Null, Služebník, State, Šablonová metoda
+
+* SW 08 – __Tovární mtd, Singleton, Bazén, Command, Iterator, Null, Servant, State, Template mtd__
+* SW 09 – __Proxy – Remote/Virtual/Protection, Adapter, Fasáda, MušíVáha, Composite__
+* SW 11
+  * CLI – __Common Language Infrastrucure__ – specifikace, vyšší jazyky na různých platformách
+  * CLR – __Common Language Runtime__ – Překlad CLI -> machine code, správa paměti, type/thread safety, garbage, výjimky
+  * CIL – __Common Intermediate Language__
+  * FCL – __Framework Class Library__ – hierarchie jmenných prostorů, práce se soubory/sítí/vlákny/..., ASP, LINQ
 
 ## HW
 

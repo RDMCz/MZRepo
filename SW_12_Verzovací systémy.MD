@@ -19,7 +19,7 @@
 
 ### Distribuované (Decentralizované)
 
-* Každý může mít historii změn uloženou lokálně (.git adresář) – lze pracovat offline
+* Každý může mít historii změn uloženou lokálně (_.git_ adresář) – lze pracovat offline
 * Umožňuje práci na různých větvích
 * Git, Mercurial, Bazaar
 

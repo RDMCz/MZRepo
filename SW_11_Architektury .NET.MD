@@ -79,7 +79,7 @@ List<string> list2 = list.Where(x => x[0] == 'a').ToList();
 * __ViewModel__ se stará o převedení dat z Modelu do podoby prezentovatelné ve View, používá logiku svou a modelu
   * Nemá odkaz na View, neví o něm (narozdíl od Presenteru v MVP), objevuje se v něm redundantní kód (boilerplate)
 * __View__ neobsahuje žádný logický kód, s ViewModelem komunikuje pomocí bindingu
-  * Bežným jazykem je XAML (Extensible Application Markup Language)
+  * Bežným jazykem je XAML (eXtensible Application Markup Language)
 
 ## Binding
 
@@ -182,7 +182,7 @@ class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto r
 ``` csharp
 private void ButtonClick(object sender, EventArgs e)
 {
-    ((Button).sender).Text = "Clicked";
+    ((Button)sender).Text = "Clicked";
 }
 ```
 

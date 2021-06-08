@@ -5,7 +5,7 @@
 
 ## Návrhový vzor
 
-* Popis / šablona pro řešení (častého) problému
+* Popis/šablona pro řešení (častého) problému
 * Svou aplikací zjednodušují daný problém
 * Ověřená funkčnost = menší šance udělat chybu
 * Kód je zpřehledněn a svým způsobem i standardizován
@@ -141,7 +141,7 @@ IAnimal fox = Animal.Null;
 
 * Řeší, když je potřeba definovat společnou funkcionalitu pro více tříd současně
 * Tyto třídy nemusí mít společného rodiče, kam bychom definici funkcionality umístili
-* Implementují ale stejné rozhraní, které je vstupním parametrem služebníka
+* Implementují ale stejné rozhraní, které je vstupním parametrem v metodách služebníka
 
 ### Stav (State)
 

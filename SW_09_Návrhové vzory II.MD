@@ -5,7 +5,7 @@
 
 ## Návrhový vzor
 
-* Popis / šablona pro řešení (častého) problému
+* Popis/šablona pro řešení (častého) problému
 * Svou aplikací zjednodušují daný problém
 * Ověřená funkčnost = menší šance udělat chybu
 * Kód je zpřehledněn a svým způsobem i standardizován
@@ -32,7 +32,7 @@ __Strukturální vzory__ (Structural patterns):
 
 * Také zastupuje jiný objekt
 * Vytvoření objektu se nechává na poslední chvíli (objekt ani být vytvořen nemusí) a chování objektu se předstírá
-* Použití: lazy loading obrázků / dat z databáze
+* Použití: lazy loading obrázků/dat z databáze
 
 ### Ochranný zástupce (Protection proxy)
 
