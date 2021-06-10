@@ -57,7 +57,7 @@ public class AccountController : ControllerBase
 * __Model__ – rozhraní poskytující data, která mají být zobrazena
 * __View__ – pasivní rozhraní zobrazující data z modelu; nasměrovává uživatelovy příkazy (události) do presenteru, aby s daty manipuloval
 * __Presenter__ – pracuje s modelem i view, podle dat získaných z modelu formátuje view (model mu hlásí změny opět událostmi)
-* Oproti MVC má každé view svého presentera, v presentorvi se nachází více logiky
+* Oproti MVC má každé view svého presentera, v presenterovi se nachází více logiky
   * Controllery v MVC se dělí spíše podle toho, s jakými daty manipulují, a tak view pracují s více controllery, které na ně nejsou tak vázané (a mohou pracovat s více view)
 * Výhoda – kompletní separace model a view, presenter je middle man
 * Nevýhoda – hodně kódu pro propojení view + presenter; presenter je příliš vázaný na dané view
@@ -157,7 +157,7 @@ Content-Type: application/json
 {"name": "Racey McRacerson"}
 ```
 
-__Representional State Transfer (REST)__:
+__Representational State Transfer (REST)__:
 
 * URL (Uniform Resource Locator) reprezentuje přímý přístup k datům
 * `http://www.server.cz/knihy` vrací seznam knih

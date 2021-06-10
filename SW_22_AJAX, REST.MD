@@ -143,7 +143,7 @@ fetch("example.com/profile", {
 
 ## Dotazovací Metody HTTP
 
-__Representional State Transfer (REST)__:
+__Representational State Transfer (REST)__:
 
 * URL (Uniform Resource Locator) reprezentuje přímý přístup k datům
 * `http://www.server.cz/knihy` vrací seznam knih

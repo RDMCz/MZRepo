@@ -74,6 +74,45 @@ SAVEPOINT savename;
 ROLLBACK TO savename;
 ```
 
+* SW 19/22 – __REST – Representational State Transfer__
+
+* SW 22 – __API – Application Programming Interface__
+
+* SW 24:
+  * __`font-family:`__ seznam fontů oddělených čárkou, prohlížeč vybere první, který je k dispozici; jako poslední písmo se tedy doporučuje použít nějaké obecné
+  * __`font-size:`__ _`15px;`_ / _`large;`_ / _`150%;`_
+  * __`font-style:`__ _`normal;`_ / _`oblique;`_ nakloněný normal / _`italic;`_ speciálně vytvořený typ kurzíva
+  * __`font-weight:`__ _`normal;`_ / _`bold;`_ / _`bolder;`_ / _`lighter;`_ / _`100;`_-_`900;`_
+  * __`font:`__ lze nastavit více parametrů najednou, např. _`15px Arial, sans-serif;`_
+  * __`color:`__
+  * __`display:`__ _`block;`_ / _`inline-block;`_ / _`inline;`_ / _`none;`_
+  * __`width:`__, __`height:`__, __`max-width:`__, __`min-height:`__, ...
+  * __`margin:`__
+  * __`padding:`__
+  * __`border:`__
+  * __`font:`__
+  * __`position:`__ _`static;`_ / _`relative;`_ / _`absolute;`_ / _`fixed;`_ / _`sticky;`_
+  * __Media feature__ – upřesňuje charakteristiku softwaru, zařízení a prostředí; např.:
+    * `aspect-ratio`
+    * `orientation`
+    * `resolution`
+    * `prefers-color-scheme` – zdali uživatel preferuje light/dark theme
+    * Píše se do závorek, za dvojtečku se píší hodnoty a popř. jednotky
+  * __Media type__:
+    * `all`
+    * `print`
+    * `screen`
+    * `speech`
+
+  ``` css
+  @media screen and (min-width: 30em) and (orientation: landscape)
+  { 
+      /* Zde se aplikují pravidla */
+  }
+  ```
+
+* SW 25 – Testování __Jednotkové, Integrační, Systémové, Aplikační, Pilotní__
+
 ## HW
 
 1. Vrstva síťového přístupu, Ethernet

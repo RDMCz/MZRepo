@@ -139,3 +139,26 @@ axios.get(
   * iss – issuer – kdo vydal token
   * aud – audience – klient, kterému byl token poskytnut
   ![JWT](./img/SW_20_07.png)
+
+---
+---
+
+``` txt
++--------+                               +---------------+
+|        |--(A)- Authorization Request ->|   Resource    |
+|        |                               |     Owner     |
+|        |<-(B)-- Authorization Grant ---|   (Uživatel)  |
+|        |                               +---------------+
+|        |
+|        |                               +---------------+
+|        |--(C)-- Authorization Grant -->| Authorization |
+| Client |                               |     Server    |
+|        |<-(D)----- Access Token -------|   (Ověření)   |
+|Aplikace|                               +---------------+
+|        |
+|        |                               +---------------+
+|        |--(E)----- Access Token ------>|    Resource   |
+|        |                               |     Server    |
+|        |<-(F)--- Protected Resource ---|     (Data)    |
++--------+                               +---------------+
+```

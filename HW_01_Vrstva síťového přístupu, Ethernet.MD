@@ -101,7 +101,7 @@
 * MAC adresa:
   * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
   * 48 bitů, kontrola pomocí komparátoru
-    * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
+    * Osmý bit – 0 = unicast, 1 = multicast
     * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
     * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
     * Druhá polovina – Přiděluje výrobce (náhodně)
@@ -121,7 +121,7 @@
 ### Broadcast
 
 * Pro všechna zařízení v síti
-* Cílová adresa – samé jedničky (FF-FF-FF-FF-FF-FF)
+* Cílová adresa – samé jedničky (FF:FF:FF:FF:FF:FF)
 
 ### Multicast
 
@@ -157,8 +157,8 @@
   * Kódování Manchester – Data XOR Hodiny
   * QAM – Kvadraturní amplitudová modulace
   * QPSK
-* __Šířka pásma__: Frekvenční rozsah (rozdíl mezi nejvyšší a nejnižší frekvencí přenášeného signálu)
-* __Propustnost__: Množství dat za jendotku času, závislé na šířce pásma
+* __Šířka pásma__: Maximální teoretické množství dat, které může protéct za jednotku času
+* __Propustnost__: Opravdové množství dat, které protéče za jednotku času
 * __Přenosová rychlost__: Závislá na propustnosti, ovlivněna vnějšími jevy
 
 ### Koaxiál
