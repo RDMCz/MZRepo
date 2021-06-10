@@ -105,10 +105,10 @@ Switch(config-if)# switchport nonegotiate                   // Vypnutí Dynamic 
   * Třetí vrstva má TTL, druhá vrstva nic takového nemá
 * Úmyslné smyčky – vytvoření nadbytečných (redundantních) spojení
 * Redundantní cesty jako záloha či pro zvýšení propustnosti
-* STP na fyzické topologii (která může obsahovat smyčky) vytváří virtuální topologii, která neobsahuje smyčky
+* STP na fyzické topologii (která může obsahovat smyčky) vytváří virtuální topologii, která smyčky neobsahuje
 * STP je dynamický protokol:
   * Reaguje na vznik nové smyčky
-  * Při přerušení nějakého spojení se pokusí vytvořit alternativní cestu odbklováním dříve blokovaného portu
+  * Při přerušení nějakého spojení se pokusí vytvořit alternativní cestu odblokováním dříve blokovaného portu
 * Hledá nejkratší/nejvýhodnější/nejlevnější cesty (podle rychlostí linek, rychlejší = nižší cena) a ruší ty redundantní
 * Každý přepínač má své Bridge ID skládající se z priority a MAC adresy
 * Přepínač s nejnižším Bridge ID je zvolen jako _Root Bridge_

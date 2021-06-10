@@ -14,13 +14,12 @@
 
 ## Výběr distribuce
 
-* Aplikace:
+* Platforma:
   * Desktop – Mint, Ubuntu, Fedora, Arch
   * Server – Red Hat, CentOS, Ubuntu Server, SUSE
   * Smartphone – Android
   * Embedded systems (IoT, routery)
   * Superpočítače
-
 * Základní distribuce – Slackware, Debian, Red Hat, ...
 
 ### Distribuce
@@ -94,8 +93,8 @@
 
 Znak | CZ | EN | Popis
 :-: | :-: | :-: | :-:
-__`-`__ | __normální soubor__ | _regular file_ | -
-__`d`__ | __adresář__ | _directory_ | -
+__`-`__ | __normální soubor__ | _regular file_ | –
+__`d`__ | __adresář__ | _directory_ | –
 __`l`__ | __symbolický odkaz__ | _symbolic link_ | Ve výpisu lze vidět, kam odkazuje. Odkaz je svázán se jménem odkazovaného (přejmenování odkaz zneplatní)
 __`-`__ | __pevný odkaz__ | _hardlink_ | Jiné jméno pro soubor, který je na disku fyzicky pouze jednou
 __`b`__ | __blokové zařízení__ | _block device_ | Souborová reperezentace blokových zařízení (pevný disk) připojených k počítači. (Adresář `/dev`)

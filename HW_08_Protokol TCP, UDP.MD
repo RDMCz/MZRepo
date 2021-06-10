@@ -24,7 +24,7 @@
 
 ### Segmentace
 
-* TCP dostává data z vyšších vrstev ta rozkouskuje na menší díly a přidá k nim TCP hlavičku
+* TCP dostává data z vyšších vrstev, ta rozkouskuje na menší díly a přidá k nim TCP hlavičku
 * Tím vzniká TCP segment, který je následně zapouzdřen do IP datagramu (o vrstvu níž)
 * Segment:
   * Zdrojový port (16 bit)
@@ -35,7 +35,7 @@
   * ...
   * Data
 * Multiplexování segmentů umožňuje více nezávislých TCP spojení najednou, segmenty jsou rozlišeny podle čísel portů
-    <table><tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr><td>Registered</td><td>1024 ÷ 49151</td><td>Určitý protokol či aplikace, IANA</td></tr><td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr></table>
+    <table><tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr><td>Registered</td><td>1024 ÷ 49151 (0xBFFF)</td><td>Určitý protokol či aplikace, IANA</td></tr><td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr></table>
 
     Číslo portu | Aplikace | ...
     :-: | :-: | :--
@@ -58,7 +58,7 @@
 * TCP je protokol s posuvným (plovoucím) okénkem
 * Je důležité předejít tomu, aby odesílatel posílal data příliš rychle a zahltil tak příjemce
 * Příjemce specifikuje, kolik dat navíc ještě dokáže zpracovat
-* _"Odesílatel přizpůsobí množství dat kvalitě přijímací bufferu."_
+* _"Odesílatel přizpůsobí množství dat kvalitě přijímacího bufferu."_
 
 ### Navázání a ukončení spojení
 

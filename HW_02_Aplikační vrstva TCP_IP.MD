@@ -83,7 +83,7 @@
 
 <table>
     <tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr>
-    <td>Registered</td><td>1024 ÷ 49151</td><td>Určitý protokol či aplikace, IANA</td></tr>
+    <td>Registered</td><td>1024 ÷ 49151 (0xBFFF)</td><td>Určitý protokol či aplikace, IANA</td></tr>
     <td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr>
 </table>
 
@@ -146,7 +146,7 @@
   * Převážně Windows, s Linuxem se lze spojit pomocí softwaru Samba
 * __111/2049 – NFS – Network File System__
 
-### 23 – Telnet
+### 23 – Telnet – Teletype Network
 
 * Client-server
 * Připojení ke vzdálenému PC pomocí textového UI – virtuální terminál
@@ -159,3 +159,7 @@
 ### 123 – NTP – Network Time Protocol
 
 * Client-server, synchronizace vnitřních hodin počítačů
+
+## 67/68 – DHCP – Dynamic Host Configuration Protocol
+
+## 53 – DNS – Domain Name System

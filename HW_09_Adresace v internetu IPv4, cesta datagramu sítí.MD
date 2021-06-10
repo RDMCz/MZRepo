@@ -28,8 +28,8 @@
 * Řízení přístupu k médiu – vázané na síťovou kartu
 * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
 * 48 bitů, kontrola pomocí komparátoru
-  * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
   * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
+  * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
   * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
   * Druhá polovina – Přiděluje výrobce (náhodně)
 
@@ -156,7 +156,7 @@ Krok 2 – Alokovat adresní bloky od největšího po nejmenší
 
 <table>
     <tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr>
-    <td>Registered</td><td>1024 ÷ 49151</td><td>Určitý protokol či aplikace, IANA</td></tr>
+    <td>Registered</td><td>1024 ÷ 49151 (0xBFFF)</td><td>Určitý protokol či aplikace, IANA</td></tr>
     <td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr>
 </table>
 

@@ -118,7 +118,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 
 <table>
     <tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr>
-    <td>Registered</td><td>1024 ÷ 49151</td><td>Určitý protokol či aplikace, IANA</td></tr>
+    <td>Registered</td><td>1024 ÷ 49151 (0xBFFF)</td><td>Určitý protokol či aplikace, IANA</td></tr>
     <td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr>
 </table>
 

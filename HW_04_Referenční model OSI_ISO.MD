@@ -92,11 +92,11 @@
   * Adresace – MAC adresy vázané na síťovou kartu (vrstva je hardwarově závislá)
   * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
   * 48 bitů, kontrola pomocí komparátoru
-    * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
     * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
+    * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
     * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
     * Druhá polovina – Přiděluje výrobce (náhodně)
-* Horvní podvrstva __LLC__
+* Horní podvrstva __LLC__
   * Propojení mezi Ethernetem a síťovou vrstvou
   * Zakrývá rozdíly mezi sítěmi 802, poskytuje společný formát a rozhraní pro síťovou vrstvu
   * Error-control, flow-control (aby rychlý odesílatel nezahltil pomalého adresáta)

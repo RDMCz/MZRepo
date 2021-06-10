@@ -15,6 +15,7 @@
             <th colspan=2>Vrstva</th>
             <th>Protokolová datová jednotka</th>
             <th>Funkce</th>
+            <th>TCP/IP</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
             <td><strong>Aplikační</strong></td>
             <td rowspan=3>Zpráva</td>
             <td>Vrstva nejblíže k uživateli. Obsahuje jádro aplikací, které má smysl standardizovat (např. přenosové mechanismy elektronické pošty), zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu. Poskytuje uživatelským programům ucelené služby.</td>
+            <td rowspan=3><strong>Aplikační</strong></td>
         </tr>
         <tr>
             <td><strong>6</strong></td>
@@ -39,18 +41,21 @@
             <td><strong>Transportní</strong></td>
             <td>TCP segment / UDP datagram</td>
             <td>Přenos dat mezi koncovými uzly (end-to-end). Účelem je poskytnout takový přenos, který si vyžadují vyšší vrstvy. Řeší odeslání dat ze zdroje do cíle. (TCP/UDP)</td>
+            <td><strong>Transportní</strong></td>
         </tr>
         <tr>
             <td><strong>3</strong></td>
             <td><strong>Síťová</strong></td>
             <td>Paket</td>
             <td>Propojuje nesousední systémy – komunikace dvou uzlů, které nejsou přímo spojeny (prostřednictvím jiných uzlů). Logická adresace – IP protokol – IP adresa. Směrování – určení cesty paketu; všechny směrovače pracují na této vrstvě.</td>
+            <td><strong>Síťová</strong></td>
         </tr>
         <tr>
             <td><strong>2</strong></td>
             <td><strong>Linková</strong></td>
             <td>Rámec</td>
             <td>Přenáší data mezi dvěma přímo spojenými uzly. Uspořádání dat z fyzické vrstvy do rámců. Pracuje s rámci, hlásí chyby. Adresace MAC a LLC. Na této vrstvě fungují přepínače; propojení pouze místních zařízení. Ethernet, Wi-Fi, ZigBee.</td>
+            <td rowspan=2><strong>Vrstva síťového rozhraní</strong></td>
         </tr>
         <tr>
             <td><strong>1</strong></td>
@@ -64,7 +69,14 @@
 ## Ethernet
 
 * Protokol definující přenos dat na lokální síti
-* Nejdůlěžitější obsah rámce: Zdrojová a cílová adresa
+* Obsah rámce:
+  * Preambule – Vzorek střídajících se bitů 0 a 1, aby zařízení snadno poznalo začátek přicházejícího rámce [7B]
+  * SFD – Start Frame Delimiter – Značí konec preambule a začátek rámce [1B]
+  * Cílová MAC adresa [6B]
+  * Zdrojová MAC adresa [6B]
+  * Délka paketu nebo indikátor protokolu [2B]
+  * Vlastní obsah
+  * Kontrolní součet CRC
 
 ### Lokální síť
 
@@ -101,8 +113,8 @@
 * MAC adresa:
   * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
   * 48 bitů, kontrola pomocí komparátoru
-    * Osmý bit – 0 = unicast, 1 = multicast
     * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
+    * Osmý bit – 0 = unicast, 1 = multicast
     * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
     * Druhá polovina – Přiděluje výrobce (náhodně)
 
@@ -155,7 +167,7 @@
 
 * __Modulace__ – nosný signál měněn modulujícím signálem:
   * Kódování Manchester – Data XOR Hodiny
-  * QAM – Kvadraturní amplitudová modulace
+  * QAM – Kvadraturní amplitudová modulace – Kombinace amplitudové a fázové modulace
   * QPSK
 * __Šířka pásma__: Maximální teoretické množství dat, které může protéct za jednotku času
 * __Propustnost__: Opravdové množství dat, které protéče za jednotku času
