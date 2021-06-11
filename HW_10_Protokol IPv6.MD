@@ -63,7 +63,7 @@ desítková soustava | šestnáctková soustava
 
 * Zařízení umístěná v jedné (pod)síti mají ve svých IP adresách shodné nejvýznamější bity (bity vlevo)
 * Velikost části, která vyjadřuje číslo sítě je definována pomocí CIDR notace počtem bitů zleva = __prefix__
-* V IPv4 lze zapsat jako délu prefixu `192.168.1.1/24` nebo pomocí masky `255.255.255.0`
+* V IPv4 lze zapsat jako délku prefixu `192.168.1.1/24` nebo pomocí masky `255.255.255.0`
 * V IPv6 se zapisuje pouze délka prefixu
   * Doporučená velikost pro podsítě je `/64`, ~aby fungoval Neighbor Discovery Protocol
 * S délkou prefixu `/64` je tedy 64 bitů z leva __Prefix__ (adresa podsítě) a zbylých 64 bitů (128-64) je __Interface ID__ (adresa konkrétního zařízení v podsíti)
@@ -79,9 +79,9 @@ desítková soustava | šestnáctková soustava
 ## Druhy vysílání a adres
 
 <table><tbody>
-<tr><td><strong>Unicast</strong></td><td>Individuální</td><td>Identifikuje právě jeden interface (jedno zařízení).</td></tr>
-<tr><td><strong>Multicast</strong></td><td>Skupinové</td><td>Adresování skupin zařízení, data přijdou všem členům skupiny.</td></tr>
-<tr><td><strong>Anycast</strong></td><td>Výběrové</td><td>Adresování skupiny, data přijdou jen nejbližšímu členovi skupiny.</td></tr>
+<tr><td><strong>Unicast</strong></td><td>Individuální</td><td>Identifikuje právě jeden interface (jedno zařízení)</td></tr>
+<tr><td><strong>Multicast</strong></td><td>Skupinové</td><td>Adresování skupin zařízení, data přijdou všem členům skupiny</td></tr>
+<tr><td><strong>Anycast</strong></td><td>Výběrové</td><td>Adresování skupiny, data přijdou jen nejbližšímu členovi skupiny</td></tr>
 </tbody></table>
 
 * Oproti IPv4 broadcast (všesměrové vysílání) není potřeba, používají se obecnější typy multicast adres
@@ -156,7 +156,7 @@ prefix | význam
   * 5 – místo – koncová zákaznická síť – jedna organizace, jedna lokalita
   * E – globální – celosvětový dosah
   * aj.
-* Celá zóna je vždy zahrnuta do nadřízené zóny většího dosahu
+* Celá zóna je vždy zahrnuta do nadřazené zóny většího dosahu
 * Zóny stejného dosahu se nesmí překrývat
 * Jelikož adresa je unikátní jen v rámci zóny a zařízení může být ve více zónách stejného dosahu, může se stejná adresa objevit v několika zónách
 * -> Pro jejich odlišení zavedeny identifikátory zón (Zone ID)
@@ -178,7 +178,7 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 * Adresa = Prefix + Interface ID (síťová část + hostitelská část)
 * Interface ID přiděluje OS:
   * Podle MAC adresy pomocí algoritmu EUI-64
-    * Doporostřed MAC adresy vloží `FFFE` a sedmý bit zleva nastaví na jedničku (pokud není)
+    * Doprostřed MAC adresy vloží `FFFE` a sedmý bit zleva nastaví na jedničku (pokud není)
     * Méně bezpečné, Windows XP
   * Nebo náhodně generováno OS, tzv. Privacy Extensions (Windows 7 a výš)
 * Zbývá vyřešit přidělení prefixu:
@@ -257,14 +257,14 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 ## Cisco a IPv6
 
 ``` txt
-ipv6 unicast-routing
+Router(config)# ipv6 unicast-routing
 ```
 
 * Zapne IPv6 směrování, které je defaultně vypnuto
 
 ``` txt
-ipv6 address 2001:db8:1:1::baba/64
-ipv6 address fe80::baba/64 link-local
+Router(config-if)# ipv6 address 2001:db8:1:1::baba/64
+Router(config-if)# ipv6 address fe80::baba/64 link-local
 ```
 
 * Nastavení IPv6 adres na interfacu

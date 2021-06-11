@@ -19,20 +19,20 @@
 1. client -> server __DISCOVERY__
     * Snaha objevit DHCP server
     * Broadcast
-2. server -> client __OFFER__
+2. client <- server __OFFER__
     * Server rezervuje adresu a nabídne ji klientovi
     * Zašle tedy odpověď obsahující nabízenou IP adresu a svou IP adresu
 3. client -> server __REQUEST__
     * Klientovi může přijít víc nabídek z více serverů
     * Vybere si jednu a o tu zažádá příslušný server
-4. server -> client __ACKNOWLEDGE__
+4. client <- server __ACKNOWLEDGE__
     * Server posílá potrvrzení + dodatečné informace
 
 * Každá adresa má svůj lease time ("doba pronájmu"), poté může být přiřazena jinému zařízení (u dynamické alokace)
 
 ### Nastavení rozsahu
 
-* U domácích routerů počáteční adresa + počet klientů/poslední adresa
+* U domácích routerů počáteční adresa + počet klientů / poslední adresa
 * U enterprise pomocí masky
 
 ``` txt
@@ -52,6 +52,7 @@ Router# wr
 ### DHCP Relay
 
 * Používá se v případě, kdy je více sítí oddělených směrovačem a jen jedna z nich obsahuje DHCP server
+* (Žádost o adresu z DHCP probíhá pomocí broadcastu, to znamená, že DHCP server musí být na stejném subnetu jako klient)
 * Když je na směrovači zapnut _relay agent_, přeposílá DHCP broadcast dotazy ze sítí bez DHCP na DHCP server
 * Relay agent k dotazu přidá adresu a masku sítě, aby DHCP server věděl, z jakého rozsahu má přidělovat adresu
 * `Router(config-if)# ip helper-address 172.16.1.2` – Relay agent musí znát adresu DHCP serveru
@@ -62,7 +63,7 @@ Router# wr
 * Adresa = Prefix + Interface ID (síťová část + hostitelská část)
 * Interface ID přiděluje OS:
   * Podle MAC adresy pomocí algoritmu EUI-64
-    * Doporostřed MAC adresy vloží `FFFE` a sedmý bit zleva nastaví na jedničku (pokud není)
+    * Doprostřed MAC adresy vloží `FFFE` a sedmý bit zleva nastaví na jedničku (pokud není)
     * Méně bezpečné, Windows XP
   * Nebo náhodně generováno OS, tzv. Privacy Extensions (Windows 7 a výš)
 * Zbývá vyřešit přidělení prefixu:
@@ -133,6 +134,8 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 69 | TFTP | Trivial File Transfer Protocol
 80 | HTTP | Hypertext Transfer Protocol
 110 | POP3 | Post Office Protocol
+111 | NFS | Network File System
+123 | NTP | Network Time Protocol
 161 | SNMP | Simple Network Management Protocol
 143 | IMAP | Internet Message Access Protocol
 443 | HTTPS | HTTP Secure
@@ -141,7 +144,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 ### Typy adres v NAT
 
 * __Inside Local__ – Privátní adresy konfigurované na stanicích vnitřní sítě
-* __Inside Global__ – Veřejné adresy, pod nimiž jsou stanice na vnitřní síti vidět z vnější sítě (dynamicky alokovány z poolu veřejných adres)
+* __Inside Global__ – Veřejné adresy, pod nimiž jsou stanice na vnitřní síti vidět z vnější sítě (např. dynamicky alokovány z poolu veřejných adres)
 * __Outside Local__ – Privátní adresy stanic ve vnější síti, jak se jeví ve vnitřní síti
 * __Outside Global__ – Veřejné adresy konfigurované na stanicích vnější sítě
 

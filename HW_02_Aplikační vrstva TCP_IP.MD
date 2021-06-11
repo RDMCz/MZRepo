@@ -98,6 +98,8 @@
 69 | TFTP | Trivial File Transfer Protocol
 80 | HTTP | Hypertext Transfer Protocol
 110 | POP3 | Post Office Protocol
+111 | NFS | Network File System
+123 | NTP | Network Time Protocol
 161 | SNMP | Simple Network Management Protocol
 143 | IMAP | Internet Message Access Protocol
 443 | HTTPS | HTTP Secure
@@ -162,4 +164,11 @@
 
 ## 67/68 – DHCP – Dynamic Host Configuration Protocol
 
+* Protokol, který koncovým zařízením v síti automaticky přiřazuje IP adresu, masku, default gateway a adresu DNS serveru
+
 ## 53 – DNS – Domain Name System
+
+* Přiřazuje k IP adrese doménové jméno
+* Pro překlad adresy se požádá DNS server (nejspíše ten, který nám byl přiřazen DHCP serverem)
+  * Pokud server tuto adresu zná, tak odpoví
+  * Pokud ne, obrátí se na kořenový DNS server

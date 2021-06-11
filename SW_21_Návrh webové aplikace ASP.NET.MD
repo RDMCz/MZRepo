@@ -124,7 +124,7 @@ public class Startup
         // Připojení:
         // * Databáze
         // * Kontrolérů
-        // * Autorizace, Autentizace, Identity
+        // * Autorizace, Autentifikace, Identity
         // * Cors – seznam aplikací, které můžou přistoupit k našemu API
         // * Razor Pages:
         services.AddRazorPages();

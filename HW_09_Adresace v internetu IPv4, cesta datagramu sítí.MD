@@ -114,9 +114,9 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 ``` txt
 Rozdělte síť 192.168.10.0/24 na:
   výroba    40 hostitelů
-  eko       10 hostitelů
+  eko       20 hostitelů
   vedení    10 hostitelů
-  údržba    29 hostitelů
+  údržba    20 hostitelů
   tisk       4 hostitelů
 
 Krok 1 – Zjistit velikosti jednotlivých podsítí
@@ -171,6 +171,8 @@ Krok 2 – Alokovat adresní bloky od největšího po nejmenší
 69 | TFTP | Trivial File Transfer Protocol
 80 | HTTP | Hypertext Transfer Protocol
 110 | POP3 | Post Office Protocol
+111 | NFS | Network File System
+123 | NTP | Network Time Protocol
 161 | SNMP | Simple Network Management Protocol
 143 | IMAP | Internet Message Access Protocol
 443 | HTTPS | HTTP Secure

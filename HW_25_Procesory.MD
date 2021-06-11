@@ -34,8 +34,9 @@
   * Primitivní instrukce zabírají méně místa (oproti architekturám s fixní délkou instrukce)
 * __CISC – Complex Instruction Set Computer__
   * Navrženo, když paměť byla drahá
-  * Jedna instrukce dokáže provádět komplexní operace
+  * Jedna instrukce dokáže provádět komplexní operace – rozkládá se na posloupnost mikroinstrukcí
   * Variabilní délka instrukce (základní instrukce jsou krátké)
+  * Velký počet instrukcí a adresačních režimů
 * __Zpětná kompatibilita__
 * __Bajtové adresování__
   * Byte je nejmenší adresovatelná jednotka (ve většině případů)
@@ -43,6 +44,8 @@
   * Opakem je word addressing (velikost slova závisí na architektuře)
 * __SIMD – Single Instruction Multiple Data__
   * Jedna instrukce pracuje paralelně s více daty
+* __Harvardská architektura__
+  * L1 je dělena na Data Cache a Instruction Cache
 
 ## Techniky optimalizace provádění instrukcí
 

@@ -118,7 +118,7 @@
 * Dá se chápat jako brána, která rozhoduje, zdali se přes ní dostanou nějaká data, reps. zdali spolu dvě síte mohou navázat spojení
 * Základní proměnnou je adresa a port zdroje a cíle
 * ACL – Access Control List – Seznam pravidel řídících přístup k nějakému objektu
-* IDS – Intrusion Detection System – Monitorování provozu s snaha odhalit podezřelé aktivity
+* IDS – Intrusion Detection System – Monitorování provozu a snaha odhalit podezřelé aktivity
   * Senzor obsahující mechanismy pro detekci nebezpečných kódů
 * IPS – Intrusion Prevention System
 

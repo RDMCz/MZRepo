@@ -101,7 +101,7 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 
 * Umělé zavedení redundance – bity určené k přenosu jsou prokládané pseudonáhodnými bity
 * Díky tomu je signál méně citlivý vůči rušení
-* Pro zařízení bez znalosti mechanismu vytvoření pseudonáhodných sekvencí se jeví jako šum
+* Pro zařízení bez znalosti mechanismu vytvoření pseudonáhodných sekvencí se signál jeví jako šum
 * Využíván __802.11b__ (a novější zpětně kompatibilní standardy)
 
 ### OFDM – Orthogonal Frequency-Division Multiplexing
@@ -188,8 +188,8 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 
 ### AAA – Authentication, Authorization, Accounting
 
-* Autentizace – identita uživatele – představení identity + ověření (heslo, certifikát, ...)
-* Autorizace – udělelní/zakázání specifického typu služeb na základě uživatelovi autentizace
+* Autentifikace – identita uživatele – představení identity + ověření (heslo, certifikát, ...)
+* Autorizace – udělelní/zakázání specifického typu služeb na základě uživatelovi autentifikace
 * Účtování – sledování využívání síťových služeb uživateli
 
 ### RADIUS

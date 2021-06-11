@@ -170,7 +170,7 @@
   * QAM – Kvadraturní amplitudová modulace – Kombinace amplitudové a fázové modulace
   * QPSK
 * __Šířka pásma__: Maximální teoretické množství dat, které může protéct za jednotku času
-* __Propustnost__: Opravdové množství dat, které protéče za jednotku času
+* __Propustnost__: Opravdové množství dat, které proteče za jednotku času
 * __Přenosová rychlost__: Závislá na propustnosti, ovlivněna vnějšími jevy
 
 ### Koaxiál

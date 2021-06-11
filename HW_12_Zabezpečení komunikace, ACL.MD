@@ -80,7 +80,7 @@
 * Filtrace paketů podle zdrojové IP adresy
 * Adresu lze přidat na whitelist nebo blacklist
 * Omezuje, co vstupuje do cíle, na kterém je ACL implementován
-* Identifikace dle čísel 1-99
+* Identifikace dle čísel 1–99
 * Optimálně nasazujeme nejblíže k cíli
 
 ### Rozšířené ACL
@@ -88,7 +88,7 @@
 * Kontroluje zdrojovou i cílovou adresu
 * Umožňuje filtrovat i čísla portů
 * Nevýhodou je větší náročnost na výkon
-* Identifikace dle čísel 100-199
+* Identifikace dle čísel 100–199
 * Optimálně nasazujeme nejblíže ke zdroji
 
 ### Jmenné ACL

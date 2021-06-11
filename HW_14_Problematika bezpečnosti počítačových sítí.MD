@@ -157,8 +157,8 @@
 
 ### AAA – Authentication, Authorization, Accounting
 
-* Autentizace – identita uživatele – představení identity + ověření (heslo, certifikát, ...)
-* Autorizace – udělelní/zakázání specifického typu služeb na základě uživatelovi autentizace
+* Autentifikace – identita uživatele – představení identity + ověření (heslo, certifikát, ...)
+* Autorizace – udělelní/zakázání specifického typu služeb na základě uživatelovi autentifikace
 * Účtování – sledování využívání síťových služeb uživateli
 
 ### RADIUS

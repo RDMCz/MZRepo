@@ -15,8 +15,10 @@
 
 ![1901](./img/HW_19_01.PNG)
 
-* Tlačítko vede do MCU, jeden konec vede na zem, druhý konec přes pull-up odpor na kladné napětí, při absenci odporu by se musel aktivovat interní pull-up
-* Bez pull-up odporu by stisknutí tlačítka zkratovalo obvod, typicky se používá 5 nebo 10 KΩ
+* Tlačítko vede do MCU, jeden konec vede na zem, druhý konec přes pull-up odpor na kladné napětí
+* Napětí definuje logickou hodnotu, když tlačítko není stisknuté
+  * Místo kladného napětí můžeme použít interní pull-up odpor
+* Při absenci externího rezistoru by stisknutí tlačítka zkratovalo obvod, typicky se používá 5 nebo 10 KΩ
 * Výhody:
   * Jednoduché zapojení
   * Snadná dektekce, přečtením pinu zjistíme hodnotu tlačítka
@@ -36,7 +38,7 @@
   * Potřeba externí součástky
   * Počet tlačítek omezen počtem vstupů na MUX
   * Nelze číst více tlačítek najednou
-* Na adresu lze přívést čítač
+* Na adresu lze přívést čítač pro ještě menší obsazenost pinů
 
 ### Zapojení s prioritním dekodérem
 
@@ -60,7 +62,7 @@
   * Sériové čtení – pomalejší, rychlý stisk nemusí být zachycen
   * Počet tlačítek omezen velikostí registru, rostoucí počet tlačítek zpomaluje čtení
 
-### Maticové zapojení
+### Maticové zapojení – Klávesnice
 
 ![1904](./img/HW_19_04.PNG)
 
@@ -73,20 +75,7 @@
   * Střední obsazenost pinů – Počet tlačítek = Vstupy * Výstupy
 * Nevýhody:
   * Detekce a rozlišení více tlačítek je složitější
-
-## Displeje
-
-1. Přímé zapojení
-    * Velká obsazenost I/O pinů (8 na každý displej)
-2. Zapojení přes dekodér
-    * Poloviční obsazenost pinů
-    * Omezený počet zobrazení, nevyužitá desetinná tečka
-3. Zapojení se společnými výstupy
-    * ![1905](./img/HW_19_05.PNG)
-    * V jeden moment svítí pouze jeden displej
-    * Hodnota je vysílána na všechny displeje a odpovídá právě rozvícenému displeji
-    * Sekvenčně se pomocí budičů přepíná, který displej svítí – obnovovací frekvence
-    * Počet pinů = Počet displejů (budičů) + Počet segmentů (lze redukovat dekodérem)
+    * Může vziknout "falešné stisknuté tlačítko", řeší se přes diody
 
 ## LED
 
@@ -109,18 +98,50 @@
 ![1907](./img/HW_19_07.PNG)
 
 * Menší proudové zatížení, stále stejná obsazenost pinů
+* Můžeme spínat jiné napětí, než které je na výstupních pinech MCU
+
+## Displeje
+
+1. Přímé zapojení
+    * Velká obsazenost I/O pinů (8 na každý displej)
+2. Zapojení přes dekodér
+    * Poloviční obsazenost pinů
+    * Omezený počet zobrazení, nevyužitá desetinná tečka
+3. Zapojení na společnou sběrnici
+    * ![1905](./img/HW_19_05.PNG)
+    * V jeden moment svítí pouze jeden displej
+    * Hodnota je vysílána na všechny displeje a odpovídá právě rozvícenému displeji
+    * Sekvenčně se pomocí budičů přepíná, který displej svítí – obnovovací frekvence
+    * Počet pinů = Počet displejů (budičů) + Počet segmentů (lze redukovat dekodérem)
+    * Nevýhoda – MCU musí neustále nastavovat a přepínat hodnoty
+    * Hodnoty určené pro jednotlivé displeje lze ukládat do záchytných registrů (hodnota se zapíše na společnou sběrnici a na příslušný _LATCH_ se pošle zápisový pulz)
+    * ![1908](./img/HW_19_08.PNG)
+    * Pokud chceme opravdu ušetřit piny, můžeme použít sériové posuvné registry SIPO (pouze dva obsazené piny)
 
 ## Inteligetní displeje
 
+* Jedná se o maticové displeje
 * Vlastní řadič, do kterého se z MCU posílají příkazy
 
 ### Alfanumerický displej
 
+* Nemůžeme pracovat s jednotlivými body
+* Pracuje se s vnitřní ASCII tabulkou, která je nahraná v řadiči
 * LCD 1602, lze definovat vlastní znaky
 
 ### Grafický displej
 
-* Jsme dělali v Pythonu
+* Lze adresovat přímo jednotlivé body
+* LCD 12864
+
+1. Monochromatické
+    * Jedna LEDka na bod
+2. Barevné
+    * Tři LEDky na bod
+    * Barvu reprezentuje více bitů
+
+---
+---
 
 ## Zákmity a jejich odstranění
 

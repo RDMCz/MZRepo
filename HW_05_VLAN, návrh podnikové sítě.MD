@@ -36,7 +36,7 @@
 3. __Podle informace z třetí vrstvy__
     * Řazení do VLAN podle IP adresy nebo podle protokolu (např. oddělení IP a AppleTalk)
     * Nepříliš rozšířené, přepínač se musí dívat do třetí vrstvy – zpomalení
-4. __Podle autentizace__
+4. __Podle autentifikace__
     * Ověření pomocí protokolu IEEE 802.1X a zařazení do VLAN podle získaných informací
 
 ### VLAN na jednom přepínači

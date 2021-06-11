@@ -9,7 +9,7 @@
 ## 4. Transportní vrstva
 
 * Řeší odeslání dat ze zdroje do cíle takovým způsobem, jaký si vyžadují vyšší vrstvy
-* Nejnižší vrstva, kterou se nezabývají síťové prvky, ale pouze koncová zařízení
+* Nejnižší vrstva, kterou se nezabývají síťové prvky, ale pouze koncová zařízení (pokud nebereme v potaz Layer 4 switching)
 * Přijímá data z relační vrstvy a rozkládá je na pakety pro síťovou vrstvu
 * Stará se o (bezchybný) přenos zprávy (kontrola chyb, sestavení zprávy po přenosu)
 
@@ -48,6 +48,8 @@
     69 | TFTP | Trivial File Transfer Protocol
     80 | HTTP | Hypertext Transfer Protocol
     110 | POP3 | Post Office Protocol
+    111 | NFS | Network File System
+    123 | NTP | Network Time Protocol
     161 | SNMP | Simple Network Management Protocol
     143 | IMAP | Internet Message Access Protocol
     443 | HTTPS | HTTP Secure

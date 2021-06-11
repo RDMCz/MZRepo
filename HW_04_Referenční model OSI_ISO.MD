@@ -111,7 +111,7 @@
 ## 4. Transportní vrstva
 
 * Řeší odeslání dat ze zdroje do cíle takovým způsobem, jaký si vyžadují vyšší vrstvy
-* Nejnižší vrstva, kterou se nezabývají síťové prvky, ale pouze koncová zařízení
+* Nejnižší vrstva, kterou se nezabývají síťové prvky, ale pouze koncová zařízení (pokud nebereme v potaz Layer 4 switching)
 * Přijímá data z relační vrstvy a rozkládá je na pakety pro síťovou vrstvu
 * Stará se o (bezchybný) přenos zprávy (kontrola chyb, sestavení zprávy po přenosu)
 * TCP – Transmission Control Protocol
@@ -142,6 +142,30 @@
 * Obsahuje jádro aplikací, které má smysl standardizovat (např. přenosové mechanismy elektronické pošty)
 * Zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu.
 * FTP, Telnet, SMTP, ...
+
+<table>
+    <tr><td>Well-known</td><td>0 ÷ 1023</td><td>Vyhrazené pro nejběžnější služby</td></tr>
+    <td>Registered</td><td>1024 ÷ 49151 (0xBFFF)</td><td>Určitý protokol či aplikace, IANA</td></tr>
+    <td>Dynamic (private)</td><td>49152 ÷ 65535 (2**16)</td><td>Porty pro dočasnou krátkou komunikaci</td></tr>
+</table>
+
+Číslo portu | Aplikace | ...
+:-: | :-: | :--
+20, 21 | FTP | File Transfer Protocol
+22 | SSH | Secure Shell
+23 | Telnet | Teletype Network
+25 | SMTP | Simple Mail Transfer Protocol
+53 | DNS | Domain Name System
+67, 68 | DHCP | Dynamic Host Configuration Protocol
+69 | TFTP | Trivial File Transfer Protocol
+80 | HTTP | Hypertext Transfer Protocol
+110 | POP3 | Post Office Protocol
+111 | NFS | Network File System
+123 | NTP | Network Time Protocol
+161 | SNMP | Simple Network Management Protocol
+143 | IMAP | Internet Message Access Protocol
+443 | HTTPS | HTTP Secure
+445 | SMB | Server Message Block
 
 ## PDU – Protocol Data Unit
 

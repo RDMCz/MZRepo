@@ -44,11 +44,16 @@ Switch(config-subif)# ip address 172.17.30.1 255.255.255.0
 
 ## L3 switch
 
+![l3switch](./img/HW_06_03.PNG)
+
 * Vícevrstvý switch kromě klasického přepínání na druhé vrstvě nabízí i funkce na vyšších vrstvách
 * Například umožňuje směrování, tyto switche jsou často nazývány L3 switch
 * Směrování oproti routeru bývá realizováno hardwarově – rychlejší, dražší
 * Mají obvykle omezenou směrovací tabulku
 * Mívá pouze Ethernet porty (RJ-45/optika), žádné sériové porty apod.
+* U Cisco L3 switchů se inter-VLAN nastavuje jednoduše:
+  1. Zapnout routování
+  2. Pro VLAN, které chceme routovat, vytvořit interface a nastavit jim IP adresu
 
 ``` txt
 Switch(config)# ip routing                                  // Defaultně pouze L2 přepínání, vlastnost IP routing se musí zapnout
@@ -60,4 +65,4 @@ Switch(config-if)# no sh
 * Problém s připojením do internetu:
   * L3 switch nemá NAT server (kromě nejdražších z řady Cisco Nexus)
   * Pro připojení do internetu by se za L3 switch musel umístit router z NAT serverem
-  
+    * Pakety určené do internetu by nepatřily do žádné jeho VLAN, pro jejich odeslání na router by se nastavila defaultní routa (žolík) `ip route 0.0.0.0 0.0.0.0 ...`

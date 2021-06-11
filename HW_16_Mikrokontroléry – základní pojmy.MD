@@ -44,12 +44,14 @@
 
 * Dokumentace strana 1
 * Harvardská RISC architektura
+  * Procesor s jednodušší instrukční řadou a jednodušším řadičem – rychlejší provádění instrukcí, složitější instrukce nahrazeny několika jendoduššími (pipelining)
   * Reduced Instruction Set Computer – jednoduchá a vysoce optimalizovaná sada instrukcí
   * _130 Powerful Instructions_ – Pro RISC relativně hodně (existují RISC procesory s pár desítkami instrukcí), u CISC je ale 130 instrukcí málo
-  * _Most Single Clock Cycle Execution_ – Instrukce trvají stejnou dobu
+  * _Most Single Clock Cycle Execution_ – Většina instrukcí se provede v jednom instrukčním cyklu
   * Většina instrukcí má stejnou délku (v binárním zápisu) – V paměti zabírají stejně místa
-  * _32 x 8 General Purpose Working Registers_ – 32 osmibitových registrů
+  * _32 x 8 General Purpose Working Registers_ – 32 osmibitových registrů – Velký počet pracovních registrů
   * Load/Store architektura – S operační pamětí pracují pouze instrukce pro čtení a zápis do paměti; Všechny aritmeticko-logické operace pracují pouze s registry (žádná ALU operace nemůže sahat přímo do paměti, nejdříve se pomocí operací přesunu musí hodnota nahrát do registru)
+  * Malý počet způsobů adresace paměti (co může být operandem u instrukcí) – registr, konstanta, registr x/y/z (indirect – to, co je uvnitř registru, se použije jako adresa do paměti), displacement (adresa v x/y/z je modifikována – práce se strukturou/polem); ALU pracuje jen s registry a konstantami
 * 8bit
   * Osmibitová datová sběrnice
   * Osmibitová šířka registrů

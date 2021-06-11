@@ -33,6 +33,7 @@
     * Cinnamon
     * MATE
     * Xfce
+    * LXDE
 
 ## Instalace a systém
 
