@@ -11,7 +11,7 @@
 * Se svým okolím komunikuje pomocí univerzálních obousměrných vodičů sdružených do portů
 * Obsahuje integrované periferie z důvodu většího programátorského pohodlí
   * Čítač / časovač
-  * A/D převodník
+  * AD převodník
   * Komunikační periferie
 * Použití – Elektronická zařízení s digitálním řízením
 * Od PC se liší architekturou, fyzickou velikostí, energetickou náročností a výpočetním výkonem

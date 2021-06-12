@@ -4,9 +4,9 @@
 
 ## Internet věcí
 
-* Síť založená na standardizovaných komunikačních protokolech, která propojuje jednoznačně adresovatelné zařízení (věci) a umožňuje sdílení dat a informací, jejichž analýzou lze docílit vyšší přidané hodnoty.
-* Cílem je sběr, uložení a analýza dat/informací/znalostí a následné sdílení výsledků.
-* Na jedné straně jsou zařízení odesílající a přijímací data, na straně druhé je firemní/uživatelská aplikace nebo cloudová služba.
+* Síť založená na standardizovaných komunikačních protokolech, která propojuje jednoznačně adresovatelné zařízení (věci) a umožňuje sdílení dat a informací, jejichž analýzou lze docílit vyšší přidané hodnoty
+* Cílem je sběr, uložení a analýza dat/informací/znalostí a následné sdílení výsledků
+* Na jedné straně jsou zařízení odesílající a přijímací data, na straně druhé je firemní/uživatelská aplikace nebo cloudová služba
 * Hlavní dvě skupiny: spotřebitelský internet věcí (Consumer IoT) a průmyslový internet věcí (Industrial IoT)
 
 ### 1. Spotřebitelský internet věcí
@@ -104,4 +104,4 @@
 * Zprávy jsou tříděny do témat (topic)
 * Zařízení posílá brokeru data v daném tématu (publish) nebo odebírá určité téma (subscribe) a přijímá patřičná data od brokeru
 * Jedno zařízení může najednou být v některých tématech publisher a v jiných subscriber
-* Témata jsou hierarchivká oddělená lomítky ("house/bedroom/lights")
+* Témata jsou hierarchická a oddělená lomítky ("house/bedroom/lights")

@@ -13,8 +13,8 @@
 * WPAN (Personal)
   * Malá vzdálenost, 10 metrů
   * IEEE 802.15:
-  * Bluetooth
-  * ZigBee – ovládání zásuvek, žárovek, ...
+    * Bluetooth
+    * ZigBee – ovládání zásuvek, žárovek, ...
 * WLAN
   * IEEE 802.11
 * WWAN

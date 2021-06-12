@@ -43,7 +43,7 @@
 ### Zapojení s prioritním dekodérem
 
 * Adresa stisknutého tlačítka s nejvyšší prioritou
-* Počet tlačítek = 2 ** Počet adresních bitů
+* Počet tlačítek = 2 ** Počet adresních bitů – Výstupem dekodéru je "adresa" (pořadí) tlačítka
 * Nelze detekovat více stisknutých tlačítek najednou
 
 ### Zapojení s posuvným registrem PISO

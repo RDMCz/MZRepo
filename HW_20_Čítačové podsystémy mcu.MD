@@ -78,5 +78,5 @@
 
 * Některé typy AD převodu jsou založeny na měření času
 * Generování přenosové rychlosti (USART, SPI, I2C)
-* PWRT – Power-Up Timer – Zpoždění napájení při zapnutí, aby nepoškodilo MCU (při zapnutí nemusí být okamžitě v ideální hodnotě)
+* PWRT – Power-Up Timer – Zpoždění napájení při zapnutí, aby nepoškodilo MCU (při zapnutí nemusí být napětí okamžitě v ideální hodnotě)
 * OST – Oscillator Start-up Timer – Zpoždění nestabilní frekvence krystalu definované v počtu taktů oscilátoru (krystal okamžitě nezačne generovat optimální signál)
