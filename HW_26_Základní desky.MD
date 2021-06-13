@@ -48,7 +48,7 @@
 * ATX – Advanced Technology eXtended
   * Vyvinul Intel jako nástupce formátu AT
   * Velikostně EATX > ATX > microATX
-* Dále je rozšířený formát Mini-ITX od VIA Technologies (menší než MicroATX)
+* Dále je rozšířený formát Mini-ITX od VIA Technologies (menší než microATX)
 * BTX – Balanced Technology eXtended
   * Pokus Intelu o nástupce ATX, příliš se neuchytil
   * Lepší chlazení/airflow
@@ -59,7 +59,7 @@
   * SO-DIMM – Small Outline DIMM – verze pro notebook
   * Předchůdcem byl SIMM, kde se z obou stran jednalo o stejný kontakt
   * DIMM má z každé strany samostatný kontakt tzn. dvojnásobný počet vývodů na stejném prostoru oproti SIMM
-* DDR1-4
+* DDR1–4
 * Většina desek má barevně rozlišené sloty pro zapojení do dual channel
 
 ## BIOS – Basic Input/Output System

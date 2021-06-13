@@ -83,7 +83,7 @@
 ### Optimalizace závislé na HW
 
 * Registrové proměnné – Klíčové slovo, kompilátor se pokusí proměnnou uložit do registrů
-* Optimalizace jednoduchým přístupem – Poud možno, kompilátor využívá bitové operace
+* Optimalizace jednoduchým přístupem – Pokud možno, kompilátor využívá bitové operace
 * Změna typu smyčky / směru – Pro procesory bývá efektivnější číslovat sestupně a testovat na nulu
 
 ### Optimalizace nezávislé na HW

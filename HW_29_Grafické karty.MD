@@ -77,5 +77,5 @@
 * Výkon měřen v GFLOPS – milion operací s plovoucí řádovou čárkou za sekundu
 * CPU je univerzální, optimalizován pro sekvenční zpracování instrukcí (fronta, pipelining, eliminace skoků, ...)
 * GPU je vysoce paralelní, jejím hlavním účelem je vykreslování obrazu, v určitých jiných operacích může být nepřesná / nemá vhodné prostředky
-* Technologie Nvidia CUDA nebo OpenCL je softwarová vrstva poskytující přímí přístup k instrukční sadě GPU
+* Technologie Nvidia CUDA nebo OpenCL je softwarová vrstva poskytující přímý přístup k instrukční sadě GPU
 * Distribuované výpočty – Folding@home, GPUGRID, Seti@home

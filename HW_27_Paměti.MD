@@ -35,7 +35,7 @@
 ### EEPROM – Electrically EPROM
 
 * Obsah lze vymazat pomocí vysokého napětí, nebo napětí na _Erase pinu_
-* Paměť flash je typem EEPROM paměti navržená pro vysoké rychlosti a hustotu, má však snížený počet přepisů
+* Paměť flash je založena na technologii EEPROM, je navržena pro vysoké rychlosti a hustotu, má však nižší životnost
 
 ## RAM – Random Access Memory
 
@@ -60,6 +60,7 @@
 * Všechny operace provádí synchronně s CPU clock
   * Snížení čekací doby CPU = zvýšení výkonu
 * SDR SDRAM – Reaguje na náběžnou hranu
+* DDR SDRAM:
 
 ### DDR – Double Data Rate
 
@@ -92,7 +93,7 @@
 
 ### CPU cache
 
-* Mezipaměť díky které nemusí CPU pokaždé sahat do operační paměti
+* Mezipaměť, díky které nemusí CPU pokaždé sahat do operační paměti
 * SRAM – rychlejší
 * L1
   * Rozděleno na L1 Data Cache a L1 Instruction Cache
@@ -100,5 +101,5 @@
   * Velikost: stovky KB, maximálně okolo 1 MB
 * L2 – Několik MB
 * L3 – Desítky MB
-* Při zkopírování dat do cache se vytvoři _cache entry_ obsahující zkopírovaná data a umístění těchto dat zvané tag
+* Při zkopírování dat do cache se vytvoří _cache entry_ obsahující zkopírovaná data a umístění těchto dat zvané tag
 * CPU před žádáním hlavní paměti zkontroluje cache, pokud je záznam nalezen (tag se shoduje s žádanou adresou) jedná o _cache hit_, při absenci dat v cache se jedná o _cache miss_

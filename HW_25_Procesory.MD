@@ -87,8 +87,6 @@
 2. Loop unrolling – Rozbalování smyček
 3. Predikce skoků
 
-### Provádění instrukcí mimo pořadí
-
 ## Techniky snižování spotřeby
 
 1. Zmenšení výrobní technologie

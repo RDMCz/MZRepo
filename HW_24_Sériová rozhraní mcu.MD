@@ -27,11 +27,11 @@
 * Arbitrace u multimasteru (řešení, když vysílá více zařízení)
   * RS485 – round-robin – pověření / časový multiplex – bezkolizní
   * I2C, CAN – kolizní, řešeno přes dominantní úroveň
-* Adresace – netřeba / rámci dat / hardwarová
+* Adresace – netřeba / v rámci dat / hardwarová
   * SPI/Microwire – hardwarová
 * Zabezpečení (špatný přenos bitu)
   * SPI/Microwire, I2C – žádné na úrovni protokolu
-  * RS422/485 – volitelný paritní bit (sudá/lichá parita jedniček ve slově)
+  * RS422/485, USART – volitelný paritní bit (sudá/lichá parita jedniček ve slově)
   * 1Wire – 8bit CRC
   * CAN – 15bit CRC
 * Odolnost proti rušení
@@ -42,7 +42,7 @@
 
 * Určeno pro připojení vnějších pamětí, AD převodníků a dalších obvodů k MCU; popř. vzájemná komunikace MCU
 * Komunikace ATmega64 s periferiemi nebo jinými AVR zařízeními
-* Řízení je singlemster – dva nebo více obvodů, jeden je master (obvykle procesor) a ostatní slave
+* Řízení je singlemaster – dva nebo více obvodů, jeden je master (obvykle procesor) a ostatní slave
 * Jednotlivé obvody propojeny čtyřmi vodiči:
 
 1. MOSI – Master Out Slave In (u mastera datový výstup u slave datový vstup)
@@ -64,7 +64,7 @@ Vzdálenost | 3 m
 Frekvence | CK/2 (ATmega64)
 Počet zařízení | Podle počtu vývodů na masteru
 Řízení | Singlemaster
-Adresace | HW
+Adresace | Hardwarová
 Zabezpečení | —
 Duplexita | Full duplex
 
@@ -140,7 +140,7 @@ Frekvence | Uvedena v baudech (až megabaudech; bit/s), ostatní rychlosti odvoz
 Počet zařízení | 2
 Řízení | Point-to-Point
 Adresace | —
-Zabezpečení | —
+Zabezpečení | Volitelný paritní bit
 Duplexita | Full duplex
 
 ---

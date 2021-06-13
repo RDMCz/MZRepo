@@ -5,11 +5,11 @@
 ## LCD – Liquid Crystal Display
 
 * Kapalný krystal je stav hmoty, kdy jsou její vlastnosti v přechodu mezi kapalným a pevným skupenstvím
-* Tyto krystaly tvoří mřížku pixelů
+* Tyto krystaly tvoří mřížku subpixelů
   * Každý pixel je tvořen třemi subpixely – RGB
 * Plocha krystalů je podsvícena výbojkou a uzavřena mezi průhledné elektrody, na které je přiváděno napětí
 * Velikost napětí způsobuje natočení krystalů a to určuje propustnost světla (jas)
-* Paprsek nejdříve prochází horizontálním polarizačním filtrem, poté je ohýbán krystaly, prochází vertikálním polarizačním filtrem a nakonec barevným filtem
+* Paprsek nejdříve prochází horizontálním polarizačním filtrem, poté je ohýbán krystaly, prochází vertikálním polarizačním filtrem a nakonec barevným filtrem
 
 ![lcd](./img/HW_30_01.png)
 
