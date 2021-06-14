@@ -23,7 +23,7 @@
   * PORTF – Vstup pro AD převodník
   * PORTG – Externí vstup časování
 
-## Popis portu
+## Popis pinu
 
 ![pin](./img/HW_18_01.png)
 

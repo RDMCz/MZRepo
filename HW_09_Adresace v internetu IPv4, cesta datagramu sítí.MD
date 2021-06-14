@@ -74,6 +74,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 * IANA přiděluje intervaly IP adres jednotlivým RIR – Regional Internet Registry
 * RIRem v Evropě je _RIPE NCC_, ta rozděluje adresy jednotlivým LIR – Local Internet Registry (zpravidla ISP)
 * O _.cz_ domény se stará _CZ.NIC_
+* DHCP – Protokol, který koncovým zařízením v síti automaticky přiřazuje IP adresu, masku, default gateway a adresu DNS serveru
 
 ## ARP – Address Resolution Protocol
 

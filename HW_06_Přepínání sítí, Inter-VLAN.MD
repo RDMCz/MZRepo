@@ -64,5 +64,5 @@ Switch(config-if)# no sh
 
 * Problém s připojením do internetu:
   * L3 switch nemá NAT server (kromě nejdražších z řady Cisco Nexus)
-  * Pro připojení do internetu by se za L3 switch musel umístit router z NAT serverem
+  * Pro připojení do internetu by se za L3 switch musel umístit router s NAT serverem
     * Pakety určené do internetu by nepatřily do žádné jeho VLAN, pro jejich odeslání na router by se nastavila defaultní routa (žolík) `ip route 0.0.0.0 0.0.0.0 ...`

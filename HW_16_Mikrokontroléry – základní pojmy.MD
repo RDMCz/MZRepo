@@ -10,7 +10,7 @@
   * Řadič je v nákresech označen jako _INSTRUCTION DECODER_, jednou z jeho hlavních úloh je dekódování instrukcí
 * Se svým okolím komunikuje pomocí univerzálních obousměrných vodičů sdružených do portů
 * Obsahuje integrované periferie z důvodu většího programátorského pohodlí
-  * Čítač / časovač
+  * Čítač/časovač
   * AD převodník
   * Komunikační periferie
 * Použití – Elektronická zařízení s digitálním řízením

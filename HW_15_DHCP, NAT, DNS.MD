@@ -148,6 +148,8 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 * __Outside Local__ – Privátní adresy stanic ve vnější síti, jak se jeví ve vnitřní síti
 * __Outside Global__ – Veřejné adresy konfigurované na stanicích vnější sítě
 
+<img src="./img/HW_15_01.PNG" width=607 />
+
 ### Druhy NAT
 
 * __Statická NAT__ – Adresy ručně přiděleny (nastaveny) správcem. Každá _inside local_ má svou _inside global_

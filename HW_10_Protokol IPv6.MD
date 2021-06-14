@@ -65,7 +65,7 @@ desítková soustava | šestnáctková soustava
 * Velikost části, která vyjadřuje číslo sítě je definována pomocí CIDR notace počtem bitů zleva = __prefix__
 * V IPv4 lze zapsat jako délku prefixu `192.168.1.1/24` nebo pomocí masky `255.255.255.0`
 * V IPv6 se zapisuje pouze délka prefixu
-  * Doporučená velikost pro podsítě je `/64`, ~aby fungoval Neighbor Discovery Protocol
+  * Doporučená velikost pro podsítě je `64`, ~aby fungoval Neighbor Discovery Protocol
 * S délkou prefixu `/64` je tedy 64 bitů z leva __Prefix__ (adresa podsítě) a zbylých 64 bitů (128-64) je __Interface ID__ (adresa konkrétního zařízení v podsíti)
 
 ## Komprimace nul
@@ -107,7 +107,7 @@ prefix | význam
 ![GUA](./img/HW_10_02.PNG)
 
 * __Global Routing Prefix__ – Globální směrovací prefix – Síťová část adresy přidělená poskytovatelem, obvykle `/48`
-* __Interface ID__ – Identifikátor rozhraní – Rozlišuje zařízení v rámci podsítě (podobné jako hostitelská část IPv4), doporučeno `/64`
+* __Interface ID__ – Identifikátor rozhraní – Rozlišuje zařízení v rámci podsítě (podobné jako hostitelská část IPv4), doporučeno `64`
 * __Subnet ID__ – Identifikátor podsítě – Prostor mezi nimi; čím větší, tím větší možné množství podsítí
 * `2000::/3` – `2000`-`3FFF`, např.: `2001:db8:3c4d:15::baba:deda`
 
@@ -213,7 +213,7 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 
 ## NDP – Neighbor Discovery Protocol
 
-* Náhrada za ARP (Address Resolution Protocol) v IPv4, kde zařízení odešle na všechny stroje v lokální síti ARP dotaz tázající se, jaké zařízení má určitou adresu
+* Náhrada za ARP (Address Resolution Protocol) v IPv4, kde zařízení odešle na všechny stroje v lokální síti ARP dotaz tázající se, jaké zařízení má určitou adresu (zná IP adresu a chce zjistit MAC adresu)
 * Funkce NDP:
   * Hledání směrovačů a zjištění informací pro automatickou konfiguraci adresy
   * Zjišťování linkových adres uzlů ve stejné lokální síti

@@ -86,11 +86,9 @@ Switch(config-if)# no sh
 Switch(config-if)# exi
 Switch(config)# no interface vlan 10                        // Odstranění SVI
 
-Switch(config)# interface fastEthernet 0/1
-Switch(config-if)# switchport mode access                   // Nastavení portu do přístupového módu
-Switch(config-if)# switchport access vlan 10                // Zařazení portu do VLAN 10
-
 Switch(config)# interface range fastEthernet 0/1-5          // Výběr více interfaců rozsahem
+Switch(config-if)# switchport mode access                   // Nastavení portů do přístupového módu
+Switch(config-if)# switchport access vlan 10                // Zařazení portů do VLAN 10
 
 Switch(config)# interface fastEthernet 0/1                           
 Switch(config-if)# switchport trunk allowed vlan 20,30      // Lze také zadat rozsah (např. vlan 11-20)

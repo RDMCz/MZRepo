@@ -2,7 +2,7 @@
 
 * Směrovací tabulky – záznamy, statické směrování, dynamické směrovací protokoly (RIP, RIPv2, RIPng, EIGRP, OSPF, BGP),
 * směrovací protokoly postavené na principu vzdáleného vektoru (distance-vector) v porovnání s link-state.
-* Výhody a nevýhody statického směrování oproti dynamického směrování.
+* Výhody a nevýhody statického směrování oproti dynamickému směrování.
 * Příklad vytvoření směrovacích tabulek staticky a pomocí směrovacího protokolu (např. RIP)
 
 ## Směrování
@@ -56,6 +56,7 @@
 
 ### BGP – Border Gateway Protocol
 
+* Path-vector
 * Používán ISP, páteřní sítě
 
 ### Distance-vector protoly
@@ -73,10 +74,6 @@
 * Výrazně náročnější na hardware
 * Lepší rychlost konvergence – Doba, za kterou bude síť plně funkční (všechny stroje budou mít vyplněné tabulky)
 
-### Dynamické routy
-
-* Přidány směrovačem pomocí směrovacích protokolů
-
 ### Statické routy
 
 * Přidány správcem
@@ -87,6 +84,21 @@
 Router> en
 Router# conf t
 Router(config)# ip route 192.168.2.0 255.255.255.0 Serial 0/1/0
+Router(config)# exi
+Router# wr
+```
+
+### Dynamické routy
+
+* Přidány směrovačem pomocí směrovacích protokolů
+
+``` txt
+Router> en
+Router# conf t
+Router(config)# router rip
+Router(config-router)# network 10.1.1.0
+Router(config-router)# neighbor 10.1.1.2
+Router(config-router)# end
 Router(config)# exi
 Router# wr
 ```

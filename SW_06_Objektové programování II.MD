@@ -44,12 +44,12 @@ class A
 
 class B : A
 {
-    public new void SomeMethod()    // Přepsání
+    public new void SomeMethod()            // Překrytí
     {
         WriteLine("B - Some Method");
     }
 
-    public override void AnotherMethod()    // Překrytí
+    public override void AnotherMethod()    // Přepsání
     {
         WriteLine("B - Another Method");
     }
