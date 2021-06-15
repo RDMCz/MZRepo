@@ -51,7 +51,7 @@
 
 ## Rozsah
 
-### PAN – Personal Area Network
+### WPAN – Wireless Personal Area Network
 
 * Malá vzdálenost, 10 metrů
 * Nositelná elektronika, tachometr na kole, ...

@@ -36,7 +36,7 @@
 
   * Na této adrese je přímo umístěný obslužný podprogram, nebo skok/adresa na skutečné umístění podprogramu (častější)
 
-* U ATmega64 jsou perušovací vektory (adresy vedoucí do paměti programu), kam se předává řízení
+* U ATmega64 jsou přerušovací vektory (adresy vedoucí do paměti programu), kam se předává řízení
 
   * Jsou na začátku PM odstupňované po dvou (0x0000, 0x0002, ...), aby se zde vešel nepodmíněný skok na skutečné místo podprogramu
 

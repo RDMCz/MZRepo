@@ -104,7 +104,7 @@ public Module TakeModule(Actions a)
 * V C# na kolekce implementující `IEnemuretor` lze použít `foreach` = __Implicitní iterátor__
 * __Explicitní iterátor__ si musíme sami napsat, instance iterátoru na požádání vrací odkaz na další prvek v kolekci, dokud nedojede k prvku poslednímu
 * __Externí iterátor__: průchod kolekcí řídí klient s využitím iterátoru; složitější, ale mocnější řešení
-* __Interní iterátor__: průchod kolekcí řídí iterátor sám; klient specifikuje , co provádět s prvky kolekce (např pomocí LINQ + lambda)
+* __Interní iterátor__: průchod kolekcí řídí iterátor sám; klient specifikuje, co provádět s prvky kolekce (např pomocí LINQ + lambda)
 
 ### Prázdný (Null) objekt
 

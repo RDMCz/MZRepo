@@ -22,15 +22,17 @@
 * Počet zařízení, které spolu na sběrnici mohou komunikovat
 * Řízení – P2P point-to-point / singlemaster / multimaster
   * USART – point-to-point
-  * SPI/Microwire, RS422, 1Wire – singlemaster
+  * SPI, RS422, 1Wire – singlemaster
   * I2C, CAN, ~RS485 – multimaster
 * Arbitrace u multimasteru (řešení, když vysílá více zařízení)
   * RS485 – round-robin – pověření / časový multiplex – bezkolizní
   * I2C, CAN – kolizní, řešeno přes dominantní úroveň
 * Adresace – netřeba / v rámci dat / hardwarová
-  * SPI/Microwire – hardwarová
+  * USART – netřeba
+  * I2C – v rámci dat
+  * SPI – hardwarová
 * Zabezpečení (špatný přenos bitu)
-  * SPI/Microwire, I2C – žádné na úrovni protokolu
+  * SPI, I2C – žádné na úrovni protokolu
   * RS422/485, USART – volitelný paritní bit (sudá/lichá parita jedniček ve slově)
   * 1Wire – 8bit CRC
   * CAN – 15bit CRC
@@ -136,10 +138,10 @@ Duplexita | Half duplex
 USART | Universal Synchronous and Asynchronous Receiver and Transmitter
 --: | :-:
 Vzdálenost | Klidně i stovky metrů (převod na RSxxx, kvalita kabelu, počet baudů)
-Frekvence | Uvedena v baudech (až megabaudech; bit/s), ostatní rychlosti odvozeny dělením; v praxi desítky/stovky kbit/s
+Frekvence | Uvedena v baudech (až megabaudech; bit/s), ostatní rychlosti odvozeny dělením; v praxi desítky/stovky Kbit/s
 Počet zařízení | 2
 Řízení | Point-to-Point
-Adresace | —
+Adresace | Netřeba
 Zabezpečení | Volitelný paritní bit
 Duplexita | Full duplex
 

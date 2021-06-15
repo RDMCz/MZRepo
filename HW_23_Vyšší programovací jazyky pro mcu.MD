@@ -34,8 +34,8 @@
   * Výrazně delší doba tvorby programu
   * Nepřenosnost
 * C:
-  * Rychlejší, větší kontrola, ...
-  * Přenosnost meti platformami, pokud neodkazujeme na konkrétní HW dané architektury
+  * Rychlejší, čitelnější, ...
+  * Přenosnost mezi platformami, pokud neodkazujeme na konkrétní HW dané architektury
     * Lze použít HAL – Hardware Abstraction Layer
 
 ## Požadavky VPJ na MCU
@@ -84,7 +84,7 @@
 
 * Registrové proměnné – Klíčové slovo, kompilátor se pokusí proměnnou uložit do registrů
 * Optimalizace jednoduchým přístupem – Pokud možno, kompilátor využívá bitové operace
-* Změna typu smyčky / směru – Pro procesory bývá efektivnější číslovat sestupně a testovat na nulu
+* Změna typu/směru smyčky – Pro procesory bývá efektivnější číslovat sestupně a testovat na nulu
 
 ### Optimalizace nezávislé na HW
 

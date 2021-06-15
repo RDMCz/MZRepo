@@ -36,10 +36,10 @@
 * Nejjednodušší protokol
 * Výukové účely, malé sítě
 * Maximálně 15 skoků (sítě s 16+ skoky jsou nedosažitelné)
-* Broadcast
+* Zasílání směrovacích tabulek broadcastem
 * RIPv2
   * Umožňuje práci s podsítěmi
-  * Multicast
+  * Zasílání směrovacích tabulek multicastem
 * RIPng (next generation)
   * Podpora IPv6
 
@@ -102,3 +102,8 @@ Router(config-router)# end
 Router(config)# exi
 Router# wr
 ```
+
+---
+---
+
+![😫](./img/HW_13_03.PNG)
