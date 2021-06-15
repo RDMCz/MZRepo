@@ -1,7 +1,5 @@
 # SW 10 – Paralelní programování
 
-* Asynchronní a paralelní programování. Thread, Task, zámek, chráněná sekce, použití paralelismu, Async/await.
-
 ## Asynchronní programování
 
 * Asynchronní volání neblokují chod volajícího

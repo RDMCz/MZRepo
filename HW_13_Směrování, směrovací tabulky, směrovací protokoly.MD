@@ -1,10 +1,5 @@
 # HW 13 – Směrování, směrovací tabulky, směrovací protokoly
 
-* Směrovací tabulky – záznamy, statické směrování, dynamické směrovací protokoly (RIP, RIPv2, RIPng, EIGRP, OSPF, BGP),
-* směrovací protokoly postavené na principu vzdáleného vektoru (distance-vector) v porovnání s link-state.
-* Výhody a nevýhody statického směrování oproti dynamickému směrování.
-* Příklad vytvoření směrovacích tabulek staticky a pomocí směrovacího protokolu (např. RIP)
-
 ## Směrování
 
 * Určení, kam se má paket dostat

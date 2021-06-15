@@ -1,12 +1,5 @@
 # HW 01 – Vrstva síťového přístupu, Ethernet
 
-* Protokol IEEE 802.3, MAC vrstva, IEEE 802.2, LLC vrstva, unicast, broadcast, multicast, anycast
-* ARP protokol, popis rámce Ethernet, PPP a WLAN (stručně, jen vybrané položky rámce)
-* Média, modulace, šířka pásma, propustnost
-* Druhy médií – kabely, optická vlákna, bezdrátové sítě - základní principy činnosti
-* Značení kabelů (koaxiál, UTP/STP, konektory - zapojení),
-* konektory optických vláken (SMF/MMF)
-
 ## Referenční model ISO/OSI
 
 <table>

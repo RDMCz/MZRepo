@@ -1,8 +1,5 @@
 # HW 24 – Sériová rozhraní mcu
 
-* Popis sériových sběrnic USART, RS422/485, SPI/Microwire, I2C, 1Wire, CAN. Popis sériového portu Atmel AVR.
-* Dokumentace strana 171
-
 ## Sériová rozhraní
 
 * Sériová komunikační rozhraní se v mikroprocesorové technice používají ke dvěma účelům:

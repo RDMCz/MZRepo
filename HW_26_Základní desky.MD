@@ -1,7 +1,5 @@
 # HW 26 – Základní desky
 
-* Základní deska (čipová sada, bios), interní sběrnice (PCI, PCIe), externí sběrnice (usb, firewire)
-
 ## Základní deska (Motherboard)
 
 * Umožňuje komunikaci mezi ostatními komponentami

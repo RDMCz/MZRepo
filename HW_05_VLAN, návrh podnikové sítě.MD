@@ -1,9 +1,5 @@
 # HW 05 – VLAN, návrh podnikové sítě
 
-* Koncepce VLAN, výhody nasazení VLAN, access VLAN, trunk VLAN, IEEE802.1Q, native VLAN, management VLAN, voice VLAN.
-* Redundance v podnikové síti (záložní cesty) – STP a PVST+ a výběr root bridge, blokované porty – určení
-* Zvýšení propustnosti sítě pomocí EtherChannel - princip, nastavení, protokoly
-
 ## VLAN – Virtual Local Area Network
 
 * VLAN je izolovaná broadcastová doména

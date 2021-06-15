@@ -1,6 +1,5 @@
 # SW 25 – Testování software, ošetření chyb
 
-* Sémantická chyba, syntaktická chyba, chyba, debugging, ladění aplikace, výjimka, testování, jednotkové testy
 * __Kompilovaný jazyk__ – Zdrojový kód nejprve přeložen pomocí překladače (kompilátoru) do strojového kódu a až poté je možné ho spustit (C#)
 * __Interpretovaný jazyk__ – Program zvaný interpreter přímo spouští kód step-by-step bez nutnosti předběžného překladu (Python)
 

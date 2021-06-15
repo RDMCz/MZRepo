@@ -1,7 +1,5 @@
 # HW 25 – Procesory
 
-* Struktura současných procesorů (x86/64). Techniky optimalizace provádění instrukcí, snižování spotřeby. Rozšířené instrukční sady.
-
 ## Central Processing Unit
 
 * Integrovaný obvod, provádí strojové instrukce

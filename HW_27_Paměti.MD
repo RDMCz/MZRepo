@@ -1,8 +1,5 @@
 # HW 27 – Paměti
 
-* Typy pamětí, struktura, základní parametry, optimalizace přístupu do paměti (cache)
-* Druhy pamětí (ROM x RAM, statické x dynamické), paměti v PC, cache (organizace dat, stupeň asociativity)
-
 ## Paměť
 
 * Fyzické zařízení umožňující ukládat data a následně s nimi pracovat

@@ -1,8 +1,5 @@
 # HW 18 – Paralelní porty mcu
 
-* Popis paralelních portů mikrokontrolérů řady Atmel AVR. Obvodový popis portu, elektrické vlastnosti. Příklady instrukcí pro práci s porty
-* Dokumentace strana 1, 3, 67, 325, 395
-
 ## Porty
 
 * Porty slouží k připojení externích periferií, nebo jako externí datová/adresová sběrnice při připojení paměti

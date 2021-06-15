@@ -1,7 +1,5 @@
 # SW 13 – Konceptuální návrh databáze
 
-* Entita, relace, entitní typ, klíč, kandidátní klíč, primární klíč, silná a slabá entity, kardinalita a parcialita, agregace, kompozice
-
 ## Relace
 
 * V relační databázi se tabulkám říká _relace_

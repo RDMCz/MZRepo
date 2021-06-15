@@ -1,10 +1,5 @@
 # HW 07 – Sítě standardu IEEE 802.11
 
-* Přenosová trasa, přístup k médiu, 802.11a/b/g/n/ac/ax Wi-Fi, AP,
-* fyzická vrstva – SS (rozprostřené spektrum) – AFH, DS, OFDM, QAM, MIMO (multiple input, multiple output),
-* Ad-hoc, Wi-Fi Direct, infrastrukturní sítě,
-* BSS, ESS, ESSID, MAC control, WEP, WPA, WPA2, WPA3, EAP, 802.1X, Radius, AAA
-
 ## Bezdrát podle dosahu
 
 * NFC – Near Field Communication

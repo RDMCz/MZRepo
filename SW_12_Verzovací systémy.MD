@@ -1,7 +1,5 @@
 # SW 12 – Verzovací systémy
 
-* Verzovací systémy, Git, repozitář, commit, větev.
-
 ## Verzování (version control)
 
 * Obecně správa změn v počítačových souborech (program, dokument, konfigurace, ...)

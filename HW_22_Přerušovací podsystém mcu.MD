@@ -1,7 +1,5 @@
 # HW 22 – Přerušovací podsystém mcu
 
-* Přerušení, obsluha, vektor, povolení, příznak, priorita, kontext, zpracování, přerušovací systém Atmel AVR
-
 ## Přerušení
 
 * Událost, na kterou chceme reagovat

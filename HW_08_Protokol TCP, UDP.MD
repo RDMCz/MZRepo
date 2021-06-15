@@ -1,7 +1,5 @@
 # HW 08 – Protokol TCP, UDP
 
-* Přepínání datagramů vs. přepínání obvodů, TCP komunikace, segmentace, multiplexování segmentů, formát datagramu, řízení toku, omezení režie, navázání a ukončení spojení (tří a čtyřcestný handshake), plovoucí okno.
-* Porovnání komunikace s použitím TCP a UDP, příklady
 * __Přepínání obvodů__ – vytvoření virtuálního obvodu, po kterém cestují pakety; v internetu se nepoužívá
 * __Přepínání datagramů__ – každý paket je otagován, k cíli se může dostat různými cestami
 * PDU – TCP segment, UDP datagram

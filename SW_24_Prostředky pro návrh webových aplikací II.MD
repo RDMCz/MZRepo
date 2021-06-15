@@ -1,7 +1,5 @@
 # SW 24 – Prostředky pro návrh webových aplikací II
 
-* Písmo v WWW, CSS, selektor, příklady selektorů, vlastnosti CSS, media query, CSS Frameworky, komponenty v CSS, možnosti pozicování prvků v Bootstrap
-
 ## Písmo
 
 * Správné stylování písma je důležité, aby se dal obsah webu číst komfortně

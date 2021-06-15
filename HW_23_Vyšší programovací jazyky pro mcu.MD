@@ -1,8 +1,5 @@
 # HW 23 – Vyšší programovací jazyky pro mcu
 
-* Požadavky vpj na architekturu mcu, omezení a rozdíly vůči programování pro osobní počítače, optimalizace kompilátoru
-* Dokumentace strana 1, 395
-
 ## Programování pro MCU x PC
 
 * ~Absence OS a osekané architektury u MCU

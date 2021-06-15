@@ -1,11 +1,5 @@
 # HW 28 – Zařízení pro ukládání dat
 
-* Pevné disky (HDD/SSD), optická média (CD, DVD, BlueRay), rozhraní PATA, SATA, SCSI, SAS, M.2.
-* HDD - popis, jak to vypadá uvnitř, organizace dat, princip
-zápisu (GMP,PMR,SMR,HAMR,MAMR,EAMR,TDMR,EPMR,MACH.2), parametry,výhody/nevýhody, rozhraní pata/scsi/sas, technologie, NCQ/TCQ, SMART
-* SSD/NVMe - princip, verze (SLC/MLC/TLC,QLC,...),parametry, /výhody/nevýhody, formáty, rozhraní(SATAx,SAS,M.2,U.2,mSATA,AIC,..), technologie TRIM
-* Optická média a zálohování vč. RAID a NAS
-
 ## HDD – Hard Disk Drive
 
 * Nevolatilní, pro ukládání a čtení dat se využívá magnetické indukce

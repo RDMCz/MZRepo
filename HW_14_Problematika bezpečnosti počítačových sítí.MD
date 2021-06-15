@@ -1,9 +1,5 @@
 # HW 14 – Problematika bezpečnosti počítačových sítí
 
-* Fyzická bezpečnost, sociální inženýrství, adware, spyware, malware, exploit, virus, červ, DoS, DDoS, Botnet (zombie), Man in the Middle (MITM), ransomware
-* Zabezpečení přepínače (flooding, snooping, starvation, port security)
-* Zabezpečení bezdrátových sítí (kontrola přístupu, šifrování)
-
 ## Fyzická bezpečnost
 
 * K serverům a jiným prvkům IT infrastruktury se nesmí dostat nepovalaná osoba – zamezení odcizení/poškození

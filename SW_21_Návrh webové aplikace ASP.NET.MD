@@ -1,7 +1,5 @@
 # SW 21 – Návrh webové aplikace <span>ASP.NET</span>
 
-* Razor Pages, MVC, Page, PageModel, Razor syntaxe, Startup.cs, služba, databáze, Entity Framework, Identity
-
 ## <span>ASP.NET</span>
 
 * Active Server Pages

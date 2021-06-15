@@ -1,8 +1,5 @@
 # SW 8 – Návrhové vzory I
 
-* Návrhové vzory pro vytváření instancí, rozšiřování funkcionality
-* Vytvářející vzory a vzory chování
-
 ## Návrhový vzor
 
 * Popis/šablona pro řešení (častého) problému

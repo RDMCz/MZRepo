@@ -1,7 +1,5 @@
 # SW 03 – Strukturované datové typy
 
-* Strukturované datové typy, objekt, pole, kolekce, generické kolekce.
-
 ## Strukturované datové typy
 
 * Objekty skládající se z několika komponent (členů)

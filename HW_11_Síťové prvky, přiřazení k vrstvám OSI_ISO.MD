@@ -1,10 +1,5 @@
 # HW 11 – Síťové prvky, přiřazení k vrstvám OSI/ISO
 
-* Popis standardního chování opakovače, mostu, přepínače, směrovače, firewallu …
-* Možnosti nastavení přepínače a směrovače pomocí managementu – další funkce směrovače,
-* Domácí router a Wi-Fi router – možnosti nastavení, porovnání s podnikovým routerem
-* Možnosti škálování sítí (drátové i bezdrátové) – rozšíření množství portů
-
 ## Referenční model ISO/OSI
 
 <table>

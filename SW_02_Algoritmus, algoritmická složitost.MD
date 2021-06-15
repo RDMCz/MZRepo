@@ -1,7 +1,5 @@
 # SW 02 – Algoritmus, algoritmická složitost
 
-* Algoritmus, algoritmická složitost, rekurze, náhodnost.
-
 ## Algoritmus
 
 Algoritmus je přesný postup, kterým lze vyřešit určitý problém.

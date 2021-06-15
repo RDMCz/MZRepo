@@ -1,7 +1,5 @@
 # SW 20 – Ověřování identity v prostředí internetu
 
-* Jméno, heslo, dvoufázové ověřování, biometrické ověřování, OAuth2, resource, owner, authorization server, OpenID, poskytovatelé ověření, access_token
-
 ## Schéma "moderní" webové aplikace
 
 ![ModernApp](./img/SW_20_01.PNG)

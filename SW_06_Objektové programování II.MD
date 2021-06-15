@@ -1,8 +1,5 @@
 # SW 06 – Objektové programování II
 
-* Zapouzdření, dědičnost, polymorfismus, přepsání a překrytí (virtual, override, new), přetížení.
-* Příkladem budiž zvířata a jejich zvuky
-
 ## Zapouzdření (Encapsulation)
 
 * = Zabalení dat a metod a restrikce přístupu k nim. Používá se pro skrytí dat ve třídě.

@@ -1,7 +1,5 @@
 # HW 04 – Referenční model OSI/ISO
 
-* Protokol, rozhraní, popis a funkce jednotlivých vrstev, PDU, zapouzdřování, porovnání s modelem TCP/IP, průchod dat přes síťové prvky, kategorie přepínačů pro jednotlivé vrstvy, nástroje pro zachycování dat v síti, testování a oprava problémů v síti
-
 ## Referenční model ISO/OSI
 
 <table>

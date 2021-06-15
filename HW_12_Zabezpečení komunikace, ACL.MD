@@ -1,9 +1,5 @@
 # HW 12 – Zabezpečení komunikace, ACL
 
-* Kryptografie symetrická a asymetrická, hashování, certifikáty a certifikační autorita, elektronický podpis, VPN, příklad implementace (SSL)
-* ACL standardní a rozšířený, jmenný ACL, zabezpečení přístupu k managování switche a routeru,
-* Vytvoření ACL a nasazení ACL na porty směrovače (filtrace provozu dovnitř a ven – porovnání)
-
 ## Kryptografie
 
 * Zabývá se šifrováním dat

@@ -1,8 +1,5 @@
 # SW 05 – Objektové programování I
 
-* Strukturované a objektové programování, objekt, třída, základní objektové vlastnosti, třídy abstraktní, zapouzdřené a rozhraní.
-* Příkladem budiž zvířata a jejich zvuky
-
 ## Strukturované a objektové programování
 
 = paradigmata (programovací styly)

@@ -1,7 +1,5 @@
 # SW 18 – Možnosti pozicování na webových stránkách
 
-* Blokové a inline prvky, absolutní a relativní pozicování, obtékání, grid, flex, tabulka
-
 ## Statické pozicování
 
 * Výchozí pozicování prvků v html je `static`

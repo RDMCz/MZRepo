@@ -1,7 +1,5 @@
 # SW 16 – Výběr dat v SQL
 
-* SELECT, projekce, restrikce, podmínky, seskupování, agregace, spojování tabulek
-
 ## SELECT
 
 * Příkaz `SELECT` se v SQL používá k získání jakýchkoliv informací z databáze

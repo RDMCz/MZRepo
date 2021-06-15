@@ -1,7 +1,5 @@
 # HW 21 – Internet věcí
 
-* Vysvětlení pojmu, architektura, sítě typu LPWAN, komunikační protokoly
-
 ## Internet věcí
 
 * Síť založená na standardizovaných komunikačních protokolech, která propojuje jednoznačně adresovatelné zařízení (věci) a umožňuje sdílení dat a informací, jejichž analýzou lze docílit vyšší přidané hodnoty

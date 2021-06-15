@@ -1,11 +1,5 @@
 # HW 02 – Aplikační vrstva TCP/IP
 
-* Sítě P2P a klient-server (pro porovnání), aplikace P2P a klient-server (model)
-* Popis aplikací a komunikace:
-  * WEB server, email,
-  * FTP, SMB, NFS, telnet, TFTP,
-  * SSH, NTP a další síťové aplikace
-
 ## Referenční model ISO/OSI
 
 <table>

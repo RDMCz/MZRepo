@@ -1,8 +1,5 @@
 # SW 01 – Základní programové konstrukce
 
-* proměnné, datové typy, reference a hodnota, programy a podprogramy, operátory, priorita operátorů
-* if, switch, cyklus
-
 ## Proměnné
 
 * Proměnná je místo v paměti, kam se ukládají data

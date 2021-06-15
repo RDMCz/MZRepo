@@ -1,8 +1,5 @@
 # HW 17 – Instrukční soubor mcu
 
-* Druhy instrukcí, popis. Struktura instrukce v paměti, CISC, RISC, architektura load-store, doba provádění instrukce. Popis příkladu zdrojového kódu programu v asm.
-* Dokumentace strana 395
-
 ## Druhy instrukcí
 
 * (Nadpisy 395–397)

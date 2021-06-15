@@ -1,7 +1,5 @@
 # SW 11 – Architektury .NET
 
-* Prostředky architektury .NET pro cílové platformy, MVVM, Binding, Observer, událostmi řízené programování.
-
 ## .NET
 
 * `.NET Framework` je framework od společnosti Microsoft

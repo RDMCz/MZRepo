@@ -1,7 +1,5 @@
 # SW 23 – React
 
-* Component, DOM, Virtual DOM, událost, props, state, hook, propagace stavu
-
 ## React
 
 * Open-source frontend JavaScript knihovna pro návrh UI a UI komponent

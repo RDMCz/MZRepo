@@ -1,11 +1,5 @@
 # HW 06 – Přepínání sítí, Inter-VLAN
 
-* Tři způsoby propojení VLAN, porovnání metod z hlediska efektivity.
-* Switch L3, směrování a přepínání sítí – porovnání
-* Nastavení směrovače pro propojení VLAN (legacy, Router-on-a-Stick)
-* Nastavení přepínače L3 pro Inter-VLAN, možnost směrování přepínače L3
-* Připojení VLAN do internetu
-
 ## Inter-VLAN routing
 
 * Po rozdělení sítě na VLAN se zmenší broadcastové domény, segmentuje se síť a ušetří se např. za hardware

@@ -1,7 +1,5 @@
 # SW 04 – Spojové struktury
 
-* Spojové struktury, seznamy, stromy, procházení, vkládání a odstraňování prvků, výhody a nevýhody.
-
 ## Spojové struktury
 
 * Struktura obsahující soubor záznamů (uzlů) propojených pomocí referencí (odkaz/ukazatel)

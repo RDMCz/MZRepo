@@ -1,12 +1,5 @@
 # HW 10 – Protokol IPv6
 
-* Specifikace, srovnání s IPv4, dual-stack, tunel, NAT64.
-* Prefix a délka prefixu, komprimace nul, názvosloví v IPv6
-* druhy vysílání (unicast, multicast, anycast),
-* druhy adres IPv6 včetně příkladů adres (GUA, LLA, ULA, multicast)
-* stanovení InterfaceID, ZoneID, použití adresy pro ping a web stránky
-* ND (NDP) – RS, RA, NS, NA, DAD, ICMPv6 – náhrada ARP
-
 ## IPv6 – Internet Protocol Version 6
 
 * Internet Protocol je zodpovědný za směrování (routování) paketů ze zdroje do cíle
@@ -191,7 +184,7 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 
 ### __RA__ – Router advertisement – Ohlášení směrovače
 
-* Směrovače v náhodných intervalech (podle Prokeše každých 200 sekund) zasílají do všech připojených sítí informace
+* Směrovače v náhodných intervalech (každých 200 sekund ?) zasílají do všech připojených sítí informace
 * Odesláno pomocí ICMPv6
 
 ### __SLAAC__ – StateLess Address AutoConfiguration – Bezstavová konfigurace

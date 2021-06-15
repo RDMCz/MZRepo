@@ -1,7 +1,5 @@
 # HW 30 – Výstupní zařízení PC
 
-* Displeje - LCD, LED, OLED, technologie zobrazení, základní parametry. Tiskárny – technologie tisku, základní parametry.
-
 ## LCD – Liquid Crystal Display
 
 * Kapalný krystal je stav hmoty, kdy jsou její vlastnosti v přechodu mezi kapalným a pevným skupenstvím

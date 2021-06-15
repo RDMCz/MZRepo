@@ -1,7 +1,5 @@
 # SW 17 – Prostředky pro návrh webových aplikací I
 
-* HTML, CSS, Javascript, značka, atribut, sémantický význam značek
-
 ## HTML (Hypertext Markup Language)
 
 * Značkovací jazyk pro tvorbu webových stránek propojených hypertextovými odkazy

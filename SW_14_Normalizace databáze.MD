@@ -1,7 +1,5 @@
 # SW 14 – Normalizace databáze
 
-* OLAP, OLTP, Normální formy, normalizace, optimalizace, 0. NF, 1. NF, 2. NF, 3. NF
-
 ## OLAP (Online Analytical Processing)
 
 * Technologie uložení dat v databázi

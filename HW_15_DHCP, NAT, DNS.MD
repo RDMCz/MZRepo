@@ -1,15 +1,5 @@
 # HW 15 – DHCP, NAT, DNS
 
-* DHCPv4 komunikace s DHCP serverem, obsah zprávy DHCP serveru
-* Nastavení rozsahu přidělovaných adres, DHCP Relay (DHCP server za standardní bránou)
-* SLAAC, DHCPv6, nastavení serveru a klienta, ověření nastavení.
-* Koncepce NAT, důvody a výhody použití NAT, port forwarding, NAT v IPv6 (NAT64)
-* Inside, outside, local a global adresy,
-* statická NAT, dynamická NAT, portovaná NAT (PAT) - overloading
-* Konfigurace statické i dynamické NAT, PAT (NAT overload), ověření nastavení
-* Doménové jméno, FQDN, systém DNS – kořenové servery
-* TLD, SLD, přiřazení DN, překlad, autoritativní odpověď
-
 ## DHCP – Dynamic Host Configuration Protocol
 
 * Protokol, který koncovým zařízením v síti automaticky přiřazuje IP adresu, masku, default gateway a adresu DNS serveru
@@ -76,7 +66,7 @@ Router# wr
 
 ### __RA__ – Router advertisement – Ohlášení směrovače
 
-* Směrovače v náhodných intervalech (podle Prokeše každých 200 sekund) zasílají do všech připojených sítí informace
+* Směrovače v náhodných intervalech (každých 200 sekund ?) zasílají do všech připojených sítí informace
 * Odesláno pomocí ICMPv6
 
 ### __SLAAC__ – StateLess Address AutoConfiguration – Bezstavová konfigurace

@@ -1,7 +1,5 @@
 # SW 15 – Jazyk SQL
 
-* Dialekt, standard, DML, DDL, DCL, TCL, INSERT, UPDATE
-
 ## Dialekt
 
 * SQL databáze jsou poskytovány mnoha firmami a občas mají mírné odlišnosti v zápisu dotazů = SQL Dialekty

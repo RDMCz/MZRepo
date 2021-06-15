@@ -1,7 +1,5 @@
 # SW 07 – Podprogramy
 
-* Podprogramy, funkce, metody, delegáty, lambda operátory, návratové hodnoty, oblast platnosti proměnné.
-
 ## Podprogramy
 
 __Program:__ Posloupnost instrukcí popisující realizaci dané úlohy počítačem

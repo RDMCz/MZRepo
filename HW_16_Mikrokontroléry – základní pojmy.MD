@@ -1,8 +1,5 @@
 # HW 16 – Mikrokontroléry (mcu) – základní pojmy
 
-* Vysvětlení pojmu mikrokontrolér, harvardská a von Neumannova architektura, hlavní vlastnosti mikrokontrolérů Atmel AVR, popis blokového schématu.
-* Dokumentace strana __1__, __3__, 10, 67, 171, 325
-
 ## Mikrokontrolér
 
 * Elektronický integrovaný obvod

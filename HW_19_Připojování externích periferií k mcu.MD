@@ -1,7 +1,5 @@
 # HW 19 – Připojování externích periferií k mcu
 
-* Tlačítka, klávesnice, LED/segmentové/inteligentní displeje
-
 ## Periferie
 
 * Vstupní – tlačítko, klávesnice

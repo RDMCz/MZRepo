@@ -1,8 +1,5 @@
 # HW 20 – Čítačové podsystémy mcu
 
-* Režim čítače/časovače, podrobný popis pro Atmel AVR. Režimy CAPTURE, COMPARE, PWM. Dohlížecí časovač WDT
-* Dokumentace strana 1, 113
-
 ``` txt
 – Two 8-bit Timer/Counters with Separate Prescalers and Compare Modes
 – Two Expanded 16-bit Timer/Counters with Separate Prescaler, Compare Mode, and Capture Mode

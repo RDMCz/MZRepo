@@ -1,7 +1,5 @@
 # HW 29 – Grafické karty
 
-* Struktura, základní parametry, akcelerace, vytváření 3D scény, použití pro negrafické výpočty.
-
 ## Grafická karta
 
 * PC komponenta zajišťující grafický výstup na zobrazovací zařízení (monitor, projektor, ...)
