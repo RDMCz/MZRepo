@@ -34,7 +34,7 @@
 
 * Obsahuje Live CD + instalátor
 * Jedná se o obraz CD/DVD
-* Rufus – vytvoření bootovatelné flashky
+* Rufus – vytvoření bootovatelného flash disku
 
 ### Instalátor
 
@@ -65,36 +65,39 @@
 * `/` – Kořenový adresář (root)
   * Vše se nachází v tomto adresáři
   * Může připomínat `C:\`, Linux ale nepřiřazuje jednotkám písmena
-* `/bin` – Základní uživatelské binární soubory
-  * Nezbytné binární soubory (programy) zaručující chod systému
-* `/boot` – Statické soubory zavaděče
-  * Soubory potřebné ke spuštění systému (kernel, zavaděč)
-* `/dev` – Soubory zařízení
-  * Zařízení reprezentovaná jako soubory
-* `/etc` – Konfigurační soubory
+* `/bin` – Binaries – Základní uživatelské binární soubory, nezbytné, zaručující chod systému
+* `/boot` – Bootloader – Soubory potřebné ke spuštění systému (kernel, zavaděč, počáteční nastavení RAM) (bootloader GRUB)
+* `/dev` – Devices – Hardwarová zařízení reprezentovaná jako soubory
+* `/etc` – Konfigurační soubory systému i služeb, čitelná forma
+  * `/etc/passwd` – Informace o uživatelích
 * `/home` – Domovský adresář uživatelů
   * Domovské adresáře všech uživatelů systému
   * Podobné `C:\Users`
   * Domovský adresář aktuálního uživatele v terminálu označen jako `~`
-* `/lib` – Důležité sdílené knihovny
-  * Knihovny potřebné pro chod binárních souborů v `/bin` a `/sbin`
-* `/proc` – Soubory jádra a procesy
-* `/sbin` – Binární soubory pro správu systému
-* `/usr` – Uživatelské binární soubory a data pouze pro čtení
-  * Aplikace a soubory používané samotnými uživateli
+* `/lib` – Libraries – Důležité sdílené knihovny potřebné pro chod binárních souborů v `/bin` a `/sbin`
+* `/media` a `/mnt` – Media a Mount – Obvyklé místo pro připojení externího úložiště (USB, CD, SD)
+* `/opt` – Optional – SW třetích stran, využití pro celý systém
+* `/proc` – Processes – Informace o běžících procesech
+* `/root` – Domácí adresář administrátora
+* `/run` – Soubory potřebné k nabootování
+* `/sbin` – Superuser binaries – Binární soubory pro správu systému, "rootovy binární soubory"
+* `/tmp` – Temporary – Dočasná data
+* `/usr` – User binaries – Aplikace a soubory používané běžnymi uživateli
+* `/var` – Variable files – Proměnné soubory sloužící službám a systému
+  * `/var/log` – Logy systému a služeb
 
 ### Druhy souborů
 
 Znak | CZ | EN | Popis
-:-: | :-: | :-: | :-:
-__`-`__ | __normální soubor__ | _regular file_ | –
-__`d`__ | __adresář__ | _directory_ | –
-__`l`__ | __symbolický odkaz__ | _symbolic link_ | Ve výpisu lze vidět, kam odkazuje. Odkaz je svázán se jménem odkazovaného (přejmenování odkaz zneplatní)
-__`-`__ | __pevný odkaz__ | _hardlink_ | Jiné jméno pro soubor, který je na disku fyzicky pouze jednou
-__`b`__ | __blokové zařízení__ | _block device_ | Souborová reperezentace blokových zařízení (pevný disk) připojených k počítači. (Adresář `/dev`)
-__`c`__ | __znakové zařízení__ | _character device_ | Souborová reperezentace znakových zařízení (terminál) připojených k počítači. (Adresář `/dev`)
-__`p`__ | __pojmenovaná roura__ | _named pipe_ | Umožňuje komunikaci mezi programy
-__`s`__ | __soket__ | _socket_ | Umožňuje komunikaci mezi procesy (i po síti). Oproti rouře podporuje obousměrnou komunikaci
+:-: | :-: | :-: | :--
+__`-`__ | __normální soubor__ | _regular file_ | Přípona není povinná, mohou ji vyžadovat některé aplikace
+__`d`__ | __adresář__ | _directory_ | Obsahuje seznam souborů
+__`l`__ | __symbolický odkaz__ | _symbolic link_ | Ve výpisu lze vidět, kam odkazuje. Neukazuje na konkrétní data, ale na název/cestu (přejmenování odkaz zneplatní)
+__`-`__ | __pevný odkaz__ | _hardlink_ | Jiné jméno pro soubor, který je na disku fyzicky pouze jednou. Funguje pouze v rámci jednoho oddílu
+__`c`__ | __znakové zařízení__ | _character device_ | Souborová reperezentace zařízení, které komunikují po jednotlivých znacích (terminál/klávesnice/tískárna). Např. `/dev/null`, `/dev/full`, `/dev/zero`, `/dev/random`
+__`b`__ | __blokové zařízení__ | _block device_ | Souborová reperezentace zařízení, které komunikují po blocích (pevný disk). Pro zápis/čtení jediného bitu je potřeba přenést celý 2048byte blok, vyžaduje použití bufferu. (`/dev`, `lsblk`)
+__`p`__ | __pojmenovaná roura__ | _named pipe_ | Umožňuje komunikaci mezi dvěma procesy, jeden do ní zapisuje a druhý z ní čte
+__`s`__ | __soket__ | _socket_ | Umožňuje komunikaci mezi procesy (i po síti mezi vzdálenými stroji). Oproti rouře podporuje obousměrnou komunikaci
 
 ### Oprávnění
 
@@ -110,8 +113,8 @@ __`s`__ | __soket__ | _socket_ | Umožňuje komunikaci mezi procesy (i po síti)
 * V terminálu je předepsáno: `<název uživatele>@<název stroje>:<aktuální složka><$ nebo #>`
   * `$` – Normální uživatel
   * `#` – Administrátor (root)
-* `ls -l` – Výpis souborů + oprávnění
-* `ls -la` – Výpis souborů + oprávnění + skryté soubory (začínající tečkou) (zkráceně `ll`)
+* `ls -l` – Výpis souborů + oprávnění ad.
+* `ls -laF` – Výpis souborů + oprávnění ad. + skryté soubory (začínající tečkou) (zkráceně `ll`)
 
 <img src="./img/HW_03_02.PNG" width="666" />
 
@@ -172,16 +175,17 @@ __Sticky bit__:
 ### Databáze uživatelů a hesel
 
 * `passwd <uživatel>` – změnit heslo, root může změnit heslo bez znalosti aktuálního hesla
-* "databáze hesel" se nachází v `/etc/` v souboru `passwd`, lze zobrazit např. `cat passwd`
+* Soubor `/etc/passwd` obsahuje informace o uživatelích
+* Hesla jsou zašifrována v `/etc/shadow`
 
 ![id](./img/HW_03_03.PNG)
 
-* Příkaz `id` ukazuje id uživatele, id vlastnické skupiny a id skupin, v nichž je uživatel členem
+* Příkaz `id` ukazuje UID uživatele, GID primární skupiny a GID skupin, v nichž je uživatel členem
 
 ### Další příkazy
 
-* `pwd` – Zobrazí absolutní cestu k aktuální složce
-* `cd <cesta>` – Procházení adresářů
+* `pwd` – Print Working Directory – Zobrazí absolutní cestu k aktuální složce
+* `cd <cesta>` – Change Directory – Procházení adresářů
   * Relativní cesta nebo absolutní začínající lomítkem
   * `cd` – Domovská složka
   * `cd ..` – O složku nahoru
