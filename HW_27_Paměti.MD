@@ -2,7 +2,7 @@
 
 ## Paměť
 
-* Fyzické zařízení umožňující ukládat data a následně s nimi pracovat
+* Fyzická zařízení umožňující ukládat data a následně s nimi pracovat
 
 ### Nevolatilní
 
@@ -23,7 +23,7 @@
 ### PROM – Programmable ROM
 
 * Data lze zapsat až po výrobě, ale pouze jednou
-* Kapacita v řádech kB
+* Kapacita v řádech KB
 
 ### EPROM – Erasable PROM
 
@@ -42,15 +42,18 @@
 
 ### SRAM – Static RAM
 
-* Každá paměťová buňka obsahuje 4 až 6 tranzistorů, které zachovávají data, dokud je k dispozici napájení
-* Rychlejší, dražší
+* Základní princip je obvod D latch
+* Realizace pomocí 6 tranzistorů (4 tranzistory a 2 odpory, které se většinou také realizují pomocí tranzistorů), které zachovávají data, dokud je k dispozici napájení
+* ~~Rychlejší~~, dražší
 * CPU cache, HDD buffer, router buffer
 
 ### DRAM – Dynamic RAM
 
 * Každá paměťová buňka obsahuje 1 tranzistor a 1 kapacitor, pro uchování dat se vyžaduje periodický _memory refresh_
   * Přečtení dat a následný zápis na stejné místo, aby se data uchovala
-* Pomalejší, levnější
+* Čtení je destruktivní, přečtenou informaci je nutno bezprostředně zapsat zpět
+* ~~Pomalejší~~, levnější, větší spotřeba v klidovém stavu
+* Mýtus rychlosti – rychlost paměti závisí převážně na její velikosti (DRAM se vyrábějí ve výrazně větších kapacitách než paměti SRAM)
 
 ### SDRAM – Synchronous DRAM
 
@@ -63,14 +66,14 @@
 
 * Reaguje na náběžnou i sestupnou hranu
 * DDR2, DDR3, DDR4 – Nejsou zpětně kompatibilní
-* DDR5 standard byl zveřejněn v roce 2020, zatím se neprodává
+* DDR5 standard byl zveřejněn v roce 2020
 
 ### Základní parametry
 
-* Kapacita [GB]
+* Kapacita \[GB\]
 * Formát – DIMM, SO-DIMM, (SIMM, SIPP)
 * Typ – SDRAM DDR2/3/4/5
-* Pracovní frekvence [MHz] – Počet instrukcí za vteřinu, také může být uvedeno v MT/s (Mega Transfers per second)
+* Pracovní frekvence \[MHz\] – Počet instrukcí za vteřinu, také může být uvedeno v MT/s (Mega Transfers per second)
 
 ### GDDR – Graphics DDR
 

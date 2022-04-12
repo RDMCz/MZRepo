@@ -97,7 +97,7 @@ openWith.Add("txt", "winword.exe"); // Nelze, klíč musí být unikátní
 
 ### __Queue__
 
-* Fronta, FIFO – First In First Out (Kdo přijde jako první je vyřešen jako první)
+* Fronta, FIFO – First In First Out (kdo přijde jako první je vyřešen jako první)
 * Enqueue, Dequeue, Peek (na prvního ve frontě)
 
 <img src="img/SW_03_01.svg" width="500">

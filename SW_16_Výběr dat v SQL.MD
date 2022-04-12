@@ -32,7 +32,7 @@ CustomerID (PK) | Name | BirthYear | Country
 
 ``` sql
 SELECT Name, Country FROM Customers LIMIT 3;
-SELECT TOP 3 Name, Country FROM Customers; -- jiný dialekt (?)
+SELECT TOP 3 Name, Country FROM Customers; -- jiný dialekt
 ```
 
 Name | Country

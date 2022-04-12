@@ -15,7 +15,7 @@
 
 * Manipulace lidí za účelem provedení určité akce nebo získání určité informace
 * Pretexting – Vytvoření smyšleného scénaře a přesvědčení oběti o jeho legitimnosti, aby následně provedla akci nebo vyzradila informace
-* Phishing – Získávání citlivých údajů na intenetu pomocí zasílání falešných zpráv, které se tváří jako pravé
+* Phishing – Získávání citlivých údajů na internetu pomocí zasílání falešných zpráv, které se tváří jako pravé
 
 ## Adware
 

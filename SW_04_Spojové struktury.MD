@@ -11,7 +11,6 @@
 * Struktura realizující seznam dynamické délky
 * Každý prvek seznamu obsahuje datovou část a odkaz na další prvek v seznamu
 * Může být i obousměrný nebo kruhový
-* [~Source Code](https://github.com/RDMCz/Spojovy-Seznam/blob/master/191120_spojovy_seznam/Models/MujList.cs)
 
 ``` csharp
 // class LinkedList<T>
@@ -83,7 +82,6 @@ public void Clear()
 * Uzel má několik následníků (v binárním stromu dva)
 * Prvky jsou obvykle nějak seřazené
 * [Využití](https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees)
-* [~Source Code](https://github.com/RDMCz/Binarni-Strom/blob/master/191211_binarni_strom/Dictionary.cs)
 
 ``` csharp
 // class BinaryTreeDictionary<K, V> where K : IComparable where V : IComparable
@@ -164,6 +162,6 @@ private void Insert(Node iroot, Node node)
 ## Výhody a nevýhody
 
 * __+__ Větší volnost tvorby
-* __+__ Rychlejší pro manipulaci s daty (mazání a přidávání hodnot kamkoliv kromě konce (pokud nezřetězená hodnota nepřidává nakonec, musí posouvat prvky (?)))
+* __+__ ~Rychlejší pro manipulaci s daty
 * __-__ Pomalejší pro náhodný přístup k datům (musí se k ní "dojít" přes odkazy)
 * __-__ Zabírají o trochu více místa v paměti
