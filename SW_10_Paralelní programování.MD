@@ -150,7 +150,7 @@ private void RunDownload()
     * __`async` – modifikátor, který specifikuje, že daná metoda (nebo lambda výraz) je prováděna asynchronně__
 4. Asynchronní metoda místo `void` vrací samotný `Task`, u ostatních návratových typů se vrací `Task<navratovyTyp>`
     * Výjimkou jsou události, zde se návratový typ nemění
-5. Zvykem je, že na konec názvu asynchronní metody se připíše "Async" (`RunDownload()` -> `RunDownloadAsync()`)
+5. Zvykem je, že na konec názvu asynchronní metody se připíše "Async" (`RunDownload()` → `RunDownloadAsync()`)
 
 ``` csharp
 private async Task RunDownloadAsync()

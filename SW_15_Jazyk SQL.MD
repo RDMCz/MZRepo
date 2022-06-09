@@ -89,7 +89,7 @@ ROLLBACK TO savename;
 -- Vložit více záznamů
 INSERT INTO animalsounds (animal, sound) VALUES ("Cat", "Meow"), ("Dog", "Woof"), ("Cow", "Moo");
 
--- Kopírování pomocí INSERT: table1 -> table2
+-- Kopírování pomocí INSERT: table1 → table2
 INSERT INTO table2 SELECT * FROM table1 (WHERE condition);
 
 -- Jiná forma zápisu: INSERT SET

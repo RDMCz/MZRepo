@@ -87,7 +87,7 @@
 ## Přepínač (Switch)
 
 * Linková vrstva
-* Počet portů obvykle v rozmezí 5-52 (cisco), propojuje prvky do hvězdicové topologie
+* Počet portů obvykle v rozmezí 5-52 (Cisco), propojuje prvky do hvězdicové topologie
 * Narozdíl od hubu přeposílá provoz pouze tam, kde je potřeba
 * V podstatě bridge s více porty
 * CAM – Content Adressable Memory
@@ -101,7 +101,7 @@
 ## Směrovač (Router)
 
 * Síťová vrstva – Propojení dvou cizích sítí
-* Přeposílá pakety směrem k jejich cíly – Cílem je cizí síť
+* Přeposílá pakety směrem k jejich cíli – Cílem je cizí síť
 * Směrovací tabulka (routing table) obsahuje adresu sítě, masku a port (interface), na kterém se nachází
 * Routování:
   * Statické – routy nastavuje správce
@@ -110,7 +110,7 @@
 
 ## Firewall
 
-* Dá se chápat jako brána, která rozhoduje, zdali se přes ní dostanou nějaká data, reps. zdali spolu dvě síte mohou navázat spojení
+* Dá se chápat jako brána, která rozhoduje, zdali se přes ní dostanou nějaká data, resp. zdali spolu dvě sítě mohou navázat spojení
 * Základní proměnnou je adresa a port zdroje a cíle
 * ACL – Access Control List – Seznam pravidel řídících přístup k nějakému objektu
 * IDS – Intrusion Detection System – Monitorování provozu a snaha odhalit podezřelé aktivity

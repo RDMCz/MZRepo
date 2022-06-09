@@ -71,7 +71,7 @@
 * Převádí bity na elektrické/rádio/optické signály (měď/bezdrát/optika)
 * Řeší fyzické poslání dat, neřeší jejich význam
 * Oznamuje chybové stavy linkové vrstvě
-* Definuje např. hodnoty napětí, maximální přenosová vzdálenost, charakteristiky signálu (modulace/šířka psáma), rozložení pinů u fyzických konektorů a jejich tvar, ...
+* Definuje např. hodnoty napětí, maximální přenosová vzdálenost, charakteristiky signálu (modulace/šířka pásma), rozložení pinů u fyzických konektorů a jejich tvar, ...
 * Na této vrstvě pracuje opakovač a rozbočovač
 
 ## 2. Linková (spojová) vrstva
@@ -88,7 +88,7 @@
 * Ethernet, Wi-Fi, ZigBee, ...
 * Dolní podvrstva __MAC__
   * Adresace – MAC adresy vázané na síťovou kartu (vrstva je hardwarově závislá)
-  * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
+  * Šest dvouciferných hexadecimálních čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
   * 48 bitů, kontrola pomocí komparátoru
     * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
     * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)

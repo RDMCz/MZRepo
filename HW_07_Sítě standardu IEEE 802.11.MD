@@ -18,7 +18,7 @@
 ## IEEE 802.11
 
 * Standard pro bezdrátové sítě WLAN
-* Využívá se bezlicenčních pásem – 2,4/5/(6) GHz – za jejich použití není nutno platit státu
+* Využívá se bezlicenčních pásem – 2,4/5/(6) GHz – za jejich použití není nutno platit
 * První verze 802.11 "legacy" byla pomalá a drahá
 
 Standard | Alias | Pásmo | Max. rychlost | Modulace
@@ -36,12 +36,12 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 
 ### 802.11b
 
-* Vyšlo ve stejný rok jako _802.11a_ a má horší vlastnosti – "krok zpět"
-* Výrazně levnější – dostupné pro běžné uživatele (_802.11a_ spíše pro firmy)
+* Vyšlo ve stejný rok jako 802.11a a má horší vlastnosti – "krok zpět"
+* Výrazně levnější – dostupné pro běžné uživatele (802.11a spíše pro firmy)
 
 ### 802.11g
 
-* V podstatě stejné parametry jako _802.11a_, ale na frekvenci 2,4 GHz
+* V podstatě stejné parametry jako 802.11a, ale na frekvenci 2,4 GHz
 
 ### 802.11n
 
@@ -102,7 +102,7 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 ### OFDM – Orthogonal Frequency-Division Multiplexing
 
 * Kódování signálu na více nosných frekvencích pomocí různých modulací, které jsou ortogonální
-  * Jsou blízko sebe, dokonce se překrývají, ale jsou nezávislé/oddělitelné
+  * ~Jsou blízko sebe, dokonce se překrývají, ale jsou nezávislé/oddělitelné
 * Využíván __802.11a/g/n/ac__
 
 ### OFDMA – Orthogonal Frequency-Division Multiple Access

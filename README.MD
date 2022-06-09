@@ -58,12 +58,12 @@
 14. Normalizace databáze
 15. Jazyk SQL
 16. Výběr dat v SQL
-17. Prostředky pro návrh webových aplikací I.
+17. Prostředky pro návrh webových aplikací I
 18. Možnosti pozicování na webových stránkách
 19. Frameworky architektury MVC
 20. Ověřování identity v prostředí internetu
 21. Návrh webové aplikace <span>ASP.NET</span>
 22. AJAX, REST
 23. React
-24. Prostředky pro návrh webových aplikací II.
+24. Prostředky pro návrh webových aplikací II
 25. Testování software, ošetření chyb

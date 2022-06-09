@@ -20,7 +20,7 @@
 ## Adware
 
 * Adware není nijak škodlivý (nijak nesleduje nebo nemanipuluje s daty uživatele)
-* Může být ale velmi otravný, uživateli zobrazují nechtěné reklamy a autor malwaru může mít z reklam příjem
+* Může být ale velmi otravný, uživateli zobrazuje nechtěné reklamy a autor malwaru může mít z reklam příjem
 * Banner, pop-up, ...
 
 ## Spyware

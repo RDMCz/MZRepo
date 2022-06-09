@@ -80,7 +80,7 @@
 
 ### IEEE 802.3
 
-* Standard společnosti Institute of Electrical and Electronics Engineers
+* Standard organizace Institute of Electrical and Electronics Engineers
 * Určuje specifikace fyzické (HW) a linkové (MAC) vrstvy
 
 <table>
@@ -95,8 +95,8 @@
 * Baseband – Přenáší pouze jeden signál, data jdou v základním pásmu (v Ethernetu je vše baseband)
 * Broadband – Přenáší několik signálů najednou (DSL modemy)
 * 1000BASE-__T__ – Twisted – Kroucená dvojlinka
-* 1000BASE-__LX__ – Long – Single-mode fiber – Menší průměr vlákna, jeden paprsek, delší vzdálenost, dražší
-* 1000BASE-__SX__ – Short – Multi-mode fiber – Větší průměr vlákna, více paprsků, kratší vzdálenost, levnější
+* 1000BASE-<b>L</b>X – Long – Single-mode fiber – Menší průměr vlákna, jeden paprsek, delší vzdálenost, dražší
+* 1000BASE-<b>S</b>X – Short – Multi-mode fiber – Větší průměr vlákna, více paprsků, kratší vzdálenost, levnější
 
 ### MAC vrstva – Media Access Control
 
@@ -104,7 +104,7 @@
 * Kontrola správnosti přenášených rámců
 * Adresace – MAC adresy vázané na síťovou kartu (vrstva je hardwarově závislá)
 * MAC adresa:
-  * Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
+  * Šest dvouciferných hexadecimálních čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
   * 48 bitů, kontrola pomocí komparátoru
     * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
     * Osmý bit – 0 = unicast, 1 = multicast
@@ -169,7 +169,7 @@
 ### Koaxiál
 
 * Měděný vnitřní vodič pro přenos
-* Vnější vodič – stínění před elmg polem, oddělen od vnitřního nevodivou vrstvou
+* Vnější vodič – stínění před elektromagnetickým polem, oddělen od vnitřního nevodivou vrstvou
 * Užití v počátcích Ethernetu, dnes se moc nepoužívá, existuje však rodina technologií Ethernet over Coax
 
 ### Kroucená dvojlinka
@@ -187,7 +187,7 @@
 
 * Skleněné nebo plastové vlákno přenašející signál pomocí světla
 * Princip totálního odrazu
-* Menší ztráty, větší vzdálenosti, imunní vůči elmg rušení
+* Menší ztráty, větší vzdálenosti, imunní vůči elektromagnetickému rušení
 * SMF – Single-mode fiber – Menší průměr vlákna, jeden paprsek, delší vzdálenost, dražší
 * MMF – Multi-mode fiber – Větší průměr vlákna, více paprsků, kratší vzdálenost, levnější
 * Vlnová délka cca 1 mikrometr, infračervený paprsek

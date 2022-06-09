@@ -20,7 +20,7 @@
 
 * Linková (spojová) vrstva ISO/OSI
 * Řízení přístupu k médiu – vázané na síťovou kartu
-* Šest dvouciferných hexa čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
+* Šest dvouciferných hexadecimálních čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
 * 48 bitů, kontrola pomocí komparátoru
   * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
   * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)

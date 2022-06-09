@@ -4,7 +4,7 @@
 
 * Internet Protocol je zodpovědný za směrování (routování) paketů ze zdroje do cíle
 * IP adresa jednoznačně identifikuje síťové rozhraní na třetí vrstvě ISO/OSI
-* IPv6 adresy se skládají z osmi skupin po čtyřech hexa číslech (0-F) oddělených dvojtečkou = __osm hextetů__
+* IPv6 adresy se skládají z osmi skupin po čtyřech hexadecimálních číslech (0-F) oddělených dvojtečkou = __osm hextetů__
 * `0123:BB99:3210:FE00:58A0:4565:98AE:1245`
 * Vznikla kvůli nedostatku IPv4 adres
 
@@ -43,8 +43,8 @@ desítková soustava | šestnáctková soustava
 * Obecná sada pravidel, jak překládat kterou položku v hlavičce, normalizováno
 * IPv6 adresy s vloženým IPv4 (IPv4-embedded)
   * Část prostoru za prefixem u adresy IPv6 je vyhrazena pro reprezentaci IPv4 adresy
-  * Převod IPv4 -> IPv6 snadný
-  * Převod IPv6 -> IPv4 složitější, využívá se dynamického mapování (podobné jako NAT u IPv4 privatních sítí)
+  * Převod IPv4 → IPv6 snadný
+  * Převod IPv6 → IPv4 složitější, využívá se dynamického mapování (podobné jako NAT u IPv4 privatních sítí)
 * Ujal se přechodový mechanismus __NAT64__
 
 ### Dual-Stack Lite (DS Lite)
@@ -91,7 +91,7 @@ prefix | význam
 `FC00::/7` | ULA – unique local address – unikátní individuální lokální
 `FE80::/10` | LLA – link-local address – individuální lokální linkové
 
-### __GUA__ – global unicast address
+### GUA – Global Unicast Address
 
 * Podobné jako veřejné IPv4 adresy, globálně unikátní, směrovatelné
 * Zatím byla definována a přiděluje se jen část z nich – prefix 0b001
@@ -104,7 +104,7 @@ prefix | význam
 * __Subnet ID__ – Identifikátor podsítě – Prostor mezi nimi; čím větší, tím větší možné množství podsítí
 * `2000::/3` – `2000`-`3FFF`, např.: `2001:db8:3c4d:15::baba:deda`
 
-### __ULA__ – unique local address
+### ULA – Unique Local Address
 
 * Nástupce _site local_ adres
 * Adresy směrovatelné v množině spolupracujících sítí, např. společnost s více pobočkami
@@ -116,7 +116,7 @@ prefix | význam
 * 40bitový Global ID je náhodně vygenerované číslo, zbytek klasika
 * např.: `fd12:3456:789a:1::1`
 
-### __LLA__ – link-local address
+### LLA – Link-Local Address
 
 * Komunikace na lince (v podsíti), linka končí routerem
 * Povinná pro každé IPv6 zařízení, nesměrovatelná, nastavuje ji OS
@@ -138,7 +138,7 @@ prefix | význam
 * Solicited-Node Multicast Address:
   * Používá ji Neighbor Discovery Protocol, aby zjistil, zdali je určitá adresa unikátní na lince
   * Spojení prefixu `ff02::1:ff00:0/104` s posledními 24 bity testované uni/anycast adresy
-  * Např. `ff02::1:ff00:0/104` + `fe80::2aa:ff:fe`__`28:9c5a`__ = `ff02::1:ff28:9c5a`
+  * Např. `ff02::1:ff00:0/104` + <code>fe80::2aa:ff:fe<b>28:9c5a</b></code> = `ff02::1:ff28:9c5a`
 
 ## Zóna
 
@@ -152,8 +152,8 @@ prefix | význam
 * Celá zóna je vždy zahrnuta do nadřazené zóny většího dosahu
 * Zóny stejného dosahu se nesmí překrývat
 * Jelikož adresa je unikátní jen v rámci zóny a zařízení může být ve více zónách stejného dosahu, může se stejná adresa objevit v několika zónách
-* -> Pro jejich odlišení zavedeny identifikátory zón (Zone ID)
-* Zápis _`<address>`_`%`_`<Zone ID>`_ např.: `fe80::714b:9770:43d4:f8b2`__`%18`__
+* → Pro jejich odlišení zavedeny identifikátory zón (Zone ID)
+* Zápis <code><i>\<address\></i>%<i>\<Zone ID\></i></code> např.: <code>fe80::714b:9770:43d4:f8b2<b>%18</b></code>
 * Příkaz ve Windows `netsh interface ipv6 show interfaces`
 
 ## Použití adresy
@@ -176,7 +176,7 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
   * Nebo náhodně generováno OS, tzv. Privacy Extensions (Windows 7 a výš)
 * Zbývá vyřešit přidělení prefixu:
   * Stavové – DHCPv6 – zařízení odešle na obecnou adresu dotaz ohledně svých parametrů a server mu odpoví
-  * Bezstavové – SLAAC – směrovače vedí vše potřebné a občas tyto informace rozešlou všem (Router advertisement), nebo si o ně zařízení zažádá (Router solicitation)
+  * Bezstavové – SLAAC – směrovače vědí vše potřebné a občas tyto informace rozešlou všem (Router advertisement), nebo si o ně zařízení zažádá (Router solicitation)
 
 ### __RS__ – Router solicitation – Výzva směrovači
 
@@ -187,19 +187,19 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 * Směrovače v náhodných intervalech (každých 200 sekund ?) zasílají do všech připojených sítí informace
 * Odesláno pomocí ICMPv6
 
-### __SLAAC__ – StateLess Address AutoConfiguration – Bezstavová konfigurace
+### SLAAC – StateLess Address AutoConfiguration – Bezstavová konfigurace
 
 * Přidělování adres, použití RA a RS
 * Není potřeba DHCPv6 server
 * Odešle prefix a délku prefixu; bránu nemusí – je to jeho zdrojová adresa
 * Dříve RA zprávy neobsahovaly IPv6 adresy rekurzivních DNS serverů
 
-### __Stateless DHCPv6__
+### Stateless DHCPv6
 
 * Nadstavba SLAAC
 * RA obsahuje příznaky, které informují zařízení, zdali má požádat DHCPv6 server o dodatečné informace (které ve SLAAC chybí)
 
-### __Stateful DHCPv6__
+### Stateful DHCPv6
 
 * DHCPv6 server přiděluje i adresu
 * SLAAC ale nelze úplně vypnout, přiděluje totiž výchozí bránu

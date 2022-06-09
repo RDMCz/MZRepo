@@ -5,7 +5,7 @@
 * Technologie uložení dat v databázi
 * Umožňuje uspořádat velké množství dat tak, aby byla srozumitelná uživatelům zabývajícím se analýzou obchodních trendů a výsledků
 * (business intelligence – souhrn prodejů, marketing, management, rozpočet, předpověď, účetní závěrka)
-* => Analytické účely nad rozsáhlými databázemi
+* ⇒ Analytické účely nad rozsáhlými databázemi
 * Jednorázově nahraná data, nad kterými jsou prováděny složité dotazy
 * Na rozdíl od relačních databází (tabulka, sloupec, řádek) pracuje s [datovou kostkou](https://office.lasakovi.com/excel/kontingencni-tabulka/OLAP-kostka-Excel-teorie/) (může být vícerozměrná)
 * Jde především o flexibilní a rychlé získání souhrnných dat
@@ -15,7 +15,7 @@
 * Technologie uložení dat v databázi, používána ve většině databázových aplikací
 * "protiklad OLAP"
 * Data jsou průběžně často modifikována a přidávána mnoha uživateli zároveň
-* => Umožňuje co nejsnadnější a nejbezpečnější modifikaci dat v mnohauživatelském prostředí
+* ⇒ Umožňuje co nejsnadnější a nejbezpečnější modifikaci dat v mnohauživatelském prostředí
 
 ## Normalizace + optimalizace
 
@@ -90,7 +90,7 @@ SubjectID (PK) | SubjectAcronym
 
 * Splňuje 2NF
 * Žádná tranzitivní závislost – všechny neklíčové atributy jsou závislé __pouze__ na PK
-* Pokud X -> Y && Y -> Z, tak X -> Z
+* Pokud X → Y && Y → Z, tak X → Z
 
 MovieID (PK) | GenreID | GenreName | RunningTime
 :-: | :-: | :-: | :-:
@@ -100,7 +100,7 @@ MovieID (PK) | GenreID | GenreName | RunningTime
 4 | 103 | Komedie | 1h35m
 
 * Splňuje 2NF, ale ne 3NF
-* MovieID -> GenreID && GenreID -> GenreName => MovieID -> GenreName
+* MovieID → GenreID && GenreID → GenreName => MovieID → GenreName
 * GenreName není určen pouze PK
 
 MovieID (PK) | GenreID (FK) | RunningTime

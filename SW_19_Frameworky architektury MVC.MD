@@ -128,7 +128,7 @@ services.AddScoped<IModel, Model>();
 
 * Aplikace běží na serveru a zobrazuje si ji klient
 * Komunikace přes protokol HTTP (Hypertext Transfer Protocol; port 80; přenos HTML/XML/... souborů)
-* Komunikace Request -> Response
+* Komunikace Request → Response
 * Server si nic "nepamatuje", jeho "paměť" je dosažena např. pomocí cookies nebo sessions
 * __Request__ – Klient žádá o určitá data
 * __Response__ – Server je poskytuje a/nebo vrací zprávu, např.:

@@ -4,7 +4,7 @@
 
 * VLAN je izolovaná broadcastová doména
   * Část sítě, kde se na linkové vrstvě může každé zařízení pomocí broadcastu dostat k jinému zařízení. Broadcastová doména končí směrovačem nebo bránou.
-* VLAN je _virtuální_, jedná se o softwarovou záležitost, logiku na fyzických zařízeních
+* VLAN je virtuální, jedná se o softwarovou záležitost, logiku na fyzických zařízeních
 * Slouží k logickému rozdělení sítě nezávisle na fyzickém uspořádání
 * Pomocí VLAN lze na jednom nebo více propojených přepínačích vytvořit více oddělených sítí, které spolu nemohou komunikovat
 
@@ -65,7 +65,7 @@
 ### Voice VLAN
 
 * Usnadňuje připojení VoIP zařízení
-* `switchport mode access` -> `switchport access vlan 10` -> `switchport voice vlan 20` – hlasová komunikace na VLAN 20
+* `switchport mode access` → `switchport access vlan 10` → `switchport voice vlan 20` – hlasová komunikace na VLAN 20
 * Ve skutečnosti se z portu stane trunk port, z access se stane native a komunikace VoIP použije 802.1Q
 
 ### Cisco IOS

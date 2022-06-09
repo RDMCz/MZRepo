@@ -87,7 +87,7 @@ Duplexita | Full duplex
 * Po ukončení přenosu je vyslána podmínka STOP
 * Vysílající stanice porovnává vysílané bity se skutečnou hodnotou SDA
   * Pokud se liší, musí vysílání okamžitě ukončit
-  * => Řešení arbitrace pomocí detekce kolize
+  * ⇒ Řešení arbitrace pomocí detekce kolize
 
 ![TWI1](./img/HW_24_03.png)
 

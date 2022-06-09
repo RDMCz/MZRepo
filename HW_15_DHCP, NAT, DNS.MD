@@ -6,16 +6,16 @@
 
 ### Průběh komunikace
 
-1. client -> server __DISCOVERY__
+1. client → server __DISCOVERY__
     * Snaha objevit DHCP server
     * Broadcast
-2. client <- server __OFFER__
+2. client ← server __OFFER__
     * Server rezervuje adresu a nabídne ji klientovi
     * Zašle tedy odpověď obsahující nabízenou IP adresu a svou IP adresu
-3. client -> server __REQUEST__
+3. client → server __REQUEST__
     * Klientovi může přijít víc nabídek z více serverů
     * Vybere si jednu a o tu zažádá příslušný server
-4. client <- server __ACKNOWLEDGE__
+4. client ← server __ACKNOWLEDGE__
     * Server posílá potrvrzení + dodatečné informace
 
 * Každá adresa má svůj lease time ("doba pronájmu"), poté může být přiřazena jinému zařízení (u dynamické alokace)
@@ -90,7 +90,7 @@ Router# wr
 
 * Mapování adresových prostorů, systém překládání síťových adres
 * Většinou se používá pro přístup více zařízení z privátní sítě do internetu za pomoci jedné nebo více veřejných adres
-* Obousměrný překlad, výchozí směr ven (privátní -> veřejná)
+* Obousměrný překlad, výchozí směr ven (privátní → veřejná)
 * __Důvody a výhody použití__:
   * Nedostatek IPv4 adres
   * Ochrana před útoky z internetu
@@ -186,7 +186,7 @@ Router(config)# ip nat inside source list 1 pool bazen overload
 * Plně kvalifikované doménové jméno specifikující přesnou lokaci ve stromové struktuře DNS
 * Zápis reprezentuje hierarchii ve stromě odspodu nahoru (až k TLD top-level domain (cz, com, ...)), jednotlivé názvy domén odděleny tečkou
 * Nad TLD se nachází DNS root, ten nemá název, správně by tedy měla být za TLD ještě tečka `host.example.com.`
-* Nejnižší doména je jméno stroje, používají se aliasy (`www.pslib.cz.` -> `hermes.pslib.cz.` (_pslib_ je SLD second-level domain))
+* Nejnižší doména je jméno stroje, používají se aliasy (`www.pslib.cz.` → `hermes.pslib.cz.` (_pslib_ je SLD second-level domain))
 
 ## DNS – Domain Name System
 
@@ -207,6 +207,6 @@ Router(config)# ip nat inside source list 1 pool bazen overload
 
 ### Překlad
 
-* Při překladu FQDN -> IP address, se systém před požádáním DNS serveru dívá do vlastní cache
+* Při překladu FQDN → IP address, se systém před požádáním DNS serveru dívá do vlastní cache
 * `C:\Windows\System32\drivers\etc` soubor `hosts`
 * `/etc` soubor `hosts`
