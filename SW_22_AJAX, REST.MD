@@ -9,7 +9,7 @@
 * Vizuálně hezčí, šetří se data
 * Využití např.:
   * React axios
-  * Komplexní webové aplikace od (Office, Gmail)
+  * Komplexní webové aplikace (Office, Gmail)
   * Našeptávače, interaktivní formuláře, validace dat na straně klienta
   * Chat
 

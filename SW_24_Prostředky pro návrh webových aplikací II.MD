@@ -43,7 +43,7 @@ p { font-size: 12px; }
 * `p, div` – vybere všechny elemety `<p>` a `<div>`
 * `.class` – vybere elementy s `class="class"`
 * `p.class` – vybere všechny elemety `<p>` s `class="class"`
-* `#id` – vybere elementy s id="id"
+* `#id` – vybere elementy s `id="id"`
 
 ### Vlastnosti
 
@@ -67,7 +67,7 @@ p { font-size: 12px; }
   * ~Velikost písma by se měla nastavovat v pointech, nikoli v pixelech
 * Relativní
   * `em` – relativní k velikosti písma elementu
-  * `rem` – relativní k velikosti písma root elementu (prvek hmtl)
+  * `rem` – relativní k velikosti písma root elementu (prvek html)
   * `%` – relativní k rodiči
   * `vw` – 1% šířky viewportu
   * `vh` – 1% výšky viewportu

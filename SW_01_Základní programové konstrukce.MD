@@ -10,7 +10,7 @@
 
 * Zásobník a hromada (halda) se nacházejí v paměti RAM
 * Tuto paměť přiděluje programu (vláknu) OS
-* Zásobník je rychlý ale má omezenou velikost
+* Zásobník je rychlý, má ale omezenou velikost
 * Hromada je ~neomezená paměť se složitějším (pomalejším) přístupem
 
 ### Hodnotové datové typy
@@ -141,7 +141,7 @@ foreach (object obj in pole) {
 
 ---
 ---
-
+<!--
 ![typy](http://www.cs.vsb.cz/behalek/vyuka/pcsharp/text/resources/3.jpg)
-
+-->
 ![memory](https://www.itnetwork.cz/images/5/csp/pamet_zasobnik_halda.png)

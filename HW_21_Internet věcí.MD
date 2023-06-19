@@ -18,7 +18,7 @@
 
 * Automatizace
   * Diagnostika a monitorování stavu (pří)strojů, upozornění na případné závady
-  * Zabezpeční prostor proti neoprávněnému vstupu
+  * Zabezpečení prostor proti neoprávněnému vstupu
   * Detekce nebezpečných látek
 * Doprava
   * Autonomní vozidla

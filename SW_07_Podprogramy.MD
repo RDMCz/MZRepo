@@ -15,9 +15,8 @@ __Podprogram__ (subroutine): Část programu
 ## Funkce + metody
 
 * ~Obecně __funkce__ = podprogram; __metoda__ = funkce (podprogram) uvnitř objektu. Metoda je OOP ekvivalent pro funkci.
-* V C# funkce nejsou, pouze metody
 * Parametry jsou metodě předávány hodnotou. Metoda získá kopii parametrů a jakékoliv modifikace uvnitř metody se nepromítnou zpět. (Toto platí pro hodnotové datové typy, nikoliv pro referenční)
-  * Lze předat parametr odkazem pomocí klíčového slova `ref`, použité proměnné musí být předem inicializovány (v metodě se pracuje s existujícími hodnotami; vhodné, pokud má metoda kromě hlavního výstupu editovat nějaké dodatečné hodnoty)
+  * Lze předat parametr odkazem pomocí klíčového slova `ref`, použité proměnné musí být předem inicializovány (v metodě se pracuje s&nbsp;existujícími hodnotami; vhodné, pokud má metoda kromě hlavního výstupu editovat nějaké dodatečné hodnoty)
   * Parametry lze definovat jako výstupní (klíčové slovo `out`), k proměnným musí být uvnitř metody něco přiřazeno (hodnota je vytvořena až uvnitř proměnné, na starou se nebere ohled; vhodné, pokud chceme metodu s více návratovými hodnotami)
 
     ``` csharp
@@ -31,7 +30,7 @@ __Podprogram__ (subroutine): Část programu
     // Main:
     string s = "aHoJ";
     string sUp = "blabla";
-    LowerUpperText(ref s, out string sLow, out sUp);    // Proměnnou lze deklarovat až při volání (sLow) nebo už před tím (sUp)
+    LowerUpperText(ref s, out string sLow, out sUp);// Proměnnou lze deklarovat až při volání (sLow) nebo už před tím (sUp)
     
     WriteLine(s);       // aHoJ!
     WriteLine(sLow);    // ahoj!
@@ -57,15 +56,16 @@ public delegate void NumberAction(int x);
 public static void Double(int x) => WriteLine(x * 2);
 public static void Triple(int x) => WriteLine(x * 3);
 
-public static void DoNumberAction(int x, NumberAction del) // Delegát (~předpis pro metodu) jako vstupní parametr
+public static void DoNumberAction(int x, NumberAction del) // Delegát (ukazatel na metodu/y) jako vstupní parametr
 {
     del(x); // Provede metody, na které delegát ukazuje
 }
 
 static void Main(string[] args)
 {
+    // K delegátovy lze přidat Double a Triple, protože mají stejnou signaturu (návratový typ a vstupní parametry)
     NumberAction del = new NumberAction(Double);
-    del += Triple; // K delegátovy lze přidat Double a Triple, protože mají stejnou signaturu (návratový typ a vstupní parametry) 
+    del += Triple;
 
     DoNumberAction(5, del);
 }

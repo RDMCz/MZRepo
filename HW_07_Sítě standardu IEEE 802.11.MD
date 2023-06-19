@@ -102,7 +102,6 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 ### OFDM – Orthogonal Frequency-Division Multiplexing
 
 * Kódování signálu na více nosných frekvencích pomocí různých modulací, které jsou ortogonální
-  * ~Jsou blízko sebe, dokonce se překrývají, ale jsou nezávislé/oddělitelné
 * Využíván __802.11a/g/n/ac__
 
 ### OFDMA – Orthogonal Frequency-Division Multiple Access

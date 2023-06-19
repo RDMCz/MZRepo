@@ -74,7 +74,7 @@ b.AnotherMethod();      // B - Another Method
 ## Přetížení
 
 * Lze definovat metody se stejným jménem a jinými vstupními parametry
-* Přetížené metody se musí lišit v počtu nebo typu parametrů (jiné pořadí nestačí)
+* Přetížené metody se musí lišit v počtu nebo typu parametrů
 * Destruktor nelze přetížit (nesmí mít parametry)
 
 ``` csharp
@@ -102,7 +102,7 @@ var c = PlusMethod(1, 2, 3);// 6
 ### Přetížení operátoru
 
 * Definice operátoru je vždy veřejná a statická
-* Následuje navrátový typ, obecné může být libovolný
+* Následuje navrátový typ
 * Klíčové slovo `operator` znamená, že chceme přetížit operátor
 * Unární operátor – definujeme jeden parametr; Binární operátor – dva parametry
 * Je vhodné, aby první parametr byl stejný typ jako třída, jejíž operátor přetěžujeme

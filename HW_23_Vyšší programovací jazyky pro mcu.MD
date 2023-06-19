@@ -73,7 +73,7 @@
 * Cílem je minimální velikost nebo co největší rychlost programu (zpravidla tyto požadavky jdou proti sobě)
 
 1. Optimalizace závislé na HW – Podpora ze strany architektury
-2. Optimalizace nezávsilé na HW – Aplikovatelné vždy
+2. Optimalizace nezávislé na HW – Aplikovatelné vždy
 
 * Měli bychom programy psát tak, abychom optimalizaci kompilátoru co nejvíce usnadnili
 

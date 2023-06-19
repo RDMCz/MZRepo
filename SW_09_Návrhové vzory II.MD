@@ -29,7 +29,7 @@ __Strukturální vzory__ (Structural patterns):
 
 * Také zastupuje jiný objekt
 * Vytvoření objektu se nechává na poslední chvíli (objekt ani být vytvořen nemusí) a chování objektu se předstírá
-* Použití: lazy loading obrázků/dat z databáze
+* Použití: lazy loading dat z databáze
 
 ### Ochranný zástupce (Protection proxy)
 

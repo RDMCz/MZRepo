@@ -76,7 +76,7 @@
 
 * Kontext
 
-  * Obsluha přerušení může pracovat s nějakými registry, po jejím skončení by hlavní program mohl tyto registry také používat a nalézt v nich neočekávaná/nekorektní data
+  * Obsluha přerušení může pracovat s nějakými registry, po jejím skončení by hlavní program mohl tyto registry také používat a nalézt v&nbsp;nich neočekávaná/nekorektní data
 
   * Korektní obsluha přerušení by měla zajistit, aby po jejím skončení obsah příznakových a pracovních registrů byl stejný, jako když byla obsluha vyvolána
 

@@ -130,7 +130,7 @@ finally {
 
 * `lock()` uzamyká kus kódu objektem, který dostane jako vstupní parametr
   * V tomto kusu kódu může být pouze jedno vlákno, ostatní čekají
-  * Vstupním parametrem je kód uzamčen ale samotný parametr nijak uzamčen/chráněn/modifikován není, může to být libovolný object
+  * Vstupním parametrem je kód uzamčen, ale samotný parametr nijak uzamčen/chráněn/modifikován není, může to být libovolný object
 
 ## async, await
 

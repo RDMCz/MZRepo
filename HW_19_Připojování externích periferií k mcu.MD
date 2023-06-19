@@ -51,7 +51,7 @@
 * Na paralelní vstup jsou připojena tlačítka
 
 1. Na pinu _sp_ se nastaví parallel a pošle se jeden pulz na _clk_, tím se stav všech tlačítek zapíše do posuvného registru
-2. Na pinu _sp_ se nastaví serial a na _clk_ se pošle tolik pulzů, kolik je tlačítek; po každém pulzu se čte datový vstup (hodnoty se "vytáhnou" z PISO do MCU)
+2. Na pinu _sp_ se nastaví serial a na _clk_ se pošle tolik pulzů, kolik je tlačítek; po každém pulzu se čte datový vstup (hodnoty se "vytáhnou" z&nbsp;PISO do MCU)
 
 * Výhody:
   * Konstatní počet pinů (3)

@@ -4,7 +4,7 @@
 
 * Internet Protocol je zodpovědný za směrování (routování) paketů ze zdroje do cíle
 * IP adresa jednoznačně identifikuje síťové rozhraní na třetí vrstvě ISO/OSI
-* IPv6 adresy se skládají z osmi skupin po čtyřech hexadecimálních číslech (0-F) oddělených dvojtečkou = __osm hextetů__
+* IPv6 adresy se skládají z osmi skupin po čtyřech hexadecimálních číslech (0–F) oddělených dvojtečkou = __osm hextetů__
 * `0123:BB99:3210:FE00:58A0:4565:98AE:1245`
 * Vznikla kvůli nedostatku IPv4 adres
 
@@ -59,7 +59,7 @@ desítková soustava | šestnáctková soustava
 * V IPv4 lze zapsat jako délku prefixu `192.168.1.1/24` nebo pomocí masky `255.255.255.0`
 * V IPv6 se zapisuje pouze délka prefixu
   * Doporučená velikost pro podsítě je `64`, ~aby fungoval Neighbor Discovery Protocol
-* S délkou prefixu `/64` je tedy 64 bitů z leva __Prefix__ (adresa podsítě) a zbylých 64 bitů (128-64) je __Interface ID__ (adresa konkrétního zařízení v podsíti)
+* S délkou prefixu `/64` je tedy 64 bitů z leva __Prefix__ (adresa podsítě) a zbylých 64 bitů (128-64) je __Interface ID__ (adresa konkrétního zařízení v&nbsp;podsíti)
 
 ## Komprimace nul
 
@@ -125,7 +125,7 @@ prefix | význam
 
 ## Multicast
 
-* Použití např. real-time distribuce obrazu a zvuku
+* Použití např. pro real-time distribuce obrazu a zvuku
 * Adresy `FF00::/8`, např.: `ff35:30:2001:718:1c01:0:0:7`
   * 8 jedniček – `FF`
   * 4 bity – příznaky

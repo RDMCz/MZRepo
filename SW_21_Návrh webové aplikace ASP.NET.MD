@@ -206,9 +206,9 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn
 ## MVC
 
 * Starší klasičtější architektura
-* Populární, kromě _<span>ASP.NET</span> MVC_ také Laravel, Ruby on Rails, Django, ...
+* Populární, kromě_<span>ASP.NET</span> MVC také Laravel, Ruby on Rails, Django, ...
 * Odděluje logiku od výstupu
-* Vhodné pro složitější aplikace, Razor Pages pro začátečnické práce
+* Vhodné pro složitější aplikace
 
 ### Model
 
@@ -257,4 +257,4 @@ public class AccountController : ControllerBase
 * Framework pro psaní webových aplikací pomocí C# a HTML
 * Client-side, WebAssembly
 * ~Alternativa JavaScriptu
-* Na backend navázáno přímo – komunikace přes TCP, ne HTTP => velmi rychlá reakce na události
+* Na backend navázáno přímo – komunikace přes TCP, ne HTTP ⇒ velmi rychlá reakce na události

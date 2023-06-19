@@ -54,7 +54,7 @@
             <td><strong>1</strong></td>
             <td><strong>Fyzická</strong></td>
             <td>Bit, symbol</td>
-            <td>Přenáší data mezi zařízeními pomocí fyzického přenosového média. Převádí bity na elektrické/rádio/optické signály. Řeší fyzické poslání dat, neřeší jejich význam. Definuje např. hodnoty napětí, maximální přenosová vzdálenost, rozložení pinů u fyzických konektorů.</td>
+            <td>Přenáší data mezi zařízeními pomocí fyzického přenosového média. Převádí bity na elektrické/rádio/optické signály. Řeší fyzické poslání dat, neřeší jejich význam. Definuje např. hodnoty napětí, maximální přenosovou vzdálenost, rozložení pinů u fyzických konektorů.</td>
         </tr>
     </tbody>
 </table>
@@ -71,7 +71,7 @@
 * Převádí bity na elektrické/rádio/optické signály (měď/bezdrát/optika)
 * Řeší fyzické poslání dat, neřeší jejich význam
 * Oznamuje chybové stavy linkové vrstvě
-* Definuje např. hodnoty napětí, maximální přenosová vzdálenost, charakteristiky signálu (modulace/šířka pásma), rozložení pinů u fyzických konektorů a jejich tvar, ...
+* Definuje např. hodnoty napětí, maximální přenosovou vzdálenost, charakteristiky signálu (modulace/šířka pásma), rozložení pinů u fyzických konektorů a jejich tvar, ...
 * Na této vrstvě pracuje opakovač a rozbočovač
 
 ## 2. Linková (spojová) vrstva

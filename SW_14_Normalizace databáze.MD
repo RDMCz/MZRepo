@@ -20,9 +20,9 @@
 ## Normalizace + optimalizace
 
 * Přeorganizování dat v relační databázi tak, aby využívala výhody relačního modelu dat
-* Normalizovaná databáze má efektivnější ukládnání, prohledávání, třídění, zpracování. Zabraňuje redundanci dat.
+* Normalizovaná databáze má efektivnější ukládání, prohledávání, třídění, zpracování. Zabraňuje redundanci dat.
 * Při normalizaci se mění sloupce jednotlivých tabulek a zavádí se mezi nimi výhodné vztahy
-* V čím vyšší je databáze normální formě (stupeň doporučení pro ideální návrh databáze), tím je kvalitněji navržena – vzrůstá efektivita ale i zátěž na databázový stroj
+* V čím vyšší je databáze normální formě (stupeň doporučení pro ideální návrh databáze), tím je kvalitněji navržena – vzrůstá efektivita ale i&nbsp;zátěž na databázový stroj
 * Kompromisem je dosáhnout co nejvyšší normy a pak úroveň snižovat na zvládnutelnou úroveň
 * Obvykle je zbytečné uvažovat nad vyšší než třetí normou
 
@@ -71,7 +71,7 @@ StudentID (PK) | SubjectID (PK) | SubjectAcronym | FinalGrade
 1 | 102 | MAT | D
 2 | 101 | CJL | A
 
-* Zkratka předmětu není funkčně závislá na celém PK, ale jen na jeho části = Nesplňuje 2NF
+* Zkratka předmětu není funkčně závislá na celém PK, ale jen na jeho části ⇒ nesplňuje 2NF
 * Při změně zkratky předmětu by se musel změnit záznam u všech oznámkovaných z tohoto předmětu
 * Nelze přidat nový předmět, u kterého ještě nikdo nemá uzavřenou známku
 
@@ -100,7 +100,7 @@ MovieID (PK) | GenreID | GenreName | RunningTime
 4 | 103 | Komedie | 1h35m
 
 * Splňuje 2NF, ale ne 3NF
-* MovieID → GenreID && GenreID → GenreName => MovieID → GenreName
+* MovieID → GenreID && GenreID → GenreName ⇒ MovieID → GenreName
 * GenreName není určen pouze PK
 
 MovieID (PK) | GenreID (FK) | RunningTime

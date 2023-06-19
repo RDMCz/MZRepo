@@ -54,7 +54,7 @@
 * Path-vector
 * Používán ISP, páteřní sítě
 
-### Distance-vector protoly
+### Distance-vector protokoly
 
 * Směrovače neznají strukturu sítě za svými nejbližšími sousedy
 * V pravidelných intervalech či při topologické změně si se sousedy vyměňují kompletní kopie svých směrovacích tabulek

@@ -151,6 +151,6 @@ I2C má start a stop condition, nezáleží na časování, důležitá je změn
 1Wire může sloužit zároveň pro napájení (dioda + kapacitor), možno připojovat zařízení dynamicky (single button) 
 – podpora pro dynamické zjištění připojených stanic pomocí binárního vyhledávacího stromu
 
-CAN zprávy neobsahují příjemce a odesílatele, ale pouze identifikátor obsahu zprávy, rámec přijmou všichni, podle identifikátoru se 
-rozhodnou, zdali zprávu přijmou (popřípadě přijmutí potvrdí), receive error counter, transmit error counter
+CAN zprávy neobsahují příjemce a odesílatele, ale pouze identifikátor obsahu zprávy, rámec přijmou všichni, podle
+identifikátoru se rozhodnou, zdali zprávu přijmou (popřípadě přijmutí potvrdí), receive error counter, transmit error counter
 ```

@@ -22,7 +22,7 @@ Vlastnosti / požadavky:
 ### Determinovanost
 
 * Za stejných podmínek pro stejné vstupy poskytuje stejný výstup
-* Toto je vyžadováno pokud není vyžadován náhodný výstup
+* Toto je vyžadováno, pokud není vyžadován náhodný výstup
 * Každý krok algoritmu musí být jednoznačně definován
 
 ### Výstup

@@ -108,7 +108,7 @@ Switch(config-if)# switchport nonegotiate                   // Vypnutí Dynamic 
 * Přepínač s nejnižším Bridge ID je zvolen jako _Root Bridge_
   * Ve výchozím nastavení se jedná o přepínač s nejnižší MAC adresou, to lze změnit nastavením priority (default 0x8000)
   * Root Bridge má všechny porty ve stavu _designated_
-  * Všechna rozhodnutí se dějí z jeho pohledu, měl to být ten nejvýkonější přepínač
+  * Všechna rozhodnutí se dějí z jeho pohledu, měl to být ten nejvýkonnější přepínač
 * Typy portů:
   * Root – port s nejlepší cenou – buď linka přímo spojená s Root Bridge nebo s nejkratší cestou k němu
   * Designated – port je členem STP topologie

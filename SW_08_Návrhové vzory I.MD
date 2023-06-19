@@ -59,30 +59,9 @@ class Jedinacek
 * Místo vytváření nových instancí se znovupoužijí ty staré
 * Dostupné instance jsou uloženy ve statické kolekci
 * Metody pro získání volné instance a pro vrácení již nepotřebné instance
-* Používá se, pokud potřebujeme větší množství instancí časově náročných na vytvoření, ale nepotřebjeme jich používat mnoho zároveň
+* Používá se, pokud potřebujeme větší množství instancí časově náročných na vytvoření, ale nepotřebujeme/nechceme jich používat mnoho zároveň
 * Omezená / Dynamická kapacita – při nedostatku instancí čekat, vyhodit výjimku / vytvořit novou
 * Použití např. v bullet hell hrách
-
-``` csharp
-private const int ModulesCount = 5;
-public static Module[] Modules = new Module[ModulesCount]
-{
-    new Module(Actions.BROUSENI),
-    new Module(Actions.BROUSENI),
-    new Module(Actions.REZANI),
-    new Module(Actions.SVAROVANI),
-    new Module(Actions.VRTANI)
-};
-
-public Module TakeModule(Actions a)
-{
-    if (Modules.Where(x => !x.InUse && x.Action == a).Count() > 0)
-        return Modules.SingleOrDefault(x => !x.InUse && x.Action == a);
-    else
-        throw new Exception("Žádné dostupné moduly");
-}
-// InUse představuje dostupnost - jestli je modul používaný
-```
 
 ## Vzory chování (Behavioral patterns)
 

@@ -6,10 +6,10 @@
 
 ``` html
 <!DOCTYPE html>
-<html>
+<html lang="cs">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
         <title>Titulek stránky</title>
     </head>
     <body>
@@ -36,17 +36,17 @@
 * `p, div` – vybere všechny elemety `<p>` a `<div>`
 * `.class` – vybere elementy s `class="class"`
 * `p.class` – vybere všechny elemety `<p>` s `class="class"`
-* `#id` – vybere elementy s id="id"
+* `#id` – vybere elementy s `id="id"`
 
 ## JavaScript
 
 * Multiparadigmatický vyšší programovací jazyk
 * Dynamické přiřazení typů, funkce první třídy (funkce jsou také objekty – mají atributy a lze je předat dále)
-* Společně s html a css tvoří základ www
+* Společně s HTML a CSS tvoří základ www
 * Většina stránek ho používá pro definici chování na straně klienta (může ale běžet i na serveru)
-* Dokáže upravovat atributy html i css prvků
+* Dokáže upravovat atributy HTML i CSS prvků
 * Frameworky:
-  * Frontend: React, Angular, Vue
+  * Frontend: React, Angular, Vue, Svelte
   * Backend: Express, Next, Meteor
 
 ``` html
@@ -89,7 +89,7 @@ function changeText() {
 * `<head>` – Obsahuje metadata + informace pro dokument
 * `<title>` – Titulek dokumentu
 * `<body>` – Tělo dokumentu
-* `<h1-6>` – Nadpis
+* `<h1–6>` – Nadpis
 * `<p>` – Odstavec
 * `<br>` – Zalomení řádku
 * `<hr>` – Horizontální oddělovací čára

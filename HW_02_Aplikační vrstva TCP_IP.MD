@@ -54,7 +54,7 @@
             <td><strong>1</strong></td>
             <td><strong>Fyzická</strong></td>
             <td>Bit, symbol</td>
-            <td>Přenáší data mezi zařízeními pomocí fyzického přenosového média. Převádí bity na elektrické/rádio/optické signály. Řeší fyzické poslání dat, neřeší jejich význam. Definuje např. hodnoty napětí, maximální přenosová vzdálenost, rozložení pinů u fyzických konektorů.</td>
+            <td>Přenáší data mezi zařízeními pomocí fyzického přenosového média. Převádí bity na elektrické/rádio/optické signály. Řeší fyzické poslání dat, neřeší jejich význam. Definuje např. hodnoty napětí, maximální přenosovou vzdálenost, rozložení pinů u fyzických konektorů.</td>
         </tr>
     </tbody>
 </table>

@@ -155,9 +155,8 @@ private void Insert(Node iroot, Node node)
 * Pokud se maže list (prvek bez potomků), stačí na něj smazat odkaz
 * Pokud má jednu větev, je vynechán (podobně jako spojový seznam)
 * Pokud má oba následníky:
-  * Je vynechán: jeho předchůdce, který na něj odkazoval, nyní odkazuje na jeho levého potomka
-  * Z tohoto levého potomka se jede doprava, dokud se nenarazí na uzel, který nemá pravého potomka
-  * Jako pravý potomek tohoto uzle se nastaví pravý potomek uzle, který je mazán
+  1. Jeho hodnotu nahradíme nejbližší vyšší (nejlevější uzel pravého podstromu) nebo nejbližší nižší (nejpravější uzel levého podstromu) hodnotou
+  2. Uzel s touto nahrazující hodnotou smažeme (měl by mít maximálně jednoho potomka, takže stejný problém nenastane)
 
 ## Výhody a nevýhody
 
