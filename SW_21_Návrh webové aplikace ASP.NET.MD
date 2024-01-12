@@ -206,7 +206,7 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn
 ## MVC
 
 * Starší klasičtější architektura
-* Populární, kromě_<span>ASP.NET</span> MVC také Laravel, Ruby on Rails, Django, ...
+* Populární, kromě <span>ASP.NET</span> MVC také Laravel, Ruby on Rails, Django, ...
 * Odděluje logiku od výstupu
 * Vhodné pro složitější aplikace
 

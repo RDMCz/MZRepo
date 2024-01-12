@@ -45,10 +45,10 @@
 
 ### Parametry
 
-* Grafický čip – Nvidia/AMD/(Intel)
+* Grafický čip – Nvidia/AMD/Intel
 * Kapacita VRAM – 16 GB
 * Šířka datové sběrnice – kolik dat proteče za jeden takt mezi GPU a VRAM – 256 bit
-* Konektivita – HDMI/DP/...
+* Konektivita – HDMI/DP/VGA/DVI (jaké a kolik)
 
 ### Akcelerace
 
@@ -60,14 +60,22 @@
 
 ### Vytváření 3D scény
 
-* 3D scéna obsahuje modely, které se skládají z primitiv jako např. polygonů
+* 3D scéna obsahuje modely, které se skládají z primitiv, výhodné jsou trojúhelníky
 * Vrcholy těchto primitiv se nazývají vertexy a obsahují souřadnice svého umístění
 * Vykreslovací řetězec (graphics pipeline) je sekvence procesů převádějící virtuální 3D scénu na zobrazitelný 2D obraz
+  1. __Orientace podle kamery__ – transformace všech objektů tak, aby kamera ležela v&nbsp;počátku (přesun/otočení)
+  2. __Ořezávání pohledovým objemem__ – vyřadit plošky mimo pohledový řetězec
+  3. __Promítání__ – body z 3D prostoru jsou transformací přeneseny na stínítko (perspektivní/rovinné)
+  4. __Transformace__ do okna obrazovky
+  5. __Lokální osvětlení__ – např. Phongův osvětlovací model
+  6. __Rasterizace__ – převod vektor→rastr
+  7. __Mapování textur__ – UV souřadnice
+  8. __Určení viditelnosti pixelů__ – z-buffer (vzdálenost od stínítka)
 * Mezi aplikací a GPU se nachází API mezivrstva, která umožňuje aplikacím univerzálně komunikovat s různými GPU (Direct3D, OpenGL, Vulcan)
 * __Input Assembler__ načítá geometrická data primitiv a následně je sestavuje v pomyslném 3D prostoru GPU
-* __Teselace__ rozděluje polygony na menší čímž zvyšuje detail objektu, nebo slučuje polygony a detail snižuje
+* __Teselace__ rozděluje trojúhelníky na menší čímž zvyšuje detail objektu, nebo slučuje trojúhelníky a detail snižuje
 * __Rasterizer__ převádí trojrozměrná primitiva do 2D obrazu. Barvy jejich pixelů vypočítává pixel shader, který dostává data od rasterizeru a vzorkovače textur
-* __Output Merger__ provádí test hloubky v Z-bufferu, zobrazí pixely nejblíže kameře a ty "schované" zahodí jako neviditelné
+* __Output Merger__ provádí test hloubky v z-bufferu, zobrazí pixely nejblíže kameře a ty "schované" zahodí jako neviditelné
 
 ### Negrafické výpočty
 

@@ -38,7 +38,7 @@
 * __Zpětná kompatibilita__
 * __Bajtové adresování__
   * Byte je nejmenší adresovatelná jednotka (ve většině případů)
-  * Každý bajt má svou adresu
+  * Každý byte má svou adresu
   * Opakem je word addressing (velikost slova závisí na architektuře)
 * __SIMD – Single Instruction Multiple Data__
   * Jedna instrukce pracuje paralelně s více daty
@@ -92,7 +92,7 @@
     * Kratší vzdálenost znamená kratší cesta pro elektrony a díky tomu nižší spotřeba
 2. Snížení napájecího napětí
 3. Intel Turbo Boost nebo AMD Turbo Core
-    * "Dynamické přetaktování" – frekvence (a spotřeba) se zvýší, pouze pokud je výkon potřeba
+    * "Dynamické přetaktování" – frekvence (a spotřeba) se zvýší pouze tehdy, pokud je výkon potřeba
     * Existují další technologie jako AMD PowerNow!, AMD Cool'n'Quiet, Intel SpeedStep, ...
 
 ## Rozšířené instrukční sady
