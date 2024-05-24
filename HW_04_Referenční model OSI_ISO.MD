@@ -1,6 +1,4 @@
-# HW 04 – Referenční model OSI/ISO
-
-## Referenční model ISO/OSI
+# HW 04 – Referenční model OSI
 
 <table>
     <thead>
@@ -63,7 +61,7 @@
 * Snaha o vytvoření jednotného standardu pro bezchybnou komunikaci v PC sítích napříč prvky od různých výrobců
 * Dekompozice implementace sítě do sedmi vrstev umožňující snadnější pochopení a větší modularitu
 * Každá vrstva využívá služeb vrstvy pod sebou a poskytuje svoje služby vrstvě nad sebou
-* Vzájemně spolu komunikují prvky ze stejných vrstev pomocí protokolů
+* Prvky ze stejných vrstev spolu komunikují pomocí protokolů
 
 ## 1. Fyzická vrstva
 
@@ -71,33 +69,37 @@
 * Převádí bity na elektrické/rádio/optické signály (měď/bezdrát/optika)
 * Řeší fyzické poslání dat, neřeší jejich význam
 * Oznamuje chybové stavy linkové vrstvě
-* Definuje např. hodnoty napětí, maximální přenosovou vzdálenost, charakteristiky signálu (modulace/šířka pásma), rozložení pinů u fyzických konektorů a jejich tvar, ...
+* Definuje např. hodnoty napětí, maximální přenosovou vzdálenost, charakteristiky signálu (modulace / šířka pásma), rozložení pinů u&nbsp;fyzických konektorů a jejich tvar, ...
 * Na této vrstvě pracuje opakovač a rozbočovač
 
 ## 2. Linková (spojová) vrstva
 
 * Využívá spojení z fyzické vrstvy pro přenos větších bloků dat – rámců
-  * Preambule – Vzorek střídajících se bitů 0 a 1, aby zařízení snadno poznalo začátek přicházejícího rámce [7B]
-  * SFD – Start Frame Delimiter – Značí konec preambule a začátek rámce [1B]
-  * Cílová MAC adresa [6B]
-  * Zdrojová MAC adresa [6B]
-  * Délka paketu nebo indikátor protokolu [2B]
-  * Vlastní obsah
-  * Kontrolní součet CRC
+  * Preambule – Vzorek střídajících se bitů 0 a 1, aby zařízení snadno poznalo začátek přicházejícího rámce [7 B]
+  * SFD – Start Frame Delimiter – Značí konec preambule a začátek rámce [1 B]
+  * Cílová MAC adresa [6 B]
+  * Zdrojová MAC adresa [6 B]
+  * Délka paketu nebo indikátor protokolu [2 B]
+  * Vlastní obsah [46–1500 B]
+  * Kontrolní součet CRC [4 B]
 * Na této vrstvě pracuje most a přepínač
 * Ethernet, Wi-Fi, ZigBee, ...
-* Dolní podvrstva __MAC__
-  * Adresace – MAC adresy vázané na síťovou kartu (vrstva je hardwarově závislá)
-  * Šest dvouciferných hexadecimálních čísel (oddělené dvojtečkou, pomlčkou, nebo neoddělené)
-  * 48 bitů, kontrola pomocí komparátoru
-    * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
-    * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
-    * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
-    * Druhá polovina – Přiděluje výrobce (náhodně)
-* Horní podvrstva __LLC__
-  * Propojení mezi Ethernetem a síťovou vrstvou
-  * Zakrývá rozdíly mezi sítěmi 802, poskytuje společný formát a rozhraní pro síťovou vrstvu
-  * Error-control, flow-control (aby rychlý odesílatel nezahltil pomalého adresáta)
+
+### Dolní podvrstva MAC
+
+* Adresace – MAC adresy vázané na síťovou kartu (vrstva je hardwarově závislá)
+* Šest dvouciferných hexadecimálních čísel (oddělené dvojtečkou/pomlčkou nebo neoddělené)
+* 48 bitů, kontrola pomocí komparátoru
+  * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
+  * Osmý bit – 0 = unicast, 1 = multicast, (FF:FF:FF:FF:FF:FF = broadcast)
+  * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
+  * Druhá polovina – Přiděluje výrobce a ručí za její jednoznačnost
+
+### Horní podvrstva LLC
+
+* Propojení mezi Ethernetem a síťovou vrstvou
+* Zakrývá rozdíly mezi sítěmi 802, poskytuje společný formát a rozhraní pro síťovou vrstvu
+* Error-control, flow-control (aby rychlý odesílatel nezahltil pomalého adresáta)
 
 ## 3. Síťová vrstva
 
@@ -125,20 +127,21 @@
 
 ## 5. Relační vrstva
 
-* Udržuje relaci (session) – uchovává informace mezi jednotlivými spojeními na úrovni transportní vrstvy
-* Práva, hesla, omezení
+* Udržuje / obnovuje / uzavírá spojení transportní vrstvy
+* Dialogue control – full-duplex / half-duplex / simplex
+* Synchronizační body – záchytné body, odkud lze obnovit dialog
 
 ## 6. Prezentační vrstva
 
-* Transformuje data do tvaru, který používají aplikace (šifrování, konvertování, komprimace)
-* Zabývá se strukturou dat, nikoliv jejich významem
-* Kódování textu (ASCII), grafických dat (JPEG), ...
+* Při odesílání transformuje data do standardních formátů vhodných pro přenos
+* Při přijímání transformuje data do formátů vhodných pro zobrazení uživateli
+* Formátování, šifrování, komprimace, de/serializace...
 
 ## 7. Aplikační vrstva
 
-* Vrstva nejblíže k uživateli. Poskytuje uživatelským programům ucelené služby.
+* Vrstva nejblíže k uživateli, která poskytuje uživatelským programům ucelené služby
 * Obsahuje jádro aplikací, které má smysl standardizovat (např. přenosové mechanismy elektronické pošty)
-* Zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu.
+* Zbylé části aplikace (UI) byly posunuty nad aplikační vrstvu
 * FTP, Telnet, SMTP, ...
 
 <table>
@@ -172,4 +175,5 @@
 
 ## TCP/IP – Transmission Control Protocol / Internet Protocol
 
-* Vznikl původně jako komunikační protokol ministerstva obrany USA
+* Sada komunikačních protokolů, kde nejdůležitější jsou TCP/UDP a IP
+* Z této sady vychází čtyřvrstvý TCP/IP model

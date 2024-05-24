@@ -13,7 +13,7 @@
 * Číslování je _slot/port_ nebo _stack/slot/port_
   * Porty na běžných nemodulárních přepínačích patří do slotu 0
   * U stackovatelných přepínačů propojených speciální sběrnicí se uvádí i pořadí zařízení ve stacku (první má číslo 1)
-    * Cisco přepínače většinou podporují maximálně 4 / 8 / 9 zařízení
+    * Cisco přepínače většinou podporují maximálně 4/8/9 zařízení
     * Také bývá omezen maximální stack bandwidth
 
 ## MAC – Media Access Control
@@ -83,14 +83,14 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 
 ### FLSM – Fixed Length Subnet Mask
 
-<img src="./img/HW_09_02.PNG" height=333>
+<img alt="FLSM" src="./img/HW_09_02.PNG" height=333>
 
 * Každé přičtení k CIDR zdvojnásobí počet sítí (ale počet zařízení se vydělí dvěma)
   * Toto platí kdekoliv – Např. jedna /22 síť obsahuje dvě /23 sítě, čtyři /24 sítě atd.
 * _Jak velké podsítě musíme mít, abychom v síti /22 mohli vytvořit 100 podsítí?_
   * 2**6 = 64 – málo
   * 2**7 = 128 – dostačující
-  * 22 + 7 = 29 – _Budou potřeba sítě s velikostí /29._
+  * 22 + 7 = 29 – _Budou potřeba podsítě s velikostí /29._
 * _Kolik podsítí můžeme vytvořit v síti /22, aby každá měla (alespoň) 50 adres zařízení?_
   * Síť /32 nemá žádné místo pro zařízení, my potřebujeme 50, nejblíže je 64 (2**6)
   * 32 - 6 = 26 – Síť /26 má 64 adres zařízení
@@ -98,7 +98,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
   * 26 - 22 = 4; 2**4 = 16 – _V síti /22 můžeme vytvořit 16 podsítí pro 50 zařízení._
 * Podsítě mají stejnou (fixní) velikost
 
-<img src="./img/HW_09_03.PNG" height=246>
+<img alt="mocniny dvou" src="./img/HW_09_03.PNG" height=246>
 
 * Je potřeba brát v potaz adresu sítě a broadcast (síť 26 má 64 adres zařízení, použitelných je ale 62)
 
@@ -106,7 +106,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 
 * Variabilní velikost podsítí, lepší využití adresního prostoru
 
-``` txt
+``` text
 Rozdělte síť 192.168.10.0/24 na:
   výroba    40 hostitelů
   eko       20 hostitelů
@@ -128,7 +128,7 @@ Krok 2 – Alokovat adresní bloky od největšího po nejmenší
 2. eko    – /27 – +32
 3. údržba – /27 – +32
 4. vedení – /28 – +16
-5. tisk –   /29 – +8
+5. tisk   – /29 – +8
 
 +========+ 192.168.10.0/26 
 | výroba |

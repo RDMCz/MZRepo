@@ -15,6 +15,7 @@
 ## DML (Data Manipulation Language)
 
 * Jazyk (podjazyk SQL) pro vkládání, mazání a upravování dat v databázi
+* Součástí DML je také dotazování pomocí `SELECT`
 
 ``` sql
 -- Vložení záznamu (jednoho či více)
@@ -38,8 +39,8 @@ DELETE FROM sousedstvo WHERE věk = 57 AND jméno = "Ludvík";
 -- VARCHAR(50) = string maximálně 50 znaků
 CREATE TABLE employees (
     id          INTEGER         PRIMARY KEY,
-    name        VARCHAR(50)     not null,
-    birthday    DATE            not null
+    name        VARCHAR(50)     NOT NULL,
+    birthday    DATE            NOT NULL
 );
 
 -- Vymazání databáze/tabulky

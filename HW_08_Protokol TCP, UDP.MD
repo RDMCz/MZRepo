@@ -68,7 +68,7 @@
 __Navázání spojení__: třícestný handshake
 
 * `klient -> server` – Příznak SYN, pořadové číslo = x (náhodné), potvrzovací číslo = 0
-* `klient <- server` – Příznak SYN+ACK, číslo sekvence = y (náhodné), potvrzovací číslo = x+1
+* `klient <- server` – Příznak SYN+ACK, pořadové číslo = y (náhodné), potvrzovací číslo = x+1
 * `klient -> server` – Příznak ACK, pořadové číslo = x+1, potvrzovací číslo = y+1
 
 __Ukončení spojení__: čtyřcestný handshake

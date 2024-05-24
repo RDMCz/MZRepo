@@ -63,13 +63,13 @@
 
 * Protokol definující přenos dat na lokální síti
 * Obsah rámce:
-  * Preambule – Vzorek střídajících se bitů 0 a 1, aby zařízení snadno poznalo začátek přicházejícího rámce [7B]
-  * SFD – Start Frame Delimiter – Značí konec preambule a začátek rámce [1B]
-  * Cílová MAC adresa [6B]
-  * Zdrojová MAC adresa [6B]
-  * Délka paketu nebo indikátor protokolu [2B]
-  * Vlastní obsah
-  * Kontrolní součet CRC
+  * Preambule – Vzorek střídajících se bitů 0 a 1, aby zařízení snadno poznalo začátek přicházejícího rámce [7 B]
+  * SFD – Start Frame Delimiter – Značí konec preambule a začátek rámce [1 B]
+  * Cílová MAC adresa [6 B]
+  * Zdrojová MAC adresa [6 B]
+  * Délka paketu nebo indikátor protokolu [2 B]
+  * Vlastní obsah [46–1500 B]
+  * Kontrolní součet CRC [4 B]
 
 ### Lokální síť
 
@@ -109,7 +109,7 @@
     * Sedmý bit – 0 = unikátní (OUI enforced), 1 = lokálně spravovaná
     * Osmý bit – 0 = unicast, 1 = multicast
     * První polovina – Organizationally Unique Identifier (OUI), výrobcům přiděluje IEEE
-    * Druhá polovina – Přiděluje výrobce (náhodně)
+    * Druhá polovina – Přiděluje výrobce a ručí za její jednoznačnost
 
 ### IEEE 802.2 – LLC vrstva – Logical Link Control
 
@@ -121,7 +121,7 @@
 ### Unicast
 
 * Přímá komunikace mezi dvěma uzly v síti
-* Cílová adresa – MAC adresa cílové síťové karty
+* Cílová adresa je MAC adresa cílové síťové karty
 
 ### Broadcast
 
@@ -174,14 +174,14 @@
 
 ### Kroucená dvojlinka
 
-* Čtyři páry vodičů, které jsou v páru pravidelně zakroucené
+* Čtyři páry vodičů, kde je každý pár pravidelně zakroucený
 * Kroucení má vliv na šířku pásma a na odolnost proti rušení
   * Magnetická pole kroucených vodičů jsou opačná a vyrušují se; vyrušují i vnější pole
 * U/UTP – Unshielded Twisted Pair
   * Značení `<stínění kabelu>/<stínění páru>TP`, U – nestíněno, F – Fólie, S – Opletení (pouze kabel)
   * Např.: SF/FTP – Kabel stíněn fólií a opletením + páry stíněny fólií
-* Různé kategorie Cat1 - Cat8, nejběžnější Cat6
-* Koncovka RJ-45 (8P8C)
+* Různé kategorie Cat1 - Cat8, nejběžnější Cat6, určují fyzikální vlastnosti přenosovou rychlost
+* Koncovka ~RJ45 (unkeyed 8P8C)
 
 ### Optika
 

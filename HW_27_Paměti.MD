@@ -44,7 +44,7 @@
 
 * Základní princip je obvod D latch
 * Realizace pomocí 6 tranzistorů (4 tranzistory a 2 odpory, které se většinou také realizují pomocí tranzistorů), které zachovávají data, dokud je k dispozici napájení
-* ~~Rychlejší~~, dražší
+* (Rychlejší), dražší
 * CPU cache, HDD buffer, router buffer
 
 ### DRAM – Dynamic RAM
@@ -52,8 +52,10 @@
 * Každá paměťová buňka obsahuje 1 tranzistor a 1 kapacitor, pro uchování dat se vyžaduje periodický _memory refresh_
   * Přečtení dat a následný zápis na stejné místo, aby se data uchovala
 * Čtení je destruktivní, přečtenou informaci je nutno bezprostředně zapsat zpět
-* ~~Pomalejší~~, levnější, větší spotřeba v klidovém stavu
-* Mýtus rychlosti – rychlost paměti závisí převážně na její velikosti (DRAM se vyrábějí ve výrazně větších kapacitách než paměti SRAM)
+* (Pomalejší), levnější, větší spotřeba v klidovém stavu
+* Rychlost u SRAM vs. DRAM je komplikovanější téma:
+
+> DRAM is optimized for density (higher capacity) and SRAM is optimized for speed (access latency). So, in general, SRAM is faster than DRAM. However, it is fundamentally possible to design DRAM to be faster than SRAM, but DRAM manufacturers don't do that since the most important selling factor for them is cost per bit. So they lower cost per bit at the expense of speed.<br><https://superuser.com/questions/648370>
 
 ### SDRAM – Synchronous DRAM
 

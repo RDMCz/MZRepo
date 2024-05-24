@@ -70,7 +70,7 @@
 * Fyzická vrstva – Větvení sítě
 * Umožňuje větvení sítě do hvězdicové topologie
 * Obnovuje data jako opakovač
-* Obnovená data rozešle na všechny svoje porty (kromě portu, z kterého data přišla)
+* Obnovená data rozešle na všechny svoje porty (kromě portu, ze kterého data přišla)
 * U větších sítí zatěžuje uzly, kterým data nebyla určena
 * Nižší latence než switch, ovšem nulová bezpečnost (broadcast storm, na hubu lze sledovat veškerý provoz sítě)
 * Nemá žádnou "inteligenci" (VLAN, STP, ...)

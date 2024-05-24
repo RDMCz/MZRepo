@@ -18,7 +18,7 @@
 4. client ← server __ACKNOWLEDGE__
     * Server posílá potrvrzení + dodatečné informace
 
-* Každá adresa má svůj lease time ("doba pronájmu"), poté může být přiřazena jinému zařízení (u dynamické alokace)
+* Každá adresa má svůj lease time ("doba pronájmu"), poté zařízení žádá o prodloužení, nebo může být adresa přiřazena jinému
 
 ### Nastavení rozsahu
 

@@ -98,7 +98,7 @@ Switch(config-if)# switchport nonegotiate                   // Vypnutí Dynamic 
 * Smyčky – broadcast storm, nestabilita CAM tabulky, opětovné doručení
   * Třetí vrstva má TTL, druhá vrstva nic takového nemá
 * Úmyslné smyčky – vytvoření nadbytečných (redundantních) spojení
-* Redundantní cesty jako záloha či pro zvýšení propustnosti
+* Redundantní cesty jako záloha nebo pro zvýšení propustnosti
 * STP na fyzické topologii (která může obsahovat smyčky) vytváří virtuální topologii, která smyčky neobsahuje
 * STP je dynamický protokol:
   * Reaguje na vznik nové smyčky

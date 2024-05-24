@@ -62,7 +62,7 @@ for (int i = 0; i < pole.Length; i++) {
 
 Selection sort najde v poli minimum (projede všech n prvků, to trvá n), dá ho na začátek a hledá nové minimum (takhle nkrát). Náročnost je tedy `O(n**2)`, stejně jako u bubble sortu.
 
-Algoritmus, který by zkoušel všechny možnosti, dokud nenajde tu seřazenou (permutace), by měl náročnost `O(n!)`.
+Algoritmus, který náhodně zkouší všechny možnosti, dokud nenajde tu seřazenou, má náročnost `O(n * n!)`. Pro každou permutaci (`n!`) je nutné zkontrolovat, zdali už je seřazeno (`n`).
 
 ## Rekurze
 

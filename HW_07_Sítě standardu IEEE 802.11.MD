@@ -21,14 +21,14 @@
 * Využívá se bezlicenčních pásem – 2,4/5/(6) GHz – za jejich použití není nutno platit
 * První verze 802.11 "legacy" byla pomalá a drahá
 
-Standard | Alias | Pásmo | Max. rychlost | Modulace
+Standard | Alias | Pásmo | Max. teoretická rychlost | Modulace
 --- | :-- | :-: | --: | :--
 802.11a | Wi-Fi 2 | 5 GHz | 54 Mbit/s | OFDM
 802.11b | Wi-Fi 1 | 2,4 GHz | 11 Mbit/s | DSSS
 802.11g | Wi-Fi 3 | 2,4 GHz | 54 Mbit/s | OFDM
 802.11n | Wi-Fi 4 | 2,4/5 GHz | 600 Mbit/s | MIMO OFDM
-802.11ac | Wi-Fi 5 | ~2,4/5 GHz | 3,5 Gbit/s | MU-MIMO OFDM
-802.11ax | Wi-Fi 6 | 2,4/5/6 GHz | 10,5 Gbit/s | MU-MIMO OFDMA
+802.11ac | Wi-Fi 5 | ~2,4/5 GHz | 6,9 Gbit/s | MU-MIMO OFDM
+802.11ax | Wi-Fi 6 | 2,4/5/6 GHz | 9,6 Gbit/s | MU-MIMO OFDMA
 
 ### 802.11a
 
@@ -67,12 +67,11 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 
 * Konsorcium, nezisková organizace
 * Certifikace produktů – zaručuje kompatibilitu mezi certifikovanými produkty
-* Postupem času krom certifikování začali vyvíjet i vlastní technologie:
+* Postupem času krom certifikování začali vyvíjet i vlastní technologie/specifikace:
   * Miracast
-  * WPA, WPA2
+  * WPA, WPA2, WPA3
   * Wi-Fi Direct
-  * Wi-Fi 6E
-  * ...
+  * [...](https://www.wi-fi.org/discover-wi-fi/specifications)
 
 ## AP – Access Point
 
@@ -101,8 +100,9 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 
 ### OFDM – Orthogonal Frequency-Division Multiplexing
 
-* Kódování signálu na více nosných frekvencích pomocí různých modulací, které jsou ortogonální
-* Využíván __802.11a/g/n/ac__
+* Kódování signálu na více nosných frekvencích, které jsou na sebe ortogonální
+* Použití různých modulací
+* Využíván __802.11a/g/n/ac__, ADSL
 
 ### OFDMA – Orthogonal Frequency-Division Multiple Access
 
@@ -148,17 +148,16 @@ Standard | Alias | Pásmo | Max. rychlost | Modulace
 
 ### WEP – Wired Equivalent Privacy
 
-* Šifrování komunikace
-* 10/26/58 hexadecimálních čísel dlouhý klíč
+* Šifrování komunikace pomocí RC4
 * Symetrická šifra, na obou koncích nastaven statický klíč
+* Klíč obvykle zadáván v hexadecimálních číslech, několik pevně daných délek
 * Snadno prolomitelné
 
 ### WPA – Wi-Fi Protected Access
 
 * __WPA__
   * Reakce na nedostatky WEP
-  * Šifra RC4
-  * TKIP – Temporal Key Integrity Protocol – Pro každý paket je používán jiný klíč
+  * TKIP – Temporal Key Integrity Protocol – Pro každý rámec je používán jiný klíč
 * __WPA2__
   * Šifra AES – Advanced Encryption Standard
   * Prolomeno 2016 – KRACK

@@ -74,6 +74,7 @@ StudentID (PK) | SubjectID (PK) | SubjectAcronym | FinalGrade
 * Zkratka předmětu není funkčně závislá na celém PK, ale jen na jeho části ⇒ nesplňuje 2NF
 * Při změně zkratky předmětu by se musel změnit záznam u všech oznámkovaných z tohoto předmětu
 * Nelze přidat nový předmět, u kterého ještě nikdo nemá uzavřenou známku
+* Smazáním druhého řádku ztratíme informaci o tom, že MAT má ID 102
 
 StudentID (PK) | SubjectID (PFK) | FinalGrade
 :-: | :-: | :-:
@@ -122,8 +123,10 @@ GenreID (PK) | GenreName
 
 #### __BCNF__ – Boyce-Coddova normální forma
 
-* Splňuje 3NF a řeší anomálii, kdy některý z atributů, který je součástí složeného PK, je funkčně závislý na některém neklíčovém atributu
-* Silnější varianta 3NF
+* Splňuje 3NF
+* Může být (ne)splněna u tabulek, které mají více složených kandidátních klíčů
+* BCNF je splněna, pokud pravidla 3NF platí pro všechny kandidátní klíče
+  * Tedy pokud levá strana všech funkčních závislostí je kandidátním klíčem
 
 #### __4NF__ – Čtvrtá normální forma
 
