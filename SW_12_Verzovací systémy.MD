@@ -55,39 +55,39 @@
 
 ## Příkazy
 
-``` bash
+```bash
 git init
 ```
 
 * Vytvoří v aktuální složce lokální repozitář
 
-``` bash
+```bash
 git add .
 ```
 
 * Přidá vybrané soubory (`.` = všechno) do tzv. staging area = prostor mezi (ne)změněnými soubory a commitem
 * Nejsou zahrnuty položky definované v souboru _.gitignore_
 
-``` bash
+```bash
 git commit -m "název commitu"
 ```
 
 * Vytvoří lokální commit ze souborů ve staging area
 
-``` bash
+```bash
 git remote add origin https://github.com/RDMCz/MZRepo.git
 ```
 
 * Přidá k lokálnímu repozitáři odkaz na repozitář vzdálený, lokálně pojmenovaný _origin_
 
-``` bash
+```bash
 git push origin main
 ```
 
 * Nahraje lokální stav do vzdáleného repozitáře _origin_ do větve _main_
 * Parametr `-u` nastaví část `origin main` jako výchozí a v budoucnu už stačí psát jen `git push` / `git pull` / ...
 
-``` bash
+```bash
 git fetch # Stáhne ze vzdáleného repozitáře všechna data navíc oproti lokálnímu, nesloučí je (merge)
 git merge
 git pull  # fetch + merge

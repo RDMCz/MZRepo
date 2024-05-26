@@ -9,7 +9,7 @@
 
 * Konečná množina hodnot a jejich identifikátorů
 
-``` csharp
+```csharp
 enum BeerType
 {
     Nealkoholické, Nízkoalkoholické, Stolní, Výčepní, Ležák, Plné, Silné
@@ -24,7 +24,7 @@ enum BeerType
 * Je to hodnotový datový typ, nepodporuje dědičnost
 * Může mít konstruktor, atributy, metody, vlastnosti, ...
 
-``` csharp
+```csharp
 struct Beer
 {
     string nazev;
@@ -53,7 +53,7 @@ Beer plzen = new Beer("Pilsner Urquell", BeerType.Ležák);
 * Množina proměnných stejného datového typu = homogenní strukturovaný datový typ
 * S polem se zachází jako s celkem, k jednotlivým proměnným se přistupuje přes index. V C# se indexuje od nuly.
 
-``` csharp
+```csharp
 int[] pole = new int[početPrvků];
 int[] pole = new int[] { 1, 2, 3, 4, 5, 6 };
 int[,] pole = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 } }; // Vícerozměrné (3x2 int[3,2])
@@ -89,7 +89,7 @@ __System.Collections__:
 * Negenerický Dictionary
 * Klíč + Hodnota – Klíč je unikátní a neměnný
 
-``` csharp
+```csharp
 Hashtable openWith = new Hashtable();
 openWith.Add("txt", "notepad.exe");
 openWith.Add("txt", "winword.exe"); // Nelze, klíč musí být unikátní
@@ -100,14 +100,14 @@ openWith.Add("txt", "winword.exe"); // Nelze, klíč musí být unikátní
 * Fronta, FIFO – First In First Out (kdo přijde jako první je vyřešen jako první)
 * Enqueue, Dequeue, Peek (na prvního ve frontě)
 
-<img src="img/SW_03_01.svg" width="500">
+<img alt="Queue" src="img/SW_03_01.svg" width="500">
 
 ### __Stack__
 
 * Zásobník, LIFO – Last In First Out (kdo přijde jako poslední je vyřešen jako první)
 * Push, Pop, Peek (na vrchol zásobníku, poslední přidaný)
 
-<img src="img/SW_03_02.png" width="500">
+<img alt="Stack" src="img/SW_03_02.png" width="500">
 
 __System.Collections.Generic__:
 

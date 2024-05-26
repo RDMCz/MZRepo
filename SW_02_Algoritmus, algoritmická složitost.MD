@@ -41,7 +41,7 @@ Vlastnosti / požadavky:
 
 #### Příklad
 
-``` csharp
+```csharp
 int minIndex;
 int temp;
 // Pro každý prvek
@@ -79,11 +79,11 @@ __Lineární__: Podprogram volá sám sebe vždy jednou
 
 __Stromová__: Podprogram se volá více jak jednou v rámci jednoho svého úkolu (nemusí být konstantní počet volání)
 
-``` csharp
+```csharp
 uint Factorial(uint N) => (N == 0) ? 1 : Factorial(N - 1) * N;
 ```
 
-``` csharp
+```csharp
 // Počítání prvků v binárním stromu od určité Node směrem dolů (třída Node obsahuje mj. Node left a Node right)
 int Count(Node temp)
 {

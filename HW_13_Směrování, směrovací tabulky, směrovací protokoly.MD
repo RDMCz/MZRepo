@@ -75,7 +75,7 @@
 * Pokud se v síti něco změní, musí se routy ručně přepsat
 * Pro malé sítě (u velkých sítí by byl velký počet rout, které musíme ručně nastavit)
 
-``` txt
+```text
 Router> en
 Router# conf t
 Router(config)# ip route 192.168.2.0 255.255.255.0 Serial 0/1/0
@@ -87,7 +87,7 @@ Router# wr
 
 * Přidány směrovačem pomocí směrovacích protokolů
 
-``` txt
+```text
 Router> en
 Router# conf t
 Router(config)# router rip

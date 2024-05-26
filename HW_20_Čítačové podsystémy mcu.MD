@@ -1,6 +1,6 @@
 # HW 20 – Čítačové podsystémy mcu
 
-``` txt
+```text
 – Two 8-bit Timer/Counters with Separate Prescalers and Compare Modes
 – Two Expanded 16-bit Timer/Counters with Separate Prescaler, Compare Mode, and Capture Mode
 – Real Time Counter with Separate Oscillator

@@ -21,7 +21,7 @@
 
 ### Vytvoření vlákna
 
-``` csharp
+```csharp
 static void MethodA() { }
 
 static void MethodB(object obj) { }
@@ -40,7 +40,7 @@ public static void Main(string[] args)
 
 * Bez specifikování delegáta se kompilátor rozhodne na základně signatury metody:
 
-``` csharp
+```csharp
 public static void Main(string[] args)
 {
     Thread ta = new Thread(MethodA); // Implicitně přetypováno na ThreadStart
@@ -77,7 +77,7 @@ public static void Main(string[] args)
 
 ### Zámek
 
-``` csharp
+```csharp
 static void Main(string[] args)
 {
     for (int i = 0; i < 3; i++) new Thread(Method).Start();
@@ -118,7 +118,7 @@ static void Method()
 
 * `lock()` je syntaktický cukr, lze rozepsat jako:
 
-``` csharp
+```csharp
 Monitor.Enter(baton);
 try {
     // Chráněná sekce
@@ -136,7 +136,7 @@ finally {
 
 * Klíčová slova usnadňující vytváření asynchronního kódu
 
-``` csharp
+```csharp
 private void RunDownload()
 {
     string results = DownloadData();
@@ -152,7 +152,7 @@ private void RunDownload()
     * Výjimkou jsou události, zde se návratový typ nemění
 5. Zvykem je, že na konec názvu asynchronní metody se připíše "Async" (`RunDownload()` → `RunDownloadAsync()`)
 
-``` csharp
+```csharp
 private async Task RunDownloadAsync()
 {
     string results = await Task.Run(() => DownloadData());
@@ -169,7 +169,7 @@ private async Task RunDownloadAsync()
 
 ### Sekvenčně
 
-``` csharp
+```csharp
 static void Main(string[] args)
 {
     long sum = 0;
@@ -182,7 +182,7 @@ static void Main(string[] args)
 
 ### Pomocí Thread
 
-``` csharp
+```csharp
 static void Main(string[] args)
 {
     CPUs = Environment.ProcessorCount; // Vrací počet logických procesorů, které mohou být využity CLR
@@ -223,7 +223,7 @@ static void SumPortion(object _portionNumber)
 
 ### Pomocí Task
 
-``` csharp
+```csharp
 static void Main(string[] args)
 {
     int CPUs = Environment.ProcessorCount;
@@ -256,7 +256,7 @@ static void Main(string[] args)
 
 ### Pomocí Parallel.For
 
-``` csharp
+```csharp
 static void Main(string[] args)
 {
     int CPUs = Environment.ProcessorCount;

@@ -25,7 +25,7 @@
 
 * Podstatou jsou metody, které mají všichni potomci definované se stejnou hlavičkou, ale jiným tělem (jiná implementace "stejných" metod)
 
-``` csharp
+```csharp
 class A
 {
     public void SomeMethod()
@@ -77,7 +77,7 @@ b.AnotherMethod();      // B - Another Method
 * Přetížené metody se musí lišit v počtu nebo typu parametrů
 * Destruktor nelze přetížit (nesmí mít parametry)
 
-``` csharp
+```csharp
 static int PlusMethod(int x, int y)
 {
     return x + y;
@@ -107,7 +107,7 @@ var c = PlusMethod(1, 2, 3);// 6
 * Unární operátor – definujeme jeden parametr; Binární operátor – dva parametry
 * Je vhodné, aby první parametr byl stejný typ jako třída, jejíž operátor přetěžujeme
 
-``` csharp
+```csharp
 class OperOver
 {
     public string text;
@@ -143,6 +143,6 @@ static void Main(string[] args)
 
 * Klíčové slovo `params` před posledním z parametrů. Typ tohoto parametru musí být pole.
 
-``` csharp
+```csharp
 public void SomeMethod(params object[] p) { } // Proměnný počet parametrů
 ```

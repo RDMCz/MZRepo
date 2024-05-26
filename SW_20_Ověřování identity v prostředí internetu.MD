@@ -72,30 +72,30 @@
   * Krátkodobý autorizační kód, za který uživatel dostane token
   * Nejběžnější, pro server-side aplikace
 
-  <img src="img/SW_20_03.png" width="620">
+  <img alt="Authorization Code" src="img/SW_20_03.png" width="620">
 
 * __Implicit__
   * Zjednodušený mechanismus, optimalizováno pro prohlížečové klienty (JavaScript)
 
-  <img src="img/SW_20_04.png" width="620">
+  <img alt="Implicit" src="img/SW_20_04.png" width="620">
 
 * __Resource Owner Password Credentials__
   * Token vyměněn přímo za ID a heslo
   * Používat pouze pokud je vysoká důvěra mezi klientem a poskytovatelem dat
   * Většinou u mobilních a desktop aplikací
 
-  <img src="img/SW_20_05.png" width="620">
+  <img alt="Resource Owner Password Credentials" src="img/SW_20_05.png" width="620">
 
 * __Client Credentials__
   * Pro API bez kontextu uživatele
 
-  <img src="img/SW_20_06.png" width="620">
+  <img alt="Client Credentials" src="img/SW_20_06.png" width="620">
 
 ### Refresh Token
 
 * Pro obnovení platnosti tokenu
 
-``` txt
+```text
 +--------+                                           +---------------+
 |        |--(A)------- Authorization Grant --------->|               |
 |        |                                           |               |
@@ -120,7 +120,7 @@
 
 ### Použití access tokenu
 
-``` javascript
+```javascript
 axios.get(
     "example.com/data",
     {"Authorization": "Bearer" + accessToken}
@@ -141,22 +141,22 @@ axios.get(
 ---
 ---
 
-``` txt
+```text
 +--------+                               +---------------+
 |        |--(A)- Authorization Request ->|   Resource    |
 |        |                               |     Owner     |
-|        |<-(B)-- Authorization Grant ---|   (Uživatel)  |
+|        |<-(B)-- Authorization Grant ---|               |
 |        |                               +---------------+
 |        |
 |        |                               +---------------+
 |        |--(C)-- Authorization Grant -->| Authorization |
 | Client |                               |     Server    |
-|        |<-(D)----- Access Token -------|   (Ověření)   |
-|Aplikace|                               +---------------+
+|        |<-(D)----- Access Token -------|               |
+|        |                               +---------------+
 |        |
 |        |                               +---------------+
 |        |--(E)----- Access Token ------>|    Resource   |
 |        |                               |     Server    |
-|        |<-(F)--- Protected Resource ---|     (Data)    |
+|        |<-(F)--- Protected Resource ---|               |
 +--------+                               +---------------+
 ```

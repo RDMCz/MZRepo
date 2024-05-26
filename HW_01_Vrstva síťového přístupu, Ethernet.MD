@@ -180,7 +180,7 @@
 * U/UTP – Unshielded Twisted Pair
   * Značení `<stínění kabelu>/<stínění páru>TP`, U – nestíněno, F – Fólie, S – Opletení (pouze kabel)
   * Např.: SF/FTP – Kabel stíněn fólií a opletením + páry stíněny fólií
-* Různé kategorie Cat1 - Cat8, nejběžnější Cat6, určují fyzikální vlastnosti přenosovou rychlost
+* Různé kategorie Cat1 – Cat8, nejběžnější Cat6, určují fyzikální vlastnosti přenosovou rychlost
 * Koncovka ~RJ45 (unkeyed 8P8C)
 
 ### Optika

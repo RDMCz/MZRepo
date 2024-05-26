@@ -94,7 +94,7 @@
 
 ### Příkazy
 
-``` txt
+```text
 Switch(config)# access-list 5 deny host 10.5.1.10
 Switch(config)# access-list 5 permit 10.5.1.10 0.0.0.255
 Switch(config)# access-list 5 deny any
@@ -102,7 +102,7 @@ Switch(config)# access-list 5 deny any
 
 * Povoluje přístup subnetu 10.5.1.0/24 mimo adresy 10.5.1.10, všechny ostatní adresy jsou zakázány
 
-``` txt
+```text
 Switch(config-if)# ip access-group {číslo|jméno ACL} {in|out} 
 ```
 

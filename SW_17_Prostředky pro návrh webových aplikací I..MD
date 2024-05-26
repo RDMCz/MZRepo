@@ -4,7 +4,7 @@
 
 * Značkovací jazyk pro tvorbu webových stránek propojených hypertextovými odkazy
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="cs">
     <head>
@@ -23,10 +23,10 @@
 * Style sheet language pro popis způsobu zobrazení elementů na stránkách napsaných v HTML (také XHTML, XML, SVG, XUL)
 * Navržen pro oddělení prezentace (vizuálu – barvy, layout, fonty) od obsahu
 * Více stránek může čerpat z jednoho .css souboru – zbavení se redundance + soubor zůstance v cache = rychlejší načítání
-* Podpora Media Queries – jiné zobrazení na PC / Mobilu / vytisknuté / přečteno čtečkou / ...
+* Podpora Media Queries – jiné zobrazení na PC / mobilu / vytisknuté / přečteno čtečkou / ...
 * Priorita:
-  1. Inline (uvnitř html elementu) `<p style="color: red">Červený text</p>`
-  2. Externí a interní (v hlavičce html) `<head><style>p {color: red;}</style></head>`
+  1. Inline (uvnitř HTML elementu) `<p style="color: red">Červený text</p>`
+  2. Externí a interní (v hlavičce HTML) `<head><style>p {color: red;}</style></head>`
   3. Browser default
 
 ### Selektory
@@ -49,12 +49,12 @@
   * Frontend: React, Angular, Vue, Svelte
   * Backend: Express, Next, Meteor
 
-``` html
+```html
 <p id="demo">Text</p>
 <button type="button" onclick="changeText()">Změnit</button>
 ```
 
-``` javascript
+```javascript
 function changeText() {
     document.getElementById("demo").innerHTML = "Změněný text";
 }
@@ -70,10 +70,10 @@ function changeText() {
 ## Atribut
 
 * Dodávají elementům dodatečné informace
-* Všechny html elementy mohou mít atributy
+* Všechny HTML elementy mohou mít atributy
 * Umožňují nastavit `id`, `class`, `style`
 
-``` html
+```html
 <img src="cesta_k_obrázku" width="šířka" height="výška" alt="placeholder">
 <a href="adresa">Odkaz</a>
 <html lang="cs"></html>
@@ -85,7 +85,7 @@ function changeText() {
 * Obsah dokumentu se značí podle toho, o jaký druh informace se jedná
 * Značky implikují význam, nikoliv instrukce pro vzhled
 * `<!DOCTYPE>` – Definuje typ dokumentu
-* `<html>` – Definuje html dokument
+* `<html>` – Definuje HTML dokument
 * `<head>` – Obsahuje metadata + informace pro dokument
 * `<title>` – Titulek dokumentu
 * `<body>` – Tělo dokumentu

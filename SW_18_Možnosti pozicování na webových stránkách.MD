@@ -2,14 +2,14 @@
 
 ## Statické pozicování
 
-* Výchozí pozicování prvků v html je `static`
+* Výchozí pozicování prvků v HTML je _`static`_
 * Prvky jsou za sebou (block) nebo vedle sebe (inline)
 
 __Blokový prvek:__
 
 * Vždy začíná na novém řádku
 * Využívá plnou šířku, kterou má k dispozici
-* Na rozdíl od inline prvků má margin-top a margin-bottom
+* Na rozdíl od inline prvků má __`margin-top`__ a __`margin-bottom`__
 * `<div>`, `<h1>`, ...
 
 __Inline prvek:__
@@ -22,14 +22,14 @@ __Inline prvek:__
 
 * Stará metoda pozicování, dříve používáná na návrh celého layoutu
 * Dnes se používá pouze pro obrázek obtékaný textem
-* `float`: `left` / `right` / `none` (default) / `inherit` `;`
+* __`float:`__ _`left;`_ / _`right;`_ / _`none;`_ (default) / _`inherit;`_
 * Pokud má více prvků stejnou hodnotu float, jsou vedle sebe
 
 ## Relativní pozicování
 
 * Posunutí prvku o určité souřadnice (pozice je relativní k výchozí pozici)
-* `position: relative;`
-* `left:` / `right:` / `top:` / `bottom:` `30px;`
+* __`position:`__ _`relative;`_
+* __`left:`__ / __`right:`__ / __`top:`__ / __`bottom:`__ _`30px;`_
 
 ## Absolutní pozicování
 
@@ -43,24 +43,24 @@ __Inline prvek:__
 
 ## Sticky
 
-__`position: sticky;`__ má relativní pozici, pokud se ale dostane mimo zobrazení (např. kvůli skrolování), přepne se na fixní pozici
+* __`position:`__ _`sticky;`_ má relativní pozici, pokud se ale dostane mimo zobrazení (např. kvůli skrolování), přepne se na fixní pozici
 
 ## Flexbox
 
 * Definuje kontejner a prvky v něm umístěné
-* `display: flex;`
+* __`display:`__ _`flex;`_
 * U prvků ve flexboxu lze určovat směr, pořadí, zarovnání, mezery mezi nimi, zalomení na nový řádek ...
-* Galerie, pokročilé navbary
+* Galerie, navbary
 
 ## Grid
 
 * Rozděluje stránku na síť zarážek – řádky a sloupce
 * Definuje se počet a velikost sloupců / řádků
 * Prvky se umisťují do jednoho nebo několika sloupců / řádků
-* `display: grid;`
+* __`display:`__ _`grid;`_
 * Použití: Hlavní vnější kostra webu pomocí Grid, detaily pomocí Flex, super detaily pomocí pozicování
 
-Flex a Grid fungují velmi dobře pro Media Queries (zobrazení na mobilu / tabletu / PC / TV / ...).
+Flex a Grid fungují velmi dobře pro Media Queries (zobrazení na mobilu / tabletu / PC / TV / ...)
 
 ## Tabulka (Table)
 
@@ -69,7 +69,7 @@ Flex a Grid fungují velmi dobře pro Media Queries (zobrazení na mobilu / tabl
 * `colspan`, `rowspan`
 * Jednoduché na použití, ale neresponzivní, nemá tolik možností, hlasové čtečky pak web čtou jako tabulku
 
-``` html
+```html
 <table>
     <thead>
         <tr>

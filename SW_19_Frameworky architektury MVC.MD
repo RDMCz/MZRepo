@@ -23,7 +23,7 @@
 * Přijímá vstup od uživatele a převádí ho na příkazy pro Model/View
 * Jeho metodám, které se dají volat (skrz REST nebo routování) se říká _akce_
 
-``` csharp
+```csharp
 [Route("[controller]")]
 [ApiController]
 public class AccountController : ControllerBase
@@ -87,7 +87,7 @@ public class AccountController : ControllerBase
 
 ![MVP](./img/SW_19_03.png)
 
-``` razor
+```razor
 @page
 @model IndexModel
 @{
@@ -107,7 +107,7 @@ public class AccountController : ControllerBase
 </table>
 ```
 
-``` csharp
+```csharp
 public class IndexModel : PageModel
 {
     private IModel s;
@@ -147,7 +147,7 @@ __Remote Procedure Calls (RPC)__:
 * Aplikace poskytuje libovolně pojmenované funkce, které klient volá a předává jim parametry​
 * Dnes se běžně nepoužívá
 
-``` rpc
+```rpc
 POST /sayHello HTTP/1.1
 HOST: api.example.com
 Content-Type: application/json

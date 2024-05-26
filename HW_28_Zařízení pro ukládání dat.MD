@@ -5,7 +5,7 @@
 * Nevolatilní, pro ukládání a čtení dat se využívá magnetické indukce
   * Mikroskopická kovová zrnka na plotnách jsou uspořádána do skupin, které mají jeden ze dvou směrů orientace (reprezentující jedničku nebo nulu)
 
-<img src="./img/HW_28_01.PNG" width="754" />
+<img alt="HDD organizace dat" src="./img/HW_28_01.PNG" width="754" />
 
 * Různé technologie pro zápis dat s cílem zvýšení hustoty dat:
 
@@ -49,7 +49,7 @@
 * ERASE – Pro vymazání jsou elektrony přesunuty pryč z hradla
 * Opakované write/erase operace vedou k opetřebení materiálu a selhání buňky
 
-<img src="./img/HW_28_02.PNG" width="666" />
+<img alt="SSD xLC" src="./img/HW_28_02.PNG" width="666" />
 
 * Vylepšená paměť V-NAND (3D NAND) skládá jednotlivé plochy NAND buněk vertikálně na sebe
 * Alternativou k NAND flash je 3D Xpoint – lepší parametry ale vyšší cena (Intel Optane)

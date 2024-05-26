@@ -7,7 +7,7 @@
 * Pomocí CSS lze nastavit:
   * __`font-family:`__ seznam fontů oddělených čárkou, prohlížeč vybere první, který je k dispozici; jako poslední písmo se tedy doporučuje použít nějaké obecné
   * __`font-size:`__ _`15px;`_ / _`large;`_ / _`150%;`_
-  * __`font-style:`__ _`normal;`_ / _`oblique;`_ nakloněný normal / _`italic;`_ speciálně vytvořený typ kurzíva
+  * __`font-style:`__ _`normal;`_ / _`oblique;`_ nakloněný normal / _`italic;`_ speciálně vytvořený řez kurzíva
   * __`font-weight:`__ _`normal;`_ / _`bold;`_ / _`bolder;`_ / _`lighter;`_ / _`100;`_-_`900;`_
   * __`font:`__ lze nastavit více parametrů najednou, např. _`15px Arial, sans-serif;`_
 * Také by se měl brát ohled na řádkování a šířku řádku
@@ -25,13 +25,13 @@
 * Style sheet language pro popis způsobu zobrazení elementů na stránkách napsaných v HTML (také XHTML, XML, SVG)
 * Navržen pro oddělení prezentace (vizuálu – barvy, layout, fonty) od obsahu
 * Více stránek může čerpat z jednoho .css souboru – zbavení se redundance + soubor zůstance v cache = rychlejší načítání
-* Podpora Media Queries – jiné zobrazení na PC / Mobilu / vytisknuté / přečteno čtečkou / ...
+* Podpora Media Queries – jiné zobrazení na PC / mobilu / vytisknuté / přečteno čtečkou / ...
 * Priorita:
-  1. Inline (uvnitř html elementu) `<p style="color: red">Červený text</p>`
-  2. Externí a interní (v hlavičce html) `<head><style>p {color: red;}</style></head>`
+  1. Inline (uvnitř HTML elementu) `<p style="color: red">Červený text</p>`
+  2. Externí a interní (v hlavičce HTML) `<head><style>p {color: red;}</style></head>`
   3. Browser default
 
-``` css
+```css
 /* selektor { vlastnost: hodnota; (= deklarace) } */
 p { font-size: 12px; }
 ```
@@ -67,7 +67,7 @@ p { font-size: 12px; }
   * ~Velikost písma by se měla nastavovat v pointech, nikoli v pixelech
 * Relativní
   * `em` – relativní k velikosti písma elementu
-  * `rem` – relativní k velikosti písma root elementu (prvek html)
+  * `rem` – relativní k velikosti písma root elementu
   * `%` – relativní k rodiči
   * `vw` – 1% šířky viewportu
   * `vh` – 1% výšky viewportu
@@ -80,7 +80,7 @@ p { font-size: 12px; }
   * `orientation`
   * `resolution`
   * `prefers-color-scheme` – zdali uživatel preferuje light/dark theme
-  * Píše se do závorek, za dvojtečku se píší hodnoty a popř. jednotky
+  * Píše se do závorek, za dvojtečku se píší hodnoty a případné jednotky
 * __Media type__:
   * `all`
   * `print`
@@ -92,7 +92,7 @@ p { font-size: 12px; }
   * `only` – kvůli starším prohlížečům
   * `,` – kombinace více médií do stejných pravidel
 
-``` css
+```css
 @media screen and (min-width: 30em) and (orientation: landscape)
 { 
     /* Zde se aplikují pravidla */
@@ -101,7 +101,7 @@ p { font-size: 12px; }
 
 ## CSS Frameworky
 
-* Framework = Softwarová struktura, která slouží jako podpora při vývoji sw produktů
+* Framework = Softwarová struktura, která slouží jako podpora při vývoji SW produktů
 * Umožňují jednodušší použití jazyka CSS pro návrh webu
 * Usnadňují mj. stylování prvků a responzivní pozicování, mohou přidávat nové komponenty
 * Nejčastěji se řeší pozicování, mohou obsahovat i JavaScript funkcionalitu

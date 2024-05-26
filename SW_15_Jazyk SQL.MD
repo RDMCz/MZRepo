@@ -17,7 +17,7 @@
 * Jazyk (podjazyk SQL) pro vkládání, mazání a upravování dat v databázi
 * Součástí DML je také dotazování pomocí `SELECT`
 
-``` sql
+```sql
 -- Vložení záznamu (jednoho či více)
 INSERT INTO sousedstvo (čp, jméno, věk) VALUES (179, "ludvik", 57);
 
@@ -32,7 +32,7 @@ DELETE FROM sousedstvo WHERE věk = 57 AND jméno = "Ludvík";
 
 * Syntax v SQL pro tvorbu a úpravu databázových objektů, hlavně tabulek
 
-``` sql
+```sql
 -- Vytvoření nové databáze/tabulky
 -- CREATE TABLE [table name] ( [column definitions comma-separated] ) [table parameters]
 -- Column definition: [column name] [data type] {NULL | NOT NULL} {column options}
@@ -63,7 +63,7 @@ TRUNCATE TABLE employees;
 * `GRANT` – Dát uživateli práva na určité operace s tabulkou
 * `REVOKE` – Odebrat tato práva
 
-``` sql
+```sql
 GRANT SELECT, INSERT, UPDATE, DELETE ON employees TO PUBLIC;
 REVOKE ALL ON employees FROM username;
 ```
@@ -72,7 +72,7 @@ REVOKE ALL ON employees FROM username;
 
 * Správa transakcí v databázi – správa změn způsobených DML/DDL příkazy
 
-``` sql
+```sql
 BEGIN TRANSACTION; 
 COMMIT; -- Učiní DML změny permanentní 
 SAVEPOINT savename;
@@ -86,7 +86,7 @@ ROLLBACK TO savename;
 * (Počet sloupců a hodnot musí být stejný)
 * Lze přidat několik záznamů najednou (import zálohy)
 
-``` sql
+```sql
 -- Vložit více záznamů
 INSERT INTO animalsounds (animal, sound) VALUES ("Cat", "Meow"), ("Dog", "Woof"), ("Cow", "Moo");
 
@@ -107,7 +107,7 @@ name | salary
 Rudolf | 0
 Hektor | 0
 
-``` sql
+```sql
 UPDATE employees SET salary = 15000;
 ```
 
@@ -116,7 +116,7 @@ name | salary
 Rudolf | 15000
 Hektor | 15000
 
-``` sql
+```sql
 UPDATE employees SET salary = 37000 WHERE name = "Hektor";
 ```
 

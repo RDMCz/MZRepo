@@ -12,7 +12,7 @@
 * Každý prvek seznamu obsahuje datovou část a odkaz na další prvek v seznamu
 * Může být i obousměrný nebo kruhový
 
-``` csharp
+```csharp
 // class LinkedList<T>
 internal class Node
 {
@@ -25,7 +25,7 @@ private Node first; // První prvek seznamu (nazýván také 'head' nebo 'start'
 
 ### Procházení seznamu
 
-``` csharp
+```csharp
 public T this[int index] {
     get {
         // Začne u prvního prvku
@@ -46,7 +46,7 @@ public T this[int index] {
 
 ### Vkládání prvků do seznamu
 
-``` csharp
+```csharp
 // Přidá prvek na začátek a změní hlavičku
 public void Add(T _value)
 {
@@ -62,7 +62,7 @@ public void Add(T _value)
 
 ### Odstraňování prvků ze seznamu
 
-``` csharp
+```csharp
 // Smaže první prvek
 public void DelFirst()
 {
@@ -83,7 +83,7 @@ public void Clear()
 * Prvky jsou obvykle nějak seřazené
 * [Využití](https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees)
 
-``` csharp
+```csharp
 // class BinaryTreeDictionary<K, V> where K : IComparable where V : IComparable
 internal class Node
 {
@@ -98,7 +98,7 @@ private Node root; // Výchozí bod stromu je kořen
 
 ### Procházení stromu
 
-``` csharp
+```csharp
 // Najít hodnotu podle klíče (rekurzivní průchod) (klíče seřazeny dle velikosti)
 public V this[K key] {
     get {
@@ -120,7 +120,7 @@ public V KeyToValue(K k, Node iroot)
 
 ### Vkládání prvků do stromu
 
-``` csharp
+```csharp
 // Přidá nový list (list = uzel bez potomků) (klíč musí být unikátní)
 public void Add(K k,V v)
 {

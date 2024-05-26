@@ -21,7 +21,7 @@
 * Většina podporována
 * Velikost integeru závislá na platformě (16/32 bit) (nemá fixní velikost jazyka C)
 * Float a double většinou nejsou podporovány hardwarově, nutnost softwarové emulace
-  * Výkonnější ARMy (Cortex M4) mají hw podporu pro plovoucí řádovou čárku
+  * Výkonnější ARMy (Cortex M4) mají HW podporu pro plovoucí řádovou čárku
 
 ## ASM x VPJ
 

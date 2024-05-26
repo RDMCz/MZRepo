@@ -5,7 +5,7 @@
 * Příkaz `SELECT` se v SQL používá k získání jakýchkoliv informací z databáze
 * Vrací množinu záznamů z jedné nebo více tabulek
 
-``` sql
+```sql
 SELECT seznam sloupců -- * = všechny, jinak odděleno čárkami
 FROM seznam tabulek 
 WHERE restrikce
@@ -14,7 +14,7 @@ HAVING restrikce
 ORDER BY dle čeho řadit;
 ```
 
-``` sql
+```sql
 SELECT * FROM Customers;
 ```
 
@@ -30,7 +30,7 @@ CustomerID (PK) | Name | BirthYear | Country
 
 * Určení dat, které se mají vybrat – výběr konkrétních sloupců
 
-``` sql
+```sql
 SELECT Name, Country FROM Customers LIMIT 3;
 SELECT TOP 3 Name, Country FROM Customers; -- jiný dialekt
 ```
@@ -47,7 +47,7 @@ Carlos | Spain
 * Podmínky, které musí být splněny, aby byl řádek zahrnut v návratovém řetězci SELECTu
 * Logické výrazy; spojky `AND`, `OR`, `NOT`; závorky
 
-``` sql
+```sql
 SELECT * FROM Customers WHERE CustomerID > 1 AND CustomerID <= 3;
 SELECT * FROM Customers WHERE CustomerID IN(2,3);
 ```
@@ -57,7 +57,7 @@ CustomerID (PK) | Name | BirthYear | Country
 2 | Arno | 1768 | France
 3 | Carlos | 1975 | Spain
 
-``` sql
+```sql
 SELECT * FROM Customers WHERE Country = "Italy";
 ```
 
@@ -70,7 +70,7 @@ CustomerID (PK) | Name | BirthYear | Country
   * `%` – Libovolný počet znaků
   * `_` – Libovolný znak
 
-    ``` sql
+    ```sql
     SELECT * FROM Customers WHERE Country LIKE "F%";
     ```
 
@@ -79,7 +79,7 @@ CustomerID (PK) | Name | BirthYear | Country
     1 | Valterri | 1989 | Finland
     2 | Arno | 1768 | France
 
-    ``` sql
+    ```sql
     SELECT * FROM Customers WHERE Country LIKE "__a__";
     ```
 
@@ -99,7 +99,7 @@ CustomerID (PK) | Name | BirthYear | Country
 * `COUNT` – počet
 * `ROUND` – zaokrouhlení
 
-``` sql
+```sql
 SELECT MIN(BirthYear) AS Oldest FROM Customers;
 ```
 
@@ -107,7 +107,7 @@ Oldest |
 :-: |
 1459 |
 
-``` sql
+```sql
 SELECT * FROM Customers WHERE BirthYear = (SELECT MIN(BirthYear) FROM Customers);
 ```
 
@@ -115,7 +115,7 @@ CustomerID (PK) | Name | BirthYear | Country
 :-: | :-: | :-: | :-:
 4 | Ezio | 1459 | Italy
 
-``` sql
+```sql
 SELECT COUNT(CustomerID) FROM Customers; -- 5
 SELECT AVG(BirthYear) FROM Customers; -- 1838
 ```
@@ -125,7 +125,7 @@ SELECT AVG(BirthYear) FROM Customers; -- 1838
 * Provádí se podle hodnot určitých sloupců
 * Když se objeví více řádků, které se v určitém sloupci shodují, databázový systém na ně bude pohlížet jako na jeden řádek
 
-``` sql
+```sql
 SELECT Country, COUNT(CustomerID) -- Běžně vybíráme to, podle čeho se bude seskupovat + agregační fce
 FROM Customers
 GROUP BY Country
@@ -144,7 +144,7 @@ Spain | 1
 * `HAVING` byl přidán do SQL, protože `WHERE` nelze použít s agregačními funkcemi
 * Dá se chápat jako druhý `WHERE`, píše se za `GROUP BY`
 
-``` sql
+```sql
 SELECT Country, COUNT(CustomerID)
 FROM Customers
 GROUP BY Country
@@ -164,7 +164,7 @@ Italy | 2
 * `RIGHT (OUTER) JOIN` – ~obrácený LEFT JOIN
 * `FULL (OUTER) JOIN` – vrací řádky z obou tabulek, doplňuje NULL při neexistující vazbě.
 
-``` sql
+```sql
 SELECT * FROM Orders;
 ```
 
@@ -175,7 +175,7 @@ OrderID (PK) | CustomerID (FK)
 103 | 4
 104 | 4
 
-``` sql
+```sql
 SELECT * FROM Customers INNER/LEFT/RIGHT/OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 ```
 
@@ -225,7 +225,7 @@ CustomerID | Name | BirthYear | Country | OrderID
 * `UNION ALL` duplicity neodstraňuje
 * Každý propojený `SELECT` musí vracet stejný počet sloupců (ideálně i stejný název a datový typ)
 
-``` sql
+```sql
 SELECT sloupce FROM tabulka1
 UNION (ALL)
 SELECT sloupce FROM tabulka2;

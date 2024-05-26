@@ -3,10 +3,10 @@
 ## <span>ASP.NET</span>
 
 * Active Server Pages
-* Postaven na .NET Frameworku od společnosti Microsoft (framework = softwarová struktura sloužící jako podpora při vývoji sw produktů)
+* Postaven na .NET Frameworku od společnosti Microsoft (framework = softwarová struktura sloužící jako podpora při vývoji SW produktů)
 * Běží na serveru a umožňuje vytvářet dynamické webové stránky
-* <span>ASP.NET</span> 1.0 (2002) - <span>ASP.NET</span> 4.8 (2019)
-* <span>ASP.NET</span> Core 1.0 (2016) - <span>ASP.NET</span> Core 5.0 (2020)
+* <span>ASP.NET</span> 1.0 (2002) – <span>ASP.NET</span> 4.8 (2019)
+* <span>ASP.NET</span> Core 1.0 (2016) – <span>ASP.NET</span> Core 5.0 (2020)
 * Verze Core může běžet i na macOS a Linuxu
 * V rámci frameworku <span>ASP.NET</span> je implementováno několik stylů tvorby aplikací
 * Jazyky C#, F#, <span>VB.NET</span>
@@ -22,7 +22,7 @@
   * Tyto služby se předávají přes Dependency Injection (základní princip Razor Pages)
   * Tyto obecné třídy jsou nadeklarovány ve Startupu do Dependency kontejneru
 
-``` razor
+```razor
 @page
 @model IndexModel
 @{
@@ -42,7 +42,7 @@
 </table>
 ```
 
-``` csharp
+```csharp
 public class IndexModel : PageModel
 {
     private IModel s;
@@ -66,7 +66,7 @@ services.AddScoped<IModel, Model>();
 
 ### RazorPages Formulář
 
-``` razor
+```razor
 <form method="post">
     <div asp-validation-summary="ModelOnly"></div>
     <div>
@@ -77,7 +77,7 @@ services.AddScoped<IModel, Model>();
 </form>
 ```
 
-``` csharp
+```csharp
 public class UserSearchModel : PageModel
 {
     public class InputModel
@@ -109,7 +109,7 @@ public class UserSearchModel : PageModel
 
 * Klíčový soubor frameworku, probíhá v něm veškerá konfgurace
 
-``` csharp
+```csharp
 public class Startup
 {
     public IConfiguration Configuration { get; } // Umožňuje práci s JSON konfigurací (appsettings.json)
@@ -158,7 +158,7 @@ public class Startup
   * Přes connection string v appsettings.json
   * aj.
 
-``` json
+```json
 {
     "ConnectionStrings": {
         "DefaultConnection": "<Connection string>"
@@ -166,7 +166,7 @@ public class Startup
 }
 ```
 
-``` csharp
+```csharp
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
 {
     public DbSet<Item> Items { get; set; }
@@ -227,7 +227,7 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn
 * Přijímá vstup od uživatele a převádí ho na příkazy pro Model/View
 * Jeho metodám, které se dají volat (skrz REST nebo routování) se říká _akce_
 
-``` csharp
+```csharp
 [Route("[controller]")]
 [ApiController]
 public class AccountController : ControllerBase
@@ -255,6 +255,5 @@ public class AccountController : ControllerBase
 ## Blazor
 
 * Framework pro psaní webových aplikací pomocí C# a HTML
-* Client-side, WebAssembly
-* ~Alternativa JavaScriptu
-* Na backend navázáno přímo – komunikace přes TCP, ne HTTP ⇒ velmi rychlá reakce na události
+* WebAssembly
+* Na backend navázáno přímo – komunikace přes SignalR, ne HTTP ⇒ velmi rychlá reakce na události

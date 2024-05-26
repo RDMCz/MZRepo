@@ -30,7 +30,7 @@
 * Rozdělují UI aplikace do nezávislých, znovupoužitelných částí – enkapsulace
 * Lze je zapsat jako třídu nebo jako funkci
 
-``` jsx
+```jsx
 const Welcome = ({name}) => {
     return (
         <>
@@ -42,7 +42,7 @@ const Welcome = ({name}) => {
 export default Welcome;
 ```
 
-``` jsx
+```jsx
 import Welcome from "./Components/Welcome";
 
 const App = () => {
@@ -60,7 +60,7 @@ export default App;
 
 * Props si lze "vyzvednout" dvěma způsoby
 
-``` jsx
+```jsx
 const Welcome = ({name, surname}) => { return (<><h1>Hello, {name} {surname}!</h1></>); }
 const Welcome = (props) => { return (<><h1>Hello, {props.name} {props.surname}!</h1></>); }
 ```
@@ -81,14 +81,14 @@ const Welcome = (props) => { return (<><h1>Hello, {props.name} {props.surname}!<
 * Tato data "přežijí" překreslení komponenty – deklarace se znovu nezavolá (refresh stránky nepřežijí)
 * Při změně těchto dat se komponenta překreslí
 
-``` jsx
+```jsx
 {/*const [<název proměnné>, <název metody pro změnu proměnné>] = useState(<iniciální hodnota>);*/}
 const [name, setName] = useState("");
 ```
 
 ## useEffect
 
-``` jsx
+```jsx
 useEffect(() => {
     {/*Kód, který se má spustit*/}        
 }, []);
@@ -113,13 +113,13 @@ Oproti klasickému JavaScriptu:
 
 ## Ukázka kódu
 
-``` jsx
+```jsx
 import { createContext } from "react";
 
 export const ListContext = createContext(null);
 ```
 
-``` jsx
+```jsx
 import { useState } from 'react';
 import { Route, Router, Switch } from "react-router-dom"; {/*Je třeba doinstalovat balíček react-router-dom*/}
 import { createBrowserHistory } from "history";
@@ -150,7 +150,7 @@ const history = createBrowserHistory();
 export default App;
 ```
 
-``` jsx
+```jsx
 import { useContext, useState } from 'react';
 
 import { ListContext } from "../Providers/ListContext";
@@ -188,7 +188,7 @@ const Home = () => {
 
 ## npm
 
-``` npm
+```bash
 npx create-react-app nazev-aplikace
 npm install --save bootstrap reactstrap axios react-router-dom formik
 npm start

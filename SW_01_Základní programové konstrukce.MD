@@ -75,7 +75,7 @@ __přiřazení a lambda__ | `=`, `*=`, `/=`, `%=`, `+=`, `-=`, `<<=`, `>>=`, `&=
 
 __úplný if__:
 
-``` csharp
+```csharp
 if (podmínka) {
 
 }
@@ -86,7 +86,7 @@ else {
 
 __neúplný if__:
 
-``` csharp
+```csharp
 if (podmínka) {
 
 }
@@ -94,7 +94,7 @@ if (podmínka) {
 
 __switch__:
 
-``` csharp
+```csharp
 switch (výraz) {
     case hodnota0:
         break;
@@ -109,7 +109,7 @@ switch (výraz) {
 
 __while__:
 
-``` csharp
+```csharp
 while (podmínka) {
     // nemusí se provést vůbec
 }
@@ -117,7 +117,7 @@ while (podmínka) {
 
 __do while__:
 
-``` csharp
+```csharp
 do {
     // provede se alespoň jednou
 } while (podmínka)
@@ -125,7 +125,7 @@ do {
 
 __for__:
 
-``` csharp
+```csharp
 for (inicializátor; podmínka; iterátor) {
 
 }
@@ -133,7 +133,7 @@ for (inicializátor; podmínka; iterátor) {
 
 __foreach__:
 
-``` csharp
+```csharp
 foreach (object obj in pole) {
     // pro každý prvek datového typu implementujícího IEnumerable
 }

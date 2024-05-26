@@ -25,7 +25,7 @@
 * U domácích routerů počáteční adresa + počet klientů / poslední adresa
 * U enterprise pomocí masky
 
-``` txt
+```text
 Router> en
 Router# conf t
 Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.2    // Buď rozsah nebo lze napsat jen jednu
@@ -138,7 +138,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 * __Outside Local__ – Privátní adresy stanic ve vnější síti, jak se jeví ve vnitřní síti
 * __Outside Global__ – Veřejné adresy konfigurované na stanicích vnější sítě
 
-<img src="./img/HW_15_01.PNG" width=607 />
+<img alt="Inside/Outside Local/Global" src="./img/HW_15_01.PNG" width=607 />
 
 ### Druhy NAT
 
@@ -148,7 +148,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
   * Více _inside local_ adres se mapuje na jednu _inside global_ adresu
   * Rozšíření překladové tabulky o porty – zařízení jsou odlišena pomocí dynamicky přidělovaných portů
 
-``` txt
+```text
 == Statická NAT =================================================================
 Router(config)# ip nat inside source static 192.168.1.3 89.24.220.3
 

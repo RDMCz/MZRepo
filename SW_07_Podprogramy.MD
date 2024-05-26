@@ -19,7 +19,7 @@ __Podprogram__ (subroutine): Část programu
   * Lze předat parametr odkazem pomocí klíčového slova `ref`, použité proměnné musí být předem inicializovány (v metodě se pracuje s&nbsp;existujícími hodnotami; vhodné, pokud má metoda kromě hlavního výstupu editovat nějaké dodatečné hodnoty)
   * Parametry lze definovat jako výstupní (klíčové slovo `out`), k proměnným musí být uvnitř metody něco přiřazeno (hodnota je vytvořena až uvnitř proměnné, na starou se nebere ohled; vhodné, pokud chceme metodu s více návratovými hodnotami)
 
-    ``` csharp
+    ```csharp
     static void LowerUpperText(ref string input, out string low, out string up)
     {
         input += "!";
@@ -40,7 +40,7 @@ __Podprogram__ (subroutine): Část programu
 * Metoda s proměnným počtem parametrů:
   * Klíčové slovo `params` před posledním z parametrů. Typ tohoto parametru musí být pole.
 
-    ``` csharp
+    ```csharp
     public void SomeMethod(params object[] p) { } // Proměnný počet parametrů
     ```
 
@@ -50,7 +50,7 @@ __Podprogram__ (subroutine): Část programu
 * Nemusí být interně spojen s jednou metodou, podporuje množinu metod (lze přidat pomocí `+=` nebo `+`)
 * Odděluje specifikaci od implementace
 
-``` csharp
+```csharp
 public delegate void NumberAction(int x);
 
 public static void Double(int x) => WriteLine(x * 2);
@@ -79,21 +79,21 @@ static void Main(string[] args)
 * Vycházejí z anonymních delegátů – jakýkoliv lambda výraz lze přepsat na delegáta
   * Výraz bez návratové hodnoty `Action`
 
-    ``` csharp
+    ```csharp
     Action<string> greet = name => WriteLine($"Hello {name}!");
     greet("World"); // "Hello World!"
     ```
 
   * Výraz s návratovou hodnotou `Func`
 
-    ``` csharp
+    ```csharp
     Func<int, int> square = x => x * x; // Func<T,TResult>
     Console.WriteLine(square(5)); // 25
     ```
 
 __Lambda + LINQ:__
 
-``` csharp
+```csharp
 int[] numbers = { 2, 3, 4, 5 };
 foreach (var v in numbers.Select(x => x * x)) Write(v + " "); // 4 9 16 25
 ```
@@ -102,7 +102,7 @@ foreach (var v in numbers.Select(x => x * x)) Write(v + " "); // 4 9 16 25
 
 __Upravený příklad z delegátů pomocí lambdy:__
 
-``` csharp
+```csharp
 public delegate void NumberAction(int x);
 
 public static void DoNumberAction(int x, NumberAction del) => del(x);

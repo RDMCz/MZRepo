@@ -145,7 +145,7 @@ Duplexita | Full duplex
 ---
 ---
 
-``` txt
+```text
 I2C má start a stop condition, nezáleží na časování, důležitá je změna hodnoty; acknowledge – potvrzuje přijatá data
 
 1Wire může sloužit zároveň pro napájení (dioda + kapacitor), možno připojovat zařízení dynamicky (single button) 

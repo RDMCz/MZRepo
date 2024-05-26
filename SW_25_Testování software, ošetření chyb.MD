@@ -2,6 +2,8 @@
 
 * __Kompilovaný jazyk__ – Zdrojový kód nejprve přeložen pomocí překladače (kompilátoru) do strojového kódu a až poté je možné ho spustit (C#)
 * __Interpretovaný jazyk__ – Program zvaný interpreter přímo spouští kód step-by-step bez nutnosti předběžného překladu (Python)
+* Pro každý jazyk (jeho specifikaci) může být napsán jak interpret, tak kompilátor
+  * Pokud se mluví o kompilovaném/interpretovaném jazyku, je pravděpodobně myšlena jeho nejpoužívanější implementace (.NET / CPython)
 
 ## Chyba
 
@@ -32,7 +34,7 @@
 * Sémantickou chybu lze zkompilovat, jelikož je syntakticky správně, program se ale bude chovat nečekaně (špatný výsledek, výjimka, pád)
 * Vývojové prostředí dokáže odhalit jen některé sémantické chyby
 
-``` csharp
+```csharp
 int i = "20";
 if (podmínka); { /*Kód*/ }
 ```
@@ -70,7 +72,7 @@ if (podmínka); { /*Kód*/ }
 
 ## Výjimka
 
-``` csharp
+```csharp
 try {
     // "Nebezpečný kód"
 }
@@ -99,7 +101,7 @@ finally {
 
 ### Jednotkové testování
 
-``` csharp
+```csharp
 [Theory]
 [InlineData(2, 3, 5)]   // Projde
 [InlineData(2, 3, 6)]   // Neprojde

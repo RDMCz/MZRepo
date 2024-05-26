@@ -70,7 +70,7 @@
 
 ### Cisco IOS
 
-``` txt
+```text
 Switch(config)# vlan 10                                     // Vytvoření/přepnutí do VLAN 10
 Switch(config-vlan)# name mojevlan                          // Pojmenování VLAN
 Switch(config-vlan)# exi                                    // Změny se uloží při opuštění konfigurace

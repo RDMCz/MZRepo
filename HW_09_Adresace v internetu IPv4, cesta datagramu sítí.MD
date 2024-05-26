@@ -106,7 +106,7 @@ C | 192.168.0.0 | 192.168.255.255 | 255.255.0.0
 
 * Variabilní velikost podsítí, lepší využití adresního prostoru
 
-``` text
+```text
 Rozdělte síť 192.168.10.0/24 na:
   výroba    40 hostitelů
   eko       20 hostitelů

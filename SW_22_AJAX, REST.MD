@@ -72,7 +72,7 @@ __XML__ – Extensible Markup Language:
 * Myšlenka – Čitelný strojem i člověkem
 * Aplikace – SVG, Česká státní správa
 
-``` xml
+```xml
 <person gender="male">
     <firstname>John</firstname>
     <lastname>Doe</lastname>
@@ -85,7 +85,7 @@ __JSON__ – JavaScript Object Notation:
 * Název proměnné (klíče) ale musí být v uvozovkách
 * Při serializaci složitějších dat může nastat problém
 
-``` json
+```json
 {
     "name": "John Doe",
     "phoneNumbers": [
@@ -103,7 +103,7 @@ __JSON__ – JavaScript Object Notation:
 
 ## Odeslání a zpracování požadavku
 
-``` javascript
+```javascript
 fetch("example.com/profile", {
     method: "POST"
 })

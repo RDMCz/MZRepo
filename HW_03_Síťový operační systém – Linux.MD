@@ -44,7 +44,7 @@
 * Časové pásmo
 * Vytvoření uživatele
 
-<img src="./img/HW_03_01.PNG" width="777" />
+<img alt="Linux Mint account creation" src="./img/HW_03_01.PNG" width="777" />
 
 * Prvním krokem po instalaci by měli být aktualizace
 * Linux lze také spustit ve Windows pomocí WSL (Windows Subsystem for Linux)
@@ -116,7 +116,7 @@ __`s`__ | __soket__ | _socket_ | Umožňuje komunikaci mezi procesy (i po síti 
 * `ls -l` – Výpis souborů + oprávnění ad.
 * `ls -laF` – Výpis souborů + oprávnění ad. + skryté soubory (začínající tečkou) (zkráceně `ll`)
 
-<img src="./img/HW_03_02.PNG" width="666" />
+<img alt="root" src="./img/HW_03_02.PNG" width="666" />
 
 * První znak označuje druh souboru
 * Následujících 9 znaků značí oprávnění

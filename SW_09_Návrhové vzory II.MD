@@ -37,7 +37,7 @@ __Strukturální vzory__ (Structural patterns):
 * Nabízí jen podmnožinu metod zastupovaného objektu, lze implementovat kontrolu přístupových práv
 * Implementace skrytím za rozhraní nebo za proxy třídu spravující instanci objektu
 
-``` csharp
+```csharp
 public class Zastupce
 {
     private Zastupovany z;

@@ -158,7 +158,7 @@ prefix | význam
 
 ## Použití adresy
 
-``` txt
+```text
 ping -6 ipv6.google.com
 ping -6 fe80::260:97ff:fe02:6ea5%4
 ```
@@ -249,13 +249,13 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
 
 ## Cisco a IPv6
 
-``` txt
+```text
 Router(config)# ipv6 unicast-routing
 ```
 
 * Zapne IPv6 směrování, které je defaultně vypnuto
 
-``` txt
+```text
 Router(config-if)# ipv6 address 2001:db8:1:1::baba/64
 Router(config-if)# ipv6 address fe80::baba/64 link-local
 ```

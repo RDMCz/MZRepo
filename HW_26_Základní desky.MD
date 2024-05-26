@@ -38,7 +38,7 @@
 * Většina funkcí Northbridge je integrována do samotného CPU
 * Zbytek je integrován do jedné části, kterou výrobci MB obecně nazývají Chipset
 
-<img src="./img/HW_26_01.jpg" height="547" />
+<img alt="CPU scheme" src="./img/HW_26_01.jpg" height="547" />
 
 ## Formát
 

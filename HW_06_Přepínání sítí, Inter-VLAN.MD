@@ -21,7 +21,7 @@
 
 * Trunk mezi směrovačem a přepínačem
 
-``` txt
+```text
 Switch(config)# interface gigabitEthernet 0/0/0
 Switch(config-if)# no sh                                        // Zapnutí interface
 Switch(config-if)# exi
@@ -49,7 +49,7 @@ Switch(config-subif)# ip address 172.17.30.1 255.255.255.0
   1. Zapnout routování
   2. Pro VLAN, které chceme routovat, vytvořit interface a nastavit jim IP adresu
 
-``` txt
+```text
 Switch(config)# ip routing                               // Defaultně pouze L2 přepínání, vlastnost IP routing se musí zapnout
 Switch(config)# interface vlan 10                        // Čísla VLAN se musí shodovat na obou stranách trunku
 Switch(config-if)# ip address 172.17.30.1 255.255.255.0

@@ -26,7 +26,7 @@ Vzory __chování__ | Interakce a responzibilita objektů | Command, Iterátor, 
   * Více implementací se stejnými parametry (tovární metody se mohou jmenovat různě)
 * Metoda se používá ve třídě, ze které dědí objekty, které metoda vytváří
 
-``` csharp
+```csharp
 public static Osoba GetInstance(int age, string name)
 {
     if (age < 0) return null;
@@ -44,7 +44,7 @@ public static Osoba GetInstance(int age, string name)
 * Instanci si lze vyžádat pomocí tovární metody (pokud instance neexistuje, je tovární metodou vytvořena)
 * Samostatně se moc již nepoužívá, někteří jej považují za antipattern; je ale součástí jiných komplexnějších NV
 
-``` csharp
+```csharp
 class Jedinacek
 {
     private Jedinacek() { }
@@ -88,7 +88,7 @@ class Jedinacek
 * Null Object je plnohodnotný objekt, ale prázdný; zastupuje hodnotu `null`
 * Odpadá testování hodnot, zdali jsou `null`
 
-``` csharp
+```csharp
 abstract class Animal : IAnimal
 {
     public abstract void Sound();

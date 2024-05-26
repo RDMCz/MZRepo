@@ -3,11 +3,11 @@
 ## .NET
 
 * `.NET Framework` je framework od společnosti Microsoft
-* Framework = Softwarová struktura, která slouží jako podpora při vývoji sw produktů
+* Framework = Softwarová struktura, která slouží jako podpora při vývoji SW produktů
   * první: `.NET Framework 1.0` (2002)
   * poslední: `.NET Framework 4.8` (2019)
 
-<img src="img/SW_11_01.png" width="333">
+<img alt="Historie .NET" src="img/SW_11_01.png" width="333">
 
 * Duchovním nástupcem je framework `.NET Core`, později přejmenován pouze na `.NET`
   * první: `.NET Core 1.0` (2016)
@@ -15,7 +15,7 @@
   * preview: `.NET 6` (2021)
 * Verze 4 byla vynechána, aby se `.NET 4` nepletl s `.NET Framework 4`
 
-<img src="img/SW_11_02.png" width="666">
+<img alt=".NET 5" src="img/SW_11_02.png" width="666">
 
 ### Podporované jazyky
 
@@ -59,7 +59,7 @@
   * pole, enumerable třídy, XML dokumenty, relační databáze, ...
 * Lze zapisovat pomocí lambda operátorů
 
-``` csharp
+```csharp
 List<string> list2 = (from x in list where x[0] == 'a' select x).ToList();
 List<string> list2 = list.Where(x => x[0] == 'a').ToList();
 
@@ -92,7 +92,7 @@ List<string> list2 = list.Where(x => x[0] == 'a').ToList();
 * Metoda, respektive delegát, který je v commandu uchován, je volán, pokud nastane nějaká událost ve View
 * WPF/UWP – `ICommand(Execute, CanExecute)`
 
-``` csharp
+```csharp
 class MainViewModel : INotifyPropertyChanged
 {
     // Data na straně poskytovatele
@@ -117,7 +117,7 @@ class MainViewModel : INotifyPropertyChanged
 }
 ```
 
-``` xml
+```xml
 <Window xmlns:viewmodels="clr-namespace:ImageEditor.ViewModels">
 
     <Window.DataContext><viewmodels:MainViewModel></viewmodels:MainViewModel></Window.DataContext>
@@ -134,7 +134,7 @@ class MainViewModel : INotifyPropertyChanged
 * Většinou převod klasických typů (bool, int, ...) na typy View (barva, obrázek, ...)
 * Bohužel je nutné převádět například i bool na viditelnost prvku, ta totiž místo boolu přijímá `enum Visibility`:
 
-``` csharp
+```csharp
 class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto rozhraní
 {
     public object Convert(object value, Type targetType, object parameter, string language)
@@ -151,7 +151,7 @@ class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto r
 }
 ```
 
-``` xml
+```xml
 <Window xmlns:converters="clr-namespace:ImageEditor.Converters">
 
     <Window.Resources>
@@ -177,7 +177,7 @@ class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto r
 * Tok programu je řízen událostmi, které jsou obvykle spuštěny určitou uživatelskou akcí
 * Základní princip – V programu běží smyčka kontrolující nastání událostí a volající patřičné metody
 
-``` csharp
+```csharp
 private void ButtonClick(object sender, EventArgs e)
 {
     ((Button)sender).Text = "Clicked";
