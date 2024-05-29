@@ -101,4 +101,4 @@ Router# wr
 ---
 ---
 
-![😫](./img/HW_13_03.PNG)
+![směrování](./img/HW_13_03.PNG)

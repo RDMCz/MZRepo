@@ -63,9 +63,9 @@
 * SPI
 * 53 vstupně-výstupních pinů
 
-![bože](./img/HW_16_03.png)
+![atmega64 diagram](./img/HW_16_03.png)
 
-![božínku](./img/HW_16_04.png)
+![atmega64 diagram simplified](./img/HW_16_04.png)
 
 ## Příznaky Status
 

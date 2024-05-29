@@ -135,12 +135,16 @@ Duplexita | Half duplex
 USART | Universal Synchronous and Asynchronous Receiver and Transmitter
 --: | :-:
 Vzdálenost | Klidně i stovky metrů (převod na RSxxx, kvalita kabelu, počet baudů)
-Frekvence | Uvedena v baudech (až megabaudech; bit/s), ostatní rychlosti odvozeny dělením; v praxi desítky/stovky Kbit/s
+Frekvence | Desítky/stovky Kbit/s
 Počet zařízení | 2
 Řízení | Point-to-Point
 Adresace | Netřeba
 Zabezpečení | Volitelný paritní bit
 Duplexita | Full duplex
+
+* Parametry:
+  * Baudrate \[baud/s\] – počet všech bitů za sekundu
+  * Bitrate \[bit/s\] – počet bitů za sekundu, zajímají nás ale jen bity nesoucí informaci
 
 ---
 ---

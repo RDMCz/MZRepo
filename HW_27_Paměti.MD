@@ -55,7 +55,7 @@
 * (Pomalejší), levnější, větší spotřeba v klidovém stavu
 * Rychlost u SRAM vs. DRAM je komplikovanější téma:
 
-> DRAM is optimized for density (higher capacity) and SRAM is optimized for speed (access latency). So, in general, SRAM is faster than DRAM. However, it is fundamentally possible to design DRAM to be faster than SRAM, but DRAM manufacturers don't do that since the most important selling factor for them is cost per bit. So they lower cost per bit at the expense of speed.<br><https://superuser.com/questions/648370>
+> DRAM is optimized for density (higher capacity) and SRAM is optimized for speed (access latency). So, in general, SRAM is faster than DRAM. However, it is fundamentally possible to design DRAM to be faster than SRAM, but DRAM manufacturers don't do that since the most important selling factor for them is cost per bit. So they lower cost per bit at the expense of speed.<br><br><https://superuser.com/questions/648370>
 
 ### SDRAM – Synchronous DRAM
 

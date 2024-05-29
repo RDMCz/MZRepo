@@ -123,11 +123,6 @@ GenreID (PK) | GenreName
 
 #### __BCNF__ – Boyce-Coddova normální forma
 
-* Splňuje 3NF
-* Může být (ne)splněna u tabulek, které mají více složených kandidátních klíčů
-* BCNF je splněna, pokud pravidla 3NF platí pro všechny kandidátní klíče
-  * Tedy pokud levá strana všech funkčních závislostí je kandidátním klíčem
-
 #### __4NF__ – Čtvrtá normální forma
 
 #### __ETNF__ – Essential tuple normal form

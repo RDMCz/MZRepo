@@ -96,4 +96,4 @@
 
   * Provede se minimálně jedna následující instrukce, během které se opět zkontrolují příznaky přerušení
 
-* Instrukce zabírající více než jeden instrukční cyklus se nemohou přerušit v půlce, aktuální instrukce se vždy dokončí
+* Instrukce zabírající více než jeden instrukční cyklus se obvykle nemohou přerušit v půlce, aktuální instrukce se vždy dokončí
