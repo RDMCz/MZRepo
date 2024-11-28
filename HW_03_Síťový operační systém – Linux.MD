@@ -94,8 +94,8 @@ __`-`__ | __normální soubor__ | _regular file_ | Přípona není povinná, moh
 __`d`__ | __adresář__ | _directory_ | Obsahuje seznam souborů
 __`l`__ | __symbolický odkaz__ | _symbolic link_ | Ve výpisu lze vidět, kam odkazuje. Neukazuje na konkrétní data, ale na název/cestu (přejmenování odkaz zneplatní)
 __`-`__ | __pevný odkaz__ | _hardlink_ | Jiné jméno pro soubor, který je na disku fyzicky pouze jednou. Funguje pouze v rámci jednoho oddílu
-__`c`__ | __znakové zařízení__ | _character device_ | Souborová reperezentace zařízení, které komunikují po jednotlivých znacích (terminál/klávesnice/tískárna). Např. `/dev/null`, `/dev/full`, `/dev/zero`, `/dev/random`
-__`b`__ | __blokové zařízení__ | _block device_ | Souborová reperezentace zařízení, které komunikují po blocích (pevný disk). Pro zápis/čtení jediného bitu je potřeba přenést celý 2048byte blok, vyžaduje použití bufferu. (`/dev`, `lsblk`)
+__`c`__ | __znakové zařízení__ | _character device_ | Souborová reprezentace zařízení, které komunikují po jednotlivých znacích (terminál/klávesnice/tískárna). Např. `/dev/null`, `/dev/full`, `/dev/zero`, `/dev/random`
+__`b`__ | __blokové zařízení__ | _block device_ | Souborová reprezentace zařízení, které komunikují po blocích (pevný disk). Pro zápis/čtení jediného bitu je potřeba přenést celý 2048byte blok, vyžaduje použití bufferu. (`/dev`, `lsblk`)
 __`p`__ | __pojmenovaná roura__ | _named pipe_ | Umožňuje komunikaci mezi dvěma procesy, jeden do ní zapisuje a druhý z ní čte
 __`s`__ | __soket__ | _socket_ | Umožňuje komunikaci mezi procesy (i po síti mezi vzdálenými stroji). Oproti rouře podporuje obousměrnou komunikaci
 
