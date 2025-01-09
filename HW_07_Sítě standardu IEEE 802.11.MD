@@ -157,10 +157,11 @@ Standard | Alias | Pásmo | Max. teoretická rychlost | Modulace
 
 * __WPA__
   * Reakce na nedostatky WEP
+  * Šifra RC4 – prolomeno
   * TKIP – Temporal Key Integrity Protocol – Pro každý rámec je používán jiný klíč
 * __WPA2__
   * Šifra AES – Advanced Encryption Standard
-  * Prolomeno 2016 – KRACK
+  * Možný útok KRACK (2017)
 * __WPA3__
 * __WPA-Personal__ – Také _WPA-PSK (pre-shared key)_
   * Domácí použití, nevyžaduje autentifikační server

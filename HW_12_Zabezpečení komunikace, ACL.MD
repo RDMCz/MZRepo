@@ -2,17 +2,17 @@
 
 ## Kryptografie
 
-* Zabývá se šifrováním dat
+* Kryptografie je nauka o šifrování, zabývá se tedy metodami ochrany dat před neautorizovaným přístupem
 
-### Symetrická
+### Symetrická šifra
 
-* K šifrování i dešifrování se používá stejný tajný klíč
-* Obě strany musí mít ke klíči přístup a použít ho
+* Šifrovací a dešifrovací klíč je buď stejný, nebo lze jeden z druhého jednoduše odvodit
 * Oproti asymetrickým šifrám o dost menší výpočetní náročnost
+* Problém je domluva klíče, která musí proběhnout po zabezpečeném kanále
 
-### Asymetrická
+### Asymetrická šifra
 
-* Oproti symetrické není potřeba výměny klíčů
+* Oproti symetrické šifře není potřeba výměny klíčů
 * Veřejný šifrovací klíč
   * Majitel ho uveřejní a kdokoliv jím může šifrovat jemu určené zprávy
 * Soukromý dešifrovací klíč
@@ -30,7 +30,7 @@
 * Použití:
   * Rychlejší prohledávání tabulek v databázi
   * Kontrola správnosti dat
-  * Skladování hesel v databázi
+  * Skladování hesel v databázi (s přidanou solí)
 
 ## Elektronický podpis
 
