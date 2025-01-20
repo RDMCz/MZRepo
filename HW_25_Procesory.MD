@@ -69,9 +69,11 @@
   * Např. paralelně: dvě ALU, jedna násobička, jedna dělička, ...
 * V jedné instrukci jsou uloženy operační kódy pro všechny jednotky (jinak by se žádný čas neušetřil)
   * Díky tomu není potřeba komplexního řadiče, instrukce mají ale velkou délku
+  * Nevyužité pozice v instrukci je nutné vyplnit instrukcemi NOP
 * Překladač se stará o kolize v registrech a skládá instrukce tak, aby bylo instrukční slovo co nejvíce zaplněno
 * Závislé na konfiguraci procesoru – změna výkonných jednotek znamená změnu zápisu slova a celý program musí být znovu přeložen
-* Nefunguje s intepretovanými jazyky
+  * Různé generace nejsou obecně zpětně kompatibilní
+  * Není vhodné pro dynamickou kompilaci a interpretaci
 
 ### Superskalární architektura
 
