@@ -190,5 +190,4 @@ Standard | Alias | Pásmo | Max. teoretická rychlost | Modulace
 
 * RADIUS je AAA client/server protokol
 * Obvykle se používá jako back-end pro 802.1X autentifikaci
-
-![802.1X](https://upload.wikimedia.org/wikipedia/commons/1/1f/802.1X_wired_protocols.png)
+* Viz [wikimedia/802.1X_wired_protocols](https://upload.wikimedia.org/wikipedia/commons/1/1f/802.1X_wired_protocols.png), ([archived](https://web.archive.org/web/20250822001640/https://upload.wikimedia.org/wikipedia/commons/1/1f/802.1X_wired_protocols.png))
