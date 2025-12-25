@@ -8,11 +8,11 @@ Vlastnosti / požadavky:
 
 ### Elementárnost
 
-* Skládá se z konečného počtu jednoduchých a snadno srozumitelných kroků (příkazů)
+* Skládá se z konečného počtu jednoduchých a srozumitelných kroků (příkazů)
 
 ### Konečnost
 
-* Musí mít konečný počet kroků – pro každý jednotlivý vstup musí být konečný
+* Musí mít konečný počet kroků pro libovolný vstup
 
 ### Obecnost
 
@@ -22,22 +22,22 @@ Vlastnosti / požadavky:
 ### Determinovanost
 
 * Za stejných podmínek pro stejné vstupy poskytuje stejný výstup
-* Toto je vyžadováno, pokud není vyžadován náhodný výstup
 * Každý krok algoritmu musí být jednoznačně definován
 
 ### Výstup
 
-* Má alespoň jeden výstup v požadovaném vztahu ke vstupům = odpověď na problém, který algoritmus řeší
+* Má alespoň jeden výstup v požadovaném vztahu ke vstupům → odpověď na problém, který algoritmus řeší
 
 ## Algoritmická složitost
 
+Složitost algoritmu je jeho náročnost na „zdroje“: čas, paměť atd.
+
 ### Časová složitost
 
-* Doba, jak dlouho algoritmus běží
-* Počítají se provedené příkazy (elementární operace) v závislosti na velikosti vstupu
-* Značí se `O()`, na konstantách v závorce nezáleží (lze je zanedbat)
-* "Omikron notace":  složitost algoritmu je asymptoticky menší nebo rovna hodnotě v závorce
-* Zajímá nás kvalita algoritmu – časová složitost rozděluje algortimy do kvalitativních kategorií
+Zjištění časové složitosti pomocí měření času vykonání programu není dobrý přístup: je závislý na HW, OS atd. Dobrý přístup, pokud možno, je analýza algoritmu. Ta pracuje s tzv. elementární operací, jejíž čas pro vykonání definujeme jako 1 (jedna jednotka času). Při analýze algoritmu zjistíme počet provedených operací, který je závislý na velikosti vstupu 𝑛. Dostaneme funkci, kde nás zajímá nejrychleji rostoucí člen – zanedbáme pomaleji rostoucí členy a multiplikativní konstanty. Funkce nejrychleji roustoucího členu je hledaná časová složitost.
+
+* Značí se `O()`, "omikron notace" – složitost algoritmu je asymptoticky ohraničena shora funkcí v&nbsp;závorce
+* Zajímá nás kvalita algoritmu – časová složitost rozděluje algoritmy do kvalitativních kategorií
 
 #### Příklad
 
@@ -60,9 +60,9 @@ for (int i = 0; i < pole.Length; i++) {
 }
 ```
 
-Selection sort najde v poli minimum (projede všech n prvků, to trvá n), dá ho na začátek a hledá nové minimum (takhle nkrát). Náročnost je tedy `O(n**2)`, stejně jako u bubble sortu.
+Selection sort najde v poli minimum (projede všech n prvků), dá ho na začátek a hledá nové minimum v dosud neseřazené části (takhle nkrát). Při zanedbání pomaleji rostoucích členů a konstant nám vyjde složitost `O(n**2)`.
 
-Algoritmus, který náhodně zkouší všechny možnosti, dokud nenajde tu seřazenou, má náročnost `O(n * n!)`. Pro každou permutaci (`n!`) je nutné zkontrolovat, zdali už je seřazeno (`n`).
+Algoritmus, který náhodně zkouší všechny možnosti, dokud nenajde tu seřazenou, má složitost `O(n * n!)`. Pro každou permutaci (`n!`) je nutné zkontrolovat, zdali už je seřazeno (`n`).
 
 ## Rekurze
 
@@ -77,7 +77,7 @@ __Nepřímá__: Více podprogramů se volá navzájem a tvoří "kruh"
 
 __Lineární__: Podprogram volá sám sebe vždy jednou
 
-__Stromová__: Podprogram se volá více jak jednou v rámci jednoho svého úkolu (nemusí být konstantní počet volání)
+__Stromová__: Podprogram se volá více jak jednou v rámci jednoho svého úkolu (počet volání nemusí být nutně konstantní)
 
 ```csharp
 uint Factorial(uint N) => (N == 0) ? 1 : Factorial(N - 1) * N;
@@ -85,18 +85,18 @@ uint Factorial(uint N) => (N == 0) ? 1 : Factorial(N - 1) * N;
 
 ```csharp
 // Počítání prvků v binárním stromu od určité Node směrem dolů (třída Node obsahuje mj. Node left a Node right)
-int Count(Node temp)
+int Count(Node node)
 {
-    int rtrn = 1;
-    if (temp.left != null) rtrn += Count(temp.left);
-    if (temp.right != null) rtrn += Count(temp.right);
-    return rtrn;
+    int result = 1;
+    if (node.left != null) result += Count(node.left);
+    if (node.right != null) result += Count(node.right);
+    return result;
 }
 ```
 
-## Náhodnost
+## Náhoda
 
-* Šifrování, simulace, generace úrovní ve hrách, ...
+* Šifrování, loterie, generace úrovní ve hrách, ...
 
 __Pravá náhodná čísla__:
 
