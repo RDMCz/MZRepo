@@ -245,7 +245,7 @@ ping -6 fe80::260:97ff:fe02:6ea5%4
   * Nedosažitelná adresa/port, neznámá cesta k cíli
   * Správce zakázal komunikaci
 * Mezi informační zprávy patří např. výzva a odpověď na echo, ty využívá program `ping -6`
-* V ICMPv4 šlo útočit na síť zahlcením cílového stroje ICMP zprávami, ICMPv6 proti tomuto implemetuje bezpečnostní opatření
+* V ICMPv4 šlo útočit na síť zahlcením cílového stroje ICMP zprávami, ICMPv6 proti tomuto implementuje bezpečnostní opatření
 
 ## Cisco a IPv6
 
