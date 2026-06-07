@@ -108,7 +108,6 @@
 2. Prohlížeč jakožto klient odesílá GET request na adresu serveru (zjištěna pomocí DNS)
 3. Server vrací požadovaná data a/nebo vrací zprávu s číselným označením (200/404/500/...)
 
-* REST – GET, POST, PUT, PATCH, DELETE
 * __443 – HTTPS__ – Pomocí asymetrické kryptografie je ověřena identita webového serveru
 * Webový server je počítač vyřizující HTTP požadavky od klientů
 

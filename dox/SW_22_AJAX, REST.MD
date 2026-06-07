@@ -141,18 +141,37 @@ fetch("example.com/profile", {
 
 ## Dotazovací Metody HTTP
 
-__Representational State Transfer (REST)__:
+* __HTTP Resource__: Identifikovatelný objekt na webu
+* __URL – Uniform Resource Locator__:
+  * Univerzální adresa resource
+  * Před dvojtečku se píše schéma/protokol (`http:`, `mailto:`, ...)
+* __HTTP Request (of resource)__: Klientský požadavek o provedení akce s resource, protokol HTTP definuje metody:
+  * `GET` – přečti
+  * `HEAD` – vrať pouze hlavičku odpovědi na `GET`
+  * `POST` – vytvoř (URL určuje až server)
+  * `PUT` – nahraď (URL určuje už klient)
+  * `PATCH` – aktualizuj
+  * `DELETE` – smaž
+  * `CONNECT` – vytvoř tunel
+  * `OPTIONS` – zjisti povolené metody
+  * `TRACE` – otestuj dostupnost
+  * Request může být synchronní (zadání adresy, kliknutí na odkaz, ...) a asynchronní (AJAX, ...) – pro server jsou oba přístupy ekvivalentní
 
-* URL (Uniform Resource Locator) reprezentuje přímý přístup k datům
-* `http://www.server.cz/knihy` vrací seznam knih
-* `http://www.server.cz/knihy/4` vrací knihu s ID == 4
-* REST metody:
-  * `GET` – získat
-  * `POST` – vytvořit
-  * `DELETE` – smazat
-  * `PUT` – klient zasílá data, která aktualizují celou entitu
-  * `PATCH` – aktualizuje pouze část entity
-  * `OPTIONS` – dotaz na server, jaké podporuje metody
+## REST – Representational State Transfer
+
+Architektura REST (2000) je založena na několika požadavcích:
+
+* __Stateless__ (bezstavový) – každý _request_ obsahuje všechny potřebné informace pro jeho pochopení
+* __Cache__ – data requestů a responses by měla být explicitně označena jako ne/kešovatelná
+* __Uniform interface__ (jednotné rozhraní) – stejné rozhraní pro klienta nehledě na poskytnutou službu, pro splnění tohoto požadavku jsou na rozhraní kladena 4 omezení:
+  1. __Identification of resources__ – resources musí jít nějak identifikovat → URL
+     * `http://www.server.cz/knihy` vrací seznam knih
+     * `http://www.server.cz/knihy/4` vrací knihu s ID == 4
+  2. __Manipulation of resources through representations__ – resources je možné upravovat pomocí HTML stránek, které slouží jako jejich reprezentace
+  3. __Self-descriptive messages__ – každá _reprezentace resource_ obsahuje všechny potřebné informace pro její pochopení
+  4. __Hypermedia as the engine of application state (HATEOAS)__ – server poskytuje informace dynamicky skrze hypermédia (text, audiovizuál, hyperlinky), kde hyperlinky odkazují na další dostupné zdroje
+* __Layered system__ – služba má hierarchii „sandboxovaných“ vrstev (⇝ CDN)
+* __Code-on-demand__ (nepovinné) – funkce klienta mohou být rozšířeny přijetím a spuštěním dodatečného kódu (⇝ JavaScript)
 
 ---
 

@@ -21,7 +21,6 @@
 
 * Propojuje Model a View
 * Přijímá vstup od uživatele a převádí ho na příkazy pro Model/View
-* Jeho metodám, které se dají volat (skrz REST nebo routování) se říká _akce_
 
 ```csharp
 [Route("[controller]")]
@@ -157,15 +156,7 @@ Content-Type: application/json
 
 __Representational State Transfer (REST)__:
 
-* URL (Uniform Resource Locator) reprezentuje přímý přístup k datům
-* `http://www.server.cz/knihy` vrací seznam knih
-* `http://www.server.cz/knihy/4` vrací knihu s ID == 4
-* REST metody:
-  * `GET` – získat
-  * `POST` – vytvořit
-  * `DELETE` – smazat
-  * `PUT` – klient zasílá data, která aktualizují celou entitu
-  * `PATCH` – aktualizuje pouze část entity
+* Viz [otázka 22](./SW_22_AJAX,%20REST.MD#rest--representational-state-transfer)
 
 __Multi Page Application (MPA)__:
 
