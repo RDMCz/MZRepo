@@ -144,7 +144,6 @@ services.AddScoped<IModel, Model>();
 __Remote Procedure Calls (RPC)__:
 
 * Aplikace poskytuje libovolně pojmenované funkce, které klient volá a předává jim parametry​
-* Dnes se běžně nepoužívá
 
 ```rpc
 POST /sayHello HTTP/1.1

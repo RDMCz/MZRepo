@@ -43,9 +43,9 @@ Beer plzen = new Beer("Pilsner Urquell", BeerType.Ležák);
 ## Objekt
 
 * neboli instance
-* V podstatě místo v paměti alokované a nakonfigurované třídou / strukturou
-* Program může vytvořit několik objektů stejné třídy / struktury
-* Může být uložen v proměnné / kolekci
+* V podstatě místo v paměti alokované a nakonfigurované třídou/strukturou
+* Program může vytvořit několik objektů stejné třídy/struktury
+* Může být uložen v proměnné/kolekci
 * V C# je třída _Object_ nejvyšší základní třída
 
 ## Pole
@@ -58,7 +58,7 @@ int[] pole = new int[početPrvků];
 int[] pole = new int[] { 1, 2, 3, 4, 5, 6 };
 int[,] pole = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 } }; // Vícerozměrné (3x2 int[3,2])
 
-// Vícerozměrné nepravidelné "zubaté" pole:
+// Vícerozměrné nepravidelné ("zubaté") pole:
 int[][] pole;
 pole = new int[2];
 pole[0] = new int[3];   // [0][0] [0][1] [0][2]
@@ -67,7 +67,7 @@ pole[1] = new int[2];   // [1][0] [1][1]
 
 * `pole.Length` – celkový počet prvků ve všech dimenzích
 * `pole.GetLength(int x)` – celkový počet prvků v dimezi _x_
-* `foreach`, `Array.Copy()`, `Array.Clear()`, `Array.Find()`, `Array.IndexOf()`, `Array.Sort()`, `Array.Reverse()`
+* `foreach`, `Array.Copy()`, `Array.Clear()`, `Array.Find()`, `Array.IndexOf()`, `Array.Sort()`, `Array.Reverse()`, ...
 
 ## Kolekce + Generické kolekce
 
@@ -129,7 +129,7 @@ __System.Collections.Generic__:
 ### __SortedList<TKey,TValue>__
 
 * Generická kolekce Klíč + Hodnota
-* V defaultu prvky automaticky řazeny podle Klíče vzestupně
+* Ve výchozím nastavení jsou prvky automaticky řazeny podle Klíče vzestupně
 
 ### __Stack\<T>__
 

@@ -30,7 +30,8 @@ __Podprogram__ (subroutine): Část programu
     // Main:
     string s = "aHoJ";
     string sUp = "blabla";
-    LowerUpperText(ref s, out string sLow, out sUp);// Proměnnou lze deklarovat až při volání (sLow) nebo už před tím (sUp)
+    LowerUpperText(ref s, out string sLow, out sUp);
+    // Proměnnou lze deklarovat až při volání (sLow) nebo už před tím (sUp)
     
     WriteLine(s);       // aHoJ!
     WriteLine(sLow);    // ahoj!

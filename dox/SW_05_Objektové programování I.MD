@@ -57,7 +57,7 @@ __Objektové__:
 
 * Modifikátor `abstract` může používat třída, metoda, vlastnost, indexer, událost
 * Abstraktní třída je myšlena pouze jako základ pro ostatní třídy, nelze z ní vytvořit instanci
-* Abstraktní členy lze použít pouze v abstraktní třídě, mají pouze hlavičku, tělo je definováno v dědících třídách (pomocí `override` protože abstraktní člen je automaticky virtuální)
+* Abstraktní členy lze použít pouze v abstraktní třídě, mají pouze hlavičku a tělo je definováno v dědících třídách (pomocí `override`, protože abstraktní člen je automaticky virtuální)
 
 ### Statická třída
 
@@ -74,8 +74,8 @@ __Objektové__:
 ### Zapečetěná třída
 
 * Modifikátor `sealed`
-* Z třídy nelze dědit
-* Modifikátor také lze použít na přepsané (override) metody, aby již nešly přepisovat v dalších potomcích
+* Ze třídy nelze dědit
+* Modifikátor lze také použít na přepsané (override) metody, aby již nešly přepisovat v dalších potomcích
 
 ### Částečná třída
 

@@ -135,7 +135,7 @@ __foreach__:
 
 ```csharp
 foreach (object obj in pole) {
-    // pro každý prvek datového typu implementujícího IEnumerable
+    // pro každý prvek objektu implementujícího IEnumerable
 }
 ```
 

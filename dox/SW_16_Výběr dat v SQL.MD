@@ -66,7 +66,7 @@ CustomerID (PK) | Name | BirthYear | Country
 4 | Ezio | 1459 | Italy
 5 | Ariana | 1999 | Italy
 
-* Operátor `LIKE` porovnává řetězce, podporuje jednoduché výrazy (~regex)
+* Operátor `LIKE` porovnává řetězce, podporuje jednoduché výrazy
   * `%` – Libovolný počet znaků
   * `_` – Libovolný znak
 
@@ -124,7 +124,7 @@ SELECT AVG(BirthYear) FROM Customers; -- 1838
 * Když se objeví více řádků, které se v určitém sloupci shodují, databázový systém na ně bude pohlížet jako na jeden řádek
 
 ```sql
-SELECT Country, COUNT(CustomerID) -- Běžně vybíráme to, podle čeho se bude seskupovat + agregační fce
+SELECT Country, COUNT(CustomerID) -- Běžně vybíráme to, podle čeho se bude seskupovat + agregační funkce
 FROM Customers
 GROUP BY Country
 ORDER BY COUNT(CustomerID) DESC; -- Seřadit dle ..., DESC = sestupně
@@ -159,8 +159,8 @@ Italy | 2
 * Pomocí příkazu `JOIN` lze spojit dvě tabulky do jedné
 * `INNER JOIN` – vrací řádky, kde se klíče shodují v obou tabulkách
 * `LEFT (OUTER) JOIN` – vrací všechny řádky z levé tabulky, ke každému z nich přiřadí shodující se řádek z pravé tabulky nebo NULL (pokud neexistuje pravá vazba)
-* `RIGHT (OUTER) JOIN` – ~obrácený LEFT JOIN
-* `FULL (OUTER) JOIN` – vrací řádky z obou tabulek, doplňuje NULL při neexistující vazbě.
+* `RIGHT (OUTER) JOIN` – "obrácený" LEFT JOIN
+* `FULL (OUTER) JOIN` – vrací řádky z obou tabulek, doplňuje NULL při neexistující vazbě
 
 ```sql
 SELECT * FROM Orders;

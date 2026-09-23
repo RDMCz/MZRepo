@@ -68,7 +68,7 @@ if (podmínka); { /*Kód*/ }
 
 ### Logování
 
-* Logování buď výpisem do souboru nebo do IDE logovací konzole (`Trace.WriteLine();`)
+* Logování buď výpisem do souboru, nebo do IDE logovací konzole (`Trace.WriteLine();`)
 
 ## Výjimka
 

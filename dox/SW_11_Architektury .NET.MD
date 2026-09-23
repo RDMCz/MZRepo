@@ -31,7 +31,7 @@
 
 * Standardizovaná specifikace popisující vlastnosti kódu a runtime prostředí
 * Vysoké jazyky mohou běžet na různých počítačových platformách bez nutnosti jejich modifikace
-* .NET jazyky jsou sestaveny do platformě nezávislého mezijazyka Common Intermediate Language (CIL, ~nejnižší člověkem čitelný kód)
+* .NET jazyky jsou sestaveny do platformě nezávislého mezijazyka Common Intermediate Language (CIL)
 * Common Language Runtime (CLR) poté převádí CIL na machine-readable kód
 * Toto je pouze specifikace, nikoliv implementace!
 
@@ -67,6 +67,7 @@ List<string> list2 = list.Where(x => x[0] == 'a').ToList();
 .Count()
 .Any()
 .SingleOrDefault()
+// ...
 ```
 
 ## MVVM (Model View ViewModel)
@@ -88,7 +89,7 @@ List<string> list2 = list.Where(x => x[0] == 'a').ToList();
 
 ### Command (příkaz)
 
-* Událost připravena na pozdější použití zapozdřena do objektu
+* Událost připravena na pozdější použití zapouzdřena do objektu
 * Metoda, respektive delegát, který je v commandu uchován, je volán, pokud nastane nějaká událost ve View
 * WPF/UWP – `ICommand(Execute, CanExecute)`
 
@@ -135,7 +136,7 @@ class MainViewModel : INotifyPropertyChanged
 * Bohužel je nutné převádět například i bool na viditelnost prvku, ta totiž místo boolu přijímá `enum Visibility`:
 
 ```csharp
-class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto rozhraní
+class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí implementovat toto rozhraní
 {
     public object Convert(object value, Type targetType, object parameter, string language)
     {
@@ -167,7 +168,7 @@ class BoolToVisibility : IValueConverter // WPF/UWP konvertory musí mít toto r
 
 * Návrhový vzor, závislost _1 : 0..N_ mezi poskytovatelem a konzumenty
 * Při změně poskytovatele jsou upozorněni všichni konzumenti a mohou na změnu reagovat
-* Příkladem tohoto NV je právě binding
+* Příkladem tohoto návrhového vzoru je právě binding
   * Žádný nebo několik prvků ve View jsou pozorovatelé jedné vlastnosti ve ViewModel
   * Změna této vlastnosti upozorní pozorovatele, ti zavolají její getter a podle něj se aktualizují
 

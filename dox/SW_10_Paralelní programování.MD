@@ -43,9 +43,9 @@ public static void Main(string[] args)
 ```csharp
 public static void Main(string[] args)
 {
-    Thread ta = new Thread(MethodA); // Implicitně přetypováno na ThreadStart
+    Thread ta = new Thread(MethodA); // Implicitně použije ThreadStart
     ta.Start();
-    Thread tb = new Thread(MethodB); // Implicitně přetypováno na ParametrizedThreadStart
+    Thread tb = new Thread(MethodB); // Implicitně použije ParametrizedThreadStart
     tb.Start("foo");
 }
 ```
@@ -130,7 +130,7 @@ finally {
 
 * `lock()` uzamyká kus kódu objektem, který dostane jako vstupní parametr
   * V tomto kusu kódu může být pouze jedno vlákno, ostatní čekají
-  * Vstupním parametrem je kód uzamčen, ale samotný parametr nijak uzamčen/chráněn/modifikován není, může to být libovolný object
+  * Vstupním parametrem je kód uzamčen, ale samotný parametr nijak uzamčen/chráněn/modifikován není, může to být libovolný objekt
 
 ## async, await
 
@@ -185,7 +185,7 @@ static void Main(string[] args)
 ```csharp
 static void Main(string[] args)
 {
-    CPUs = Environment.ProcessorCount; // Vrací počet logických procesorů, které mohou být využity CLR
+    CPUs = Environment.ProcessorCount; // Vrací počet logických procesorů, které mohou být využity
     portionSize = numbers.Length / CPUs; // Rozdělení pole pro jednotlivá vlákna
     sumPortions = new long[CPUs]; // Pole pro (mezi)výsledky
     long sum = 0;
@@ -214,7 +214,7 @@ static void SumPortion(object _portionNumber)
     int portionNumber = (int)_portionNumber; // Explicitní přetypování
     var start = portionSize * portionNumber;
     var end = (portionNumber == CPUs - 1) ? (numbers.Length) : (portionSize * portionNumber + portionSize);
-    // $"Vlákno {Environment.CurrentManagedThreadId}" pracuje od {start} do {end - 1}
+    // $"Vlákno {Environment.CurrentManagedThreadId} pracuje od {start} do {end - 1}"
     long sum = 0;
     for (int i = start; i < end; i++) sum += numbers[i];
     sumPortions[portionNumber] = sum;

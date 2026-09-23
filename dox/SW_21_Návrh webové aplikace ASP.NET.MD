@@ -107,7 +107,7 @@ public class UserSearchModel : PageModel
 
 ## Startup.cs
 
-* Klíčový soubor frameworku, probíhá v něm veškerá konfgurace
+* Klíčový soubor frameworku, probíhá v něm veškerá konfigurace
 
 ```csharp
 public class Startup
@@ -123,7 +123,7 @@ public class Startup
         // * Databáze
         // * Kontrolérů
         // * Autorizace, Autentifikace, Identity
-        // * Cors – seznam aplikací, které můžou přistoupit k našemu API
+        // * Cors – seznam aplikací, které mohou přistoupit k našemu API
         // * Razor Pages:
         services.AddRazorPages();
         // * Dependency Injection:
@@ -187,7 +187,7 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn
 ## Entity Framework
 
 * Běží na .NET
-* "Nadstavba" nad <span>ADO</span>.NET (ActiveX Data Objects) – množina tříd nabízející služby k práci s databází
+* "Nadstavba" nad <span>ADO</span>.NET (ActiveX Data Objects) – množina tříd nabízející služby pro práci s databází
 * Generuje SQL dotazy pro konkrétní databázi (MySQL, Microsoft SQL Server, SQLite, PostgreSQL, ...)
 * Příkazy v sytaxy LINQ překládá do konkrétního SQL, tento dotaz odešle a přijdou mu data, která přeloží zpět do C#
 * = ORM – Objektově relační mapování – Konverze dat mezi relační databází a OOP jazykem

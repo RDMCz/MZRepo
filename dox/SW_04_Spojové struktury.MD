@@ -13,14 +13,18 @@
 * Může být i obousměrný nebo kruhový
 
 ```csharp
-// class LinkedList<T>
-internal class Node
+class LinkedList<T>
 {
-    public T value;
-    public Node next;
-}
+    // ...
 
-private Node first; // První prvek seznamu (nazýván také 'head' nebo 'start')
+    class Node
+    {
+        public T value;
+        public Node next;
+    }
+
+    private Node first; // První prvek seznamu (nazýván také 'head' nebo 'start')
+}
 ```
 
 ### Procházení seznamu
@@ -32,7 +36,7 @@ public T this[int index] {
         Node pointer = first;
         // Přes odkaz .next cyklicky prochází
         for (int i = 0; i < index; i++) {
-            // Pokud dostane hodnotu mimo rozsah, vrací poslední prvek (při záporné hodnotě vrací první prvek)
+            // Pokud dostane hodnotu mimo rozsah, vrací poslední prvek (při záporné hodnotě tedy vrací první prvek)
             if (pointer.next != null) {
                 pointer = pointer.next;
             }
@@ -84,35 +88,39 @@ public void Clear()
 * [Využití](https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees)
 
 ```csharp
-// class BinaryTreeDictionary<K, V> where K : IComparable where V : IComparable
-internal class Node
+class BinaryTreeDictionary<K, V> where K : IComparable where V : IComparable
 {
-    public K key;
-    public V value;
-    public Node left;
-    public Node right;
-}
+    // ...
 
-private Node root; // Výchozí bod stromu je kořen
+    class Node
+    {
+        public K key;
+        public V value;
+        public Node left;
+        public Node right;
+    }
+
+    private Node root; // Výchozí bod stromu je kořen
+}
 ```
 
 ### Procházení stromu
 
 ```csharp
-// Najít hodnotu podle klíče (rekurzivní průchod) (klíče seřazeny dle velikosti)
+// Najít hodnotu podle klíče (rekurzivní průchod) (klíče seřazeny dle velikosti – levý potomek nižší hodnota, pravý vyšší)
 public V this[K key] {
     get {
         return KeyToValue(key, root);
     }
 }
 
-public V KeyToValue(K k, Node iroot)
+public V KeyToValue(K key, Node node)
 {
-    if (iroot == null) throw new Exception("Strom je prázdný");
+    if (node == null) throw new Exception("Strom je prázdný");
 
-    if (iroot.key.CompareTo(k) == 0) return iroot.value;
-    else if (iroot.key.CompareTo(k) > 0 && iroot.left != null) return KeyToValue(k, iroot.left);
-    else if (iroot.key.CompareTo(k) < 0 && iroot.right != null) return KeyToValue(k, iroot.right);
+    if (node.key.CompareTo(key) == 0) return node.value;
+    else if (node.key.CompareTo(key) > 0 && node.left != null) return KeyToValue(key, node.left);
+    else if (node.key.CompareTo(key) < 0 && node.right != null) return KeyToValue(key, node.right);
 
     throw new Exception("Nenalezeno");
 }
@@ -122,7 +130,7 @@ public V KeyToValue(K k, Node iroot)
 
 ```csharp
 // Přidá nový list (list = uzel bez potomků) (klíč musí být unikátní)
-public void Add(K k,V v)
+public void Add(K k, V v)
 {
     var node = new Node() {
         key = k,
@@ -136,16 +144,16 @@ public void Add(K k,V v)
     Insert(root, node);
 }
 
-private void Insert(Node iroot, Node node)
+private void Insert(Node currentNode, Node newNode)
 {
-    if (iroot.key.Equals(node.key)) throw new Exception("Klíč již existuje");
-    else if (node.key.CompareTo(iroot.key) < 0) { // node.key < iroot.key
-        if (iroot.left == null) iroot.left = node;
-        else Insert(iroot.left, node);
+    if (currentNode.key.Equals(newNode.key)) throw new Exception("Klíč již existuje");
+    else if (newNode.key.CompareTo(currentNode.key) < 0) { // newNode.key < currentNode.key
+        if (currentNode.left == null) currentNode.left = newNode;
+        else Insert(currentNode.left, newNode);
     }
-    else { // node.key > iroot.key
-        if (iroot.right == null) iroot.right = node;
-        else Insert(iroot.right, node);
+    else { // newNode.key > currentNode.key
+        if (currentNode.right == null) currentNode.right = newNode;
+        else Insert(currentNode.right, newNode);
     }
 }
 ```
@@ -155,7 +163,7 @@ private void Insert(Node iroot, Node node)
 * Pokud se maže list (prvek bez potomků), stačí na něj smazat odkaz
 * Pokud má jednu větev, je vynechán (podobně jako spojový seznam)
 * Pokud má oba následníky:
-  1. Jeho hodnotu nahradíme nejbližší vyšší (nejlevější uzel pravého podstromu) nebo nejbližší nižší (nejpravější uzel levého podstromu) hodnotou
+  1. Jeho hodnotu nahradíme nejbližší vyšší (nejlevější uzel pravého podstromu), nebo nejbližší nižší (nejpravější uzel levého podstromu) hodnotou
   2. Uzel s touto nahrazující hodnotou smažeme (měl by mít maximálně jednoho potomka, takže stejný problém nenastane)
 
 ## Výhody a nevýhody
